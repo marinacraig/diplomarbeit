@@ -1,19 +1,24 @@
 ###über mich
-Mein breites Wissen in sehr unterschiedlichen
- Bereichen zeichnet mich als Generalistin aus. Dies
- ermöglicht es mir, mich agil in neue Gebiete vorzuwagen
- und mein Wissen laufend zu erweitern.  
- Genau deswegen habe ich mich entschieden die Ausbildung
- zur Web-Developerin in Angriff zu nehmen. 
- Der Gedanke, mit unterschiedlichsten Kunden und Anforderungen
- konfrontiert zu werden, motiviert mich die Diplomarbeit in 
- Angriff zu nehmen und erfolgreich abzuliefern. 
+Kundenbedürfnisse zu verstehen, einen hohen NPS zu erreichen, 
+laufend dazuzulernen liegen mir seit vielen Jahren am Herzen.  
+Als Generalistin konnte ich stetig mein Wissen erweitern 
+und neue Erfahrungen sammeln. Dazu gehören die schweizweite Kundenbetreuung (DE und FR), 
+weltweite Produktkommunikation, u.a. mit Unterstützung von 
+Jira und Confluence, Google Analytics und Adwords sowie 
+vielem mehr.  
+ 
+ 
  
  ###Tools
  - **MacBook Air** wird mein wichtigstes Tool sein, da 
  mein alter Laptop mittlerweile wirklich am abkratzen
   ist und ich mir im Moment keine andere Maschine
   leisten kann.
+ - **Google Docs** für die Planung des Projekts, das 
+ Festhalten von Ideen, Grob- und
+  Feinkonzept, Offerte, da ich hiermit sofort starten kann 
+  und die Docs via Links ausgewählten Personen einfach und
+  online zugänglich machen kann. [1] 
  - **PhpStorm** werde ich verwenden, da es hiermit um einiges
   einfacher ist zu coden als mit notepad++ und mehr
   Möglichkeiten bietet als Dreamweaver.
@@ -49,4 +54,10 @@ Mein breites Wissen in sehr unterschiedlichen
  wie ich und momentan eher alles komplizierter als nötig macht.
  **Carbon** und **compiler** werden, wenn benötigt, zur vereinfachten
   Handhabung von php verwendet.
-- **Weitere** sind jetzt nicht geplant.    
+- **Weitere** evtl. github bzw. dort Projekte und Issues 
+ für Kanban bzw. die Umsetzung des Feinkonzepts (Grundbedingung:
+ andere können auf dem Repo nicht spicken) 
+
+[1] [Grobkonzept, Feinkonzept](https://docs.google.com/spreadsheets/d/1eV_7Tlo0QKG4BIn0B93sUNnICly4tzJ4m1kySTdQwCs/edit?usp=sharing)
+ und [Offerte](https://docs.google.com/document/d/1dCjLOwE2s_naJFpOfdwf1nAEW1BeifqMymJoFDwuWrs/edit?usp=sharing)  
+     
