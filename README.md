@@ -31,3 +31,4 @@ Diplomarbeit Repo fehlt noch daher [Notizen](dokumentation/drandenken.md)
 [einzelne ToDo's auf github als Project / Kanban](githubrep)  
 http://htmlpreview.github.io/? 
 
+[Styleänderungen](style.md)
