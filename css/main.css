@@ -1,4 +1,8 @@
-@import url("https://fonts.googleapis.com/css?family=Bitter|Encode+Sans+Semi+Expanded");
+@import url("https://fonts.googleapis.com/css?family=Bitter|Encode+Sans+Semi+Expanded|Dancing+Script|Niconne|Norican");
+.item__6--herz {
+  font-family: 'Niconne', cursive;
+  font-size: 1.8rem; }
+
 html {
   font-size: 13px; }
 
@@ -8,5 +12,51 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Bitter', serif; }
 
+nav {
+  font-size: 1.30769230rem; }
+  nav ul {
+    list-style-type: none; }
+  nav li {
+    padding: 0 20px;
+    height: 64px; }
+
+/*
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 24px;
+  grid-auto-rows: minmax(8px, auto);
+  justify-items: start;
+  align-content: center;
+}
+
+.item {
+  .__1 {
+    grid-column: 1 / 12;
+    grid-row: 8;
+  }
+
+.__2{
+  grid-column: span 2;
+}
+.__3{
+  grid-column: span 3;
+}
+.__4{
+  grid-column: span 4;
+}
+.__5{
+  grid-column: span 5;
+}
+.__6{
+  grid-column: span 6;
+}
+.__12{
+  grid-column: span 12;
+}
+//ggf erweitern bis 12
+}
+
+*/
 .icon {
-  margin: 12px; }
+  margin: 0 12px; }

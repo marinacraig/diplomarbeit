@@ -1,10 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Bitter|Encode+Sans+Semi+Expanded|Dancing+Script|Niconne|Norican');
+//Todo: für Festival Lovers: nur eine behalten Dancing+Script|Niconne|Norican
+.item__6--herz{
+  //font-family: 'Dancing Script', cursive;
+  //font-size: 1.7rem;
+  font-family: 'Niconne', cursive;
+  font-size: 1.8rem;
+  //font-family: 'Norican', cursive;
+  //font-size: 1.6rem;
+}
+
 html{
   font-size: 13px;
 }
 
+//$font17px=1.30769230rem;
+
+
 body{
   font-family: 'Encode Sans Semi Expanded', sans-serif;
 }
+
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Bitter', serif;
