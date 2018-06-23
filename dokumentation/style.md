@@ -15,3 +15,8 @@ Zudem ist keine passende Schrift oder Logoteile für
  Festival Lovers in der Navigation vorhanden. Dort 
  wird eine weitere Google Font
 verwendet.
+
+##Header und Footer
+Flexbox wurde wegen dem Wechsel der Reihenfolgen im 
+Footer und verwendet. Daher konnten nicht alle px-Abstände 
+zu 100 % eingehalten werden.

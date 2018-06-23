@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Bitter|Encode+Sans+Semi+Expanded|Niconne");
 * {
   margin: 0;
@@ -21,49 +20,62 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.8rem; }
 
 img {
-  padding: 12px; }
+  margin: 12px; }
   img .icon__nav .icon__footer {
     height: 32px; }
 
 nav {
-  font-size: 1.30769230rem; }
+  font-size: 1.30769230rem;
+  /*   p {
+      padding-bottom: 12px;
+    }*/ }
   nav ul {
-    list-style-type: none;
-    max-height: 64px;
-    border: #C2C2C2 1px solid; }
-  nav li {
-    display: inline;
     height: 64px;
-    padding: 4px; }
-    nav li p {
-      padding-bottom: 12px; }
-    nav li .nav__display--phone {
-      display: inline; }
-    nav li .nav__display--tablet, nav li .nav__display--desktop {
-      display: none; }
-  nav .nav__menu:hover {
+    border: #C2C2C2 1px solid;
+    padding: 0 3px 0 3px; }
+  nav a {
+    text-decoration: none; }
+  nav li {
+    list-style-type: none; }
+  nav .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; }
+  nav .item .item__hidden {
+    display: none; }
+  nav .item .nav__menu {
+    flex-grow: 5.5; }
+  nav .item .nav__festivallovers {
+    flex-grow: 4.5; }
+  nav .item .nav__login, nav .item .nav__ticket {
+    flex-grow: 1; }
+  nav .nav__menu > a, nav .nav__festivallovers > a {
+    text-decoration: none;
+    color: #000; }
+  nav .nav__menu > a:hover {
     color: #767676; }
-  nav .nav__login, nav .nav__ticket {
+  nav .nav__login > a, nav .nav__ticket > a {
+    text-decoration: none;
     color: #C2C2C2;
     border-left: #C2C2C2 1px solid; }
-  nav .nav__ticket:hover, nav .nav__login:hover {
+  nav .nav__ticket > a:hover, nav .nav__login > a:hover {
     background-color: #C2C2C2;
     color: #000; }
 
-/*
-Todo:
-background-color: einheitlich in höhe
-border: schön rund herum
-svg gleiche Farbe wie schrift
-padding /margin schön
- */
 @media screen and (min-width: 768px) {
-  nav li .nav__display--tablet {
-    display: inline; } }
+  nav ul {
+    padding: 0 24px 0 12px; }
+  nav .item .nav__display--tablet.item__hidden {
+    display: flex; } }
 
 @media screen and (min-width: 1200px) {
-  nav li .nav__display--desktop {
-    display: inline; } }
+  nav ul {
+    padding: 0 20px 0 3px; }
+  nav li {
+    padding-left: 32px; }
+  nav .item .nav__display--desktop.item__hidden {
+    display: flex; } }
 
 footer {
   font-size: 1.30769230rem;
@@ -79,7 +91,7 @@ footer {
     list-style-type: none; }
   footer .footer__menu > a {
     margin: 0 10px; }
-  footer .footer__socialmedia > a {
+  footer .footer__socialmedia > a, footer .footer__up > a {
     margin: 6px; }
   footer .container {
     display: flex;

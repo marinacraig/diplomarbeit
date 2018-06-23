@@ -18,13 +18,13 @@ footer{
   .footer__menu>a {
     margin: 0 10px;
   }
-  .footer__socialmedia>a{
+  .footer__socialmedia>a, .footer__up>a{
     margin: 6px;
   }
   .container{
     display: flex;
     flex-direction: row;
-    //Todo: tablet desktop flex-wrap: nowrap
+    //tablet desktop flex-wrap: nowrap
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
