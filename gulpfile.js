@@ -7,6 +7,8 @@ const browserSync = require('browser-sync').create();
 const runSequence = require('gulp-run-sequence');
 
 
+
+
 gulp.task('build', (cb)=>{
     runSequence('clean', ['babel', 'sass'], 'copy',cb);
 });
@@ -25,37 +27,43 @@ gulp.task('babel', () => {
 );
 
 
-gulp.task('sass', () => {
-    return gulp.src('./src/scss/**/*.scss')
+gulp.task('sass-alt', () => {
+    return gulp.src('./css/**/*.scss')
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('./src/css'))
+        .pipe(gulp.css('./css/**/*.css'))
         .pipe(browserSync.reload({
             stream: true
         }));
 });
 
 
-gulp.task('copy', () => {
-    gulp
-    .src(['src/index.html', 'src/**/*.css', 'src/media/**/*.svg'], {base: 'src/'})
-    .pipe(gulp.dest('dist'));
-});
+gulp.task('sass', ()=> {
+    return gulp.src('css/main.scss')
+        .pipe(sass())
+        .pipe(gulp.dest('css'))
+        .pipe(browserSync.reload({
+            stream: true
+        }))
+})
+
 
 gulp.task('browserSync', () => {
     browserSync.init({
     server: {
-        baseDir: 'src'
+        baseDir: '.'
     },
 })
 });
 
 
 gulp.task('sync:watch', ['browserSync'], () => {
-    gulp.watch('./src/scss/**/*.scss', ['sass']);
+    gulp.watch('./css/**/*.scss', ['sass']);
 });
 
 gulp.task('sass:watch', () => {
-    gulp.watch('./src/scss/**/*.scss', ['sass']);
+    gulp.watch('./css/**/*.scss', ['sass']);
 });
+
+gulp.task('default', ['browserSync', 'sass:watch']);

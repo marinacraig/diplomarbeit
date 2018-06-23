@@ -1,0 +1,25 @@
+{
+  "name": "diplomarbeit",
+  "version": "1.0.0",
+  "description": "###Inhaltsverzeichnis Dokumentation:",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "browser-sync": "^2.24.4",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-cli": "^2.0.1",
+    "gulp-run-sequence": "^0.3.2",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "node-sass": "^4.9.0",
+    "normalize.css": "^8.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "marina enadeghe",
+  "license": "ISC"
+}

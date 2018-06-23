@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Bitter|Encode+Sans+Semi+Expanded|Dancing+Script|Niconne|Norican");
+* {
+  margin: 0;
+  padding: 0; }
+
 .item__6--herz {
   font-family: 'Niconne', cursive;
   font-size: 1.8rem; }
@@ -60,3 +64,6 @@ nav {
 */
 .icon {
   margin: 0 12px; }
+
+html {
+  background-color: #3F51B5; }
