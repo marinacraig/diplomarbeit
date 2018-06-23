@@ -68,9 +68,49 @@ padding /margin schön
 footer {
   font-size: 1.30769230rem;
   color: #767676; }
+  footer ul {
+    height: 112px;
+    border: #C2C2C2 1px solid;
+    padding: 0 16px; }
   footer a {
     text-decoration: none;
     color: #767676; }
+  footer li {
+    list-style-type: none; }
+  footer .footer__menu > a {
+    margin: 0 10px; }
+  footer .footer__socialmedia > a {
+    margin: 6px; }
+  footer .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center; }
+  footer .item .item__hidden {
+    display: none; }
+  footer .footer__socialmedia {
+    order: 5; }
+  footer .footer__up {
+    order: 4; }
+
+@media screen and (min-width: 768px) {
+  footer ul {
+    height: 64px;
+    padding: 0 24px; }
+  footer .container {
+    flex-wrap: nowrap; }
+  footer .item .item__hidden {
+    display: flex; }
+  footer .footer__socialmedia {
+    order: 4; }
+  footer .footer__up {
+    order: 5; } }
+
+@media screen and (min-width: 1200px) {
+  footer ul {
+    padding: 0 120px; } }
 
 /*
 .container {

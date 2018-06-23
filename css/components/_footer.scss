@@ -1,9 +1,81 @@
 footer{
   font-size: 1.30769230rem;
   color: $grau76_hex;
+  ul {
+    height: 112px;
+    border: $grauC2_hex 1px solid;
+    padding: 0 16px;
+  }
 
   a {
     text-decoration: none;
     color: $grau76_hex;
   }
+  li {
+    list-style-type: none;
+
+  }
+  .footer__menu>a {
+    margin: 0 10px;
+  }
+  .footer__socialmedia>a{
+    margin: 6px;
+  }
+  .container{
+    display: flex;
+    flex-direction: row;
+    //Todo: tablet desktop flex-wrap: nowrap
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    //nur phone nötig, da 2 Zeilen
+    align-content: center;
+  }
+  .item{
+    .item__hidden{
+      display: none;
+    }
+  }
+  .footer__socialmedia{
+    order: 5;
+  }
+  .footer__up{
+    order: 4;
+  }
+}
+
+
+//tablet
+@media screen and (min-width : 768px) {
+  footer{
+    ul {
+      height: 64px;
+      padding: 0 24px;
+    }
+    .container{
+      flex-wrap: nowrap;
+    }
+    .item{
+      .item__hidden{
+        display: flex;
+      }
+    }
+    .footer__socialmedia{
+      order: 4;
+    }
+    .footer__up{
+      order: 5;
+    }
+  }
+}
+
+
+//laptop
+@media screen and (min-width : 1200px) {
+  footer{
+    ul {
+      padding: 0 120px;
+    }
+  }
+
 }
