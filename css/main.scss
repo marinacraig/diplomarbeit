@@ -5,12 +5,22 @@
 @import 'components/colors';
 @import 'components/fonts';
 @import 'components/navigation';
+@import 'components/footer';
 @import 'components/grid';
 
+html {
+  color: $schwarz_hex;
+}
 
-.icon {
-  margin: 0 12px;
+/*
+//tablet
+@media screen and (min-width : 768px) {
+
 }
-html{
-  background-color: #3F51B5;
+
+
+//laptop
+@media screen and (min-width : 1200px) {
+
 }
+*/

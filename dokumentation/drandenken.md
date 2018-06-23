@@ -19,15 +19,10 @@
     5. Login - vergessen, Umgang mit Adressen
     6. Countdown Tickets
 - DB export - wie?
-- Schriften / Bilder: Lizenzen werden vorausgesetzt und nicht von men 
- geprüft 
  - Eidesstattliche Erklärung _an Unterschrift / print / scan denken_ 
  [Vorlage](https://docs.google.com/document/d/1Ww_N4ldXzhiEH6JXWizSCmLFYKU5LkGJV4W8mb1bWJc/edit)         
  - link check md
  
- - andere Schrift für Festival Lovers - richtig verlinken
-  und andere 2 löschen
-- normalize.css greift nicht  
  
  
  

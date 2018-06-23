@@ -12,7 +12,6 @@ Zeitplan / Meilensteine
 
 
 Aus dem Briefing:
-- _Abstract / Management Summary_ (nur für individuelles Projekt)  
 - Setup Guide  (was ist damit genau gemeint?)
 - URL der lauffähigen Version  
 - Zeitplan / Meilensteine

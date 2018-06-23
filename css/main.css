@@ -1,11 +1,8 @@
-@import url("https://fonts.googleapis.com/css?family=Bitter|Encode+Sans+Semi+Expanded|Dancing+Script|Niconne|Norican");
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Bitter|Encode+Sans+Semi+Expanded|Niconne");
 * {
   margin: 0;
   padding: 0; }
-
-.item__6--herz {
-  font-family: 'Niconne', cursive;
-  font-size: 1.8rem; }
 
 html {
   font-size: 13px; }
@@ -16,13 +13,51 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Bitter', serif; }
 
+.nav__festivallovers {
+  font-family: 'Niconne', cursive;
+  font-size: 1.8rem; }
+
+.icon__nav {
+  height: 32px; }
+
 nav {
   font-size: 1.30769230rem; }
   nav ul {
-    list-style-type: none; }
+    list-style-type: none;
+    max-height: 64px;
+    padding: 16px;
+    border: #C2C2C2 1px solid; }
   nav li {
-    padding: 0 20px;
-    height: 64px; }
+    display: inline;
+    height: 64px;
+    padding: 16px; }
+    nav li .nav__display--phone {
+      display: inline; }
+    nav li .nav__display--tablet, nav li .nav__display--desktop {
+      display: none; }
+  nav .nav__menu:hover {
+    color: #767676; }
+  nav .nav__login, nav .nav__ticket {
+    color: #C2C2C2;
+    border-left: #C2C2C2 1px solid; }
+  nav .nav__ticket:hover, nav .nav__login:hover {
+    background-color: #C2C2C2;
+    color: #000; }
+
+/*
+Todo:
+background-color: einheitlich in höhe
+border: schön rund herum
+svg gleiche Farbe wie schrift
+padding /margin schön
+ */
+@media screen and (min-width: 768px) {
+  nav li .nav__display--tablet {
+    display: inline; } }
+
+@media screen and (min-width: 1200px) {
+  nav li .nav__display--desktop {
+    display: inline; } }
 
 /*
 .container {
@@ -62,8 +97,18 @@ nav {
 }
 
 */
-.icon {
-  margin: 0 12px; }
-
 html {
-  background-color: #3F51B5; }
+  color: #000; }
+
+/*
+//tablet
+@media screen and (min-width : 768px) {
+
+}
+
+
+//laptop
+@media screen and (min-width : 1200px) {
+
+}
+*/

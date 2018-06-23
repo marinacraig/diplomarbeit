@@ -1,13 +1,107 @@
+@import 'icons';
+
 nav {
   font-size: 1.30769230rem;
 
+
   ul {
     list-style-type: none;
-
+    max-height: 64px;
+    padding: 16px;
+    border: $grauC2_hex 1px solid;
   }
   li {
-    padding: 0 20px;
+    display: inline;
     height: 64px;
+    padding: 16px;
+
+
+    .nav__display--phone {
+      display: inline;
+    }
+    .nav__display--tablet, .nav__display--desktop {
+      display: none;
+    }
+  }
+  .nav__menu:hover {
+    color: $grau76_hex;
+  }
+
+  .nav__login, .nav__ticket {
+    color: $grauC2_hex;
+    border-left: $grauC2_hex 1px solid;
+  }
+  .nav__ticket:hover, .nav__login:hover {
+    background-color: $grauC2_hex;
+    color: $schwarz_hex;
+  }
+
+}
+
+/*
+Todo:
+background-color: einheitlich in höhe
+border: schön rund herum
+svg gleiche Farbe wie schrift
+padding /margin schön
+ */
+
+//tablet
+@media screen and (min-width: 768px) {
+  nav {
+
+    ul {
+
+    }
+    li {
+
+      .nav__display--tablet {
+        display: inline;
+      }
+    }
+    .nav__menu {
+
+    }
+    .nav__menu:hover {
+
+    }
+    .nav__login, .nav__ticket {
+
+    }
+    .nav__ticket:hover, .nav__login:hover {
+
+    }
+
+  }
+
+}
+
+//laptop
+@media screen and (min-width: 1200px) {
+  nav {
+
+    ul {
+
+    }
+    li {
+
+      .nav__display--desktop {
+        display: inline;
+
+      }
+    }
+    .nav__menu {
+
+    }
+    .nav__menu:hover {
+
+    }
+    .nav__login, .nav__ticket {
+
+    }
+    .nav__ticket:hover, .nav__login:hover {
+
+    }
 
   }
 

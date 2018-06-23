@@ -38,14 +38,17 @@
  Dies simple da ich mein Wissen vertiefen und festigen will um
  später schneller Alternativen verstehen und anwenden zu 
  können.
-- **gulp npm babbel** werden zur Vereinfachung der Tätigkeiten 
+- **gulp** wird zur Vereinfachung der Tätigkeiten 
  verwendet. **Linter** ist gerade Out-of-scope da er nicht will
  wie ich und momentan eher alles komplizierter als nötig macht.
  **Carbon** und **compiler** werden, wenn benötigt, zur vereinfachten
-  Handhabung von php bzw. Zeiten verwendet.
+  Handhabung von php bzw. Zeiten verwendet. **install.sh**  
+  ersetzt die npm install-Befehle (siehe Doku im gulpfile.js).
 - **Weitere** evtl. github Projekte und Issues 
  für Kanban bzw. die Umsetzung des Feinkonzepts (Grundbedingung:
- andere können auf dem Repo nicht spicken) 
+ andere können auf dem Repo nicht spicken)  
+ Die Todo's von php-Storm werden laufend genutzt (keine
+  Doppelerfassung, sind dort, wo noch was zu tun ist)
 
 
 [1] [Grobkonzept, Feinkonzept](https://docs.google.com/spreadsheets/d/1eV_7Tlo0QKG4BIn0B93sUNnICly4tzJ4m1kySTdQwCs/edit?usp=sharing)
