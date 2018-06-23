@@ -7,14 +7,16 @@ nav {
   ul {
     list-style-type: none;
     max-height: 64px;
-    padding: 16px;
+
     border: $grauC2_hex 1px solid;
   }
   li {
     display: inline;
     height: 64px;
-    padding: 16px;
-
+    padding: 4px;
+    p {
+      padding-bottom: 12px;
+    }
 
     .nav__display--phone {
       display: inline;

@@ -5,6 +5,9 @@
   padding: 0; }
 
 html {
+  color: #000; }
+
+html {
   font-size: 13px; }
 
 body {
@@ -17,20 +20,23 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Niconne', cursive;
   font-size: 1.8rem; }
 
-.icon__nav {
-  height: 32px; }
+img {
+  padding: 12px; }
+  img .icon__nav .icon__footer {
+    height: 32px; }
 
 nav {
   font-size: 1.30769230rem; }
   nav ul {
     list-style-type: none;
     max-height: 64px;
-    padding: 16px;
     border: #C2C2C2 1px solid; }
   nav li {
     display: inline;
     height: 64px;
-    padding: 16px; }
+    padding: 4px; }
+    nav li p {
+      padding-bottom: 12px; }
     nav li .nav__display--phone {
       display: inline; }
     nav li .nav__display--tablet, nav li .nav__display--desktop {
@@ -58,6 +64,13 @@ padding /margin schön
 @media screen and (min-width: 1200px) {
   nav li .nav__display--desktop {
     display: inline; } }
+
+footer {
+  font-size: 1.30769230rem;
+  color: #767676; }
+  footer a {
+    text-decoration: none;
+    color: #767676; }
 
 /*
 .container {
@@ -97,9 +110,6 @@ padding /margin schön
 }
 
 */
-html {
-  color: #000; }
-
 /*
 //tablet
 @media screen and (min-width : 768px) {

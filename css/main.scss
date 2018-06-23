@@ -2,15 +2,14 @@
   margin:0;
   padding:0;
 }
+
 @import 'components/colors';
 @import 'components/fonts';
 @import 'components/navigation';
-@import 'components/footer';
+@import "components/footer";
 @import 'components/grid';
 
-html {
-  color: $schwarz_hex;
-}
+
 
 /*
 //tablet
