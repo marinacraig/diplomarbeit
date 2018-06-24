@@ -12,10 +12,22 @@
 </head>
 <body>
 <header>
-    <nav>
+    <nav id="pagetop">
+        <!--Inhalt des Overlays-->
+        <div id="myNav" class="overlay">
+            <!--Todo: Eventlistener statt inline fkt onclick-->
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <a href="#">Festivals</a>
+                <a href="#">Magazin</a>
+                <a href="#">News</a>
+            </div>
+        </div>
+        <!--Nav-Teil der immer sichtbar ist-->
         <ul class="nav container">
             <li class="nav nav__menu item">
-                <a href="#" class="container">
+                <!--w3 mit span, bei mir wegen alter Logik mit a-->
+                <a class="container" onclick="openNav()">
                 <img alt="navigation-menu-burger" title="navigation-menu-burger"
                      src="assets/navigation_menu.svg" class="icon icon__nav icon__nav--menu">
                 <p class="nav__display nav__display--phone">MENU</p>
@@ -48,10 +60,13 @@
     </nav>
 
 </header>
-<h1>hello</h1>
-<ul>
-    <li>test element <p>mit absatz</p></li>
-</ul>
+<article>
+    <h1>hello</h1>
+    <ul>
+        <li>test element <p>mit absatz</p></li>
+    </ul>
+</article>
+
 
 <footer>
     <ul class="footer container">
@@ -74,7 +89,7 @@
                              class="icon icon__footer icon__footer--twitter"></a>
         </li>
         <li class="footer footer__up item">
-            <a href="#" class="container">
+            <a href="#pagetop" class="container">
                 <p class="item__hidden">BACK TO TOP</p>
         <img alt="icon-backtotop" title="icon-backtotop" src="assets/navigation_backtotop.svg"
         class="icon icon__footer icon__footer--backtotop">
@@ -82,5 +97,6 @@
         </li>
     </ul>
 </footer>
+<script src="js/navigation.js"></script>
 </body>
 </html>

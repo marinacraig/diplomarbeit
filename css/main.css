@@ -26,9 +26,9 @@ img {
 
 nav {
   font-size: 1.30769230rem;
-  /*   p {
-      padding-bottom: 12px;
-    }*/ }
+  position: fixed;
+  top: 0;
+  width: 100%; }
   nav ul {
     height: 64px;
     border: #C2C2C2 1px solid;
@@ -162,6 +162,9 @@ footer {
 }
 
 */
+article {
+  margin-top: 64px; }
+
 /*
 //tablet
 @media screen and (min-width : 768px) {

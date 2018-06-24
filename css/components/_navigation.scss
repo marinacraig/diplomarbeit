@@ -1,6 +1,9 @@
+// Navigation weiss, ul li in nav verschachtelt, da diese in der Regel immer anders als andere ul li
 nav {
   font-size: 1.30769230rem;
-
+  position: fixed;
+  top: 0;
+  width: 100%;
 
   ul {
     height: 64px;
@@ -15,11 +18,7 @@ nav {
     list-style-type: none;
   }
 
-
-
- /*   p {
-      padding-bottom: 12px;
-    }*/
+  // flexbox:
     .container{
       display: flex;
       flex-direction: row;
@@ -40,6 +39,8 @@ nav {
           flex-grow: 1;
         }
       }
+
+  //Schriften
   .nav__menu>a, .nav__festivallovers>a{
     text-decoration: none;
     color: $schwarz_hex;
