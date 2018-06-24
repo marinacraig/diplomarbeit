@@ -9,10 +9,16 @@ html {
 html {
   font-size: 13px; }
 
+/*
+17px=1.30769230rem;
+32px=2.46153846rem;
+48px=3.69230769rem;
+56px=4.30769230rem;
+ */
 body {
   font-family: 'Encode Sans Semi Expanded', sans-serif; }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, .overlay-content {
   font-family: 'Bitter', serif; }
 
 .nav__festivallovers {
@@ -62,6 +68,40 @@ nav {
   nav .nav__ticket > a:hover, nav .nav__login > a:hover {
     background-color: #C2C2C2;
     color: #000; }
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  overflow-x: hidden;
+  transition: 0.5s; }
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px; }
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 2.46153846rem;
+  color: #FFF;
+  display: block;
+  transition: 0.3s; }
+
+.overlay a:hover, .overlay a:focus {
+  color: #000;
+  background-color: #FFF; }
+
+.overlay .closebtn {
+  position: absolute;
+  font-size: 1.30769230rem; }
 
 @media screen and (min-width: 768px) {
   nav ul {

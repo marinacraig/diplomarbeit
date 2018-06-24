@@ -3,18 +3,25 @@
 html{
   font-size: 13px;
 }
+/*
+17px=1.30769230rem;
+32px=2.46153846rem;
+48px=3.69230769rem;
+56px=4.30769230rem;
+ */
 
-//$font17px=1.30769230rem;
 
-
+//statt Proxima Nova:
 body{
   font-family: 'Encode Sans Semi Expanded', sans-serif;
 }
 
-
-h1, h2, h3, h4, h5, h6 {
+// statt Adelle wird Bitter eingesetzt
+h1, h2, h3, h4, h5, h6, .overlay-content {
   font-family: 'Bitter', serif;
 }
+
+//Navigation Schrift von Festival Lovers ist kein Icon bzw. Bild
 .nav__festivallovers{
   font-family: 'Niconne', cursive;
   font-size: 1.8rem;

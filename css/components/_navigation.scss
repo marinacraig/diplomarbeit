@@ -61,6 +61,50 @@ nav {
   }
 
 }
+// overlay
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top:0;
+  background-color: $schwarz_rgba;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  //mobile schriftgrösse
+  font-size: 2.46153846rem;
+  color: $weiss_hex;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: $schwarz_hex;
+  background-color: $weiss_hex;
+}
+//x auf der linken Seite
+.overlay .closebtn {
+  position: absolute;
+  //top: 16px;
+  //left: 16px;
+  //Schriftgrösse von nav
+  font-size: 1.30769230rem;
+}
 
 
 //tablet
