@@ -1,0 +1,81 @@
+// overlay
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: $schwarz_rgba;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  //mobile schriftgrösse
+  font-size: 2.46153846rem;
+  font-weight: bold;
+}
+
+.overlay a {
+  text-decoration: none;
+  color: $weiss_hex;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: $schwarz_hex;
+  background-color: $weiss_hex;
+  width: 100%;
+}
+//x auf der linken Seite
+.overlay .closebtn {
+  //Schriftgrösse von nav
+  font-size: 1.30769230rem;
+}
+.overlay .item {
+  .item__hidden {
+    display: none;
+  }
+  .nav__menu {
+    flex-grow: 5.5;
+  }
+  .nav__festivallovers {
+    flex-grow: 4.5;
+  }
+  .nav__login, .nav__ticket {
+    flex-grow: 1;
+  }
+}
+
+//tablet
+@media screen and (min-width: 768px) {
+
+    .overlay-content {
+      font-size: 3.69230769rem;
+    }
+  .overlay .item {
+    .nav__display--tablet.item__hidden {
+      display: flex;
+    }
+  }
+}
+
+//laptop
+@media screen and (min-width: 1200px) {
+
+    .overlay-content {
+      font-size: 4.30769230rem;
+    }
+  .overlay .item {
+    .nav__display--desktop.item__hidden {
+      display: flex;
+    }
+  }
+}

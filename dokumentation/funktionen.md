@@ -1,2 +1,2 @@
 #Navigation
-closeNav() und openNav(): HTML (besser mit Eventlistener machen)
+closeNav() und openNav(): im HTML (evtl. mit Eventlistener machen)

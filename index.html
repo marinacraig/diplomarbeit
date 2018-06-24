@@ -13,21 +13,72 @@
 <body>
 <header>
     <nav id="pagetop">
+
         <!--Inhalt des Overlays-->
+
         <div id="myNav" class="overlay">
+            <ul class="nav container">
+                <li class="nav nav__menu item container">
             <!--Todo: Eventlistener statt inline fkt onclick-->
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+            <a href="javascript:void(0)" class="closebtn container" onclick="closeNav()">
                 <img alt="navigation-schliessen" title="navigation-schliessen"
                      src="assets/navigation_schliessen.svg" class="icon icon__nav icon__nav--menu">
                 <p class="nav__display nav__display--phone">SCHLIESSEN</p>
             </a>
+                </li>
+                <li class="nav nav__festivallovers item">
+                    <a href="#" class="container">
+                        <p class="nav__display nav__display--tablet item__hidden">Festival</p>
+                        <img alt="herz" title="herz" src="assets/detail_like_filled.svg" class="icon icon__nav icon__nav--herz">
+                        <p class="nav__display nav__display--tablet item__hidden">Lovers</p>
+                    </a>
+                </li>
+                <div class="container">
+                    <li class="nav nav__login item">
+                        <a href="#" class="container">
+                            <img alt="navigation-login" title=navigation-login" src="assets/navigation_login.svg"
+                                 class="icon icon__nav icon__nav--login">
+                            <p class="nav__display nav__display--desktop item__hidden">LOGIN</p>
+                        </a>
+                    </li>
+                    <li class="nav nav__ticket item">
+                        <a href="#" class="container">
+                            <img alt="navigation-ticket" title=navigation-ticket" src="assets/navigation_ticketkauf.svg"
+                                 class="icon icon__nav icon__nav--ticket">
+                            <p class="nav__display nav__display--desktop item__hidden">TICKETS KAUFEN</p>
+                        </a>
+                    </li>
+
+                </div>
+            </ul>
             <div class="overlay-content">
                 <a href="#">Festivals</a>
                 <a href="#">Magazin</a>
                 <a href="#">News</a>
             </div>
+            <div class="container">
+                <!--Suche im Overlay-->
+                <li class="container item nav__suche">
+                    <input type="text" id="suche" class="item">
+                    <label class="item" for="suche"><img alt="icon-suche" title="icon-suche" src="assets/navigation_suche.svg"
+                                                         class="icon icon__nav icon__nav--suche"></label>
+                </li>
+                <!-- vom Footer kopiert, li class angepasst-->
+                <li class="nav nav__socialmedia item container">
+                    <a href="#"><img alt="icon-facebook" title="icon-facebook" src="assets/socialmedia_facebook.svg"
+                                     class="icon icon__nav icon__nav--facebook"></a>
+                    <a href="#"><img alt="icon-instagram" title="icon-instagram" src="assets/socialmedia_instagram.svg"
+                                     class="icon icon__nav icon__nav--instagram"></a>
+                    <a href="#"><img alt="icon-snapchat" title="icon-snapchat" src="assets/socialmedia_snapchat.svg"
+                                     class="icon icon__nav icon__nav--snapchat"></a>
+                    <a href="#"><img alt="icon-youtube" title="icon-youtube" src="assets/socialmedia_youtube.svg"
+                                     class="icon icon__nav icon__nav--youtube"></a>
+                    <a href="#"><img alt="icon-twitter" title="icon-twitter" src="assets/socialmedia_twitter.svg"
+                                     class="icon icon__nav icon__nav--twitter"></a>
+                </li>
+            </div>
         </div>
-        <!--Nav-Teil der immer sichtbar ist-->
+        <!--Nav-Teil ohne overlay - nicht sichtbar wenn overlay vorhanden-->
         <ul class="nav container">
             <li class="nav nav__menu item">
                 <!--w3 mit span, bei mir wegen alter Logik mit a-->

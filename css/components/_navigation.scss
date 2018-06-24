@@ -1,5 +1,6 @@
 // Navigation weiss, ul li in nav verschachtelt, da diese in der Regel immer anders als andere ul li
 nav {
+  //CSS für Nav mit weissem Hintergrund
   font-size: 1.30769230rem;
   position: fixed;
   top: 0;
@@ -18,106 +19,82 @@ nav {
     list-style-type: none;
   }
 
-  // flexbox:
-    .container{
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    }
-      .item {
-        .item__hidden{
-          display: none;
-        }
-        .nav__menu{
-          flex-grow: 5.5;
-        }
-        .nav__festivallovers{
-          flex-grow: 4.5;
-        }
-        .nav__login, .nav__ticket{
-          flex-grow: 1;
-        }
-      }
-
   //Schriften
-  .nav__menu>a, .nav__festivallovers>a{
+  .nav__menu > a, .nav__festivallovers > a {
     text-decoration: none;
     color: $schwarz_hex;
   }
 
-  .nav__menu>a:hover {
+  .nav__menu > a:hover {
     color: $grau76_hex;
   }
 
-  .nav__login>a, .nav__ticket>a {
+  .nav__login > a, .nav__ticket > a {
     text-decoration: none;
     color: $grauC2_hex;
     border-left: $grauC2_hex 1px solid;
   }
-  .nav__ticket>a:hover, .nav__login>a:hover {
+  .nav__ticket > a:hover, .nav__login > a:hover {
     background-color: $grauC2_hex;
     color: $schwarz_hex;
   }
+  .nav__socialmedia>a {
+    margin: 6px;
+  }
 
-}
-// overlay
+@import "overlay";
 
-.overlay {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top:0;
-  background-color: $schwarz_rgba;
-  overflow-x: hidden;
-  transition: 0.5s;
-}
+  // flexbox:
+  .container, .overlay .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-.overlay-content {
-  position: relative;
-  top: 25%;
-  width: 100%;
-  text-align: center;
-  margin-top: 30px;
+  .item {
+    .item__hidden {
+      display: none;
+    }
+    .nav__menu {
+      flex-grow: 5.5;
+    }
+    .nav__festivallovers {
+      flex-grow: 4.5;
+    }
+    .nav__login, .nav__ticket {
+      flex-grow: 1;
+    }
+  }
+  //styling des Suchfeldes im overlay
+  .nav__suche {
+    border-bottom: $grauC2_hex 1px solid;
+    color:$weiss_hex;
+  }
+/*  input{
+    border:none;
+    border-radius: 0;
+    &:focus{
+      outline: none;
+    }
+    &:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0px 1000px $schwarz_rgba inset;
+      -webkit-text-fill-color: $weiss_hex
+    }
+  }*/
 }
-
-.overlay a {
-  padding: 8px;
-  text-decoration: none;
-  //mobile schriftgrösse
-  font-size: 2.46153846rem;
-  color: $weiss_hex;
-  display: block;
-  transition: 0.3s;
-}
-
-.overlay a:hover, .overlay a:focus {
-  color: $schwarz_hex;
-  background-color: $weiss_hex;
-}
-//x auf der linken Seite
-.overlay .closebtn {
-  position: absolute;
-  //top: 16px;
-  //left: 16px;
-  //Schriftgrösse von nav
-  font-size: 1.30769230rem;
-}
-
 
 //tablet
-@media screen and (min-width : 768px) {
-  nav{
+@media screen and (min-width: 768px) {
+  nav {
     ul {
       padding: 0 24px 0 12px;
     }
-    .container{
+    .container {
 
     }
-    .item{
-      .nav__display--tablet.item__hidden{
+    .item {
+      .nav__display--tablet.item__hidden {
         display: flex;
       }
     }
@@ -125,19 +102,19 @@ nav {
 }
 
 //laptop
-@media screen and (min-width : 1200px) {
-  nav{
+@media screen and (min-width: 1200px) {
+  nav {
     ul {
       padding: 0 20px 0 3px;
     }
     li {
       padding-left: 32px;
     }
-    .container{
+    .container {
 
     }
-    .item{
-      .nav__display--desktop.item__hidden{
+    .item {
+      .nav__display--desktop.item__hidden {
         display: flex;
       }
     }

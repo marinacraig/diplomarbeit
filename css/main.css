@@ -18,7 +18,7 @@ html {
 body {
   font-family: 'Encode Sans Semi Expanded', sans-serif; }
 
-h1, h2, h3, h4, h5, h6, .overlay-content {
+h1, h2, h3, h4, h5, h6, .overlay-content, nav .nav__suche {
   font-family: 'Bitter', serif; }
 
 .nav__festivallovers {
@@ -34,7 +34,18 @@ nav {
   font-size: 1.30769230rem;
   position: fixed;
   top: 0;
-  width: 100%; }
+  width: 100%;
+  /*  input{
+    border:none;
+    border-radius: 0;
+    &:focus{
+      outline: none;
+    }
+    &:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0px 1000px $schwarz_rgba inset;
+      -webkit-text-fill-color: $weiss_hex
+    }
+  }*/ }
   nav ul {
     height: 64px;
     border: #C2C2C2 1px solid;
@@ -43,19 +54,6 @@ nav {
     text-decoration: none; }
   nav li {
     list-style-type: none; }
-  nav .container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center; }
-  nav .item .item__hidden {
-    display: none; }
-  nav .item .nav__menu {
-    flex-grow: 5.5; }
-  nav .item .nav__festivallovers {
-    flex-grow: 4.5; }
-  nav .item .nav__login, nav .item .nav__ticket {
-    flex-grow: 1; }
   nav .nav__menu > a, nav .nav__festivallovers > a {
     text-decoration: none;
     color: #000; }
@@ -68,40 +66,70 @@ nav {
   nav .nav__ticket > a:hover, nav .nav__login > a:hover {
     background-color: #C2C2C2;
     color: #000; }
-
-.overlay {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  background-color: rgba(0, 0, 0, 0.75);
-  overflow-x: hidden;
-  transition: 0.5s; }
-
-.overlay-content {
-  position: relative;
-  top: 25%;
-  width: 100%;
-  text-align: center;
-  margin-top: 30px; }
-
-.overlay a {
-  padding: 8px;
-  text-decoration: none;
-  font-size: 2.46153846rem;
-  color: #FFF;
-  display: block;
-  transition: 0.3s; }
-
-.overlay a:hover, .overlay a:focus {
-  color: #000;
-  background-color: #FFF; }
-
-.overlay .closebtn {
-  position: absolute;
-  font-size: 1.30769230rem; }
+  nav .nav__socialmedia > a {
+    margin: 6px; }
+  nav .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    overflow-x: hidden;
+    transition: 0.5s; }
+  nav .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    font-size: 2.46153846rem;
+    font-weight: bold; }
+  nav .overlay a {
+    text-decoration: none;
+    color: #FFF;
+    display: block;
+    transition: 0.3s; }
+  nav .overlay a:hover, nav .overlay a:focus {
+    color: #000;
+    background-color: #FFF;
+    width: 100%; }
+  nav .overlay .closebtn {
+    font-size: 1.30769230rem; }
+  nav .overlay .item .item__hidden {
+    display: none; }
+  nav .overlay .item .nav__menu {
+    flex-grow: 5.5; }
+  nav .overlay .item .nav__festivallovers {
+    flex-grow: 4.5; }
+  nav .overlay .item .nav__login, nav .overlay .item .nav__ticket {
+    flex-grow: 1; }
+  @media screen and (min-width: 768px) {
+    nav .overlay-content {
+      font-size: 3.69230769rem; }
+    nav .overlay .item .nav__display--tablet.item__hidden {
+      display: flex; } }
+  @media screen and (min-width: 1200px) {
+    nav .overlay-content {
+      font-size: 4.30769230rem; }
+    nav .overlay .item .nav__display--desktop.item__hidden {
+      display: flex; } }
+  nav .container, nav .overlay .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; }
+  nav .item .item__hidden {
+    display: none; }
+  nav .item .nav__menu {
+    flex-grow: 5.5; }
+  nav .item .nav__festivallovers {
+    flex-grow: 4.5; }
+  nav .item .nav__login, nav .item .nav__ticket {
+    flex-grow: 1; }
+  nav .nav__suche {
+    border-bottom: #C2C2C2 1px solid;
+    color: #FFF; }
 
 @media screen and (min-width: 768px) {
   nav ul {
