@@ -6,12 +6,12 @@ nav {
   top: 0;
   width: 100%;
 
-  ul {
+  .nav__top {
     height: 64px;
     border: $grauC2_hex 1px solid;
     padding: 0 3px 0 3px;
-
   }
+
   a {
     text-decoration: none;
   }
@@ -38,9 +38,7 @@ nav {
     background-color: $grauC2_hex;
     color: $schwarz_hex;
   }
-  .nav__socialmedia>a {
-    margin: 6px;
-  }
+
 
 @import "overlay";
 
@@ -66,22 +64,7 @@ nav {
       flex-grow: 1;
     }
   }
-  //styling des Suchfeldes im overlay
-  .nav__suche {
-    border-bottom: $grauC2_hex 1px solid;
-    color:$weiss_hex;
-  }
-/*  input{
-    border:none;
-    border-radius: 0;
-    &:focus{
-      outline: none;
-    }
-    &:-webkit-autofill {
-      -webkit-box-shadow: 0 0 0px 1000px $schwarz_rgba inset;
-      -webkit-text-fill-color: $weiss_hex
-    }
-  }*/
+
 }
 
 //tablet

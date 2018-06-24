@@ -17,19 +17,20 @@
         <!--Inhalt des Overlays-->
 
         <div id="myNav" class="overlay">
-            <ul class="nav container">
+            <ul class="nav container nav__top">
                 <li class="nav nav__menu item container">
-            <!--Todo: Eventlistener statt inline fkt onclick-->
-            <a href="javascript:void(0)" class="closebtn container" onclick="closeNav()">
-                <img alt="navigation-schliessen" title="navigation-schliessen"
-                     src="assets/navigation_schliessen.svg" class="icon icon__nav icon__nav--menu">
-                <p class="nav__display nav__display--phone">SCHLIESSEN</p>
-            </a>
+                    <!--Todo: Eventlistener statt inline fkt onclick-->
+                    <a href="javascript:void(0)" class="closebtn container" onclick="closeNav()">
+                        <img alt="navigation-schliessen" title="navigation-schliessen"
+                             src="assets/navigation_schliessen.svg" class="icon icon__nav icon__nav--menu">
+                        <p class="nav__display nav__display--phone">SCHLIESSEN</p>
+                    </a>
                 </li>
                 <li class="nav nav__festivallovers item">
                     <a href="#" class="container">
                         <p class="nav__display nav__display--tablet item__hidden">Festival</p>
-                        <img alt="herz" title="herz" src="assets/detail_like_filled.svg" class="icon icon__nav icon__nav--herz">
+                        <img alt="herz" title="herz" src="assets/detail_like_filled.svg"
+                             class="icon icon__nav icon__nav--herz">
                         <p class="nav__display nav__display--tablet item__hidden">Lovers</p>
                     </a>
                 </li>
@@ -56,11 +57,13 @@
                 <a href="#">Magazin</a>
                 <a href="#">News</a>
             </div>
-            <div class="container">
+            <div nav__bottom></div>
+            <ul class="nav container">
                 <!--Suche im Overlay-->
                 <li class="container item nav__suche">
                     <input type="text" id="suche" class="item">
-                    <label class="item" for="suche"><img alt="icon-suche" title="icon-suche" src="assets/navigation_suche.svg"
+                    <label class="item" for="suche"><img alt="icon-suche" title="icon-suche"
+                                                         src="assets/navigation_suche.svg"
                                                          class="icon icon__nav icon__nav--suche"></label>
                 </li>
                 <!-- vom Footer kopiert, li class angepasst-->
@@ -76,64 +79,236 @@
                     <a href="#"><img alt="icon-twitter" title="icon-twitter" src="assets/socialmedia_twitter.svg"
                                      class="icon icon__nav icon__nav--twitter"></a>
                 </li>
-            </div>
+            </ul>
+        </div>
         </div>
         <!--Nav-Teil ohne overlay - nicht sichtbar wenn overlay vorhanden-->
-        <ul class="nav container">
+        <ul class="nav container nav__top">
             <li class="nav nav__menu item">
                 <!--w3 mit span, bei mir wegen alter Logik mit a-->
                 <a class="container" onclick="openNav()">
-                <img alt="navigation-menu-burger" title="navigation-menu-burger"
-                     src="assets/navigation_menu.svg" class="icon icon__nav icon__nav--menu">
-                <p class="nav__display nav__display--phone">MENU</p>
+                    <img alt="navigation-menu-burger" title="navigation-menu-burger"
+                         src="assets/navigation_menu.svg" class="icon icon__nav icon__nav--menu">
+                    <p class="nav__display nav__display--phone">MENU</p>
                 </a>
             </li>
             <li class="nav nav__festivallovers item">
                 <a href="#" class="container">
-                <p class="nav__display nav__display--tablet item__hidden">Festival</p>
-                <img alt="herz" title="herz" src="assets/detail_like_filled.svg" class="icon icon__nav icon__nav--herz">
-                <p class="nav__display nav__display--tablet item__hidden">Lovers</p>
+                    <p class="nav__display nav__display--tablet item__hidden">Festival</p>
+                    <img alt="herz" title="herz" src="assets/detail_like_filled.svg"
+                         class="icon icon__nav icon__nav--herz">
+                    <p class="nav__display nav__display--tablet item__hidden">Lovers</p>
                 </a>
             </li>
             <div class="container">
-            <li class="nav nav__login item">
-                <a href="#" class="container">
-                <img alt="navigation-login" title=navigation-login" src="assets/navigation_login.svg"
-                     class="icon icon__nav icon__nav--login">
-                <p class="nav__display nav__display--desktop item__hidden">LOGIN</p>
-                </a>
-            </li>
-            <li class="nav nav__ticket item">
-                <a href="#" class="container">
-                <img alt="navigation-ticket" title=navigation-ticket" src="assets/navigation_ticketkauf.svg"
-                     class="icon icon__nav icon__nav--ticket">
-                <p class="nav__display nav__display--desktop item__hidden">TICKETS KAUFEN</p>
-                </a>
-            </li>
+                <li class="nav nav__login item">
+                    <a href="#" class="container">
+                        <img alt="navigation-login" title=navigation-login" src="assets/navigation_login.svg"
+                             class="icon icon__nav icon__nav--login">
+                        <p class="nav__display nav__display--desktop item__hidden">LOGIN</p>
+                    </a>
+                </li>
+                <li class="nav nav__ticket item">
+                    <a href="#" class="container">
+                        <img alt="navigation-ticket" title=navigation-ticket" src="assets/navigation_ticketkauf.svg"
+                             class="icon icon__nav icon__nav--ticket">
+                        <p class="nav__display nav__display--desktop item__hidden">TICKETS KAUFEN</p>
+                    </a>
+                </li>
             </div>
         </ul>
     </nav>
-
 </header>
+
+
+<!--eigentliche Seite-->
 <article>
-    <h1>hello</h1>
-    <ul>
-        <li>test element <p>mit absatz</p></li>
-    </ul>
+    <h1>Auf welche Musik stehst du?</h1>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+    </p>
+    <button class="btnschwarz" id="filter_anzeigen">Filter anzeigen</button>
+    <div class="item item__hidden">
+        <button class="btngrau btngrau__jazz">Jazz</button>
+        <button class="btngrau btngrau__hiphop">HipHop</button>
+        <button class="btngrau btngrau__indie">Indie</button>
+        <button class="btngrau btngrau__poprock">Pop & Rock</button>
+        <button class="btngrau btngrau__electronic">Electronic</button>
+        <button class="btnunterstrichen">Mehr Genres</button>
+        <button class="btnweiss">Filter zurücksetzen</button>
+        <button class="btnschwarz">Ergebnis anzeigen</button>
+    </div>
+    <img src="images/rsz_startseite_1.jpg" alt="festivalbild" title="festivalbild" class="image image__breit"/>
+
+    <!-- Magazin -->
+    <section id="magazin">
+        <h2>Magazin</h2>
+        <div class="magazin">
+            <h3>einfach etwas</h3>
+            <p>elis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede
+                justo,
+                fringilla vel, aliquet nec, vulput</p>
+        </div>
+
+        <div class="magazin">
+            <h3>einfach etwas?</h3>
+            <p>elis, ultricies nec, pellenequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra qu
+                tesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo,
+                fringilla vel, aliquet nec, vulput</p>
+        </div>
+
+        <div class="magazin">
+            <h3>einfach etwas mit noch was</h3>
+            <p>elis, ultricies nec, pellentesque eu, equat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in,
+                viverra qu
+                pretium quis, sem. Nuede justo, fringilla vel, aliquet nec, vulput</p>
+        </div>
+
+        <div class="magazin">
+            <h3>einfach etwas tztz</h3>
+            <p>elis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede
+                justo,
+                fringilla vel, aliquet nec, vulput equat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in,
+                viverra
+                qu fringilla vel, aliquet nec, vulput equat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in,
+                viverra qu</p>
+            </p>
+        </div>
+
+        <div class="magazin">
+            <h3>einfach etwas?</h3>
+            <p>elis, ultricies nec, pellenequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra qu
+                tesque eu, pretium quis, sem. Nulla cons</p>
+        </div>
+
+        <div class="magazin">
+            <h3>einfach etwas mit noch was</h3>
+            <p>elis, ultricies nec, pellentesque eu, equat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in,
+                viverra qu
+                pretium quis, sem. Nuede justo, fringilla vel, aliquet nec, vulput</p>
+        </div>
+        <a href="#">
+            <button class="btnweiss">Mehr anzeigen</button>
+        </a>
+
+    </section>
+    <!--Banner-->
+    <img src="images/rsz_banner_mob.jpg" alt="banner" title="banner" class="banner banner__mobile"/>
+    <img src="images/rsz_banner.jpg" alt="banner" title="banner" class="banner banner__desktop"/>
+
+<!--Der Entdeckungen-Teil
+    hier gehören die bunten svg mit player hin-->
+    <section id="entdeckungen">
+        <h2>Entdeckungen</h2>
+        <p>Sei offen für neues und geniesse unerwartete Musikerlebnisse. Höre dir spannende Samples an und entdecke
+            deine Leidenschaften.</p>
+
+        <!--todo: svg mit player einfügen-->
+        <img alt="icon-music_jazz" title="icon-music_jazz" src="assets/music_jazz.svg" class="icon icon__music_jazz">
+        <img alt="icon-music_hiphop" title="icon-music_hiphop" src="assets/music_hiphop.svg" class="icon icon__music_hiphop">
+        <img alt="icon-music_indie" title="icon-music_indie" src="assets/music_indie.svg" class="icon icon__music_indie">
+        <img alt="icon-music_poprock" title="icon-music_poprock" src="assets/music_poprock.svg" class="icon icon__music_poprock">
+        <img alt="icon-music_electronic" title="icon-music_electronic" src="assets/music_electronic.svg" class="icon icon__music_electronic">
+
+        <a href="#">
+            <button class="btnweiss">Mehr Samples</button>
+        </a>
+    </section>
+
+<!--Der news-Teil-->
+    <section id="news">
+        <div class="news">
+            <img src="images/rsz_startseite_bsp_news.jpg" alt="news" title="news" class="news news_image"/>
+            <p class="countdown">24. Juni 2018</p>
+            <p>der die Entscheidung trifft, eine Freude zu genießen, die keine unangenehmen Folgen hat,
+                oder einen, der Schmerz vermeidet, </p>
+            <hr/>
+            <img alt="icon-detail_like" title="icon-detail_like" src="assets/detail_like.svg"
+                 class="icon icon__like">
+            <p>34</p>
+        </div>
+
+        <div class="news">
+            <p class="countdown">24. Juni 2018</p>
+            <p>der die Entscheidung trifft, eine Freude zu genießen, die keine unangenehmen Folgen hat,
+                oder einen, der Schmerz vermeidet, </p>
+            <hr/>
+            <img alt="icon-detail_like_filled" title="icon-detail_like_filled" src="assets/detail_like_filled.svg"
+                 class="icon icon__like_filled">
+            <p>11</p>
+        </div>
+
+        <div class="news">
+            <img src="images/rsz_startseite_bsp_news.jpg" alt="news" title="news" class="news news_image"/>
+            <p class="countdown">24. Juni 2018</p>
+            <p>der die Entscheidung trifft, eine Freude zu genießen, die keine unangenehmen Folgen hat,
+                oder einen, der Schmerz vermeidet, </p>
+            <hr/>
+            <img alt="icon-detail_like" title="icon-detail_like" src="assets/detail_like.svg"
+                 class="icon icon__like">
+            <p>34</p>
+        </div>
+
+        <div class="news">
+            <p class="countdown">24. Juni 2018</p>
+            <p>der die Entscheidung trifft, eine Freude zu genießen, die keine unangenehmen Folgen hat,
+                oder einen, der Schmerz vermeidet, </p>
+            <hr/>
+            <img alt="icon-detail_like_filled" title="icon-detail_like_filled" src="assets/detail_like_filled.svg"
+                 class="icon icon__like_filled">
+            <p>11</p>
+        </div>
+
+        <div class="news">
+            <p class="countdown">24. Juni 2018</p>
+            <p>der die Entscheidung trifft, eine Freude zu genießen, die keine unangenehmen Folgen hat,
+                oder einen, der Schmerz vermeidet, </p>
+            <hr/>
+            <img alt="icon-detail_like_filled" title="icon-detail_like_filled" src="assets/detail_like_filled.svg"
+                 class="icon icon__like_filled">
+            <p>11</p>
+        </div>
+
+        <div class="news">
+            <img src="images/rsz_startseite_bsp_news.jpg" alt="news" title="news" class="news news_image"/>
+            <p class="countdown">24. Juni 2018</p>
+            <p>der die Entscheidung trifft, eine Freude zu genießen, die keine unangenehmen Folgen hat,
+                oder einen, der Schmerz vermeidet, </p>
+            <hr/>
+            <img alt="icon-detail_like" title="icon-detail_like" src="assets/detail_like.svg"
+                 class="icon icon__like">
+            <p>34</p>
+        </div>
+
+        <div class="news">
+        <img src="images/rsz_startseite_bsp_news.jpg" alt="news" title="news" class="news news_image"/>
+        <p class="countdown">24. Juni 2018</p>
+        <p>der die Entscheidung trifft, eine Freude zu genießen, die keine unangenehmen Folgen hat,
+            oder einen, der Schmerz vermeidet, </p>
+        <hr/>
+        <img alt="icon-detail_like" title="icon-detail_like" src="assets/detail_like.svg"
+             class="icon icon__like">
+        <p>34</p>
+        </div>
+
+        <a href="#">
+            <button class="btnweiss">Mehr Anzeigen</button>
+        </a>
+    </section>
+
 </article>
 
 
 <footer>
     <ul class="footer container">
 
-            <li class="footer footer__menu item">
-                <a href="#">FESTIVALS</a>
-                <a href="#">MAGAZIN</a>
-                <a href="#">NEWS</a>
-            </li>
+        <li class="footer footer__menu item">
+            <a href="#">FESTIVALS</a>
+            <a href="#">MAGAZIN</a>
+            <a href="#">NEWS</a>
+        </li>
         <li class="footer footer__socialmedia item">
             <a href="#"><img alt="icon-facebook" title="icon-facebook" src="assets/socialmedia_facebook.svg"
-                                 class="icon icon__footer icon__footer--facebook"></a>
+                             class="icon icon__footer icon__footer--facebook"></a>
             <a href="#"><img alt="icon-instagram" title="icon-instagram" src="assets/socialmedia_instagram.svg"
                              class="icon icon__footer icon__footer--instagram"></a>
             <a href="#"><img alt="icon-snapchat" title="icon-snapchat" src="assets/socialmedia_snapchat.svg"
@@ -146,9 +321,9 @@
         <li class="footer footer__up item">
             <a href="#pagetop" class="container">
                 <p class="item__hidden">BACK TO TOP</p>
-        <img alt="icon-backtotop" title="icon-backtotop" src="assets/navigation_backtotop.svg"
-        class="icon icon__footer icon__footer--backtotop">
-        </a>
+                <img alt="icon-backtotop" title="icon-backtotop" src="assets/navigation_backtotop.svg"
+                     class="icon icon__footer icon__footer--backtotop">
+            </a>
         </li>
     </ul>
 </footer>

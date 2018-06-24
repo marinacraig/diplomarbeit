@@ -1,7 +1,7 @@
 // overlay
 
 .overlay {
-  height: 100%;
+  height: 100vh;
   width: 0;
   position: fixed;
   z-index: 1;
@@ -53,6 +53,58 @@
     flex-grow: 1;
   }
 }
+// suche und socialmedia ohne border, unten
+
+.nav__bottom {
+
+}
+.nav__socialmedia>a {
+  margin: 6px;
+}
+
+//flexbox unterer Teil - anders für phone und tablet
+.nav__bottom{
+  margin-top: auto;
+  flex-shrink: 0;
+}
+
+/*
+.overlay .container .nav__bottom {
+  position: fixed;
+  bottom:0;
+  height: 112px;
+  padding: 0 16px;
+  background-color: #3F51B5;
+}
+.nav__bottom .item {
+
+}
+//desktop li social re suche
+.nav__socialmedia{
+  order: 11;
+}
+.nav__suche{
+  order: 10;
+}
+*/
+
+
+//styling des Suchfeldes im overlay
+.nav__suche {
+  border-bottom: $grauC2_hex 1px solid;
+  color:$weiss_hex;
+}
+/*  input{
+    border:none;
+    border-radius: 0;
+    &:focus{
+      outline: none;
+    }
+    &:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0px 1000px $schwarz_rgba inset;
+      -webkit-text-fill-color: $weiss_hex
+    }
+  }*/
 
 //tablet
 @media screen and (min-width: 768px) {

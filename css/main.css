@@ -35,6 +35,25 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
+  /*
+.overlay .container .nav__bottom {
+  position: fixed;
+  bottom:0;
+  height: 112px;
+  padding: 0 16px;
+  background-color: #3F51B5;
+}
+.nav__bottom .item {
+
+}
+//desktop li social re suche
+.nav__socialmedia{
+  order: 11;
+}
+.nav__suche{
+  order: 10;
+}
+*/
   /*  input{
     border:none;
     border-radius: 0;
@@ -46,7 +65,7 @@ nav {
       -webkit-text-fill-color: $weiss_hex
     }
   }*/ }
-  nav ul {
+  nav .nav__top {
     height: 64px;
     border: #C2C2C2 1px solid;
     padding: 0 3px 0 3px; }
@@ -66,10 +85,8 @@ nav {
   nav .nav__ticket > a:hover, nav .nav__login > a:hover {
     background-color: #C2C2C2;
     color: #000; }
-  nav .nav__socialmedia > a {
-    margin: 6px; }
   nav .overlay {
-    height: 100%;
+    height: 100vh;
     width: 0;
     position: fixed;
     z-index: 1;
@@ -104,6 +121,14 @@ nav {
     flex-grow: 4.5; }
   nav .overlay .item .nav__login, nav .overlay .item .nav__ticket {
     flex-grow: 1; }
+  nav .nav__socialmedia > a {
+    margin: 6px; }
+  nav .nav__bottom {
+    margin-top: auto;
+    flex-shrink: 0; }
+  nav .nav__suche {
+    border-bottom: #C2C2C2 1px solid;
+    color: #FFF; }
   @media screen and (min-width: 768px) {
     nav .overlay-content {
       font-size: 3.69230769rem; }
@@ -127,9 +152,6 @@ nav {
     flex-grow: 4.5; }
   nav .item .nav__login, nav .item .nav__ticket {
     flex-grow: 1; }
-  nav .nav__suche {
-    border-bottom: #C2C2C2 1px solid;
-    color: #FFF; }
 
 @media screen and (min-width: 768px) {
   nav ul {
