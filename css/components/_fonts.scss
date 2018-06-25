@@ -1,28 +1,115 @@
 @import url('https://fonts.googleapis.com/css?family=Bitter|Encode+Sans+Semi+Expanded|Niconne');
 
-html{
-  font-size: 13px;
+html {
+  font-size: 17px;
 }
+
 /*
+für html 13px:
 17px=1.30769230rem;
+20px=1.53846153rem;
+24px=1.84615384rem;
 32px=2.46153846rem;
 48px=3.69230769rem;
 56px=4.30769230rem;
+96px=7.38461538rem;
+144px=11.0769230rem;
+
+für html 17px:
+13	0.7647058824rem
+17	1rem
+20	1.176470588rem
+24	1.411764706rem
+32	1.882352941rem
+48	2.823529412rem
+56	3.294117647rem
+96	5.647058824rem
+144	8.470588235rem
  */
 
-
 //statt Proxima Nova:
-body{
+body {
   font-family: 'Encode Sans Semi Expanded', sans-serif;
 }
 
 // statt Adelle wird Bitter eingesetzt
-h1, h2, h3, h4, h5, h6, .overlay-content, nav .nav__suche {
+h1, h2, h3, h4, h5, h6{
   font-family: 'Bitter', serif;
 }
 
+h1 {
+  font-size: 1.882352941rem; //32
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.411764706rem; //24
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.176470588rem; //20
+  font-weight: bold;
+}
+
+//für grosses Festival
+.festival {
+  font-size: 2.823529412rem; //48
+  font-weight: bold;
+}
+
+
 //Navigation Schrift von Festival Lovers ist kein Icon bzw. Bild
-.nav__festivallovers{
+.nav__festivallovers {
   font-family: 'Niconne', cursive;
   font-size: 1.8rem;
+}
+
+//Todo: class für tabs sobald klar ist wo diese sind
+//Buttons Tabs header
+header, button {
+  font-weight: bold;
+}
+//Breadcrumb, Zusatzinfos (Datum, Likes)
+/*
+
+.irgeneine neue Klasse {
+  font-size: 0,7647058824rem; //13
+}
+*/
+
+//tablet
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 2.823529412rem; //48
+  }
+  h2 {
+    font-size: 1.882352941rem; //32
+  }
+  h3 {
+    font-size: 1.176470588rem; //20
+  }
+  //für grosses Festival
+  .festival {
+    font-size: 5.647058824rem; //96
+  }
+}
+
+
+//laptop
+@media screen and (min-width: 1200px) {
+  h1 {
+    font-size: 3.294117647rem; //56
+  }
+  h2 {
+
+  }
+  h3 {
+    font-size: 1.176470588rem; //20
+  }
+  //für grosses Festival
+  .festival {
+    font-size: 8.470588235rem; //144
+  }
+
 }

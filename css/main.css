@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Bitter|Encode+Sans+Semi+Expanded|Niconne");
 * {
   margin: 0;
@@ -7,23 +8,82 @@ html {
   color: #000; }
 
 html {
-  font-size: 13px; }
+  font-size: 17px; }
 
 /*
+für html 13px:
 17px=1.30769230rem;
+20px=1.53846153rem;
+24px=1.84615384rem;
 32px=2.46153846rem;
 48px=3.69230769rem;
 56px=4.30769230rem;
+96px=7.38461538rem;
+144px=11.0769230rem;
+
+für html 17px:
+13	0.7647058824rem
+17	1rem
+20	1.176470588rem
+24	1.411764706rem
+32	1.882352941rem
+48	2.823529412rem
+56	3.294117647rem
+96	5.647058824rem
+144	8.470588235rem
  */
 body {
   font-family: 'Encode Sans Semi Expanded', sans-serif; }
 
-h1, h2, h3, h4, h5, h6, .overlay-content, nav .nav__suche {
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Bitter', serif; }
+
+h1 {
+  font-size: 1.882352941rem;
+  font-weight: bold; }
+
+h2 {
+  font-size: 1.411764706rem;
+  font-weight: bold; }
+
+h3 {
+  font-size: 1.176470588rem;
+  font-weight: bold; }
+
+.festival {
+  font-size: 2.823529412rem;
+  font-weight: bold; }
 
 .nav__festivallovers {
   font-family: 'Niconne', cursive;
   font-size: 1.8rem; }
+
+header, button {
+  font-weight: bold; }
+
+/*
+
+.irgeneine neue Klasse {
+  font-size: 0,7647058824rem; //13
+}
+*/
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 2.823529412rem; }
+  h2 {
+    font-size: 1.882352941rem; }
+  h3 {
+    font-size: 1.176470588rem; }
+  .festival {
+    font-size: 5.647058824rem; } }
+
+@media screen and (min-width: 1200px) {
+  h1 {
+    font-size: 3.294117647rem; }
+  h3 {
+    font-size: 1.176470588rem; }
+  .festival {
+    font-size: 8.470588235rem; } }
 
 img {
   margin: 12px; }
@@ -34,6 +94,25 @@ svg {
   margin: 12px; }
   svg .icon__nav .icon__footer {
     height: 32px; }
+
+.icon__music {
+  height: 120px;
+  width: 100%; }
+
+.icon__music--jazz {
+  fill: #D81B60; }
+
+.icon__music--hiphop {
+  fill: #FDD835; }
+
+.icon__music--indie {
+  fill: #00D79F; }
+
+.icon__music--poprock {
+  fill: #3949AB; }
+
+.icon__music--electronic {
+  fill: #5E35B1; }
 
 nav {
   font-size: 1.30769230rem;
@@ -241,7 +320,7 @@ footer {
 }
 
 */
-article {
+#pagetop {
   margin-top: 64px; }
 
 /*

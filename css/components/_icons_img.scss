@@ -1,0 +1,111 @@
+img {
+  //Todo: falls Bild grösser anpassen ohne verziehen
+
+  .image__big {
+    height: 176px;
+    width: 375px;
+  }
+  .banner__mobile {
+
+  }
+  .news_image {
+    height: 232px;
+    width: 343px;
+  }
+  //Todo: Bildergalerie: S. 16ff Styleguide, ggf Klassen anpassen; ab seite 18 noch nichts erfasst
+  .gallery {
+    width: 343px;
+    height: 232px;
+  }
+  .teaser {
+    width: 128px;
+    height: 128px;
+  }
+  .teaser__big {
+    width: 375px;
+    height: 337px;
+  }
+  .profile {
+    width: 110px;
+    height: 110px;
+  }
+}
+
+svg {
+  margin: 12px;
+  .icon__nav .icon__footer {
+    height: 32px;
+  }
+}
+
+//die farbigen waves auf der Hauptseite
+.icon__music {
+  height: 120px;
+  width: 100%;
+}
+
+.icon__music--jazz {
+  fill: $pink_hex;
+}
+
+.icon__music--hiphop {
+  fill: $gelb_hex;
+}
+
+.icon__music--indie {
+  fill: $mint_hex;
+}
+
+.icon__music--poprock {
+  fill: $blau_hex;
+}
+
+.icon__music--electronic {
+  fill: $violett_hex;
+}
+
+//tablet
+@media screen and (min-width: 768px) {
+  img {
+    .image__big {
+      height: 350px;
+      width: 768px;
+    }
+    .news_image {
+      height: 144px;
+      width: 221px;
+    }
+    .gallery {
+      height: 534px;
+      width: 352px;
+    }
+    .teaser {
+      width: 312px;
+    }
+    .teaser__big {
+      width: 768px;
+      height: 648px;
+    }
+  }
+}
+
+//laptop
+@media screen and (min-width: 1200px) {
+  img {
+    .image__big {
+      height: 450px;
+      width: 1440px;
+    }
+    .banner__desktop {
+
+    }
+    .gallery {
+      width: 593px;
+      height: 392px;
+    }
+    .teaser__big {
+      width: 1440px;
+      height: 1289px;
+    }
+  }
+}

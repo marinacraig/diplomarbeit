@@ -5,15 +5,17 @@
 
 @import 'components/colors';
 @import 'components/fonts';
-@import "components/icons";
+@import "components/icons_img";
 @import "components/buttons";
 @import 'components/navigation';
 @import "components/footer";
 @import 'components/grid';
 
-article {
+#pagetop {
   margin-top: 64px;
 }
+//Styleguide, s. 9 Absätze
+
 
 /*
 //tablet
