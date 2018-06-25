@@ -28,11 +28,17 @@
   display: block;
   transition: 0.3s;
 }
+.icon__nav, .icon__footer{
+  fill: $weiss_hex;
+}
 
 .overlay a:hover, .overlay a:focus {
   color: $schwarz_hex;
   background-color: $weiss_hex;
   width: 100%;
+  .icon__nav{
+    fill: $schwarz_hex;
+  }
 }
 //x auf der linken Seite
 .overlay .closebtn {
@@ -55,9 +61,7 @@
 }
 // suche und socialmedia ohne border, unten
 
-.nav__bottom {
 
-}
 .nav__socialmedia>a {
   margin: 6px;
 }
@@ -68,43 +72,13 @@
   flex-shrink: 0;
 }
 
-/*
-.overlay .container .nav__bottom {
-  position: fixed;
-  bottom:0;
-  height: 112px;
-  padding: 0 16px;
-  background-color: #3F51B5;
-}
-.nav__bottom .item {
-
-}
-//desktop li social re suche
-.nav__socialmedia{
-  order: 11;
-}
-.nav__suche{
-  order: 10;
-}
-*/
-
 
 //styling des Suchfeldes im overlay
 .nav__suche {
   border-bottom: $grauC2_hex 1px solid;
   color:$weiss_hex;
 }
-/*  input{
-    border:none;
-    border-radius: 0;
-    &:focus{
-      outline: none;
-    }
-    &:-webkit-autofill {
-      -webkit-box-shadow: 0 0 0px 1000px $schwarz_rgba inset;
-      -webkit-text-fill-color: $weiss_hex
-    }
-  }*/
+
 
 //tablet
 @media screen and (min-width: 768px) {

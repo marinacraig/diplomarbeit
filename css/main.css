@@ -30,41 +30,16 @@ img {
   img .icon__nav .icon__footer {
     height: 32px; }
 
+svg {
+  margin: 12px; }
+  svg .icon__nav .icon__footer {
+    height: 32px; }
+
 nav {
   font-size: 1.30769230rem;
   position: fixed;
   top: 0;
-  width: 100%;
-  /*
-.overlay .container .nav__bottom {
-  position: fixed;
-  bottom:0;
-  height: 112px;
-  padding: 0 16px;
-  background-color: #3F51B5;
-}
-.nav__bottom .item {
-
-}
-//desktop li social re suche
-.nav__socialmedia{
-  order: 11;
-}
-.nav__suche{
-  order: 10;
-}
-*/
-  /*  input{
-    border:none;
-    border-radius: 0;
-    &:focus{
-      outline: none;
-    }
-    &:-webkit-autofill {
-      -webkit-box-shadow: 0 0 0px 1000px $schwarz_rgba inset;
-      -webkit-text-fill-color: $weiss_hex
-    }
-  }*/ }
+  width: 100%; }
   nav .nav__top {
     height: 64px;
     border: #C2C2C2 1px solid;
@@ -76,15 +51,23 @@ nav {
   nav .nav__menu > a, nav .nav__festivallovers > a {
     text-decoration: none;
     color: #000; }
+  nav .icon__nav--menu {
+    fill: #000; }
   nav .nav__menu > a:hover {
     color: #767676; }
+    nav .nav__menu > a:hover .icon__nav--menu {
+      fill: #767676; }
   nav .nav__login > a, nav .nav__ticket > a {
     text-decoration: none;
     color: #C2C2C2;
     border-left: #C2C2C2 1px solid; }
+  nav .icon__nav--login, nav .icon__nav--ticket {
+    fill: #C2C2C2; }
   nav .nav__ticket > a:hover, nav .nav__login > a:hover {
     background-color: #C2C2C2;
     color: #000; }
+    nav .nav__ticket > a:hover .icon__nav--login, nav .nav__ticket > a:hover .icon__nav--ticket, nav .nav__login > a:hover .icon__nav--login, nav .nav__login > a:hover .icon__nav--ticket {
+      fill: #000; }
   nav .overlay {
     height: 100vh;
     width: 0;
@@ -107,10 +90,14 @@ nav {
     color: #FFF;
     display: block;
     transition: 0.3s; }
+  nav .icon__nav, nav .icon__footer {
+    fill: #FFF; }
   nav .overlay a:hover, nav .overlay a:focus {
     color: #000;
     background-color: #FFF;
     width: 100%; }
+    nav .overlay a:hover .icon__nav, nav .overlay a:focus .icon__nav {
+      fill: #000; }
   nav .overlay .closebtn {
     font-size: 1.30769230rem; }
   nav .overlay .item .item__hidden {
@@ -177,6 +164,8 @@ footer {
   footer a {
     text-decoration: none;
     color: #767676; }
+  footer .icon__footer {
+    fill: #767676; }
   footer li {
     list-style-type: none; }
   footer .footer__menu > a {

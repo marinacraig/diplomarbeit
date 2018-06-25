@@ -23,10 +23,16 @@ nav {
   .nav__menu > a, .nav__festivallovers > a {
     text-decoration: none;
     color: $schwarz_hex;
-  }
 
+  }
+  .icon__nav--menu{
+    fill:$schwarz_hex;
+  }
   .nav__menu > a:hover {
     color: $grau76_hex;
+    .icon__nav--menu{
+      fill:$grau76_hex;
+    }
   }
 
   .nav__login > a, .nav__ticket > a {
@@ -34,9 +40,15 @@ nav {
     color: $grauC2_hex;
     border-left: $grauC2_hex 1px solid;
   }
+  .icon__nav--login, .icon__nav--ticket{
+    fill:$grauC2_hex;
+  }
   .nav__ticket > a:hover, .nav__login > a:hover {
     background-color: $grauC2_hex;
     color: $schwarz_hex;
+    .icon__nav--login, .icon__nav--ticket{
+      fill:$schwarz_hex;
+    }
   }
 
 
