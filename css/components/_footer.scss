@@ -1,11 +1,9 @@
 footer{
-  font-size: 1.30769230rem;
   color: $grau76_hex;
-  ul {
-    height: 112px;
-    border: $grauC2_hex 1px solid;
-    padding: 0 16px;
-  }
+  max-height: 112px;
+  min-height: 64px;
+  border: $grauC2_hex 1px solid;
+  padding: 0 16px;
 
   a {
     text-decoration: none;
@@ -19,10 +17,10 @@ footer{
 
   }
   .footer__menu>a {
-    margin: 0 10px;
+    //margin: 0 10px;
   }
   .footer__socialmedia>a, .footer__up>a{
-    margin: 6px;
+
   }
 
   //flexbox:
@@ -32,7 +30,7 @@ footer{
     flex-direction: row;
     //tablet desktop flex-wrap: nowrap
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     //nur phone nötig, da 2 Zeilen
     align-content: center;
@@ -53,14 +51,13 @@ footer{
 
 
 //tablet
-@media screen and (min-width : 768px) {
+@media screen and (min-width : 376px) {
   footer{
-    ul {
-      height: 64px;
-      padding: 0 24px;
-    }
+
+    padding: 0 24px;
+
     .container{
-      flex-wrap: nowrap;
+      //flex-wrap: nowrap; eingeblendet furchtbar
     }
     .item{
       .item__hidden{
@@ -78,11 +75,10 @@ footer{
 
 
 //laptop
-@media screen and (min-width : 1200px) {
+@media screen and (min-width : 769px) {
   footer{
-    ul {
-      padding: 0 120px;
-    }
+    padding: 0 120px;
+
   }
 
 }

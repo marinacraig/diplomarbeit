@@ -20,3 +20,5 @@ verwendet.
 Flexbox wurde wegen dem Wechsel der Reihenfolgen im 
 Footer und verwendet. Daher konnten nicht alle px-Abstände 
 zu 100 % eingehalten werden.
+Laut Styleguide ist Header bold (s. 6), bei Navigationsbeschreibung
+ jedoch nicht. Ich habe mich für bold entschieden.

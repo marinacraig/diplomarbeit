@@ -1,7 +1,6 @@
 // Navigation weiss, ul li in nav verschachtelt, da diese in der Regel immer anders als andere ul li
 nav {
   //CSS für Nav mit weissem Hintergrund
-  font-size: 1.30769230rem;
   position: fixed;
   top: 0;
   width: 100%;
@@ -80,7 +79,7 @@ nav {
 }
 
 //tablet
-@media screen and (min-width: 768px) {
+@media screen and (min-width : 376px) {
   nav {
     ul {
       padding: 0 24px 0 12px;
@@ -97,7 +96,7 @@ nav {
 }
 
 //laptop
-@media screen and (min-width: 1200px) {
+@media screen and (min-width : 769px) {
   nav {
     ul {
       padding: 0 20px 0 3px;

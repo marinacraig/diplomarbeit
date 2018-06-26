@@ -18,7 +18,7 @@
   width: 100%;
   text-align: center;
   //mobile schriftgrösse
-  font-size: 2.46153846rem;
+  font-size: 1.882352941rem; //32
   font-weight: bold;
 }
 
@@ -43,7 +43,6 @@
 //x auf der linken Seite
 .overlay .closebtn {
   //Schriftgrösse von nav
-  font-size: 1.30769230rem;
 }
 .overlay .item {
   .item__hidden {
@@ -62,15 +61,11 @@
 // suche und socialmedia ohne border, unten
 
 
-.nav__socialmedia>a {
-  margin: 6px;
-}
-
 //flexbox unterer Teil - anders für phone und tablet
-.nav__bottom{
+/*.nav__bottom{
   margin-top: auto;
   flex-shrink: 0;
-}
+}*/
 
 
 //styling des Suchfeldes im overlay
@@ -81,10 +76,10 @@
 
 
 //tablet
-@media screen and (min-width: 768px) {
+@media screen and (min-width : 376px) {
 
     .overlay-content {
-      font-size: 3.69230769rem;
+      font-size: 2.823529412rem; //17
     }
   .overlay .item {
     .nav__display--tablet.item__hidden {
@@ -94,14 +89,17 @@
 }
 
 //laptop
-@media screen and (min-width: 1200px) {
+@media screen and (min-width : 769px) {
 
     .overlay-content {
-      font-size: 4.30769230rem;
+      font-size: 3.294117647rem;//56
     }
-  .overlay .item {
-    .nav__display--desktop.item__hidden {
-      display: flex;
+
+/*    .nav__suche{
+      order:10;
     }
-  }
+    .nav__socialmedia{
+      order:9;
+    }*/
+
 }

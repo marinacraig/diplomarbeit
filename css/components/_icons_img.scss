@@ -45,7 +45,7 @@ img {
 svg {
   margin: 12px;
   .icon__nav .icon__footer {
-    height: 32px;
+    width: 32px;
   }
 }
 
@@ -76,7 +76,7 @@ svg {
 }
 
 //tablet
-@media screen and (min-width: 768px) {
+@media screen and (min-width : 376px) {
   img {
     .image__big {
       height: 350px;
@@ -108,7 +108,7 @@ svg {
 }
 
 //laptop
-@media screen and (min-width: 1200px) {
+@media screen and (min-width : 769px) {
   img {
     .image__big {
       height: 450px;

@@ -1,0 +1,7 @@
+//Styleguide s. 31, schrift
+.breadcrumb {
+  color: $grauC2_hex;
+  &:hover{
+    color: $schwarz_hex
+  }
+}

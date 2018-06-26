@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Bitter|Encode+Sans+Semi+Expanded|Niconne');
 
+
 html {
   font-size: 17px;
 }
@@ -68,18 +69,16 @@ h3 {
 //Todo: class für tabs sobald klar ist wo diese sind
 //Buttons Tabs header
 header, button {
-  font-weight: bold;
+  font-weight: bold; //bold laut Schriften, im Nav Design jedoch Regular
 }
 //Breadcrumb, Zusatzinfos (Datum, Likes)
-/*
-
-.irgeneine neue Klasse {
-  font-size: 0,7647058824rem; //13
+.breadcrumb {
+  font-size: 0.7647058824rem; //13
 }
-*/
+
 
 //tablet
-@media screen and (min-width: 768px) {
+@media screen and (min-width : 376px) {
   h1 {
     font-size: 2.823529412rem; //48
   }
@@ -97,7 +96,7 @@ header, button {
 
 
 //laptop
-@media screen and (min-width: 1200px) {
+@media screen and (min-width : 769px) {
   h1 {
     font-size: 3.294117647rem; //56
   }

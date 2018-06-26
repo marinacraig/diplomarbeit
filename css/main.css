@@ -67,7 +67,7 @@ header, button {
   font-size: 0,7647058824rem; //13
 }
 */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 376px) {
   h1 {
     font-size: 2.823529412rem; }
   h2 {
@@ -77,7 +77,7 @@ header, button {
   .festival {
     font-size: 5.647058824rem; } }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 769px) {
   h1 {
     font-size: 3.294117647rem; }
   h3 {
@@ -120,7 +120,7 @@ img .profile {
 svg {
   margin: 12px; }
   svg .icon__nav .icon__footer {
-    height: 32px; }
+    width: 32px; }
 
 .icon__music {
   height: 120px;
@@ -141,7 +141,7 @@ svg {
 .icon__music--electronic {
   fill: #5E35B1; }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 376px) {
   img .image__big {
     height: 350px;
     width: 768px; }
@@ -161,7 +161,7 @@ svg {
   img .teaser__share {
     width: 534px; } }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 769px) {
   img .image__big {
     height: 450px;
     width: 1440px; }
@@ -180,10 +180,13 @@ svg {
     width: 592px; } }
 
 nav {
-  font-size: 1.30769230rem;
   position: fixed;
   top: 0;
-  width: 100%; }
+  width: 100%;
+  /*.nav__bottom{
+  margin-top: auto;
+  flex-shrink: 0;
+}*/ }
   nav .nav__top {
     height: 64px;
     border: #C2C2C2 1px solid;
@@ -227,7 +230,7 @@ nav {
     top: 25%;
     width: 100%;
     text-align: center;
-    font-size: 2.46153846rem;
+    font-size: 1.882352941rem;
     font-weight: bold; }
   nav .overlay a {
     text-decoration: none;
@@ -242,8 +245,6 @@ nav {
     width: 100%; }
     nav .overlay a:hover .icon__nav, nav .overlay a:focus .icon__nav {
       fill: #000; }
-  nav .overlay .closebtn {
-    font-size: 1.30769230rem; }
   nav .overlay .item .item__hidden {
     display: none; }
   nav .overlay .item .nav__menu {
@@ -252,24 +253,24 @@ nav {
     flex-grow: 4.5; }
   nav .overlay .item .nav__login, nav .overlay .item .nav__ticket {
     flex-grow: 1; }
-  nav .nav__socialmedia > a {
-    margin: 6px; }
-  nav .nav__bottom {
-    margin-top: auto;
-    flex-shrink: 0; }
   nav .nav__suche {
     border-bottom: #C2C2C2 1px solid;
     color: #FFF; }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 376px) {
     nav .overlay-content {
-      font-size: 3.69230769rem; }
+      font-size: 2.823529412rem; }
     nav .overlay .item .nav__display--tablet.item__hidden {
       display: flex; } }
-  @media screen and (min-width: 1200px) {
-    nav .overlay-content {
-      font-size: 4.30769230rem; }
-    nav .overlay .item .nav__display--desktop.item__hidden {
-      display: flex; } }
+  @media screen and (min-width: 769px) {
+    nav {
+      /*    .nav__suche{
+      order:10;
+    }
+    .nav__socialmedia{
+      order:9;
+    }*/ }
+      nav .overlay-content {
+        font-size: 3.294117647rem; } }
   nav .container, nav .overlay .container {
     display: flex;
     flex-direction: row;
@@ -284,13 +285,13 @@ nav {
   nav .item .nav__login, nav .item .nav__ticket {
     flex-grow: 1; }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 376px) {
   nav ul {
     padding: 0 24px 0 12px; }
   nav .item .nav__display--tablet.item__hidden {
     display: flex; } }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 769px) {
   nav ul {
     padding: 0 20px 0 3px; }
   nav li {
@@ -299,12 +300,11 @@ nav {
     display: flex; } }
 
 footer {
-  font-size: 1.30769230rem;
-  color: #767676; }
-  footer ul {
-    height: 112px;
-    border: #C2C2C2 1px solid;
-    padding: 0 16px; }
+  color: #767676;
+  max-height: 112px;
+  min-height: 64px;
+  border: #C2C2C2 1px solid;
+  padding: 0 16px; }
   footer a {
     text-decoration: none;
     color: #767676; }
@@ -312,15 +312,11 @@ footer {
     fill: #767676; }
   footer li {
     list-style-type: none; }
-  footer .footer__menu > a {
-    margin: 0 10px; }
-  footer .footer__socialmedia > a, footer .footer__up > a {
-    margin: 6px; }
   footer .container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     align-content: center; }
   footer .item .item__hidden {
@@ -330,21 +326,18 @@ footer {
   footer .footer__up {
     order: 4; }
 
-@media screen and (min-width: 768px) {
-  footer ul {
-    height: 64px;
+@media screen and (min-width: 376px) {
+  footer {
     padding: 0 24px; }
-  footer .container {
-    flex-wrap: nowrap; }
-  footer .item .item__hidden {
-    display: flex; }
-  footer .footer__socialmedia {
-    order: 4; }
-  footer .footer__up {
-    order: 5; } }
+    footer .item .item__hidden {
+      display: flex; }
+    footer .footer__socialmedia {
+      order: 4; }
+    footer .footer__up {
+      order: 5; } }
 
-@media screen and (min-width: 1200px) {
-  footer ul {
+@media screen and (min-width: 769px) {
+  footer {
     padding: 0 120px; } }
 
 /*
@@ -388,23 +381,21 @@ footer {
 #pagetop {
   padding-top: 64px; }
 
+.inklmargin {
+  margin: 0 16px; }
+
+@media screen and (min-width: 376px) {
+  .inklmargin {
+    margin: 0 24px; } }
+
+@media screen and (min-width: 769px) {
+  .inklmargin {
+    margin: 0 120px; } }
+
 /*
-meine def alt:
+
 //tablet
-@media screen and (min-width : 768px) {
-
-}
-
-
-//laptop
-@media screen and (min-width : 1200px) {
-
-}
-
-
-neu:
-//tablet
-@media screen and (min-width : 276px) {
+@media screen and (min-width : 376px) {
 
 }
 
@@ -416,19 +407,7 @@ neu:
 //TV
 @media screen and (min-width : 1441px) {
 
-}
-
-//Styleguide:
-//Smartphone:
-@media screen and (max-width : 375px) {
-
-}
-//Tablet:
-@media screen and (max-width : 768px) {
-
-}
-//Desktop:
-@media screen and (max-width : 1440px) {
+// Todo: Ab 1600 Pixel Breite wächst das Design nicht mehr mit (Ausnahme ist die Linie des Header, die immer über die komplette Viewport Breite geht). Der Inhalt ist zentriert angeordnet.
 
 }
 

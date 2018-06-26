@@ -11,29 +11,44 @@
 @import "components/footer";
 @import 'components/grid';
 
+
+
 #pagetop {
   padding-top: 64px;
 }
+
+.inklmargin {
+  margin: 0 16px;
+}
+
 //Styleguide, s. 9 Absätze
 
 
-/*
-meine def alt:
 //tablet
-@media screen and (min-width : 768px) {
-
+@media screen and (min-width : 376px) {
+  .inklmargin {
+    margin: 0 24px;
+  }
 }
 
 
 //laptop
-@media screen and (min-width : 1200px) {
+@media screen and (min-width : 769px) {
+  .inklmargin {
+    margin: 0 120px;
+  }
+}
+//TV
+@media screen and (min-width : 1441px) {
+
+  // Todo: Ab 1600 Pixel Breite wächst das Design nicht mehr mit (Ausnahme ist die Linie des Header, die immer über die komplette Viewport Breite geht). Der Inhalt ist zentriert angeordnet.
 
 }
 
+/*
 
-neu:
 //tablet
-@media screen and (min-width : 276px) {
+@media screen and (min-width : 376px) {
 
 }
 
@@ -45,19 +60,7 @@ neu:
 //TV
 @media screen and (min-width : 1441px) {
 
-}
-
-//Styleguide:
-//Smartphone:
-@media screen and (max-width : 375px) {
-
-}
-//Tablet:
-@media screen and (max-width : 768px) {
-
-}
-//Desktop:
-@media screen and (max-width : 1440px) {
+// Todo: Ab 1600 Pixel Breite wächst das Design nicht mehr mit (Ausnahme ist die Linie des Header, die immer über die komplette Viewport Breite geht). Der Inhalt ist zentriert angeordnet.
 
 }
 
