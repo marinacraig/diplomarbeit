@@ -15,7 +15,8 @@
 .overlay-content {
   position: relative;
   top: 25%;
-  width: 100%;
+  bottom: 30%;
+  width: 100vw;
   text-align: center;
   //mobile schriftgrösse
   font-size: 1.882352941rem; //32
@@ -60,19 +61,20 @@
 }
 // suche und socialmedia ohne border, unten
 
-
-//flexbox unterer Teil - anders für phone und tablet
-/*.nav__bottom{
-  margin-top: auto;
-  flex-shrink: 0;
-}*/
-
+.nav__bottom{
+  position: relative;
+  top: 40%; //wo beginnt es, ggf noch anpassen
+  bottom: 25%; //abstand von unten, ggf noch anpassen
+  width: 100%;
+  //text-align: center; // mehr in die Mitte
+}
 
 //styling des Suchfeldes im overlay
 .nav__suche {
   border-bottom: $grauC2_hex 1px solid;
   color:$weiss_hex;
 }
+
 
 
 //tablet

@@ -1,3 +1,10 @@
+@import "colors";
+
+button:not(.btnunterstrichen){
+  text-transform: uppercase;
+  text-decoration: none; // falls button mit <a> auf etwas verlinkt ist
+}
+
 .btngrau{
 
 }
@@ -11,11 +18,38 @@
 .btnunterstrichen{
 
 }
-.btnweiss{
-  //mind. einer verlinkt auf andere HTML-Seite
 
-}
+//Primarybutton, Mobile über die ganze Breite
 .btnschwarz{
+  font-weight: bold;
+  height: 48px;
+  background-color: $schwarz_hex;
+  color: $weiss_hex;
+  max-width: 343px;
+  width: 100vw;
+  margin: auto 32px;
+
+  &:hover{
+    background-color: $grau76_hex;
+  }
+
 
 }
+
+
+//Secondrybutton, Text kann verlinkt sein
+.btnweiss{
+  font-weight: bold;
+  height: 48px;
+  border: $schwarz_hex 1px solid;
+  max-width: 343px;
+  width: 100vw;
+  margin: auto 32px;
+
+&:hover{
+  background-color: $schwarz_hex;
+  color: $weiss_hex;
+}
+}
+
 

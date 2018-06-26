@@ -38,6 +38,7 @@ nav {
     text-decoration: none;
     color: $grauC2_hex;
     border-left: $grauC2_hex 1px solid;
+
   }
   .icon__nav--login, .icon__nav--ticket{
     fill:$grauC2_hex;
@@ -51,7 +52,7 @@ nav {
   }
 
 
-@import "overlay";
+  @import "overlay";
 
   // flexbox:
   .container, .overlay .container {
@@ -73,6 +74,9 @@ nav {
     }
     .nav__login, .nav__ticket {
       flex-grow: 1;
+    }
+    .nav__ticket{
+      padding:10px;
     }
   }
 
