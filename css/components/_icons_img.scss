@@ -25,6 +25,17 @@ img {
     width: 375px;
     height: 337px;
   }
+  .teaser__kachel{
+    height:232px;
+    width: 343px;
+  }
+  .teaser__liste{
+    //gibt es nur für Desktop
+  }
+  .teaser__share{
+    height: 232px;
+    width: 375px;
+  }
   .profile {
     width: 110px;
     height: 110px;
@@ -86,6 +97,13 @@ svg {
       width: 768px;
       height: 648px;
     }
+    .teaser__kachel{
+      width: 348px;
+    }
+
+    .teaser__share{
+      width:534px;
+    }
   }
 }
 
@@ -106,6 +124,16 @@ svg {
     .teaser__big {
       width: 1440px;
       height: 1289px;
+    }
+    .teaser__kachel{
+      width: 384px;
+    }
+    .teaser__liste{
+      height: 104px;
+      width: 169px;
+    }
+    .teaser__share{
+      width:592px;
     }
   }
 }

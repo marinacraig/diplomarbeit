@@ -12,12 +12,13 @@
 @import 'components/grid';
 
 #pagetop {
-  margin-top: 64px;
+  padding-top: 64px;
 }
 //Styleguide, s. 9 Absätze
 
 
 /*
+meine def alt:
 //tablet
 @media screen and (min-width : 768px) {
 
@@ -28,4 +29,36 @@
 @media screen and (min-width : 1200px) {
 
 }
+
+
+neu:
+//tablet
+@media screen and (min-width : 276px) {
+
+}
+
+
+//laptop
+@media screen and (min-width : 769px) {
+
+}
+//TV
+@media screen and (min-width : 1441px) {
+
+}
+
+//Styleguide:
+//Smartphone:
+@media screen and (max-width : 375px) {
+
+}
+//Tablet:
+@media screen and (max-width : 768px) {
+
+}
+//Desktop:
+@media screen and (max-width : 1440px) {
+
+}
+
 */
