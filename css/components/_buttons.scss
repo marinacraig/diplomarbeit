@@ -1,12 +1,28 @@
 @import "colors";
 
-button:not(.btnunterstrichen){
-  text-transform: uppercase;
-  text-decoration: none; // falls button mit <a> auf etwas verlinkt ist
+button {
+  height: 48px;
+  &:not(.btnunterstrichen) {
+    text-transform: uppercase;
+    text-decoration: none; // falls button mit <a> auf etwas verlinkt ist
+  }
 }
 
-.btngrau{
+.btngrau {
+  background-color: $grauC2_hex;
+  color: $weiss_hex;
+  border-radius: 10px;
+  margin: 18px 12px;
 
+  .icon__music {
+    fill: $weiss_hex;
+  }
+  p {
+    display: inline;
+
+    .results{
+    }
+  }
 }
 
 .btngrau__jazz
@@ -14,42 +30,40 @@ button:not(.btnunterstrichen){
 .btngrau__indie
 .btngrau__poprock
 .btngrau__electronic
-
-.btnunterstrichen{
+.btnunterstrichen {
 
 }
 
 //Primarybutton, Mobile über die ganze Breite
-.btnschwarz{
+.btnschwarz {
   font-weight: bold;
-  height: 48px;
   background-color: $schwarz_hex;
   color: $weiss_hex;
   max-width: 343px;
   width: 100vw;
-  margin: auto 32px;
+  padding: auto 32px;
+  margin: 8px;
 
-  &:hover{
+  &:hover {
     background-color: $grau76_hex;
   }
 
-
 }
 
-
 //Secondrybutton, Text kann verlinkt sein
-.btnweiss{
+.btnweiss {
   font-weight: bold;
-  height: 48px;
   border: $schwarz_hex 1px solid;
   max-width: 343px;
   width: 100vw;
-  margin: auto 32px;
+  padding: auto 32px;
+  margin: 8px;
 
-&:hover{
-  background-color: $schwarz_hex;
-  color: $weiss_hex;
-}
+  &:hover {
+    background-color: $schwarz_hex;
+    color: $weiss_hex;
+  }
+  //todo: tabs: S. 34 styleguide, pfeile hinzufügen
 }
 
 

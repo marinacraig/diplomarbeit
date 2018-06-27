@@ -1,0 +1,48 @@
+svg {
+  margin: 12px;
+  .icon__nav .icon__footer {
+    width: 32px;
+  }
+}
+.musikrichtung{
+  .icon__music {
+    height: 17px;
+  }
+}
+//die farbigen waves auf der Hauptseite
+.entdeckungen {
+  .icon__music {
+    height: 120px;
+    width: 100%;
+  }
+
+.icon__music--jazz {
+  fill: $pink_hex;
+}
+
+.icon__music--hiphop {
+  fill: $gelb_hex;
+}
+
+.icon__music--indie {
+  fill: $mint_hex;
+}
+
+.icon__music--poprock {
+  fill: $blau_hex;
+}
+
+.icon__music--electronic {
+  fill: $violett_hex;
+}
+}
+
+//tablet
+@media screen and (min-width : 376px) {
+
+}
+
+//laptop
+@media screen and (min-width : 769px) {
+
+}

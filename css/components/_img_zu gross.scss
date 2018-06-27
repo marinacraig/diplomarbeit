@@ -1,6 +1,9 @@
 img {
   //Todo: falls Bild grösser anpassen ohne verziehen
   max-width: 100vw;
+  max-height: 100vh;
+  object-fit: cover;
+  overflow: hidden;
 
   .image__big {
     height: 176px;
@@ -43,42 +46,10 @@ img {
   }
 }
 
-svg {
-  margin: 12px;
-  .icon__nav .icon__footer {
-    width: 32px;
-  }
-}
-
-//die farbigen waves auf der Hauptseite
-.icon__music {
-  height: 120px;
-  width: 100%;
-}
-
-.icon__music--jazz {
-  fill: $pink_hex;
-}
-
-.icon__music--hiphop {
-  fill: $gelb_hex;
-}
-
-.icon__music--indie {
-  fill: $mint_hex;
-}
-
-.icon__music--poprock {
-  fill: $blau_hex;
-}
-
-.icon__music--electronic {
-  fill: $violett_hex;
-}
-
 //tablet
 @media screen and (min-width : 376px) {
   img {
+
     .image__big {
       height: 350px;
       width: 768px;

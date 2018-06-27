@@ -72,7 +72,8 @@ header, button {
   font-weight: bold; //bold laut Schriften, im Nav Design jedoch Regular
 }
 //Breadcrumb, Zusatzinfos (Datum, Likes)
-.breadcrumb {
+//.results von Musikfilter auf der Startseite
+.breadcrumb, .results {
   font-size: 0.7647058824rem; //13
 }
 
