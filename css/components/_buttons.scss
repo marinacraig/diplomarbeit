@@ -25,13 +25,40 @@ button {
   }
 }
 
-.btngrau__jazz
-.btngrau__hiphop
-.btngrau__indie
-.btngrau__poprock
-.btngrau__electronic
-.btnunterstrichen {
+//Todo: class active via js wenn filter aktiv bzw. s. 38 mittels checkbox aktivieren
 
+.btngrau__jazz{
+  &:hover{
+    background-color: $gelb_hex;
+  }
+}
+.btngrau__hiphop{
+  &:hover{
+    background-color: $pink_hex;
+  }
+}
+.btngrau__indie{
+  &:hover{
+    background-color: $mint_hex;
+  }
+}
+.btngrau__poprock{
+  &:hover{
+    background-color: $blau_hex;
+  }
+}
+.btngrau__electronic{
+   .active, &:hover{
+    background-color: $violett_hex;
+  }
+}
+.btnunterstrichen {
+  background-color: $weiss_hex;
+  border:0;
+  text-decoration: underline;
+  &:hover{
+    color:$grauC2_hex;
+  }
 }
 
 //Primarybutton, Mobile über die ganze Breite
@@ -66,4 +93,35 @@ button {
   //todo: tabs: S. 34 styleguide, pfeile hinzufügen
 }
 
+// von der Startseite:
+//todo: musikrichtung - on click alle anzeigen (js)
 
+//mittels akkordeon  - jedoch: wie kann man es für grösser phone ausblenden?
+// -> mittels "Filter zurücksetzen" akkordion schliessen
+.item__hidden--buttons{
+  display: none;
+}
+
+.musikrichtung{
+  //todo: zentriert
+
+}
+
+
+
+
+//tablet
+@media screen and (min-width : 376px) {
+.item__hidden--buttons{
+    display: inline;
+  }
+  .item__hidden--button{
+    display: none;
+  }
+}
+
+
+//laptop
+@media screen and (min-width : 769px) {
+
+}

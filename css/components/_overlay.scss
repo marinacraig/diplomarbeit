@@ -35,7 +35,7 @@
 }
 
 .overlay a:hover, .overlay a:focus {
-  .nav__login, .nav__ticket {
+  //.nav__menu, .nav__login, .nav__ticket {
   color: $schwarz_hex;
   background-color: $weiss_hex;
   width: 100%;
@@ -43,7 +43,7 @@
   .icon__nav{
     fill: $schwarz_hex;
   }
-  }
+ // }
 }
 //x auf der linken Seite
 .overlay .closebtn {

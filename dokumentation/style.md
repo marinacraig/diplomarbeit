@@ -22,3 +22,7 @@ Footer und verwendet. Daher konnten nicht alle px-Abstände
 zu 100 % eingehalten werden.
 Laut Styleguide ist Header bold (s. 6), bei Navigationsbeschreibung
  jedoch nicht. Ich habe mich für bold entschieden.
+ 
+##Buttons  
+Unterstrichener Button wechselt beim Hover die Farbe, 
+wirkt so einheitlicher.

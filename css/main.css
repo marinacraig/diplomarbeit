@@ -117,80 +117,124 @@ svg {
   fill: #5E35B1; }
 
 img {
+  padding: 0;
+  margin: 0;
   max-width: 100vw;
-  max-height: 100vh;
-  object-fit: cover;
   overflow: hidden; }
-  img .image__big {
-    height: 176px;
-    width: 375px; }
-  img .news_image {
-    height: 232px;
-    width: 343px; }
-  img .gallery {
-    height: 343px;
-    width: 232px; }
-  img .teaser {
-    width: 128px;
-    height: 128px; }
-  img .teaser__big {
-    max-height: 337px;
-    max-width: 375px; }
-  img .teaser__kachel {
-    height: 232px;
-    width: 343px; }
-  img .teaser__share {
-    height: 232px;
-    width: 375px; }
-  img .profile {
-    height: 110px;
-    width: 110px; }
 
-@media screen and (max-width: 376px) {
-  img .image__big {
-    min-height: 45.57291667vw;
-    min-width: 100vw;
-    max-height: 350px;
-    max-width: 768px; }
-  img .news_image {
+.image__big {
+  height: 176px;
+  width: 375px; }
+
+.banner__mobile {
+  height: 432px;
+  width: 375px;
+  display: block; }
+
+.banner__desktop, .banner__tablet {
+  display: none; }
+
+.news_image {
+  height: 232px;
+  width: 343px; }
+
+.gallery {
+  height: 232px;
+  width: 343px; }
+
+.teaser {
+  width: 128px;
+  height: 128px; }
+
+.teaser__big {
+  max-height: 337px;
+  max-width: 375px; }
+
+.teaser__kachel {
+  height: 232px;
+  width: 343px; }
+
+.teaser__share {
+  height: 232px;
+  width: 375px; }
+
+.profile {
+  height: 110px;
+  width: 110px; }
+
+@media screen and (min-width: 376px) {
+  .image__big {
+    max-height: 45.57291667%;
+    max-width: 100%;
+    height: 350px;
+    width: 768px; }
+  .banner__tablet {
+    max-height: 57.29166667%;
+    max-width: 100%;
+    height: 440px;
+    width: 768px;
+    display: block; }
+  .banner__desktop, .banner__mobile {
+    display: none; }
+  .news_image {
     height: 144px;
     width: 221px; }
-  img .gallery {
+  .gallery {
     height: 352px;
     width: 534px; }
-  img .teaser {
+  .teaser {
     width: 312px; }
-  img .teaser__big {
-    min-height: 84.375vw;
-    min-width: 100vw;
-    max-height: 648px;
-    max-width: 768px; }
-  img .teaser__kachel {
+  .teaser__big {
+    max-height: 84.375%;
+    max-width: 100%;
+    height: 648px;
+    width: 768px; }
+  .teaser__kachel {
     width: 348px; }
-  img .teaser__share {
+  .teaser__share {
     max-width: 534px; } }
 
-@media screen and (max-width: 769px) {
-  img .image__big {
-    min-height: 31.25vw;
-    min-width: 100vw;
-    max-height: 450px;
-    max-width: 1440px; }
-  img .gallery {
+@media screen and (min-width: 769px) {
+  .image__big {
+    max-height: 31.25%;
+    max-width: 100%;
+    height: 450px;
+    width: 1440px; }
+  .banner__desktop {
+    max-height: 26.11111111%;
+    max-width: 100%;
+    height: 376px;
+    width: 1440px;
+    display: block; }
+  .banner__mobile, .banner__tablet {
+    display: none; }
+  .gallery {
     height: 593px;
     width: 392px; }
-  img .teaser__big {
-    min-height: 89.51388889vw;
-    min-width: 100vw;
-    max-height: 1289px;
-    max-width: 1440px; }
-  img .teaser__kachel {
+  .teaser__big {
+    max-height: 89.51388889%;
+    max-width: 100%;
+    height: 1289px;
+    width: 1440px; }
+  .teaser__kachel {
     width: 384px; }
-  img .teaser__liste {
+  .teaser__liste {
     height: 104px;
     width: 169px; }
-  img .teaser__share {
+  .teaser__share {
     width: 592px; } }
+
+@media screen and (min-width: 1441px) {
+  img .image__big {
+    max-height: 31.25%;
+    max-width: 1600px;
+    height: 450px;
+    width: 1440px; }
+  .teaser__big {
+    max-height: 89.51388889%;
+    max-width: 100%;
+    height: 1289px;
+    width: 1440px; } }
 
 /*
 //tablet
@@ -276,6 +320,28 @@ button {
   .btngrau p {
     display: inline; }
 
+.btngrau__jazz:hover {
+  background-color: #FDD835; }
+
+.btngrau__hiphop:hover {
+  background-color: #D81B60; }
+
+.btngrau__indie:hover {
+  background-color: #00D79F; }
+
+.btngrau__poprock:hover {
+  background-color: #3949AB; }
+
+.btngrau__electronic .active, .btngrau__electronic:hover {
+  background-color: #5E35B1; }
+
+.btnunterstrichen {
+  background-color: #FFF;
+  border: 0;
+  text-decoration: underline; }
+  .btnunterstrichen:hover {
+    color: #C2C2C2; }
+
 .btnschwarz {
   font-weight: bold;
   background-color: #000;
@@ -298,13 +364,25 @@ button {
     background-color: #000;
     color: #FFF; }
 
-header {
-  max-width: 100vw; }
+.item__hidden--buttons {
+  display: none; }
+
+@media screen and (min-width: 376px) {
+  .item__hidden--buttons {
+    display: inline; }
+  .item__hidden--button {
+    display: none; } }
 
 nav {
   position: fixed;
   top: 0;
-  width: 100%; }
+  width: 100%;
+  /*  ul{
+   // width: 100vw;
+    margin:0;
+    padding:0;
+    max-width: 100vw;
+  }*/ }
   nav .nav__top {
     height: 64px;
     padding: 0 3px;
@@ -359,11 +437,11 @@ nav {
     transition: 0.3s; }
   nav .icon__nav, nav .icon__footer {
     fill: #FFF; }
-  nav .overlay a:hover .nav__login, nav .overlay a:hover .nav__ticket, nav .overlay a:focus .nav__login, nav .overlay a:focus .nav__ticket {
+  nav .overlay a:hover, nav .overlay a:focus {
     color: #000;
     background-color: #FFF;
     width: 100%; }
-    nav .overlay a:hover .nav__login .icon__nav, nav .overlay a:hover .nav__ticket .icon__nav, nav .overlay a:focus .nav__login .icon__nav, nav .overlay a:focus .nav__ticket .icon__nav {
+    nav .overlay a:hover .icon__nav, nav .overlay a:focus .icon__nav {
       fill: #000; }
   nav .overlay .item .item__hidden {
     display: none; }
