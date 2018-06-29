@@ -1,63 +1,92 @@
 img {
   //Todo: falls Bild grösser anpassen ohne verziehen
-  padding:0;
-  margin:0;
+  padding: 0;
+  margin: 0;
   max-width: 100vw;
   //object-fit: cover;
   overflow: hidden;
 
 }
+
 .image__big {
   //evtl. zu gross, daher flexibel
+  max-height: 46.93333333%;
+  max-width: 100%;
   height: 176px;
   width: 375px;
 
 }
+
 .banner__mobile {
-  //evtl. zu gross, daher flexibel
-  height:432px;
+  //evtl. zu gross, daher flexibel - todo Banner: überstehendes phone & button zusätzlich berücksichtigen s. 45
+  max-height: 115.2%;
+  max-width: 100%;
+  height: 432px;
   width: 375px;
-  display:block;
+  display: block;
 }
-.banner__desktop, .banner__tablet{
+
+.banner__desktop, .banner__tablet {
   display: none;
 }
+
 .news_image {
+  max-height: 67.63848397%;
+  max-width: 100%;
   height: 232px;
   width: 343px;
 }
-//Todo: Bildergalerie: S. 16ff Styleguide, ggf Klassen anpassen; ab seite 18 noch nichts erfasst
+
+//Todo: Bildergalerie: S. 16ff und s. 40ff Styleguide, ggf Klassen anpassen; ab seite 18 noch nichts erfasst
 .gallery {
+  max-height: 67.63848397%;
+  max-width: 100%;
   height: 232px;
   width: 343px;
 }
+
 .teaser {
+  max-height: 100%;
+  max-width: 100%;
   width: 128px;
   height: 128px;
 }
+
 .teaser__big {
   //evtl. zu gross, daher flexibel
-  max-height: 337px;
-  max-width: 375px;
+  max-height: 89.86666667%;
+  max-width: 100%;
+  height: 337px;
+  width: 375px;
 }
-.teaser__kachel{
-  height:232px;
+
+.teaser__kachel {
+  max-height: 67.63848397%;
+  max-width: 100%;
+  height: 232px;
   width: 343px;
 }
-.teaser__liste{
+
+.teaser__liste {
   //gibt es nur für Desktop
 }
-.teaser__share{
+
+.teaser__share {
+  max-height: 61.86666667%;
+  max-width: 100%;
   height: 232px;
   width: 375px;
 }
+
 .profile {
+  max-height: 100%;
+  max-width: 100%;
   height: 110px;
   width: 110px;
 }
 
 //tablet
-@media screen and (min-width : 376px) {
+@media screen and (min-width: 376px) {
   img {
 
   }
@@ -70,15 +99,15 @@ img {
     height: 350px;
     width: 768px;
   }
-  .banner__tablet{
+  .banner__tablet {
     //evtl. zu gross, daher flexibel
     max-height: 57.29166667%;
     max-width: 100%;
     height: 440px;
     width: 768px;
-    display:block;
+    display: block;
   }
-  .banner__desktop, .banner__mobile{
+  .banner__desktop, .banner__mobile {
     display: none;
   }
 
@@ -103,17 +132,17 @@ img {
     width: 768px;
 
   }
-  .teaser__kachel{
+  .teaser__kachel {
     width: 348px;
   }
 
-  .teaser__share{
-    max-width:534px;
+  .teaser__share {
+    max-width: 534px;
   }
 }
 
 //laptop
-@media screen and (min-width : 769px) {
+@media screen and (min-width: 769px) {
   img {
 
   }
@@ -132,10 +161,10 @@ img {
     max-height: 26.11111111%;
     max-width: 100%;
     height: 376px;
-    width:1440px;
-    display:block;
+    width: 1440px;
+    display: block;
   }
-  .banner__mobile, .banner__tablet{
+  .banner__mobile, .banner__tablet {
     display: none;
   }
   .gallery {
@@ -152,19 +181,20 @@ img {
     width: 1440px;
 
   }
-  .teaser__kachel{
+  .teaser__kachel {
     width: 384px;
   }
-  .teaser__liste{
+  .teaser__liste {
     height: 104px;
     width: 169px;
   }
-  .teaser__share{
-    width:592px;
+  .teaser__share {
+    width: 592px;
   }
 }
+
 //TV
-@media screen and (min-width : 1441px) {
+@media screen and (min-width: 1441px) {
   img {
     .image__big {
       //evtl. zu gross, daher flexibel

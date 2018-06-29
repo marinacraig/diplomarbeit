@@ -2,6 +2,8 @@
 
 button {
   height: 48px;
+  //buttons max-width wegen devices
+  max-width: 100%;
   &:not(.btnunterstrichen) {
     text-transform: uppercase;
     text-decoration: none; // falls button mit <a> auf etwas verlinkt ist
@@ -20,44 +22,49 @@ button {
   p {
     display: inline;
 
-    .results{
+    .results {
     }
   }
 }
 
 //Todo: class active via js wenn filter aktiv bzw. s. 38 mittels checkbox aktivieren
 
-.btngrau__jazz{
-  &:hover{
+.btngrau__jazz {
+  &:hover {
     background-color: $gelb_hex;
   }
 }
-.btngrau__hiphop{
-  &:hover{
+
+.btngrau__hiphop {
+  &:hover {
     background-color: $pink_hex;
   }
 }
-.btngrau__indie{
-  &:hover{
+
+.btngrau__indie {
+  &:hover {
     background-color: $mint_hex;
   }
 }
-.btngrau__poprock{
-  &:hover{
+
+.btngrau__poprock {
+  &:hover {
     background-color: $blau_hex;
   }
 }
-.btngrau__electronic{
-   .active, &:hover{
+
+.btngrau__electronic {
+  .active, &:hover {
     background-color: $violett_hex;
   }
 }
+
 .btnunterstrichen {
   background-color: $weiss_hex;
-  border:0;
+  border: 0;
   text-decoration: underline;
-  &:hover{
-    color:$grauC2_hex;
+  &:hover {
+    color: $grauC2_hex;
   }
 }
 
@@ -66,8 +73,8 @@ button {
   font-weight: bold;
   background-color: $schwarz_hex;
   color: $weiss_hex;
-  max-width: 343px;
-  width: 100vw;
+  width: 343px;
+  max-width: 100%;
   padding: auto 32px;
   margin: 8px;
 
@@ -81,8 +88,8 @@ button {
 .btnweiss {
   font-weight: bold;
   border: $schwarz_hex 1px solid;
-  max-width: 343px;
-  width: 100vw;
+  width: 343px;
+  max-width: 100%;
   padding: auto 32px;
   margin: 8px;
 
@@ -98,30 +105,27 @@ button {
 
 //mittels akkordeon  - jedoch: wie kann man es für grösser phone ausblenden?
 // -> mittels "Filter zurücksetzen" akkordion schliessen
+
 .item__hidden--buttons{
   display: none;
 }
 
-.musikrichtung{
+.musikrichtung {
   //todo: zentriert
 
 }
 
-
-
-
 //tablet
 @media screen and (min-width : 376px) {
-.item__hidden--buttons{
+  .item__hidden--buttons {
     display: inline;
   }
-  .item__hidden--button{
+  .item__hidden--button {
     display: none;
   }
 }
 
-
 //laptop
-@media screen and (min-width : 769px) {
+@media screen and (min-width: 769px) {
 
 }

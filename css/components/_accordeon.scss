@@ -1,0 +1,58 @@
+#akkordeon:not(:target) .content {
+  display: none;
+}
+
+#akkordeon:target .content {
+  display: block;
+}
+
+#akkordeon:target .show {
+  display: none;
+}
+
+#akkordeon:not(:target) .hide {
+  display: none;
+}
+//Todo: Style Akkordion s. 37
+// wo genau kommt dieses zum einsatz?
+//https://elbnetz.com/elemente-nur-mit-css-ein-und-ausblenden/
+//Idee: show und hide in ein gemeinsames div, und unterstreichen (24px)
+.show:not(.btnschwarz, .btnweiss){
+  font-family: 'Bitter', serif;
+  font-size: 1.882352941rem;
+  font-weight: bold;
+}
+.hiden:not(.btnschwarz, .btnweiss){
+  // sollte unnötig sein
+  // font-family: 'Encode Sans Semi Expanded', sans-serif;
+  font-weight: bold;
+}
+.content:not(.btnschwarz, .btnweiss, .btngrau){
+  color: $schwarz_rgba;
+
+}
+
+
+//idee: item__hidden--buttons bw. item__hidden--button passend hier ein / ausblenden
+//-> führt nicht zum ziel
+
+//tablet
+@media screen and (min-width : 376px) {
+  #akkordeon:not(:target) .content {
+    display: inline;
+  }
+
+  #akkordeon:target .show {
+    display: inline;
+  }
+
+  #akkordeon:not(:target) .hide {
+    display: inline;
+  }
+
+}
+
+//laptop
+@media screen and (min-width: 769px) {
+
+}

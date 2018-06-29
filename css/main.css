@@ -47,19 +47,23 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 1.882352941rem;
-  font-weight: bold; }
+  font-weight: bold;
+  margin: 40px auto; }
 
 h2 {
   font-size: 1.411764706rem;
-  font-weight: bold; }
+  font-weight: bold;
+  margin: 32px auto; }
 
 h3 {
   font-size: 1.176470588rem;
-  font-weight: bold; }
+  font-weight: bold;
+  margin: 32px auto; }
 
 .festival {
   font-size: 2.823529412rem;
-  font-weight: bold; }
+  font-weight: bold;
+  margin: 40px auto; }
 
 .nav__festivallovers {
   font-family: 'Niconne', cursive;
@@ -73,21 +77,30 @@ header, button {
 
 @media screen and (min-width: 376px) {
   h1 {
-    font-size: 2.823529412rem; }
+    font-size: 2.823529412rem;
+    margin: 64px auto; }
   h2 {
-    font-size: 1.882352941rem; }
+    font-size: 1.882352941rem;
+    margin: 32px auto; }
   h3 {
-    font-size: 1.176470588rem; }
+    font-size: 1.176470588rem;
+    margin: 20px auto; }
   .festival {
-    font-size: 5.647058824rem; } }
+    font-size: 5.647058824rem;
+    margin: 100px auto; } }
 
 @media screen and (min-width: 769px) {
   h1 {
-    font-size: 3.294117647rem; }
+    font-size: 3.294117647rem;
+    margin: 80px auto; }
+  h2 {
+    margin: 40px auto; }
   h3 {
-    font-size: 1.176470588rem; }
+    font-size: 1.176470588rem;
+    margin: 32px auto; }
   .festival {
-    font-size: 8.470588235rem; } }
+    font-size: 8.470588235rem;
+    margin: 144px auto; } }
 
 svg {
   margin: 12px; }
@@ -123,10 +136,14 @@ img {
   overflow: hidden; }
 
 .image__big {
+  max-height: 46.93333333%;
+  max-width: 100%;
   height: 176px;
   width: 375px; }
 
 .banner__mobile {
+  max-height: 115.2%;
+  max-width: 100%;
   height: 432px;
   width: 375px;
   display: block; }
@@ -135,30 +152,44 @@ img {
   display: none; }
 
 .news_image {
+  max-height: 67.63848397%;
+  max-width: 100%;
   height: 232px;
   width: 343px; }
 
 .gallery {
+  max-height: 67.63848397%;
+  max-width: 100%;
   height: 232px;
   width: 343px; }
 
 .teaser {
+  max-height: 100%;
+  max-width: 100%;
   width: 128px;
   height: 128px; }
 
 .teaser__big {
-  max-height: 337px;
-  max-width: 375px; }
+  max-height: 89.86666667%;
+  max-width: 100%;
+  height: 337px;
+  width: 375px; }
 
 .teaser__kachel {
+  max-height: 67.63848397%;
+  max-width: 100%;
   height: 232px;
   width: 343px; }
 
 .teaser__share {
+  max-height: 61.86666667%;
+  max-width: 100%;
   height: 232px;
   width: 375px; }
 
 .profile {
+  max-height: 100%;
+  max-width: 100%;
   height: 110px;
   width: 110px; }
 
@@ -305,7 +336,8 @@ html {
   color: #000; }
 
 button {
-  height: 48px; }
+  height: 48px;
+  max-width: 100%; }
   button:not(.btnunterstrichen) {
     text-transform: uppercase;
     text-decoration: none; }
@@ -346,8 +378,8 @@ button {
   font-weight: bold;
   background-color: #000;
   color: #FFF;
-  max-width: 343px;
-  width: 100vw;
+  width: 343px;
+  max-width: 100%;
   padding: auto 32px;
   margin: 8px; }
   .btnschwarz:hover {
@@ -356,8 +388,8 @@ button {
 .btnweiss {
   font-weight: bold;
   border: #000 1px solid;
-  max-width: 343px;
-  width: 100vw;
+  width: 343px;
+  max-width: 100%;
   padding: auto 32px;
   margin: 8px; }
   .btnweiss:hover {
@@ -557,11 +589,63 @@ footer {
 }
 
 */
+#akkordeon:not(:target) .content {
+  display: none; }
+
+#akkordeon:target .content {
+  display: block; }
+
+#akkordeon:target .show {
+  display: none; }
+
+#akkordeon:not(:target) .hide {
+  display: none; }
+
+.show:not(.btnschwarz, .btnweiss) {
+  font-family: 'Bitter', serif;
+  font-size: 1.882352941rem;
+  font-weight: bold; }
+
+.hiden:not(.btnschwarz, .btnweiss) {
+  font-weight: bold; }
+
+.content:not(.btnschwarz, .btnweiss, .btngrau) {
+  color: rgba(0, 0, 0, 0.75); }
+
+@media screen and (min-width: 376px) {
+  #akkordeon:not(:target) .content {
+    display: inline; }
+  #akkordeon:target .show {
+    display: inline; }
+  #akkordeon:not(:target) .hide {
+    display: inline; } }
+
 #pagetop {
   padding-top: 64px; }
 
 .inklmargin {
   margin: 0 16px; }
+
+.musikrichtung, .entdeckungen, .inklpadding > h2, .inklmargin > h2 {
+  text-align: center; }
+
+.inklpadding {
+  padding: 16px;
+  background-color: #E5E5E5; }
+
+.news {
+  background-color: #FFF;
+  margin: 0 auto 16px auto;
+  max-width: 100%;
+  width: 343px; }
+
+.news__content {
+  padding: 16px; }
+  .news__content .container {
+    display: flex; }
+
+.counter {
+  padding-top: 16px; }
 
 @media screen and (min-width: 376px) {
   .inklmargin {

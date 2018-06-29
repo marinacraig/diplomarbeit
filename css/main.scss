@@ -19,6 +19,7 @@ body{
 @import 'components/navigation';
 @import "components/footer";
 @import 'components/grid';
+@import "components/accordeon";
 
 
 #pagetop {
@@ -29,7 +30,48 @@ body{
   margin: 0 16px;
 }
 
+
 //Styleguide, s. 9 Absätze
+
+//Hauptseite:
+//1. section, musikrichtung und entdeckungen, Titel von news und magazin zentriert
+.musikrichtung, .entdeckungen, .inklpadding>h2, .inklmargin>h2{
+  text-align: center;
+}
+
+//section news
+//statt inklmargin
+.inklpadding {
+  padding: 16px;
+  background-color: $grauE5_hex;
+}
+
+.news{
+  background-color: $weiss_hex;
+  margin: 0 auto 16px auto;
+  //tablet und desktop: margin:8px;
+  //masse wie .news__image
+  //für tablet: max-width:100%, width: 221px;
+  max-width: 100%;
+  width: 343px;
+
+}
+.news__content{
+  padding: 16px;
+  .container{
+    //padding-bottom: 16px; //wegen unten - evtl. anders lösen
+    display: flex;
+  }
+}
+//counter-zahl soll oben sein
+.counter{
+  padding-top:16px;
+}
+
+
+
+
+
 
 
 //tablet
