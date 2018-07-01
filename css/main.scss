@@ -1,14 +1,15 @@
-*{
-  margin:0;
-  padding:0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-html{
+html {
+  max-width: 100vw;
   border: #00D79F 1px solid;
 }
-body{
-  border:deeppink 1px solid;
-  max-width: 100vw;
+
+body {
+  border: deeppink 1px solid;
 }
 
 @import 'components/colors';
@@ -21,7 +22,6 @@ body{
 @import 'components/grid';
 @import "components/accordeon";
 
-
 #pagetop {
   padding-top: 64px;
 }
@@ -30,12 +30,11 @@ body{
   margin: 0 16px;
 }
 
-
 //Styleguide, s. 9 Absätze
 
 //Hauptseite:
 //1. section, musikrichtung und entdeckungen, Titel von news und magazin zentriert
-.musikrichtung, .entdeckungen, .inklpadding>h2, .inklmargin>h2{
+.musikrichtung, .entdeckungen, .inklpadding > h2, .inklmargin > h2 {
   text-align: center;
 }
 
@@ -44,9 +43,12 @@ body{
 .inklpadding {
   padding: 16px;
   background-color: $grauE5_hex;
+  .btnweiss{
+    background-color: $grauE5_hex;
+  }
 }
 
-.news{
+.news {
   background-color: $weiss_hex;
   margin: 0 auto 16px auto;
   //tablet und desktop: margin:8px;
@@ -56,40 +58,75 @@ body{
   width: 343px;
 
 }
-.news__content{
+
+.news__content {
   padding: 16px;
-  .container{
+  .container {
     //padding-bottom: 16px; //wegen unten - evtl. anders lösen
     display: flex;
   }
+  hr {
+    color: $grauE5_hex;
+  }
 }
+
 //counter-zahl soll oben sein
-.counter{
-  padding-top:16px;
+.counter {
+  padding-top: 16px;
 }
 
+//Bilder wegen URL:
+.festivalbild {
+  background-image: url("../images/rsz_startseite_1.jpg");
+  background-position: center;
+  background-size: cover;
+}
 
+.banner__mobile {
+  background-image: url('../images/rsz_banner_mob.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.banner__tablet {
+  background-image: url("../images/rsz_banner.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.banner__desktop {
+  background-image: url("../images/rsz_banner.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+//Todo: Dieses Bild würde mit den news abgefüllt werden -> news Bild = Festivalbild?, im span alt Text
+.news__image {
+  background-image: url("../images/rsz_startseite_bsp_news.jpg");
+  background-position: center;
+  background-size: cover;
+}
 
 
 
 
 
 //tablet
-@media screen and (min-width : 376px) {
+@media screen and (min-width: 376px) {
   .inklmargin {
     margin: 0 24px;
   }
 }
 
-
 //laptop
-@media screen and (min-width : 769px) {
+@media screen and (min-width: 769px) {
   .inklmargin {
     margin: 0 120px;
   }
 }
+
 //TV
-@media screen and (min-width : 1441px) {
+@media screen and (min-width: 1441px) {
 
   // Todo: Ab 1600 Pixel Breite wächst das Design nicht mehr mit (Ausnahme ist die Linie des Header, die immer über die komplette Viewport Breite geht). Der Inhalt ist zentriert angeordnet.
 

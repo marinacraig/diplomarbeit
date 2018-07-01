@@ -335,12 +335,12 @@
 <!--eigentliche Seite-->
 
 
-<article>
+<div>
     <div id="pagetop"></div>
     <!--klassen akkordeon: content show hide-->
     <section id="musikrichtung" class="musikrichtung inklmargin">
-        <!--eigentlich gehört hier SEO h1 hin-->
-        <h2>Auf welche Musik stehst du?</h2>
+        <!--eigentlich gehört hier SEO h1 hin -> class h2 wegen Schriftgrösse-->
+        <h1 class="h2">Auf welche Musik stehst du?</h1>
         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
         </p>
        <a class="show" ahref="#akkordeon"><button class="btnschwarz item__hidden--button" id="filter_anzeigen">Filter anzeigen</button></a>
@@ -438,7 +438,9 @@
         </div>
     </section>
 
-    <img src="images/rsz_startseite_1.jpg" alt="festivalbild" title="festivalbild" class="image image__big"/>
+    <div class="image image__big festivalbild">
+    <span role="img" aria-label="festivalbild" > </span>
+    </div>
 
     <!-- Magazin -->
 
@@ -498,10 +500,18 @@
 
     <!--Banner-->
 
+    <div class="image image__big festivalbild banner banner__mobile">
+        <span role="img" aria-label="banner" > </span>
+    </div>
 
-    <img src="images/rsz_banner_mob.jpg" alt="banner" title="banner" class="banner banner__mobile"/>
-    <img src="images/rsz_banner.jpg" alt="banner" title="banner" class="banner banner__tablet"/>
-    <img src="images/rsz_banner.jpg" alt="banner" title="banner" class="banner banner__desktop"/>
+    <div class="image image__big festivalbild banner banner__tablet">
+        <span role="img" aria-label="banner" > </span>
+    </div>
+
+    <div class="image image__big festivalbild banner banner__desktop">
+        <span role="img" aria-label="banner"> </span>
+    </div>
+
 
 
     <!--Der Entdeckungen-Teil
@@ -604,10 +614,9 @@
     <!--Der news-Teil-->
 
 
-    <section id="news" class="inklpadding">
+    <section id="news" class="inklpadding"
         <h2>News</h2>
-        <div class="news">
-            <img src="images/rsz_startseite_bsp_news.jpg" alt="news" title="news" class="news news_image"/>
+            <img src="images/rsz_startseite_bsp_news.jpg" alt="news" title="news" class="news news__image"/>
             <div class="news__content">
             <p class="countdown">24. Juni 2018</p>
             <p>der die Entscheidung trifft, eine Freude zu genießen, die keine unangenehmen Folgen hat,
@@ -632,6 +641,7 @@
         </div>
 
         <div class="news">
+            <div class="news__content">
             <p class="countdown">24. Juni 2018</p>
             <p>der die Entscheidung trifft, eine Freude zu genießen, die keine unangenehmen Folgen hat,
                 oder einen, der Schmerz vermeidet, </p>
@@ -651,10 +661,12 @@
                     </g>
                 </g>
             </svg><p class="counter">11</p></div>
+            </div>
         </div>
 
         <div class="news">
-            <img src="images/rsz_startseite_bsp_news.jpg" alt="news" title="news" class="news news_image"/>
+            <img src="images/rsz_startseite_bsp_news.jpg" alt="news" title="news" class="news news__image"/>
+            <div class="news__content">
             <p class="countdown">24. Juni 2018</p>
             <p>der die Entscheidung trifft, eine Freude zu genießen, die keine unangenehmen Folgen hat,
                 oder einen, der Schmerz vermeidet, </p>
@@ -674,9 +686,11 @@
                     </g>
                 </g>
             </svg><p class="counter">32</p></div>
+            </div>
         </div>
 
         <div class="news">
+            <div class="news__content">
             <p class="countdown">24. Juni 2018</p>
             <p>der die Entscheidung trifft, eine Freude zu genießen, die keine unangenehmen Folgen hat,
                 oder einen, der Schmerz vermeidet, </p>
@@ -696,9 +710,11 @@
                     </g>
                 </g>
             </svg><p class="counter">20</p></div>
+            </div>
         </div>
 
         <div class="news">
+            <div class="news__content">
             <p class="countdown">24. Juni 2018</p>
             <p>der die Entscheidung trifft, eine Freude zu genießen, die keine unangenehmen Folgen hat,
                 oder einen, der Schmerz vermeidet, </p>
@@ -718,10 +734,12 @@
                     </g>
                 </g>
             </svg><p class="counter">13</p></div>
+            </div>
         </div>
 
         <div class="news">
-            <img src="images/rsz_startseite_bsp_news.jpg" alt="news" title="news" class="news news_image"/>
+            <img src="images/rsz_startseite_bsp_news.jpg" alt="news" title="news" class="news news__image"/>
+            <div class="news__content">
             <p class="countdown">24. Juni 2018</p>
             <p>der die Entscheidung trifft, eine Freude zu genießen, die keine unangenehmen Folgen hat,
                 oder einen, der Schmerz vermeidet, </p>
@@ -741,12 +759,14 @@
                     </g>
                 </g>
             </svg><p class="counter">19</p></div>
+            </div>
         </div>
 
         <div class="news">
-            <img src="images/rsz_startseite_bsp_news.jpg" alt="news" title="news" class="news news_image"/>
-            <p class="countdown">24. Juni 2018</p>
-            <p>der die Entscheidung trifft, eine Freude zu genießen, die keine unangenehmen Folgen hat,
+            <img src="images/rsz_startseite_bsp_news.jpg" alt="news" title="news" class="news news__image"/>
+            <div class="news__content">
+            <p class="news__content--countdown">24. Juni 2018</p>
+            <p class="news__content--description">der die Entscheidung trifft, eine Freude zu genießen, die keine unangenehmen Folgen hat,
                 oder einen, der Schmerz vermeidet, </p>
             <hr/>
             <div class="container"><svg width="24px" height="23px" viewBox="0 0 24 23" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -764,6 +784,7 @@
                     </g>
                 </g>
             </svg><p class="counter">12</p></div>
+            </div>
         </div>
 
         <a href="#">

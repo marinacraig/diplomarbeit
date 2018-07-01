@@ -4,13 +4,16 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
+  border: #00D79F 2px solid;
 
-/*  ul{
+  /*
+  ul{
    // width: 100vw;
     margin:0;
     padding:0;
-    max-width: 100vw;
-  }*/
+    max-width: 100%;
+  }
+  */
 
 
   .nav__top {
@@ -97,7 +100,7 @@ nav {
 @media screen and (min-width : 769px) {
   nav {
     .nav__ticket {
-      padding: 0 20px 0 0;
+      //padding: 0 20px 0 0;
     }
     li {
      //padding-left: 32px;

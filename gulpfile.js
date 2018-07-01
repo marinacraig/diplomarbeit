@@ -10,7 +10,7 @@ const runSequence = require('gulp-run-sequence');
 
 /*
 diese Sachen von unserer tdo übernommen, ggf anpassen, sass-alt ist umbenannt ums vom neuen unterscheiden zu können
-todo: minify etc. noch ergänzen
+todo: minify, dest etc. noch ergänzen
  */
 gulp.task('build', (cb)=>{
     runSequence('clean', ['babel', 'sass'], 'copy',cb);
@@ -96,4 +96,8 @@ check ob es funktioniert hat:
 ls -l
 danach ./install.sh im Terminal damit es installiert wird (durch diesen Befehl wird speziell danach gesucht,
 wegen Sicherheit wird dies so gemacht
+ */
+/*
+.gitignore:
+ggf. entsprechend berücksichtigen (Bsp. /nodes_modules oder /dist)
  */
