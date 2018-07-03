@@ -4,7 +4,7 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  border: #00D79F 2px solid;
+  //border: #00D79F 2px solid;
 
   /*
   ul{
@@ -27,8 +27,19 @@ nav {
   }
   li {
     list-style-type: none;
+
     }
 
+  .nav__menu, .nav__login, .nav__ticket {
+    p{
+      margin: auto 1em auto 0;
+    }
+  }
+  .nav__festivallovers{
+    p{
+      margin: auto;
+    }
+  }
   //Schriften
   .nav__menu > a, .nav__festivallovers > a {
     text-decoration: none;

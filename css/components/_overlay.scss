@@ -38,7 +38,7 @@
   //.nav__menu, .nav__login, .nav__ticket {
   color: $schwarz_hex;
   background-color: $weiss_hex;
-  width: 100%;
+  //width: 100%;
 
   .icon__nav{
     fill: $schwarz_hex;
@@ -59,8 +59,9 @@
 
 .nav__bottom{
   position: relative;
+  display: block;
   top: 40%; //wo beginnt es, ggf noch anpassen
-  bottom: 25%; //abstand von unten, ggf noch anpassen
+  bottom: 20%; //abstand von unten, ggf noch anpassen
   width: 100%;
   //text-align: center; // mehr in die Mitte
 }

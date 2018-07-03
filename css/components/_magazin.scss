@@ -1,0 +1,38 @@
+// für die Hauptseite
+
+.magazin:not(button){
+  display: inline;
+}
+.magazin__artikel{
+  border-bottom: $grauF0_hex solid 1px;
+  display: inline-table;
+  width: 100%;
+}
+
+.magazin .btnweiss{
+  //padding: auto;
+}
+
+
+
+
+//tablet
+@media screen and (min-width: 376px) {
+  .magazin__artikel{
+    border-bottom: none;
+    width: 45%;
+    padding: 1%;
+  }
+
+
+}
+
+//laptop
+@media screen and (min-width: 769px) {
+  .magazin__artikel{
+    border-bottom: none;
+    width: 30%;
+    padding: 1.5%;
+  }
+
+}

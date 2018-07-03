@@ -5,11 +5,7 @@
   padding: 0; }
 
 html {
-  max-width: 100vw;
-  border: #00D79F 1px solid; }
-
-body {
-  border: deeppink 1px solid; }
+  max-width: 100vw; }
 
 html {
   color: #000; }
@@ -53,7 +49,7 @@ h1 {
   font-weight: bold;
   margin: 40px auto; }
 
-h2 {
+h2, h1.h2 {
   font-size: 1.411764706rem;
   font-weight: bold;
   margin: 32px auto; }
@@ -82,9 +78,8 @@ header, button {
   h1 {
     font-size: 2.823529412rem;
     margin: 64px auto; }
-  h2 {
-    font-size: 1.882352941rem;
-    margin: 32px auto; }
+  h2, h1.h2 {
+    font-size: 1.882352941rem; }
   h3 {
     font-size: 1.176470588rem;
     margin: 20px auto; }
@@ -96,7 +91,7 @@ header, button {
   h1 {
     font-size: 3.294117647rem;
     margin: 80px auto; }
-  h2 {
+  h2, h1.h2 {
     margin: 40px auto; }
   h3 {
     font-size: 1.176470588rem;
@@ -414,7 +409,6 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  border: #00D79F 2px solid;
   /*
   ul{
    // width: 100vw;
@@ -431,6 +425,10 @@ nav {
     text-decoration: none; }
   nav li {
     list-style-type: none; }
+  nav .nav__menu p, nav .nav__login p, nav .nav__ticket p {
+    margin: auto 1em auto 0; }
+  nav .nav__festivallovers p {
+    margin: auto; }
   nav .nav__menu > a, nav .nav__festivallovers > a {
     text-decoration: none;
     color: #000; }
@@ -479,16 +477,16 @@ nav {
     fill: #FFF; }
   nav .overlay a:hover, nav .overlay a:focus {
     color: #000;
-    background-color: #FFF;
-    width: 100%; }
+    background-color: #FFF; }
     nav .overlay a:hover .icon__nav, nav .overlay a:focus .icon__nav {
       fill: #000; }
   nav .overlay .item .item__hidden {
     display: none; }
   nav .nav__bottom {
     position: relative;
+    display: block;
     top: 40%;
-    bottom: 25%;
+    bottom: 20%;
     width: 100%; }
   nav .nav__suche {
     border-bottom: #C2C2C2 1px solid;
@@ -626,20 +624,25 @@ footer {
   #akkordeon:not(:target) .hide {
     display: inline; } }
 
-#pagetop {
-  padding-top: 64px; }
+.magazin:not(button) {
+  display: inline; }
 
-.inklmargin {
-  margin: 0 16px; }
+.magazin__artikel {
+  border-bottom: #F0F0F0 solid 1px;
+  display: inline-table;
+  width: 100%; }
 
-.musikrichtung, .entdeckungen, .inklpadding > h2, .inklmargin > h2 {
-  text-align: center; }
+@media screen and (min-width: 376px) {
+  .magazin__artikel {
+    border-bottom: none;
+    width: 45%;
+    padding: 1%; } }
 
-.inklpadding {
-  padding: 16px;
-  background-color: #E5E5E5; }
-  .inklpadding .btnweiss {
-    background-color: #E5E5E5; }
+@media screen and (min-width: 769px) {
+  .magazin__artikel {
+    border-bottom: none;
+    width: 30%;
+    padding: 1.5%; } }
 
 .news {
   background-color: #FFF;
@@ -651,8 +654,37 @@ footer {
   padding: 16px; }
   .news__content .container {
     display: flex; }
-  .news__content hr {
-    color: #E5E5E5; }
+    .news__content .container hr {
+      color: #F0F0F0; }
+
+.news__button {
+  background-color: #F0F0F0; }
+  .news__button .btnweiss {
+    margin: 0; }
+    .news__button .btnweiss:hover {
+      background-color: #000; }
+
+#pagetop {
+  padding-top: 64px; }
+
+.inklmargin {
+  margin: 0 16px; }
+
+.musikrichtung, .inklmargin, .entdeckungen, .inklpadding {
+  padding-top: 24px;
+  padding-bottom: 24px; }
+
+.musikrichtung, .entdeckungen, .inklpadding > h2, .inklmargin > h2 {
+  text-align: center; }
+
+p {
+  margin-bottom: 1em; }
+
+.inklpadding {
+  padding: 16px;
+  background-color: #F0F0F0; }
+  .inklpadding .btnweiss {
+    background-color: #F0F0F0; }
 
 .counter {
   padding-top: 16px; }
@@ -684,11 +716,17 @@ footer {
 
 @media screen and (min-width: 376px) {
   .inklmargin {
-    margin: 0 24px; } }
+    margin: 0 24px; }
+  .musikrichtung, .inklmargin, .entdeckungen, .inklpadding {
+    padding-top: 32px;
+    padding-bottom: 32px; } }
 
 @media screen and (min-width: 769px) {
   .inklmargin {
-    margin: 0 120px; } }
+    margin: 0 120px; }
+  .musikrichtung, .inklmargin, .entdeckungen, .inklpadding {
+    padding-top: 40px;
+    padding-bottom: 40px; } }
 
 /*
 

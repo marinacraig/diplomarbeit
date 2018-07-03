@@ -5,11 +5,11 @@
 
 html {
   max-width: 100vw;
-  border: #00D79F 1px solid;
+  //border: #00D79F 1px solid;
 }
 
 body {
-  border: deeppink 1px solid;
+  //border: deeppink 1px solid;
 }
 
 @import 'components/colors';
@@ -21,6 +21,9 @@ body {
 @import "components/footer";
 @import 'components/grid';
 @import "components/accordeon";
+@import "components/magazin";
+@import "components/news";
+
 
 #pagetop {
   padding-top: 64px;
@@ -33,44 +36,35 @@ body {
 //Styleguide, s. 9 Absätze
 
 //Hauptseite:
+//jede section trennt sich wie h2
+.musikrichtung, .inklmargin, .entdeckungen, .inklpadding{
+  padding-top:24px;
+  padding-bottom: 24px;
+
+}
 //1. section, musikrichtung und entdeckungen, Titel von news und magazin zentriert
 .musikrichtung, .entdeckungen, .inklpadding > h2, .inklmargin > h2 {
   text-align: center;
 }
 
+//jeder Paragraph hat einen abstand
+p {
+  margin-bottom: 1em;
+}
+
 //section news
 //statt inklmargin
+
 .inklpadding {
   padding: 16px;
-  background-color: $grauE5_hex;
+  background-color: $grauF0_hex;
   .btnweiss{
-    background-color: $grauE5_hex;
+    background-color: $grauF0_hex;
   }
 }
 
-.news {
-  background-color: $weiss_hex;
-  margin: 0 auto 16px auto;
-  //tablet und desktop: margin:8px;
-  //masse wie .news__image
-  //für tablet: max-width:100%, width: 221px;
-  max-width: 100%;
-  width: 343px;
 
-}
-
-.news__content {
-  padding: 16px;
-  .container {
-    //padding-bottom: 16px; //wegen unten - evtl. anders lösen
-    display: flex;
-  }
-  hr {
-    color: $grauE5_hex;
-  }
-}
-
-//counter-zahl soll oben sein
+//counter-zahl soll oben sein // news
 .counter {
   padding-top: 16px;
 }
@@ -116,12 +110,24 @@ body {
   .inklmargin {
     margin: 0 24px;
   }
+  //jede section trennt sich wie h2
+  .musikrichtung, .inklmargin, .entdeckungen, .inklpadding{
+    padding-top:32px;
+    padding-bottom: 32px;
+
+  }
+
 }
 
 //laptop
 @media screen and (min-width: 769px) {
   .inklmargin {
     margin: 0 120px;
+  }
+  .musikrichtung, .inklmargin, .entdeckungen, .inklpadding{
+    padding-top:40px;
+    padding-bottom: 40px;
+
   }
 }
 

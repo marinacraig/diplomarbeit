@@ -335,7 +335,7 @@
 <!--eigentliche Seite-->
 
 
-<div>
+<article>
     <div id="pagetop"></div>
     <!--klassen akkordeon: content show hide-->
     <section id="musikrichtung" class="musikrichtung inklmargin">
@@ -361,7 +361,8 @@
                         </g>
                     </g>
                 </svg>
-                <p>Jazz<span class="results">27</span></p></button>
+                <p>Jazz<span class="results">27</span></p>
+            </button>
             <button class="btngrau btngrau__hiphop">
                 <svg class="icon icon__music" viewBox="0 0 20 23" version="1.1" xmlns="http://www.w3.org/2000/svg"
                      xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -448,28 +449,33 @@
     <section id="magazin" class="inklmargin">
         <h2>Magazin</h2>
         <div class="magazin">
+        <div class="magazin__artikel">
             <h3>einfach etwas</h3>
+            <div class="mehr item__hidden">lesen</div>
             <p>elis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede
                 justo,
                 fringilla vel, aliquet nec, vulput</p>
         </div>
 
-        <div class="magazin">
-            <h3>einfach etwas?</h3>
+            <div class="magazin__artikel">
+                <h3>einfach etwas</h3>
+                <div class="mehr item__hidden">lesen</div>
             <p>elis, ultricies nec, pellenequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra qu
                 tesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo,
                 fringilla vel, aliquet nec, vulput</p>
         </div>
 
-        <div class="magazin">
-            <h3>einfach etwas mit noch was</h3>
+            <div class="magazin__artikel">
+                <h3>einfach etwas mit noch etwas</h3>
+                <div class="mehr item__hidden">lesen</div>
             <p>elis, ultricies nec, pellentesque eu, equat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in,
                 viverra qu
                 pretium quis, sem. Nuede justo, fringilla vel, aliquet nec, vulput</p>
         </div>
 
-        <div class="magazin">
-            <h3>einfach etwas tztz</h3>
+            <div class="magazin__artikel">
+                <h3>einfach etwas blablabla</h3>
+                <div class="mehr item__hidden">lesen</div>
             <p>elis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede
                 justo,
                 fringilla vel, aliquet nec, vulput equat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in,
@@ -479,21 +485,25 @@
             </p>
         </div>
 
-        <div class="magazin">
-            <h3>einfach etwas?</h3>
+            <div class="magazin__artikel">
+                <h3>einfach etwas?</h3>
+                <div class="mehr item__hidden">lesen</div>
             <p>elis, ultricies nec, pellenequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra qu
                 tesque eu, pretium quis, sem. Nulla cons</p>
         </div>
 
-        <div class="magazin">
-            <h3>einfach etwas mit noch was</h3>
+            <div class="magazin__artikel">
+                <h3>einfach etwas mit noch etwas</h3>
+                <div class="mehr item__hidden">lesen</div>
             <p>elis, ultricies nec, pellentesque eu, equat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in,
                 viverra qu
                 pretium quis, sem. Nuede justo, fringilla vel, aliquet nec, vulput</p>
         </div>
-        <a href="#">
-            <button class="btnweiss">Mehr anzeigen</button>
-        </a>
+            <a href="#">
+                <button class="btnweiss">Mehr anzeigen</button>
+            </a>
+        </div>
+
 
     </section>
 
@@ -614,9 +624,12 @@
     <!--Der news-Teil-->
 
 
-    <section id="news" class="inklpadding"
+    <section id="news" class="inklpadding">
         <h2>News</h2>
-            <img src="images/rsz_startseite_bsp_news.jpg" alt="news" title="news" class="news news__image"/>
+        <div class="news">
+        <div class="news news__image">
+            <span role="img" aria-label="news" > </span>
+        </div>
             <div class="news__content">
             <p class="countdown">24. Juni 2018</p>
             <p>der die Entscheidung trifft, eine Freude zu genießen, die keine unangenehmen Folgen hat,
@@ -639,6 +652,7 @@
             </svg><p class="counter">34</p></div>
             </div>
         </div>
+
 
         <div class="news">
             <div class="news__content">
@@ -665,7 +679,9 @@
         </div>
 
         <div class="news">
-            <img src="images/rsz_startseite_bsp_news.jpg" alt="news" title="news" class="news news__image"/>
+            <div class="news news__image">
+                <span role="img" aria-label="news" > </span>
+            </div>
             <div class="news__content">
             <p class="countdown">24. Juni 2018</p>
             <p>der die Entscheidung trifft, eine Freude zu genießen, die keine unangenehmen Folgen hat,
@@ -738,7 +754,9 @@
         </div>
 
         <div class="news">
-            <img src="images/rsz_startseite_bsp_news.jpg" alt="news" title="news" class="news news__image"/>
+            <div class="news news__image">
+                <span role="img" aria-label="news" > </span>
+            </div>
             <div class="news__content">
             <p class="countdown">24. Juni 2018</p>
             <p>der die Entscheidung trifft, eine Freude zu genießen, die keine unangenehmen Folgen hat,
@@ -763,7 +781,9 @@
         </div>
 
         <div class="news">
-            <img src="images/rsz_startseite_bsp_news.jpg" alt="news" title="news" class="news news__image"/>
+            <div class="news news__image">
+                <span role="img" aria-label="news" > </span>
+            </div>
             <div class="news__content">
             <p class="news__content--countdown">24. Juni 2018</p>
             <p class="news__content--description">der die Entscheidung trifft, eine Freude zu genießen, die keine unangenehmen Folgen hat,
@@ -787,9 +807,11 @@
             </div>
         </div>
 
+        <div class="news news__button">
         <a href="#">
             <button class="btnweiss">Mehr Anzeigen</button>
         </a>
+        </div>
     </section>
 
 </article>

@@ -1,0 +1,34 @@
+//von der Hauptseite, ohne Bilder wegen URL
+
+.news {
+  background-color: $weiss_hex;
+  margin: 0 auto 16px auto;
+  //tablet und desktop: margin:8px;
+  //masse wie .news__image
+  //für tablet: max-width:100%, width: 221px;
+  max-width: 100%;
+  width: 343px;
+
+}
+
+.news__content {
+  padding: 16px;
+  .container {
+    //padding-bottom: 16px; //wegen unten - evtl. anders lösen
+    display: flex;
+    hr {
+      color: $grauF0_hex;
+    }
+  }
+
+
+}
+.news__button{
+  background-color: $grauF0_hex;
+  .btnweiss{
+    margin: 0;
+    &:hover{
+      background-color: $schwarz_hex;
+    }
+  }
+}

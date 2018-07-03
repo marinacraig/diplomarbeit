@@ -16,13 +16,16 @@ button {
   border-radius: 10px;
   margin: 18px 12px;
 
+
   .icon__music {
     fill: $weiss_hex;
   }
   p {
     display: inline;
+    //todo: soll höher sein
 
     .results {
+
     }
   }
 }
@@ -107,7 +110,7 @@ button {
 //mittels akkordeon  - jedoch: wie kann man es für grösser phone ausblenden?
 // -> mittels "Filter zurücksetzen" akkordion schliessen
 
-.item__hidden--buttons{
+.item__hidden--buttons {
   display: none;
 }
 
@@ -116,8 +119,9 @@ button {
 
 }
 
+
 //tablet
-@media screen and (min-width : 376px) {
+@media screen and (min-width: 376px) {
   .item__hidden--buttons {
     display: inline;
   }
