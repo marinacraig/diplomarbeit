@@ -1,0 +1,67 @@
+#pagetop__inclbreadcrump {
+  padding-top: 100px; //ggf anpassen
+}
+
+.festivaluebersicht_filterbar {
+  background-color: $grauF0_hex;
+  //evtl. hier: padding:16px; etc. analog Hauptseite
+  font-size: 1rem;
+
+  ul {
+    display: inline-block;
+
+  }
+  li {
+    float: left;
+    list-style-type: none;
+    p, svg {
+      display: inline;
+    }
+  }
+
+  .filter {
+    text-decoration: none;
+
+    ul {
+      height: 48px;
+      width: 100%;
+    }
+    li {
+      color: $grauC2_hex;
+
+      &:active {
+        color: $schwarz_hex;
+      }
+    }
+  }
+
+
+  .item__hidden{
+    display: none;
+  }
+
+  //svg background-color, fill: weiss
+  .icon__music{
+    fill:$weiss_hex;
+  }
+  .icon__music--jazz{
+    background-color: $gelb_hex;
+  }
+
+}
+
+//tablet
+@media screen and (min-width : 376px) {
+  .festivaluebersicht_filterbar {
+
+    .item__hidden {
+      display: inline;
+    }
+  }
+}
+
+
+//laptop
+@media screen and (min-width : 769px) {
+
+}

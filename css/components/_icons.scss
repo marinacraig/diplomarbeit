@@ -2,6 +2,12 @@ svg {
   margin: 12px;
   .icon__nav .icon__footer {
     width: 32px;
+    //sind weiter im navigation.scss definiert
+  }
+  .icon__breadcrumb{
+    height: 13px;
+    width: 100%;
+    fill: $grauC2_hex;
   }
 }
 .musikrichtung{
@@ -35,6 +41,13 @@ svg {
 .icon__music--electronic {
   fill: $violett_hex;
 }
+}
+
+.icon__filter{
+  fill:$grauC2_hex;//stimmt das?
+  :active{
+    fill:$schwarz_hex;
+  }
 }
 
 //tablet

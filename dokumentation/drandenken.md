@@ -26,6 +26,7 @@
   dist etc. nicht auf github pushen)
   - news auf der Hauptseite: Bild wird via Background-image
   eingefügt - beachten bei DB Teil
+- Auf welchen Wegen kommt man zur Festivalübersicht?
  
  
  

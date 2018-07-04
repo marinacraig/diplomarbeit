@@ -36,10 +36,13 @@ body {
 @import "components/buttons";
 @import 'components/navigation';
 @import "components/footer";
+@import "components/breadcrump";
 @import 'components/grid';
 @import "components/accordeon";
 @import "components/magazin";
 @import "components/news";
+@import "components/festivaluebersicht";
+
 
 
 #pagetop {
@@ -101,6 +104,13 @@ p {
 //Todo: Dieses Bild würde mit den news abgefüllt werden -> news Bild = Festivalbild?, im span alt Text
 .news__content--image {
   background-image: url("../images/rsz_startseite_bsp_news.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+//Todo: Bild würde sich mit jedem Festival ändern
+.teaser__kachel {
+  background-image: url("../images/rsz_festival.jpg");
   background-position: center;
   background-size: cover;
 }

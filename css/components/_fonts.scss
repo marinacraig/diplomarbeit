@@ -50,7 +50,7 @@ h2, h1.h2 {
   margin:32px auto;
 }
 
-h3 {
+h3, .h3 {
   font-size: 1.176470588rem; //20
   font-weight: bold;
   margin-bottom: 1em; // sieht besser aus
@@ -58,7 +58,7 @@ h3 {
 }
 
 //für grosses Festival
-.festival {
+.festivalgross {
   font-size: 2.823529412rem; //48
   font-weight: bold;
   margin:40px auto;
@@ -78,7 +78,7 @@ header, button {
 }
 //Breadcrumb, Zusatzinfos (Datum, Likes)
 //.results von Musikfilter auf der Startseite
-.breadcrumb, .results {
+.nav__breadcrumb, .results {
   font-size: 0.7647058824rem; //13
 }
 
@@ -98,7 +98,7 @@ header, button {
     //margin:20px auto;
   }
   //für grosses Festival
-  .festival {
+  .festivalgross {
     font-size: 5.647058824rem; //96
     margin:100px auto;
   }
@@ -119,7 +119,7 @@ header, button {
     //margin:32px auto;
   }
   //für grosses Festival
-  .festival {
+  .festivalgross {
     font-size: 8.470588235rem; //144
     margin:144px auto;
   }

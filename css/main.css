@@ -75,12 +75,12 @@ h2, h1.h2 {
   font-weight: bold;
   margin: 32px auto; }
 
-h3 {
+h3, .h3 {
   font-size: 1.176470588rem;
   font-weight: bold;
   margin-bottom: 1em; }
 
-.festival {
+.festivalgross {
   font-size: 2.823529412rem;
   font-weight: bold;
   margin: 40px auto; }
@@ -92,7 +92,7 @@ h3 {
 header, button {
   font-weight: bold; }
 
-.breadcrumb, .results {
+.nav__breadcrumb, .results {
   font-size: 0.7647058824rem; }
 
 @media screen and (min-width: 376px) {
@@ -103,7 +103,7 @@ header, button {
     font-size: 1.882352941rem; }
   h3 {
     font-size: 1.176470588rem; }
-  .festival {
+  .festivalgross {
     font-size: 5.647058824rem;
     margin: 100px auto; } }
 
@@ -115,7 +115,7 @@ header, button {
     margin: 40px auto; }
   h3 {
     font-size: 1.176470588rem; }
-  .festival {
+  .festivalgross {
     font-size: 8.470588235rem;
     margin: 144px auto; } }
 
@@ -123,6 +123,10 @@ svg {
   margin: 12px; }
   svg .icon__nav .icon__footer {
     width: 32px; }
+  svg .icon__breadcrumb {
+    height: 13px;
+    width: 100%;
+    fill: #C2C2C2; }
 
 .musikrichtung .icon__music {
   height: 17px; }
@@ -145,6 +149,11 @@ svg {
 
 .entdeckungen .icon__music--electronic {
   fill: #5E35B1; }
+
+.icon__filter {
+  fill: #C2C2C2; }
+  .icon__filter :active {
+    fill: #000; }
 
 img {
   padding: 0;
@@ -518,6 +527,21 @@ footer {
   footer {
     padding: 0 120px; } }
 
+.breadcrumb {
+  text-decoration: none;
+  font-size: 0.7647058824rem;
+  /*  svg:hover{
+    fill: $schwarz_hex;
+  }*/ }
+  .breadcrumb ul {
+    display: inline-block;
+    height: 14px; }
+  .breadcrumb li {
+    color: #C2C2C2;
+    float: left; }
+    .breadcrumb li:hover {
+      color: #000; }
+
 /*
 .container {
   display: grid;
@@ -683,6 +707,39 @@ footer {
   .news__content {
     flex-basis: 17%; } }
 
+#pagetop__inclbreadcrump {
+  padding-top: 100px; }
+
+.festivaluebersicht_filterbar {
+  background-color: #F0F0F0;
+  font-size: 1rem; }
+  .festivaluebersicht_filterbar ul {
+    display: inline-block; }
+  .festivaluebersicht_filterbar li {
+    float: left;
+    list-style-type: none; }
+    .festivaluebersicht_filterbar li p, .festivaluebersicht_filterbar li svg {
+      display: inline; }
+  .festivaluebersicht_filterbar .filter {
+    text-decoration: none; }
+    .festivaluebersicht_filterbar .filter ul {
+      height: 48px;
+      width: 100%; }
+    .festivaluebersicht_filterbar .filter li {
+      color: #C2C2C2; }
+      .festivaluebersicht_filterbar .filter li:active {
+        color: #000; }
+  .festivaluebersicht_filterbar .item__hidden {
+    display: none; }
+  .festivaluebersicht_filterbar .icon__music {
+    fill: #FFF; }
+  .festivaluebersicht_filterbar .icon__music--jazz {
+    background-color: #FDD835; }
+
+@media screen and (min-width: 376px) {
+  .festivaluebersicht_filterbar .item__hidden {
+    display: inline; } }
+
 #pagetop {
   padding-top: 64px; }
 
@@ -721,6 +778,11 @@ p {
 
 .news__content--image {
   background-image: url("../images/rsz_startseite_bsp_news.jpg");
+  background-position: center;
+  background-size: cover; }
+
+.teaser__kachel {
+  background-image: url("../images/rsz_festival.jpg");
   background-position: center;
   background-size: cover; }
 

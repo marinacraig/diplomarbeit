@@ -1,7 +1,23 @@
 //Styleguide s. 31, schrift
 .breadcrumb {
-  color: $grauC2_hex;
-  &:hover{
-    color: $schwarz_hex
+  text-decoration: none;
+  font-size: 0.7647058824rem;
+
+  ul{
+    display: inline-block;
+    height: 14px;
   }
+  li{
+    color: $grauC2_hex;
+    float: left;
+    &:hover{
+      color: $schwarz_hex;
+    }
+  }
+/*  svg:hover{
+    fill: $schwarz_hex;
+  }*/
+
 }
+
+//todo: tbd - breadcrump svg... fill hover...
