@@ -1,4 +1,21 @@
-* {
+/* Border Box Trick Start */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+/* Border Box Trick Ende */
+
+.clearfix {
+  clear:both;
+}
+
+.body {
+  max-width:1440px;
+  width:100%;
+}
+/** {
   margin: 0;
   padding: 0;
 }
@@ -10,7 +27,7 @@ html {
 
 body {
   //border: deeppink 1px solid;
-}
+}*/
 
 @import 'components/colors';
 @import 'components/fonts';
@@ -29,21 +46,22 @@ body {
   padding-top: 64px;
 }
 
-.inklmargin {
+.musikrichtung {
   margin: 0 16px;
 }
 
 //Styleguide, s. 9 Absätze
 
 //Hauptseite:
-//jede section trennt sich wie h2
-.musikrichtung, .inklmargin, .entdeckungen, .inklpadding{
+//jede article trennt sich wie h2
+article{
   padding-top:24px;
   padding-bottom: 24px;
 
+
 }
-//1. section, musikrichtung und entdeckungen, Titel von news und magazin zentriert
-.musikrichtung, .entdeckungen, .inklpadding > h2, .inklmargin > h2 {
+//1. article, musikrichtung und entdeckungen, Titel von news und magazin zentriert
+.musikrichtung, .entdeckungen{
   text-align: center;
 }
 
@@ -52,22 +70,8 @@ p {
   margin-bottom: 1em;
 }
 
-//section news
-//statt inklmargin
+//article news
 
-.inklpadding {
-  padding: 16px;
-  background-color: $grauF0_hex;
-  .btnweiss{
-    background-color: $grauF0_hex;
-  }
-}
-
-
-//counter-zahl soll oben sein // news
-.counter {
-  padding-top: 16px;
-}
 
 //Bilder wegen URL:
 .festivalbild {
@@ -95,7 +99,7 @@ p {
 }
 
 //Todo: Dieses Bild würde mit den news abgefüllt werden -> news Bild = Festivalbild?, im span alt Text
-.news__image {
+.news__content--image {
   background-image: url("../images/rsz_startseite_bsp_news.jpg");
   background-position: center;
   background-size: cover;
@@ -107,13 +111,14 @@ p {
 
 //tablet
 @media screen and (min-width: 376px) {
-  .inklmargin {
+  .musikrichtung {
     margin: 0 24px;
   }
-  //jede section trennt sich wie h2
-  .musikrichtung, .inklmargin, .entdeckungen, .inklpadding{
-    padding-top:32px;
-    padding-bottom: 32px;
+  //jede article trennt sich wie h2
+article{
+  padding-top:32px;
+  padding-bottom: 32px;
+
 
   }
 
@@ -121,10 +126,10 @@ p {
 
 //laptop
 @media screen and (min-width: 769px) {
-  .inklmargin {
+  .musikrichtung {
     margin: 0 120px;
   }
-  .musikrichtung, .inklmargin, .entdeckungen, .inklpadding{
+  article{
     padding-top:40px;
     padding-bottom: 40px;
 

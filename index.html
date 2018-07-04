@@ -6,7 +6,7 @@
           content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
 
 </head>
@@ -111,7 +111,7 @@
                 </div>
             </ul>
             <div class="overlay-content">
-                <a href="#">Festivals</a>
+                <a href="content/overview.html">Festivals</a>
                 <a href="#">Magazin</a>
                 <a href="#">News</a>
             </div>
@@ -264,7 +264,7 @@
                 </a>
             </li>
             <li class="nav nav__festivallovers item">
-                <a href="#" class="container">
+                <a href="index.html" class="container">
                     <p class="nav__display nav__display--tablet item__hidden">Festival</p>
                     <svg class="icon icon__nav icon__nav--herz" width="24px" height="23px" viewBox="0 0 24 23"
                          version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -334,11 +334,10 @@
 
 <!--eigentliche Seite-->
 
-
-<article>
+<section>
     <div id="pagetop"></div>
     <!--klassen akkordeon: content show hide-->
-    <section id="musikrichtung" class="musikrichtung inklmargin">
+    <article id="musikrichtung" class="musikrichtung">
         <!--eigentlich gehört hier SEO h1 hin -> class h2 wegen Schriftgrösse-->
         <h1 class="h2">Auf welche Musik stehst du?</h1>
         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
@@ -441,7 +440,7 @@
             </a>
             <button class="btnschwarz">Ergebnis anzeigen</button>
         </div>
-    </section>
+    </article>
 
     <div class="image image__big festivalbild">
         <span role="img" aria-label="festivalbild"> </span>
@@ -449,7 +448,7 @@
 
     <!-- Magazin -->
 
-    <section id="magazin" class="magazin">
+    <article id="magazin" class="magazin">
         <h2>Magazin</h2>
         <div class="magazin__article">
             <div class="magazin__content">
@@ -509,7 +508,7 @@
             <button class="btnweiss">Mehr anzeigen</button>
         </a>
 
-    </section>
+    </article>
 
 
     <!--Banner-->
@@ -531,7 +530,7 @@
         hier gehören die bunten svg mit player hin-->
 
 
-    <section id="entdeckungen" class="entdeckungen">
+    <article id="entdeckungen" class="entdeckungen">
         <h2>Entdeckungen</h2>
         <p>Sei offen für neues und geniesse unerwartete Musikerlebnisse. Höre dir spannende Samples an und entdecke
             deine Leidenschaften.</p>
@@ -621,19 +620,20 @@
         <a href="#">
             <button class="btnweiss">Mehr Samples</button>
         </a>
-    </section>
+    </article>
 
 
     <!--Der news-Teil-->
 
 
-    <section id="news" class="inklpadding">
+    <article id="news" class="news">
         <h2>News</h2>
-        <div class="news">
-            <div class="news news__image">
+        <div class="news__articlex">
+        <div class="news__content">
+            <div class="news__content--image">
                 <span role="img" aria-label="news"> </span>
             </div>
-            <div class="news__content">
+            <div class="news__content--content">
                 <p class="countdown">24. Juni 2018</p>
                 <p>der die Entscheidung trifft, eine Freude zu genießen, die keine unangenehmen Folgen hat,
                     oder einen, der Schmerz vermeidet, </p>
@@ -659,8 +659,8 @@
         </div>
 
 
-        <div class="news">
-            <div class="news__content">
+        <div class="news__content">
+            <div class="news__content--content">
                 <p class="countdown">24. Juni 2018</p>
                 <p>der die Entscheidung trifft, eine Freude zu genießen, die keine unangenehmen Folgen hat,
                     oder einen, der Schmerz vermeidet, </p>
@@ -685,11 +685,11 @@
             </div>
         </div>
 
-        <div class="news">
-            <div class="news news__image">
+        <div class="news__content">
+            <div class="news__content--image">
                 <span role="img" aria-label="news"> </span>
             </div>
-            <div class="news__content">
+            <div class="news__content--content">
                 <p class="countdown">24. Juni 2018</p>
                 <p>der die Entscheidung trifft, eine Freude zu genießen, die keine unangenehmen Folgen hat,
                     oder einen, der Schmerz vermeidet, </p>
@@ -714,8 +714,8 @@
             </div>
         </div>
 
-        <div class="news">
-            <div class="news__content">
+        <div class="news__content">
+            <div class="news__content--content">
                 <p class="countdown">24. Juni 2018</p>
                 <p>der die Entscheidung trifft, eine Freude zu genießen, die keine unangenehmen Folgen hat,
                     oder einen, der Schmerz vermeidet, </p>
@@ -740,8 +740,8 @@
             </div>
         </div>
 
-        <div class="news">
-            <div class="news__content">
+        <div class="news__content">
+            <div class="news__content--content">
                 <p class="countdown">24. Juni 2018</p>
                 <p>der die Entscheidung trifft, eine Freude zu genießen, die keine unangenehmen Folgen hat,
                     oder einen, der Schmerz vermeidet, </p>
@@ -766,11 +766,11 @@
             </div>
         </div>
 
-        <div class="news">
-            <div class="news news__image">
+        <div class="news__content">
+            <div class="news__content--image">
                 <span role="img" aria-label="news"> </span>
             </div>
-            <div class="news__content">
+            <div class="news__content--content">
                 <p class="countdown">24. Juni 2018</p>
                 <p>der die Entscheidung trifft, eine Freude zu genießen, die keine unangenehmen Folgen hat,
                     oder einen, der Schmerz vermeidet, </p>
@@ -795,13 +795,13 @@
             </div>
         </div>
 
-        <div class="news">
-            <div class="news news__image">
+        <div class="news__content">
+            <div class="news__content--image">
                 <span role="img" aria-label="news"> </span>
             </div>
-            <div class="news__content">
-                <p class="news__content--countdown">24. Juni 2018</p>
-                <p class="news__content--description">der die Entscheidung trifft, eine Freude zu genießen, die keine
+            <div class="news__content--content">
+                <p class="news__content--content  countdown">24. Juni 2018</p>
+                <p class="news__content--content description">der die Entscheidung trifft, eine Freude zu genießen, die keine
                     unangenehmen Folgen hat,
                     oder einen, der Schmerz vermeidet, </p>
                 <hr/>
@@ -824,20 +824,20 @@
                     <p class="counter">12</p></div>
             </div>
         </div>
-
-        <div class="news news__button">
+            </div>
+        <div class="news__content--button">
             <a href="#">
                 <button class="btnweiss">Mehr Anzeigen</button>
             </a>
         </div>
-    </section>
+    </article>
 
-</article>
+</section>
 
 <!--footer-->
 
 <footer>
-    <ul class="footer container nav__top">
+    <ul class="footer container">
 
         <li class="footer footer__menu item">
             <a href="#">FESTIVALS</a>

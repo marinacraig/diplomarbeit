@@ -80,6 +80,10 @@
     .overlay-content {
       font-size: 2.823529412rem; //17
     }
+}
+
+// weil mich die Schrift in der Navi stört noch ein zusätzlicher Breakpoint
+@media screen and (min-width : 450px) {
   .overlay .item {
     .nav__display--tablet.item__hidden {
       display: flex;

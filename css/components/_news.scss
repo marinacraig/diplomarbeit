@@ -1,18 +1,38 @@
 //von der Hauptseite, ohne Bilder wegen URL
+.news:not(.news__content) {
+  //anpassen tablet 24, desktop 120
+  padding-left:16px;
+  padding-right:16px;
+  background-color: $grauF0_hex;
+  text-align: center;
+  .btnweiss{
+    margin: 16px;
+    background-color: $grauF0_hex;
+      &:hover{
+        background-color: $schwarz_hex;
+      }
+  }
 
-.news {
+}
+.news__article{
+  display: block;
+}
+.news__content {
   background-color: $weiss_hex;
   margin: 0 auto 16px auto;
-  //tablet und desktop: margin:8px;
-  //masse wie .news__image
-  //für tablet: max-width:100%, width: 221px;
+/*  tablet und desktop: margin:8px;
+  masse wie .news__content--image
+  max-height:65.15837104%;
+  max-width:100%;
+  height: 144px;
+  width: 221px;
+  für tablet: max-width:100%, width: 221px;*/
   max-width: 100%;
   width: 343px;
-  display: block;
 
 }
 
-.news__content {
+.news__content--content {
   padding: 16px;
   .container {
     //padding-bottom: 16px; //wegen unten - evtl. anders lösen
@@ -22,14 +42,57 @@
     }
   }
 
+}
+
+//counter-zahl soll oben sein // news
+.counter {
+  //padding-top: 16px;
+}
+
+
+//tablet
+@media screen and (min-width: 376px) {
+  .news:not(.news__content) {
+    //anpassen tablet 24, desktop 120
+    padding-left:24px;
+    padding-right:24px;
+
+  }
+  .news__article{
+    display: flex;
+    //flex-direction: row;
+    flex-wrap: wrap; //evtl. dann doch nur wrap
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .news__content {
+    margin: 8px;
+    /*
+      masse wie .news__content--image
+      max-height:65.15837104%;
+      height: 144px;
+      für tablet: max-width:100%, width: 221px;*/
+    // unnötig: max-width: 100%;
+    //flex-basis: 221px;
+    flex-basis: 30%;
+    width: 221px;
+    align-self: self-start;
+
+
+  }
 
 }
-.news__button{
-  background-color: $grauF0_hex;
-  .btnweiss{
-    margin: 0;
-    &:hover{
-      background-color: $schwarz_hex;
-    }
+
+//laptop
+@media screen and (min-width: 769px) {
+
+  .news:not(.news__content) {
+    //anpassen tablet 24, desktop 120
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+  .news__content {
+    flex-basis: 17%;
+
   }
 }

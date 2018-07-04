@@ -1,11 +1,14 @@
 // Navigation weiss, ul li in nav verschachtelt, da diese in der Regel immer anders als andere ul li
+ul {
+  margin: 0;
+  padding: 0;
+}
 nav {
   //CSS für Nav mit weissem Hintergrund
   position: fixed;
   top: 0;
   width: 100%;
   //border: #00D79F 2px solid;
-
   /*
   ul{
    // width: 100vw;
@@ -99,9 +102,12 @@ nav {
 @media screen and (min-width : 376px) {
   nav {
 
-    .container {
+  }
+}
 
-    }
+// weil mich die Schrift in der Navi stört noch ein zusätzlicher Breakpoint
+@media screen and (min-width : 450px) {
+  nav {
     .item {
       .nav__display--tablet.item__hidden {
         display: flex;
