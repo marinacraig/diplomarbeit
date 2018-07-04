@@ -21,6 +21,9 @@ nav {
     padding: 0 3px;
     border: $grauC2_hex 1px solid;
   }
+  .nav__top--original {
+    background-color: $weiss_hex;
+  }
 
   a {
     text-decoration: none;

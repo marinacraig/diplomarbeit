@@ -421,6 +421,8 @@ nav {
     height: 64px;
     padding: 0 3px;
     border: #C2C2C2 1px solid; }
+  nav .nav__top--original {
+    background-color: #FFF; }
   nav a {
     text-decoration: none; }
   nav li {
