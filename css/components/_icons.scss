@@ -19,7 +19,9 @@ svg {
 .entdeckungen {
   .icon__music {
     height: 120px;
-    width: 100%;
+    max-width: 100%; //todo: hier lag der Fehler scrolling, wie mache ich die icons genügend lang?
+    display: block;
+    margin: 48px 0; //ggf nochmals anpassen, sieht nach identischem h2-Abstand aus
   }
 
 .icon__music--jazz {
