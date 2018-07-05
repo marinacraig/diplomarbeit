@@ -10,6 +10,8 @@ svg {
     fill: $grauC2_hex;
   }
 }
+
+//für die Hauptseite
 .musikrichtung{
   .icon__music {
     height: 17px;
@@ -44,12 +46,15 @@ svg {
   fill: $violett_hex;
 }
 }
-
+//für die Festivalübersichtsseite
 .icon__filter{
   fill:$grauC2_hex;//stimmt das?
   :active{
     fill:$schwarz_hex;
   }
+}
+.icon__merken, .icon__gemerkt {
+  fill: $schwarz_hex;
 }
 
 //tablet

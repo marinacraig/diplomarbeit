@@ -157,6 +157,9 @@ svg {
   .icon__filter :active {
     fill: #000; }
 
+.icon__merken, .icon__gemerkt {
+  fill: #000; }
+
 img {
   padding: 0;
   margin: 0;
@@ -712,34 +715,81 @@ footer {
 #pagetop__inclbreadcrump {
   padding-top: 100px; }
 
-.festivaluebersicht_filterbar {
-  background-color: #F0F0F0;
-  font-size: 1rem; }
-  .festivaluebersicht_filterbar ul {
-    display: inline-block; }
-  .festivaluebersicht_filterbar li {
-    float: left;
-    list-style-type: none; }
-    .festivaluebersicht_filterbar li p, .festivaluebersicht_filterbar li svg {
-      display: inline; }
-  .festivaluebersicht_filterbar .filter {
+.festivaluebersicht__filter {
+  background-color: #F0F0F0; }
+  .festivaluebersicht__filter .filter {
     text-decoration: none; }
-    .festivaluebersicht_filterbar .filter ul {
+    .festivaluebersicht__filter .filter ul {
       height: 48px;
       width: 100%; }
-    .festivaluebersicht_filterbar .filter li {
+    .festivaluebersicht__filter .filter li {
       color: #C2C2C2; }
-      .festivaluebersicht_filterbar .filter li:active {
+      .festivaluebersicht__filter .filter li:active {
         color: #000; }
-  .festivaluebersicht_filterbar .item__hidden {
-    display: none; }
-  .festivaluebersicht_filterbar .icon__music {
+  .festivaluebersicht__filter ul {
+    display: inline-block; }
+  .festivaluebersicht__filter li {
+    float: left;
+    list-style-type: none; }
+    .festivaluebersicht__filter li p, .festivaluebersicht__filter li svg {
+      display: inline; }
+  .festivaluebersicht__filter .festival__list {
+    margin: 0 16px; }
+    .festivaluebersicht__filter .festival__list--jazz {
+      border-bottom: #FDD835 4px solid; }
+    .festivaluebersicht__filter .festival__list--hiphop {
+      border-bottom: #D81B60 4px solid; }
+    .festivaluebersicht__filter .festival__list--indie {
+      border-bottom: #00D79F 4px solid; }
+    .festivaluebersicht__filter .festival__list--poprock {
+      border-bottom: #3949AB 4px solid; }
+    .festivaluebersicht__filter .festival__list--electronic {
+      border-bottom: #5E35B1 4px solid; }
+    .festivaluebersicht__filter .festival__list--item {
+      background-color: #FFF;
+      margin: 8px 0; }
+      .festivaluebersicht__filter .festival__list--item .filter__music {
+        height: 48px;
+        width: 100%; }
+        .festivaluebersicht__filter .festival__list--item .filter__music--jazz {
+          background-color: #FDD835;
+          text-align: center; }
+        .festivaluebersicht__filter .festival__list--item .filter__music--hiphop {
+          background-color: #D81B60;
+          text-align: center; }
+        .festivaluebersicht__filter .festival__list--item .filter__music--indie {
+          background-color: #00D79F;
+          text-align: center; }
+        .festivaluebersicht__filter .festival__list--item .filter__music--poprock {
+          background-color: #3949AB;
+          text-align: center; }
+        .festivaluebersicht__filter .festival__list--item .filter__music--electronic {
+          background-color: #5E35B1;
+          text-align: center; }
+      .festivaluebersicht__filter .festival__list--item .filter__name {
+        margin: 8px;
+        width: 100%; }
+      .festivaluebersicht__filter .festival__list--item .filter__ort, .festivaluebersicht__filter .festival__list--item .filter__datum {
+        margin: 0 8px 8px 8px;
+        width: calc(100% - 80px);
+        color: #767676; }
+      .festivaluebersicht__filter .festival__list--item .filter__merken, .festivaluebersicht__filter .festival__list--item .filter__gemerkt {
+        float: right;
+        width: 50px;
+        margin-top: -12px; }
+  .festivaluebersicht__filter .icon__music {
     fill: #FFF; }
-  .festivaluebersicht_filterbar .icon__music--jazz {
-    background-color: #FDD835; }
+  .festivaluebersicht__filter .item__hidden {
+    display: none; }
+  .festivaluebersicht__filter .item__hidden--tablet {
+    display: none; }
 
 @media screen and (min-width: 376px) {
-  .festivaluebersicht_filterbar .item__hidden {
+  .festivaluebersicht__filter .item__hidden {
+    display: inline; } }
+
+@media screen and (min-width: 769px) {
+  .item__hidden--tablet {
     display: inline; } }
 
 #pagetop {

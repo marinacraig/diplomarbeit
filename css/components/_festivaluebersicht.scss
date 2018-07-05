@@ -2,23 +2,11 @@
   padding-top: 100px; //ggf anpassen
 }
 
-.festivaluebersicht_filterbar {
+.festivaluebersicht__filter {
   background-color: $grauF0_hex;
   //evtl. hier: padding:16px; etc. analog Hauptseite
-  font-size: 1rem;
 
-  ul {
-    display: inline-block;
-
-  }
-  li {
-    float: left;
-    list-style-type: none;
-    p, svg {
-      display: inline;
-    }
-  }
-
+  //Überschrift bei Festival-Liste
   .filter {
     text-decoration: none;
 
@@ -35,33 +23,125 @@
     }
   }
 
+  //Liste und listen der Festivalübersicht
+  ul {
+    display: inline-block;
 
-  .item__hidden{
-    display: none;
+  }
+  li {
+    float: left;
+    list-style-type: none;
+    p, svg {
+      display: inline;
+    }
+  }
+
+  // einzelne Festival-Kurzübersicht
+  .festival__list {
+    //laptop margin: 0 120px; tablet: margin: 0 24px;
+    margin: 0 16px;
+
+    //Abschluss-Border
+    &--jazz {
+      border-bottom: $gelb_hex 4px solid;
+    }
+    &--hiphop {
+      border-bottom: $pink_hex 4px solid;
+    }
+    &--indie {
+      border-bottom: $mint_hex 4px solid;
+    }
+    &--poprock {
+      border-bottom: $blau_hex 4px solid;
+    }
+    &--electronic {
+      border-bottom: $violett_hex 4px solid;
+    }
+
+    &--item {
+      background-color: $weiss_hex;
+      margin: 8px 0;
+
+      //nicht mobile: .teaser__kachel{}
+      .filter {
+        &__music {
+          //ab tablet height und width 104px
+          height: 48px;
+          width: 100%;
+
+          &--jazz {
+            background-color: $gelb_hex;
+            text-align: center;
+          }
+          &--hiphop {
+            background-color: $pink_hex;
+            text-align: center;
+          }
+          &--indie {
+            background-color: $mint_hex;
+            text-align: center;
+          }
+          &--poprock {
+            background-color: $blau_hex;
+            text-align: center;
+          }
+          &--electronic {
+            background-color: $violett_hex;
+            text-align: center;
+          }
+        }
+
+        &__name {
+          margin: 8px;
+          width: 100%;
+        }
+        &__ort, &__datum {
+          margin: 0 8px 8px 8px;
+          width: calc(100% - 80px);
+          color: $grau76_hex;
+        }
+        &__merken, &__gemerkt {
+          //ab Tablet anders
+          float: right;
+          width: 50px;
+          margin-top: -12px;
+        }
+      }
+
+    }
+
   }
 
   //svg background-color, fill: weiss
-  .icon__music{
-    fill:$weiss_hex;
+  .icon__music {
+    fill: $weiss_hex;
   }
-  .icon__music--jazz{
-    background-color: $gelb_hex;
+  //wird mobile nicht angezeigt
+  .item__hidden {
+    display: none;
+  }
+  //wird tablet auch nicht angezeigt
+  .item__hidden--tablet {
+    display: none;
   }
 
 }
 
 //tablet
-@media screen and (min-width : 376px) {
-  .festivaluebersicht_filterbar {
-
+@media screen and (min-width: 376px) {
+  .festivaluebersicht__filter {
     .item__hidden {
       display: inline;
     }
   }
 }
 
-
 //laptop
-@media screen and (min-width : 769px) {
+@media screen and (min-width: 769px) {
+
+  //wird tablet auch nicht angezeigt
+  .item__hidden--tablet {
+    display: inline;
+  }
 
 }
