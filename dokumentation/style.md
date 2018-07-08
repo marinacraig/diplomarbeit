@@ -17,9 +17,10 @@ Zudem ist keine passende Schrift oder Logoteile für
 verwendet.
 
 ##Header und Footer
-Flexbox wurde wegen dem Wechsel der Reihenfolgen im 
-Footer und verwendet. Daher konnten nicht alle px-Abstände 
-zu 100 % eingehalten werden.
+Flexbox wurde im Header und
+Footer verwendet. Daher konnten nicht alle px-Abstände 
+zu 100 % eingehalten werden. Festival-Lovers liegt daher nicht exakt 
+übereinander.
 Laut Styleguide ist Header bold (s. 6), bei Navigationsbeschreibung
  jedoch nicht. Ich habe mich für bold entschieden.
  

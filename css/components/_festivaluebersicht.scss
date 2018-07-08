@@ -7,8 +7,10 @@
   //evtl. hier: padding:16px; etc. analog Hauptseite
 
   //Überschrift bei Festival-Liste
-  .filter {
+  .filternavigation {
     text-decoration: none;
+    //laptop margin: 0 120px; tablet: margin: 0 24px;
+    margin: 16px;
 
     ul {
       height: 48px;
@@ -130,9 +132,10 @@
 //tablet
 @media screen and (min-width: 376px) {
   .festivaluebersicht__filter {
-    .item__hidden {
-      display: inline;
-    }
+
+  }
+  .item__hidden {
+    display: inline;
   }
 }
 

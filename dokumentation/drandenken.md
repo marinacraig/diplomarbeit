@@ -27,6 +27,7 @@
   - news auf der Hauptseite: Bild wird via Background-image
   eingefügt - beachten bei DB Teil
 - Auf welchen Wegen kommt man zur Festivalübersicht?
+-> Tom schickt etwas, Todo: ggf. anpassen
  
  
  

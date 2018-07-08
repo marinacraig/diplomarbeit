@@ -8,15 +8,7 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  //border: #00D79F 2px solid;
-  /*
-  ul{
-   // width: 100vw;
-    margin:0;
-    padding:0;
-    max-width: 100%;
-  }
-  */
+
 
 
   .nav__top {
@@ -33,6 +25,8 @@ nav {
   }
   li {
     list-style-type: none;
+    height: 100%;
+    display: flex;
 
     }
 
@@ -42,8 +36,15 @@ nav {
     }
   }
   .nav__festivallovers{
-    p{
-      margin: auto;
+
+    &--1{
+      margin-left: 1em;
+    }
+    &--2{
+      margin-right: 1em;
+    }
+    .icon__nav--herz{
+      fill:$schwarz_hex;
     }
   }
   //Schriften

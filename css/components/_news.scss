@@ -1,18 +1,21 @@
 //von der Hauptseite, ohne Bilder wegen URL
-.news:not(.news__content) {
+.news {
+
+&:not(.news__content) {
   //anpassen tablet 24, desktop 120
-  padding-left:16px;
-  padding-right:16px;
+  padding-left: 16px;
+  padding-right: 16px;
   background-color: $grauF0_hex;
   text-align: center;
-  .btnweiss{
-    margin: 16px;
+  .btnweiss {
+    margin: 16px auto;
+    padding: auto;
     background-color: $grauF0_hex;
-      &:hover{
-        background-color: $schwarz_hex;
-      }
+    &:hover {
+      background-color: $schwarz_hex;
+    }
   }
-
+}
 }
 .news__article{
   display: block;
@@ -20,6 +23,8 @@
 .news__content {
   background-color: $weiss_hex;
   margin: 0 auto 16px auto;
+  max-width: 100%;
+  width: 343px;
 /*  tablet und desktop: margin:8px;
   masse wie .news__content--image
   max-height:65.15837104%;
@@ -75,7 +80,7 @@
     // unnötig: max-width: 100%;
     //flex-basis: 221px;
     flex-basis: 30%;
-    width: 221px;
+    min-width: 221px;
     align-self: self-start;
 
 
