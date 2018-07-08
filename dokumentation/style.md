@@ -20,10 +20,13 @@ verwendet.
 Flexbox wurde im Header und
 Footer verwendet. Daher konnten nicht alle px-Abstände 
 zu 100 % eingehalten werden. Festival-Lovers liegt daher nicht exakt 
-übereinander.
-Laut Styleguide ist Header bold (s. 6), bei Navigationsbeschreibung
+übereinander.  
+Laut Styleguide ist Header-Schrift bold (s. 6), bei Navigationsbeschreibung
  jedoch nicht. Ich habe mich für bold entschieden.
  
 ##Buttons  
 Unterstrichener Button wechselt beim Hover die Farbe, 
-wirkt so einheitlicher.
+wirkt so einheitlicher.  
+Auf der Hauptseite bei Entdeckungen fehlt auf dem Mobile Bild 
+der Button für mehr Samples. Ich habe den Button dennoch eingebunden,
+ da es auf mich sonst wie vergessen wirkt. 

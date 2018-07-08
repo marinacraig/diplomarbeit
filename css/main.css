@@ -316,11 +316,16 @@ button {
   background-color: #C2C2C2;
   color: #FFF;
   border-radius: 10px;
-  margin: 18px 12px; }
+  margin: 18px 12px;
+  display: inline-flex; }
   .btngrau .icon__music {
     fill: #FFF; }
   .btngrau p {
-    display: inline; }
+    display: flex;
+    margin: auto;
+    padding-right: 1em; }
+    .btngrau p .results {
+      padding-left: 1em; }
 
 .btngrau__jazz:hover {
   background-color: #FDD835; }
@@ -633,11 +638,6 @@ footer {
   #akkordeon:not(:target) .hide {
     display: inline; } }
 
-.entdeckungen {
-  max-width: 100%; }
-  .entdeckungen .btnweiss {
-    margin: auto; }
-
 .magazin {
   margin: 0 16px; }
   .magazin:not(.magazin__article) {
@@ -833,6 +833,27 @@ article {
 
 p {
   margin-bottom: 1em; }
+
+.entdeckungen {
+  max-width: 100%;
+  padding-bottom: 48px; }
+  .entdeckungen .btnweiss {
+    margin: auto; }
+  .entdeckungen__music {
+    height: 120px;
+    margin: 48px 0;
+    background-position: center;
+    background-size: cover; }
+    .entdeckungen__music--jazz {
+      background-image: url("../assets/audio_jazz.svg"); }
+    .entdeckungen__music--hiphop {
+      background-image: url("../assets/audio_hiphop.svg"); }
+    .entdeckungen__music--indie {
+      background-image: url("../assets/audio_indie.svg"); }
+    .entdeckungen__music--poprock {
+      background-image: url("../assets/audio_poprock.svg"); }
+    .entdeckungen__music--electronic {
+      background-image: url("../assets/audio_electronic.svg"); }
 
 .festivalbild {
   background-image: url("../images/rsz_startseite_1.jpg");

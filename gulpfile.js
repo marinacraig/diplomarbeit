@@ -10,7 +10,7 @@ const runSequence = require('gulp-run-sequence');
 
 /*
 diese Sachen von unserer tdo übernommen, ggf anpassen, sass-alt ist umbenannt ums vom neuen unterscheiden zu können
-todo: minify, dest etc. noch ergänzen
+todo: minify, dest, von svg:alle mit audio am anfang etc. noch ergänzen
  */
 gulp.task('build', (cb)=>{
     runSequence('clean', ['babel', 'sass'], 'copy',cb);

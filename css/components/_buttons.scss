@@ -15,17 +15,19 @@ button {
   color: $weiss_hex;
   border-radius: 10px;
   margin: 18px 12px;
+  display: inline-flex;
 
 
   .icon__music {
     fill: $weiss_hex;
   }
   p {
-    display: inline;
-    //todo: soll höher sein
-
+    display: flex;
+    margin: auto;
+    padding-right: 1em;
+    //soll höher sein
     .results {
-
+      padding-left: 1em;
     }
   }
 }
