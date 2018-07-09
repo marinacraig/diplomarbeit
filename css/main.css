@@ -679,69 +679,67 @@ footer {
   .magazin__content {
     flex-basis: 30%; } }
 
-.news:not(.news__content) {
+.news {
   padding-left: 16px;
   padding-right: 16px;
   background-color: #F0F0F0;
   text-align: center; }
-  .news:not(.news__content) .btnweiss {
+  .news .btnweiss {
     margin: 16px auto;
     padding: auto;
     background-color: #F0F0F0; }
-    .news:not(.news__content) .btnweiss:hover {
+    .news .btnweiss:hover {
       background-color: #000; }
-
-.news__article {
-  display: block; }
-
-.news__content {
-  background-color: #FFF;
-  margin: 0 auto 16px auto;
-  max-width: 100%;
-  width: 343px;
-  /*  tablet und desktop: margin:8px;
-  masse wie .news__content--image
-  max-height:65.15837104%;
-  max-width:100%;
-  height: 144px;
-  width: 221px;
-  für tablet: max-width:100%, width: 221px;*/
-  max-width: 100%;
-  width: 343px; }
-
-.news__content--content {
-  padding: 16px; }
-  .news__content--content .container {
-    display: flex; }
-    .news__content--content .container hr {
-      color: #F0F0F0; }
-
-@media screen and (min-width: 376px) {
-  .news:not(.news__content) {
-    padding-left: 24px;
-    padding-right: 24px; }
   .news__article {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start; }
+    text-align: left; }
   .news__content {
-    margin: 8px;
-    /*
+    background-color: #FFF;
+    margin: 0 auto 16px auto;
+    max-width: 343px;
+    width: 100%;
+    /*  tablet und desktop: margin:8px;
       masse wie .news__content--image
       max-height:65.15837104%;
+      max-width:100%;
       height: 144px;
-      für tablet: max-width:100%, width: 221px;*/
-    flex-basis: 30%;
-    min-width: 221px;
-    align-self: self-start; } }
+      width: 221px;
+      für tablet: max-width:100%, width: 221px;*/ }
+    .news__content--content {
+      padding: 16px; }
+      .news__content--content .container {
+        display: flex; }
+        .news__content--content .container hr {
+          color: #F0F0F0; }
+
+@media screen and (min-width: 376px) {
+  .news {
+    padding-left: 24px;
+    padding-right: 24px; }
+    .news__article {
+      column-count: 3;
+      column-gap: 0; }
+      .news__article--content {
+        break-inside: avoid;
+        padding: 5px; }
+    .news__content {
+      margin: 8px;
+      max-width: 100%;
+      width: 221px;
+      padding: auto;
+      /*  tablet und desktop: margin:8px;
+        masse wie .news__content--image
+        max-height:65.15837104%;
+        max-width:100%;
+        height: 144px;
+        width: 221px;
+        für tablet: max-width:100%, width: 221px;*/ } }
 
 @media screen and (min-width: 769px) {
-  .news:not(.news__content) {
+  .news {
     padding-left: 120px;
     padding-right: 120px; }
-  .news__content {
-    flex-basis: 17%; } }
+    .news__article {
+      column-count: 5; } }
 
 #pagetop__inclbreadcrump {
   padding-top: 100px; }

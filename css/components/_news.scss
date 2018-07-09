@@ -1,88 +1,93 @@
 //von der Hauptseite, ohne Bilder wegen URL
 .news {
-
-&:not(.news__content) {
-  //anpassen tablet 24, desktop 120
-  padding-left: 16px;
-  padding-right: 16px;
-  background-color: $grauF0_hex;
-  text-align: center;
-  .btnweiss {
-    margin: 16px auto;
-    padding: auto;
+    //anpassen tablet 24, desktop 120
+    padding-left: 16px;
+    padding-right: 16px;
     background-color: $grauF0_hex;
-    &:hover {
-      background-color: $schwarz_hex;
+    text-align: center;
+    .btnweiss {
+      margin: 16px auto;
+      padding: auto;
+      background-color: $grauF0_hex;
+      &:hover {
+        background-color: $schwarz_hex;
+      }
     }
-  }
-}
-}
-.news__article{
-  display: block;
-}
-.news__content {
-  background-color: $weiss_hex;
-  margin: 0 auto 16px auto;
-  max-width: 100%;
-  width: 343px;
-/*  tablet und desktop: margin:8px;
-  masse wie .news__content--image
-  max-height:65.15837104%;
-  max-width:100%;
-  height: 144px;
-  width: 221px;
-  für tablet: max-width:100%, width: 221px;*/
-  max-width: 100%;
-  width: 343px;
 
-}
 
-.news__content--content {
-  padding: 16px;
-  .container {
-    //padding-bottom: 16px; //wegen unten - evtl. anders lösen
-    display: flex;
-    hr {
-      color: $grauF0_hex;
+  &__article {
+    text-align: left;
+    &--content {
+      //wieviele columns maisonry
+
     }
   }
 
-}
+  &__content {
+    background-color: $weiss_hex;
+    margin: 0 auto 16px auto;
+    max-width: 343px;
+    width: 100%;
+    /*  tablet und desktop: margin:8px;
+      masse wie .news__content--image
+      max-height:65.15837104%;
+      max-width:100%;
+      height: 144px;
+      width: 221px;
+      für tablet: max-width:100%, width: 221px;*/
 
-//counter-zahl soll oben sein // news
-.counter {
-  //padding-top: 16px;
+
+    &--content {
+      padding: 16px;
+      .container {
+        //padding-bottom: 16px; //wegen unten - evtl. anders lösen
+        display: flex;
+        hr {
+          color: $grauF0_hex;
+        }
+      }
+
+    }
+  }
+
+  //counter-zahl soll oben sein // news
+  .counter {
+    //padding-top: 16px;
+  }
 }
 
 
 //tablet
 @media screen and (min-width: 376px) {
-  .news:not(.news__content) {
+  .news {
     //anpassen tablet 24, desktop 120
-    padding-left:24px;
-    padding-right:24px;
+    padding-left: 24px;
+    padding-right: 24px;
 
-  }
-  .news__article{
-    display: flex;
-    //flex-direction: row;
-    flex-wrap: wrap; //evtl. dann doch nur wrap
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-  .news__content {
-    margin: 8px;
-    /*
-      masse wie .news__content--image
-      max-height:65.15837104%;
-      height: 144px;
-      für tablet: max-width:100%, width: 221px;*/
-    // unnötig: max-width: 100%;
-    //flex-basis: 221px;
-    flex-basis: 30%;
-    min-width: 221px;
-    align-self: self-start;
+    &__article {
+      //wieviele columns maisonry
+      column-count: 3;
+      column-gap: 0;
 
+      &--content {
+        break-inside: avoid;
+        padding: 5px;
+      }
+    }
+
+    &__content {
+      margin: 8px;
+      max-width: 100%;
+      width: 221px;
+      padding: auto;
+      /*  tablet und desktop: margin:8px;
+        masse wie .news__content--image
+        max-height:65.15837104%;
+        max-width:100%;
+        height: 144px;
+        width: 221px;
+        für tablet: max-width:100%, width: 221px;*/
+    }
 
   }
 
@@ -90,14 +95,18 @@
 
 //laptop
 @media screen and (min-width: 769px) {
-
-  .news:not(.news__content) {
+  .news {
     //anpassen tablet 24, desktop 120
     padding-left: 120px;
     padding-right: 120px;
-  }
-  .news__content {
-    flex-basis: 17%;
+
+    &__article {
+      //wieviele columns maisonry
+      column-count: 5;
+      //column-gap: 0;
+    }
+
+
 
   }
 }
