@@ -22,7 +22,9 @@ Footer verwendet. Daher konnten nicht alle px-Abstände
 zu 100 % eingehalten werden. Festival-Lovers liegt daher nicht exakt 
 übereinander.  
 Laut Styleguide ist Header-Schrift bold (s. 6), bei Navigationsbeschreibung
- jedoch nicht. Ich habe mich für bold entschieden.
+ jedoch nicht. Ich habe mich für bold entschieden.  
+ Das Drop-Down vom Login hat laut Bildern einen Abstand. Damit man auch mit der Maus
+ die Eingabefelder auswählen kann, wurde dieser entfernt.  
  
 ##Buttons  
 Unterstrichener Button wechselt beim Hover die Farbe, 
