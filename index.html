@@ -121,7 +121,7 @@
 
             <!--die 3 grossen Links auf der Seite-->
 
-            <div class="overlay-content">
+            <div class="overlay__content">
                 <a href="content/festivaluebersicht.html">Festivals</a>
                 <a href="#">Magazin</a>
                 <a href="#">News</a>
@@ -303,8 +303,8 @@
             </li>
             <li>
                 <ul class="container">
-                    <li class="nav nav__login item">
-                        <a href="#" class="container">
+                    <li class="nav nav__login item nav__dropdown">
+                        <span class="container">
                             <svg class="icon icon__nav icon__nav--login" width="24px" height="24px" viewBox="0 0 24 24"
                                  version="1.1" xmlns="http://www.w3.org/2000/svg"
                                  xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -322,10 +322,41 @@
                                 </g>
                             </svg>
                             <p class="nav__display nav__display--desktop item__hidden nav__login">LOGIN</p>
-                        </a>
+                        </span>
+
+
+                        <!-- Login Maske - Dropdown -->
+                       <ul class="nav__dropdown--content">
+
+                           <li>
+                               <p class="pfeil-oben login"></p>
+                           </li>
+
+                            <li>
+                                <input type="email" placeholder="E-Mail Adresse">
+                            </li>
+                            <li>
+                                <input type="password" placeholder="Passwort">
+                            </li>
+                            <li>
+                                <button class="btnweiss">anmelden</button>
+                            </li>
+                            <li>
+                                <p><a href="#">Passwort</a> vergessen?</p>
+                            </li>
+                           <hr>
+                            <li>
+                                <p>Neu bei FestivalLovers?</p>
+                                <p>Jetzt <a href="#">registieren.</a></p>
+
+
+                            </li>
+
+                        </ul>
+
                     </li>
                     <li class="nav nav__ticket item">
-                        <a href="#" class="container">
+                        <span class="container">
                             <svg class="icon icon__nav icon__nav--ticket" width="24px" height="22px" viewBox="0 0 24 22"
                                  version="1.1" xmlns="http://www.w3.org/2000/svg"
                                  xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -343,7 +374,7 @@
                                 </g>
                             </svg>
                             <p class="nav__display nav__display--desktop item__hidden nav__ticket">TICKETS KAUFEN</p>
-                        </a>
+                        </span>
                     </li>
                 </ul>
             </li>
@@ -642,7 +673,7 @@
                 <div class="news__content--content">
                     <p class="countdown">24. Juni 2018</p>
                     <p>der die Entscheidung trifft, eine Freude zu genießen, die keine unangenehmen Folgen hat,
-                        oder einen, der Schmerz vermeidet, </p>
+                        oder </p>
                     <hr/>
                     <div class="container">
                         <svg width="24px" height="23px" viewBox="0 0 24 23" version="1.1"
@@ -664,6 +695,35 @@
                         <p class="counter">11</p></div>
                 </div>
             </div>
+            </div>
+
+            <div class="news__article--content">
+                <div class="news__content">
+                    <div class="news__content--content">
+                        <p class="countdown">24. Juni 2018</p>
+                        <p>der die Entscheidung trifft, eine Freude zu genießen, die keine unangenehmen Folgen hat,
+                            oder einen, der Schmerz vermeidet, </p>
+                        <hr/>
+                        <div class="container">
+                            <svg width="24px" height="23px" viewBox="0 0 24 23" version="1.1"
+                                 xmlns="http://www.w3.org/2000/svg"
+                                 xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+                                <title>detail_like_filled</title>
+                                <desc>Created with Sketch.</desc>
+                                <defs></defs>
+                                <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <g class="icon icon__like_filled" id="detail_like_filled"
+                                       transform="translate(-12.000000, -12.000000)" fill="#000000">
+                                        <g transform="translate(12.000000, 12.000000)" id="Shape">
+                                            <path d="M23.9589231,7.03476923 C23.6086154,3.17907692 20.8795385,0.381692308 17.4641538,0.381692308 C15.1887692,0.381692308 13.1053846,1.60615385 11.9330769,3.56861538 C10.7713846,1.58076923 8.77338462,0.381230769 6.53446154,0.381230769 C3.11953846,0.381230769 0.39,3.17861538 0.0401538462,7.03430769 C0.0124615385,7.20461538 -0.101076923,8.10092308 0.244153846,9.56261538 C0.741692308,11.6709231 1.89092308,13.5886154 3.56676923,15.1070769 L11.9275385,22.6943077 L20.4318462,15.1075385 C22.1076923,13.5886154 23.2569231,11.6713846 23.7544615,9.56261538 C24.0996923,8.10138462 23.9861538,7.20507692 23.9589231,7.03476923 L23.9589231,7.03476923 Z"></path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                            <p class="counter">11</p></div>
+                    </div>
+                </div>
             </div>
 
             <div class="news__article--content">

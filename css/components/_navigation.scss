@@ -1,4 +1,6 @@
 // Navigation weiss, ul li in nav verschachtelt, da diese in der Regel immer anders als andere ul li
+
+@import "login";
 ul {
   margin: 0;
   padding: 0;
@@ -31,6 +33,7 @@ nav {
     }
 
   .nav__menu, .nav__login, .nav__ticket {
+
     p{
       margin: auto 1em auto 0;
     }
@@ -63,25 +66,26 @@ nav {
     }
   }
 
-  .nav__login > a, .nav__ticket > a {
+  .nav__login > span, .nav__ticket > span {
     text-decoration: none;
     color: $grauC2_hex;
     border-left: $grauC2_hex 1px solid;
-
+    height: 100%;
+    &:hover{
+      background-color: $grauC2_hex;
+      color: $schwarz_hex;
+      .icon__nav--login, .icon__nav--ticket{
+        fill:$schwarz_hex;
+      }
+    }
   }
   .icon__nav--login, .icon__nav--ticket{
     fill:$grauC2_hex;
   }
-  .nav__ticket > a:hover, .nav__login > a:hover {
-    background-color: $grauC2_hex;
-    color: $schwarz_hex;
-    .icon__nav--login, .icon__nav--ticket{
-      fill:$schwarz_hex;
-    }
-  }
 
 
   @import "overlay";
+
 
   // flexbox:
   .container, .overlay .container {

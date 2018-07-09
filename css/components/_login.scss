@@ -1,0 +1,89 @@
+.nav__dropdown{
+  position: relative;
+  display: inline-block;
+  height: 100%;
+
+  ul{
+    //muss nach links, kommt sonst direkt darunter, gilt für beide
+   margin-left: calc(-70vw);
+    max-width: 100vw;
+    padding: 12px;
+
+    .pfeil-oben  {
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 10px solid $schwarz_hex;
+      margin-top: -38px;
+    }
+    //da das Dropdown verschoben werden musste, muss Pfeil zurück - gilt nur je unter Menu
+    .login{
+      margin-left: calc(70vw - 6px);
+    }
+  }
+
+
+
+  &--content{
+    display: none;
+    position: absolute;
+    background-color: $schwarz_hex;
+    max-width: 100vw;
+    width: 350px;
+    margin: 24px auto;//tablet 32px, desktop 40px
+    padding-bottom: 24px;
+    z-index: 1;
+    color: $weiss_hex;
+
+
+
+    li{
+      padding:12px;
+      display: block;
+      p{
+        color: $weiss_hex;
+        font-weight: normal;
+        text-align: center;
+        padding-bottom: 4px;
+
+        > a {
+          text-decoration: underline;
+          border-bottom: $weiss_hex;
+          font-weight: bold;
+          color:$weiss_hex;
+        }
+      }
+
+    }
+
+    hr{
+      margin: 24px -0.5em; //tablet 32px, desktop 40px
+    }
+
+    input {
+      height: 48px;
+      max-width: 100%;
+      background-color: $weiss_hex;
+      width: 343px;
+      margin-top: 8px;
+      padding-left: 12px;
+      color:$schwarz_hex;
+
+      &:hover {
+        background-color: $schwarz_hex;
+        color: $weiss_hex;
+      }
+    }
+
+
+    .btnweiss{
+      margin: 0;
+    }
+  }
+
+  &:hover &--content, &:active &--content{
+    display: block;
+
+  }
+}

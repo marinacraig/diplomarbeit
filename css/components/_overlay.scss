@@ -15,9 +15,31 @@
   .icon__nav, .icon__footer, .icon__nav--login, .icon__nav--ticket, .icon__nav--herz{
     fill: $weiss_hex;
   }
+  a, span{
+    text-decoration: none;
+    color: $weiss_hex;
+    display: block;
+    transition: 0.3s;
+
+    &:hover, &:focus{
+      color: $schwarz_hex;
+      background-color: $weiss_hex;
+      width: 100%;
+
+      .icon__nav, .icon__footer, .icon__nav--login, .icon__nav--ticket, .icon__nav--herz{
+        fill: $schwarz_hex;
+      }
+    }
+  }
+  li .nav__login, li .nav__ticket {
+    &:not(p){
+      border-left: $weiss_hex 1px solid;
+  }
+
+  }
 }
 
-.overlay-content {
+.overlay__content {
   position: relative;
   top: 25%;
   bottom: 40%;
@@ -28,25 +50,6 @@
   font-weight: bold;
 }
 
-.overlay a {
-  text-decoration: none;
-  color: $weiss_hex;
-  display: block;
-  transition: 0.3s;
-}
-
-
-.overlay a:hover, .overlay a:focus {
-  //.nav__menu, .nav__login, .nav__ticket {
-  color: $schwarz_hex;
-  background-color: $weiss_hex;
-  width: 100%;
-
-  .icon__nav, .icon__nav--herz, .icon__footer{
-    fill: $schwarz_hex;
-  }
- // }
-}
 
 .overlay .item {
   .item__hidden {
@@ -90,7 +93,7 @@
 //tablet
 @media screen and (min-width : 376px) {
 
-    .overlay-content {
+    .overlay__content {
       font-size: 2.823529412rem; //17
     }
   .nav__bottom {
@@ -110,7 +113,7 @@
 //laptop
 @media screen and (min-width : 769px) {
 
-    .overlay-content {
+    .overlay__content {
       font-size: 3.294117647rem;//56
     }
 

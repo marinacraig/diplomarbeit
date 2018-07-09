@@ -17,10 +17,6 @@
 
   &__article {
     text-align: left;
-    &--content {
-      //wieviele columns maisonry
-
-    }
   }
 
   &__content {
@@ -50,10 +46,6 @@
     }
   }
 
-  //counter-zahl soll oben sein // news
-  .counter {
-    //padding-top: 16px;
-  }
 }
 
 
@@ -70,7 +62,7 @@
       column-gap: 0;
 
       &--content {
-        break-inside: avoid;
+        break-inside: avoid; //wird vom firefox ignoriert
         padding: 5px;
       }
     }

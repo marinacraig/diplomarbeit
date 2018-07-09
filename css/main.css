@@ -362,6 +362,64 @@ button {
   .item__hidden--button {
     display: none; } }
 
+.nav__dropdown {
+  position: relative;
+  display: inline-block;
+  height: 100%; }
+  .nav__dropdown ul {
+    margin-left: calc(-70vw);
+    max-width: 100vw;
+    padding: 12px; }
+    .nav__dropdown ul .pfeil-oben {
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 10px solid #000;
+      margin-top: -38px; }
+    .nav__dropdown ul .login {
+      margin-left: calc(70vw - 6px); }
+  .nav__dropdown--content {
+    display: none;
+    position: absolute;
+    background-color: #000;
+    max-width: 100vw;
+    width: 350px;
+    margin: 24px auto;
+    padding-bottom: 24px;
+    z-index: 1;
+    color: #FFF; }
+    .nav__dropdown--content li {
+      padding: 12px;
+      display: block; }
+      .nav__dropdown--content li p {
+        color: #FFF;
+        font-weight: normal;
+        text-align: center;
+        padding-bottom: 4px; }
+        .nav__dropdown--content li p > a {
+          text-decoration: underline;
+          border-bottom: #FFF;
+          font-weight: bold;
+          color: #FFF; }
+    .nav__dropdown--content hr {
+      margin: 24px -0.5em; }
+    .nav__dropdown--content input {
+      height: 48px;
+      max-width: 100%;
+      background-color: #FFF;
+      width: 343px;
+      margin-top: 8px;
+      padding-left: 12px;
+      color: #000; }
+      .nav__dropdown--content input:hover {
+        background-color: #000;
+        color: #FFF; }
+    .nav__dropdown--content .btnweiss {
+      margin: 0; }
+  .nav__dropdown:hover .nav__dropdown--content, .nav__dropdown:active .nav__dropdown--content {
+    display: block; }
+
 ul {
   margin: 0;
   padding: 0; }
@@ -399,17 +457,18 @@ nav {
     color: #767676; }
     nav .nav__menu > a:hover .icon__nav--menu {
       fill: #767676; }
-  nav .nav__login > a, nav .nav__ticket > a {
+  nav .nav__login > span, nav .nav__ticket > span {
     text-decoration: none;
     color: #C2C2C2;
-    border-left: #C2C2C2 1px solid; }
+    border-left: #C2C2C2 1px solid;
+    height: 100%; }
+    nav .nav__login > span:hover, nav .nav__ticket > span:hover {
+      background-color: #C2C2C2;
+      color: #000; }
+      nav .nav__login > span:hover .icon__nav--login, nav .nav__login > span:hover .icon__nav--ticket, nav .nav__ticket > span:hover .icon__nav--login, nav .nav__ticket > span:hover .icon__nav--ticket {
+        fill: #000; }
   nav .icon__nav--login, nav .icon__nav--ticket {
     fill: #C2C2C2; }
-  nav .nav__ticket > a:hover, nav .nav__login > a:hover {
-    background-color: #C2C2C2;
-    color: #000; }
-    nav .nav__ticket > a:hover .icon__nav--login, nav .nav__ticket > a:hover .icon__nav--ticket, nav .nav__login > a:hover .icon__nav--login, nav .nav__login > a:hover .icon__nav--ticket {
-      fill: #000; }
   nav .overlay {
     max-width: 100vw;
     height: 100%;
@@ -423,7 +482,20 @@ nav {
     transition: 0.5s; }
     nav .overlay .icon__nav, nav .overlay .icon__footer, nav .overlay .icon__nav--login, nav .overlay .icon__nav--ticket, nav .overlay .icon__nav--herz {
       fill: #FFF; }
-  nav .overlay-content {
+    nav .overlay a, nav .overlay span {
+      text-decoration: none;
+      color: #FFF;
+      display: block;
+      transition: 0.3s; }
+      nav .overlay a:hover, nav .overlay a:focus, nav .overlay span:hover, nav .overlay span:focus {
+        color: #000;
+        background-color: #FFF;
+        width: 100%; }
+        nav .overlay a:hover .icon__nav, nav .overlay a:hover .icon__footer, nav .overlay a:hover .icon__nav--login, nav .overlay a:hover .icon__nav--ticket, nav .overlay a:hover .icon__nav--herz, nav .overlay a:focus .icon__nav, nav .overlay a:focus .icon__footer, nav .overlay a:focus .icon__nav--login, nav .overlay a:focus .icon__nav--ticket, nav .overlay a:focus .icon__nav--herz, nav .overlay span:hover .icon__nav, nav .overlay span:hover .icon__footer, nav .overlay span:hover .icon__nav--login, nav .overlay span:hover .icon__nav--ticket, nav .overlay span:hover .icon__nav--herz, nav .overlay span:focus .icon__nav, nav .overlay span:focus .icon__footer, nav .overlay span:focus .icon__nav--login, nav .overlay span:focus .icon__nav--ticket, nav .overlay span:focus .icon__nav--herz {
+          fill: #000; }
+    nav .overlay li .nav__login:not(p), nav .overlay li .nav__ticket:not(p) {
+      border-left: #FFF 1px solid; }
+  nav .overlay__content {
     position: relative;
     top: 25%;
     bottom: 40%;
@@ -431,17 +503,6 @@ nav {
     text-align: center;
     font-size: 1.882352941rem;
     font-weight: bold; }
-  nav .overlay a {
-    text-decoration: none;
-    color: #FFF;
-    display: block;
-    transition: 0.3s; }
-  nav .overlay a:hover, nav .overlay a:focus {
-    color: #000;
-    background-color: #FFF;
-    width: 100%; }
-    nav .overlay a:hover .icon__nav, nav .overlay a:hover .icon__nav--herz, nav .overlay a:hover .icon__footer, nav .overlay a:focus .icon__nav, nav .overlay a:focus .icon__nav--herz, nav .overlay a:focus .icon__footer {
-      fill: #000; }
   nav .overlay .item .item__hidden {
     display: none; }
   nav .nav__bottom {
@@ -464,7 +525,7 @@ nav {
       border: none;
       color: #FFF; }
   @media screen and (min-width: 376px) {
-    nav .overlay-content {
+    nav .overlay__content {
       font-size: 2.823529412rem; }
     nav .nav__bottom {
       top: 40%; } }
@@ -472,7 +533,7 @@ nav {
     nav .overlay .item .nav__display--tablet.item__hidden {
       display: flex; } }
   @media screen and (min-width: 769px) {
-    nav .overlay-content {
+    nav .overlay__content {
       font-size: 3.294117647rem; }
     nav .nav__bottom ul {
       display: flex;

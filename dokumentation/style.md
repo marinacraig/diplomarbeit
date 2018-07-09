@@ -30,3 +30,9 @@ wirkt so einheitlicher.
 Auf der Hauptseite bei Entdeckungen fehlt auf dem Mobile Bild 
 der Button für mehr Samples. Ich habe den Button dennoch eingebunden,
  da es auf mich sonst wie vergessen wirkt. 
+ 
+##Hauptseite
+###news und magazin
+Laut Layout sollte beides mit Maisonry umgesetzt werden. Aus 
+Zeitgründen wurde jedoch nur der news-Teil entsprechend umgesetzt.  
+ 
