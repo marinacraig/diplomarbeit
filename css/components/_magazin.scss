@@ -16,6 +16,30 @@
   .item__hidden{
     display: inline;
   }
+
+  //Ein und Ausblenden von Text
+  .magazin__content--mehr {
+    display: none;
+  }
+  .magazin__content--text {
+    opacity: 0;
+    max-height: 0;
+    font-size: 0;
+    transition: .25s ease;
+  }
+  .magazin__content--mehr:checked ~ .magazin__content--inhalt .magazin__content--text {
+    opacity: 1;
+    font-size: inherit;
+    max-height: 999em;
+  }
+  .magazin__content--mehr ~ .magazin__content--weniger:before {
+    content: 'LESEN';
+    border-bottom: $schwarz_hex solid 1px;
+
+  }
+  .magazin__content--mehr:checked ~ .magazin__content--weniger:before {
+    content: 'WENIGER';
+  }
 }
 
 
@@ -40,6 +64,14 @@
     }
   }
 
+  .magazin__content--mehr~ .magazin__content--inhalt .magazin__content--text {
+    opacity: 1;
+    font-size: inherit;
+    max-height: 999em;
+  }
+  .magazin__content--mehr ~ .magazin__content--weniger:before {
+    display: none;
+  }
 }
 
 //laptop
