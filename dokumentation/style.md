@@ -38,3 +38,7 @@ der Button für mehr Samples. Ich habe den Button dennoch eingebunden,
 Laut Layout sollte beides mit Maisonry umgesetzt werden. Aus 
 Zeitgründen wurde jedoch nur der news-Teil entsprechend umgesetzt.  
  
+##Festivalübersicht
+Die Texte sind vom padding / margin her anders als im Styleguide. 
+Sie sind nun alle einheitlich, und passen auch, wenn der Text länger ist. 
+ 
