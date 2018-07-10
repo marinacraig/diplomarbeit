@@ -1,3 +1,5 @@
+//Styleguide: mindestBreite für Tablet / bwz. Desktop (mind. 1200 ohne Rahmen etc) zu gross -> zusätzlicher Breakpoint
+
 #pagetop__inclbreadcrump {
   padding-top: 100px; //ggf anpassen
 }
@@ -15,9 +17,16 @@
     ul {
       height: 48px;
       width: 100%;
+      display: inline-flex;
     }
     li {
       color: $grauC2_hex;
+      display: flex;
+      float: left;
+      list-style-type: none;
+      p, svg {
+        display: inline;
+      }
 
       &:active {
         color: $schwarz_hex;
@@ -25,23 +34,21 @@
     }
   }
 
-  //Liste und listen der Festivalübersicht
-  ul {
-    display: inline-block;
-
-  }
-  li {
-    float: left;
-    list-style-type: none;
-    p, svg {
-      display: inline;
-    }
-  }
+  //Liste und Listen der Festivalübersicht ("nav" und die einzelnen Festivals)
 
   // einzelne Festival-Kurzübersicht
   .festival__list {
     //laptop margin: 0 120px; tablet: margin: 0 24px;
     margin: 0 16px;
+    display: inline-block;
+
+    li {
+      float: left;
+      list-style-type: none;
+      p, svg {
+        display: inline;
+      }
+    }
 
     //Abschluss-Border
     &--jazz {
@@ -63,6 +70,7 @@
     &--item {
       background-color: $weiss_hex;
       margin: 8px 0;
+      width: 100%;
 
       //nicht mobile: .teaser__kachel{}
       .filter {
@@ -97,16 +105,18 @@
           margin: 8px;
           width: 100%;
         }
-        &__ort, &__datum {
-          margin: 0 8px 8px 8px;
-          width: calc(100% - 80px);
-          color: $grau76_hex;
+        &__detail {
+          &--ort, &--datum{
+            margin: 0 8px 8px 8px;
+            width: calc(100% - 80px);
+            color: $grau76_hex;
+          }
         }
         &__merken, &__gemerkt {
           //ab Tablet anders
           float: right;
           width: 50px;
-          margin-top: -12px;
+          //margin-top: -12px;
         }
       }
 
@@ -131,20 +141,126 @@
 
 //tablet
 @media screen and (min-width: 376px) {
-  .festivaluebersicht__filter {
 
-  }
-  .item__hidden {
-    display: inline;
-  }
 }
 
 //laptop
 @media screen and (min-width: 769px) {
+  .festivaluebersicht__filter {
 
-  //wird tablet auch nicht angezeigt
-  .item__hidden--tablet {
-    display: inline;
+    //evtl. hier: padding:16px; etc. analog Hauptseite
+
+    //Überschrift bei Festival-Liste
+    .filternavigation {
+      //laptop margin: 0 120px; tablet: margin: 0 24px;
+      margin: 0 24px;
+
+    }
+
+    // einzelne Festival-Kurzübersicht
+    .festival__list {
+      //laptop margin: 0 120px; tablet: margin: 0 24px;
+      margin: 0 24px;
+
+      ul {
+        height: 104px;
+        //width soll ausgenützt werden
+        width: calc(100vw - 68px);
+
+      }
+
+      //Abschluss-Border
+      &--jazz {
+        border-right: $gelb_hex 4px solid;
+        border-bottom: $gelb_hex 0 solid;
+      }
+      &--hiphop {
+        border-right: $pink_hex 4px solid;
+        border-bottom: $pink_hex 0 solid;
+      }
+      &--indie {
+        border-right: $mint_hex 4px solid;
+        border-bottom: $mint_hex 0 solid;
+      }
+      &--poprock {
+        border-right: $blau_hex 4px solid;
+        border-bottom: $blau_hex 0 solid;
+      }
+      &--electronic {
+        border-right: $violett_hex 4px solid;
+        border-bottom: $violett_hex 0 solid;
+      }
+
+      &--item {
+        text-align: start;
+
+
+        //nicht mobile: .teaser__kachel{}
+        .filter {
+
+
+          &__music {
+            //ab tablet height und width 104px
+            width: 104px;
+            height: 100%;
+            padding: 8px;
+            svg {
+              height: 60px;
+              width: auto;
+
+            }
+
+          }
+
+          &__name {
+            margin: 0; //statt 8px
+            width: 374px;
+            height: 100%;
+            border-right: $grauF0_hex 1px solid;
+            inline-size: 40%; //von console - ist sonst zu breit
+            padding: 36px 16px;
+          }
+          &__detail {
+            margin: 0; // statt margin: 0 8px 8px 8px;
+            height: 100%;
+            width: 184px;//höher: 184 und 210
+            padding-top: 8px;
+
+
+            &--ort, &--datum{
+              float: none;
+              width: 100%;
+              padding: 8px;
+            }
+          }
+          &__merken, &__gemerkt {
+            //ab Tablet anders
+            width: 104px;
+            height: 100%;
+            border-left: $grauF0_hex 1px solid;
+            padding-top: 8px;
+            text-align: center;
+          }
+        }
+
+      }
+
+    }
+
+    .item__hidden {
+      display: inline;
+    }
   }
 
+}
+
+//TV
+@media screen and (min-width: 1441px) {
+  .festivaluebersicht__filter {
+
+    //wird tablet auch nicht angezeigt
+    .item__hidden--tablet {
+      display: inline;
+    }
+  }
 }

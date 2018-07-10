@@ -69,6 +69,15 @@ img {
 
 .teaser__liste {
   //gibt es nur für Desktop
+
+/*  wäre synchon:
+  max-height: 61.53846154%;
+  max-width: 100%;
+  aber sollte immer 104px hoch sein
+  */
+  max-width: 100%; //ggf nochmals anpassen
+  height: 104px;
+  width: 169px;
 }
 
 .teaser__share {

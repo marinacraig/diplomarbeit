@@ -10,6 +10,7 @@
   li{
     color: $grauC2_hex;
     float: left;
+    list-style-type: none;
     &:hover{
       color: $schwarz_hex;
     }
