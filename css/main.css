@@ -828,17 +828,22 @@ footer {
     text-decoration: none;
     height: 48px;
     max-width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-content: center; }
+    display: grid;
+    grid-template-columns: 5fr 5fr 1fr 1fr;
+    grid-template-rows: 1fr; }
     .festivaluebersicht__filter .filternavigation .filter {
       color: #C2C2C2;
       list-style-type: none; }
-      .festivaluebersicht__filter .filternavigation .filter__datum, .festivaluebersicht__filter .filternavigation .filter__kanton {
-        flex: 0 1 40%; }
-      .festivaluebersicht__filter .filternavigation .filter__kacheln, .festivaluebersicht__filter .filternavigation .filter__liste {
-        flex: 0 1 10%; }
+      .festivaluebersicht__filter .filternavigation .filter__datum {
+        grid-column: 1; }
+      .festivaluebersicht__filter .filternavigation .filter__liste {
+        grid-column: 2; }
+      .festivaluebersicht__filter .filternavigation .filter__kacheln {
+        grid-column: 3;
+        justify-self: end; }
+      .festivaluebersicht__filter .filternavigation .filter__liste {
+        grid-column: 4;
+        justify-self: end; }
       .festivaluebersicht__filter .filternavigation .filter p, .festivaluebersicht__filter .filternavigation .filter svg {
         display: inline;
         margin: 0; }
