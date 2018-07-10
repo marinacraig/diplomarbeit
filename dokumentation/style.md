@@ -40,5 +40,8 @@ Zeitgründen wurde jedoch nur der news-Teil entsprechend umgesetzt.
  
 ##Festivalübersicht
 Die Texte sind vom padding / margin her anders als im Styleguide. 
-Sie sind nun alle einheitlich, und passen auch, wenn der Text länger ist. 
+Sie sind nun alle einheitlich, und passen auch, wenn der Text länger ist.  
+Die Auswahlliste oberhalb der Festivalübersicht weicht ebenfalls leicht
+ ab. Ich habe für die Umsetzung Flexbox gewählt, durch die entsprechende 
+ Verteilung ist das Wort Liste nicht genau rechtsbündig.
  

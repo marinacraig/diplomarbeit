@@ -826,19 +826,23 @@ footer {
   background-color: #F0F0F0; }
   .festivaluebersicht__filter .filternavigation {
     text-decoration: none;
-    margin: 16px; }
-    .festivaluebersicht__filter .filternavigation ul {
-      height: 48px;
-      width: 100%;
-      display: inline-flex; }
-    .festivaluebersicht__filter .filternavigation li {
+    height: 48px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center; }
+    .festivaluebersicht__filter .filternavigation .filter {
       color: #C2C2C2;
-      display: flex;
-      float: left;
       list-style-type: none; }
-      .festivaluebersicht__filter .filternavigation li p, .festivaluebersicht__filter .filternavigation li svg {
-        display: inline; }
-      .festivaluebersicht__filter .filternavigation li:active {
+      .festivaluebersicht__filter .filternavigation .filter__datum, .festivaluebersicht__filter .filternavigation .filter__kanton {
+        flex: 0 1 40%; }
+      .festivaluebersicht__filter .filternavigation .filter__kacheln, .festivaluebersicht__filter .filternavigation .filter__liste {
+        flex: 0 1 10%; }
+      .festivaluebersicht__filter .filternavigation .filter p, .festivaluebersicht__filter .filternavigation .filter svg {
+        display: inline;
+        margin: 0; }
+      .festivaluebersicht__filter .filternavigation .filter:active {
         color: #000; }
   .festivaluebersicht__filter .festival__list {
     margin: 0 16px;
