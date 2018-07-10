@@ -141,11 +141,6 @@
 
 //tablet
 @media screen and (min-width: 376px) {
-
-}
-
-//laptop
-@media screen and (min-width: 769px) {
   .festivaluebersicht__filter {
 
     //evtl. hier: padding:16px; etc. analog Hauptseite
@@ -215,6 +210,7 @@
           &__name {
             margin: 0; //statt 8px
             width: 374px;
+            max-width: 100%;
             height: 100%;
             border-right: $grauF0_hex 1px solid;
             inline-size: 40%; //von console - ist sonst zu breit
@@ -224,6 +220,7 @@
             margin: 0; // statt margin: 0 8px 8px 8px;
             height: 100%;
             width: 184px;//höher: 184 und 210
+            max-width: 100%;
             padding-top: 8px;
 
 
@@ -238,6 +235,7 @@
             width: 104px;
             height: 100%;
             border-left: $grauF0_hex 1px solid;
+            margin: auto;
             padding-top: 8px;
             text-align: center;
           }
@@ -254,9 +252,122 @@
 
 }
 
-//TV
-@media screen and (min-width: 1441px) {
+//laptop
+@media screen and (min-width: 769px) {
   .festivaluebersicht__filter {
+    width: 100%;
+
+
+    //evtl. hier: padding:16px; etc. analog Hauptseite
+
+    //Überschrift bei Festival-Liste
+    .filternavigation {
+      //laptop margin: 0 120px; tablet: margin: 0 24px;
+      margin: 0 120px;
+
+    }
+
+    // einzelne Festival-Kurzübersicht
+    .festival__list {
+      //laptop margin: 0 120px; tablet: margin: 0 24px;
+      margin: 0 120px;
+
+
+      ul{
+        height: 104px;
+        //width soll ausgenützt werden
+        max-width: calc(100vw - 270px); //ggf anpassen
+
+      }
+
+
+      &--item {
+
+        .teaser__kachel{
+          width: 169px;
+        }
+
+
+        //nicht mobile: .teaser__kachel{}
+        .filter {
+
+
+          &__music {
+            //ab tablet height und width 104px
+            width: 104px;
+            height: 100%;
+            padding: 8px;
+            svg {
+              height: 60px;
+              width: auto;
+
+            }
+
+          }
+
+          &__name {
+
+            inline-size: 15%; //von console - ist sonst zu breit
+
+          }
+          &__detail {
+            display: inline; //test
+            //margin: 0; // statt margin: 0 8px 8px 8px;
+            //width: 100%;//höher: 184 und 210
+            padding-top: 0;
+            margin: 0;
+            width: calc(184px + 210px);
+            max-width: 100%;
+            //inline-size: 10%;
+
+
+
+            &--ort{
+              display: inline-block;
+              height: 100%;
+              width: 184px;
+              max-width: 100%;
+              //margin: 0;
+             // padding: 40px 8px;
+              align-items: center;
+              text-align: center;
+
+            }
+
+            &--datum{
+              display: inline-block;
+              width: 210px;
+              max-width: 100%;
+              height: 100%;
+              border-left: $grauF0_hex 1px solid;
+              padding: 40px 16px;
+              text-align: center;
+              justify-items: center;
+
+            }
+          }
+          &__merken, &__gemerkt {
+            display: inline-flex;
+            width: 156px;
+            padding-left: 8px;
+            display: inline-flex;
+            align-items: center;
+            text-align: center;
+
+
+            //ab Tablet anders
+            /*width: 104px;
+            height: 100%;
+            border-left: $grauF0_hex 1px solid;
+            margin: auto;
+            padding-top: 8px;
+            text-align: center;*/
+          }
+        }
+
+      }
+
+    }
 
     //wird tablet auch nicht angezeigt
     .item__hidden--tablet {
@@ -264,3 +375,4 @@
     }
   }
 }
+

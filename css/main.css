@@ -12,7 +12,7 @@ html {
   clear: both; }
 
 .body {
-  max-width: 1440px;
+  max-width: 1600px;
   width: 100%; }
 
 html {
@@ -199,12 +199,8 @@ img {
   width: 343px; }
 
 .teaser__liste {
-  /*  wäre synchon:
-  max-height: 61.53846154%;
-  max-width: 100%;
-  aber sollte immer 104px hoch sein
-  */
-  max-width: 100%;
+  /*  max-height: 61.53846154%;
+  max-width: 100%;*/
   height: 104px;
   width: 169px; }
 
@@ -901,7 +897,7 @@ footer {
   .festivaluebersicht__filter .item__hidden--tablet {
     display: none; }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 376px) {
   .festivaluebersicht__filter .filternavigation {
     margin: 0 24px; }
   .festivaluebersicht__filter .festival__list {
@@ -936,6 +932,7 @@ footer {
       .festivaluebersicht__filter .festival__list--item .filter__name {
         margin: 0;
         width: 374px;
+        max-width: 100%;
         height: 100%;
         border-right: #F0F0F0 1px solid;
         inline-size: 40%;
@@ -944,6 +941,7 @@ footer {
         margin: 0;
         height: 100%;
         width: 184px;
+        max-width: 100%;
         padding-top: 8px; }
         .festivaluebersicht__filter .festival__list--item .filter__detail--ort, .festivaluebersicht__filter .festival__list--item .filter__detail--datum {
           float: none;
@@ -953,14 +951,70 @@ footer {
         width: 104px;
         height: 100%;
         border-left: #F0F0F0 1px solid;
+        margin: auto;
         padding-top: 8px;
         text-align: center; }
   .festivaluebersicht__filter .item__hidden {
     display: inline; } }
 
-@media screen and (min-width: 1441px) {
-  .festivaluebersicht__filter .item__hidden--tablet {
-    display: inline; } }
+@media screen and (min-width: 769px) {
+  .festivaluebersicht__filter {
+    width: 100%; }
+    .festivaluebersicht__filter .filternavigation {
+      margin: 0 120px; }
+    .festivaluebersicht__filter .festival__list {
+      margin: 0 120px; }
+      .festivaluebersicht__filter .festival__list ul {
+        height: 104px;
+        max-width: calc(100vw - 270px); }
+      .festivaluebersicht__filter .festival__list--item .teaser__kachel {
+        width: 169px; }
+      .festivaluebersicht__filter .festival__list--item .filter__music {
+        width: 104px;
+        height: 100%;
+        padding: 8px; }
+        .festivaluebersicht__filter .festival__list--item .filter__music svg {
+          height: 60px;
+          width: auto; }
+      .festivaluebersicht__filter .festival__list--item .filter__name {
+        inline-size: 15%; }
+      .festivaluebersicht__filter .festival__list--item .filter__detail {
+        display: inline;
+        padding-top: 0;
+        margin: 0;
+        width: calc(184px + 210px);
+        max-width: 100%; }
+        .festivaluebersicht__filter .festival__list--item .filter__detail--ort {
+          display: inline-block;
+          height: 100%;
+          width: 184px;
+          max-width: 100%;
+          align-items: center;
+          text-align: center; }
+        .festivaluebersicht__filter .festival__list--item .filter__detail--datum {
+          display: inline-block;
+          width: 210px;
+          max-width: 100%;
+          height: 100%;
+          border-left: #F0F0F0 1px solid;
+          padding: 40px 16px;
+          text-align: center;
+          justify-items: center; }
+      .festivaluebersicht__filter .festival__list--item .filter__merken, .festivaluebersicht__filter .festival__list--item .filter__gemerkt {
+        display: inline-flex;
+        width: 156px;
+        padding-left: 8px;
+        display: inline-flex;
+        align-items: center;
+        text-align: center;
+        /*width: 104px;
+            height: 100%;
+            border-left: $grauF0_hex 1px solid;
+            margin: auto;
+            padding-top: 8px;
+            text-align: center;*/ }
+    .festivaluebersicht__filter .item__hidden--tablet {
+      display: inline; } }
 
 #pagetop {
   padding-top: 64px; }
@@ -1025,7 +1079,7 @@ p {
   background-position: center;
   background-size: cover; }
 
-.teaser__kachel {
+.teaser__liste {
   background-image: url("../images/rsz_festival.jpg");
   background-position: center;
   background-size: cover; }

@@ -12,7 +12,7 @@ html {
 }
 
 .body {
-  max-width:1440px;
+  max-width:1600px;
   width:100%;
 }
 
@@ -130,7 +130,7 @@ p {
 }
 
 //Todo: Bild würde sich mit jedem Festival ändern
-.teaser__kachel {
+.teaser__liste {
   background-image: url("../images/rsz_festival.jpg");
   background-position: center;
   background-size: cover;
@@ -169,7 +169,6 @@ article{
 
 //TV
 @media screen and (min-width: 1441px) {
-
   // Todo: Ab 1600 Pixel Breite wächst das Design nicht mehr mit (Ausnahme ist die Linie des Header, die immer über die komplette Viewport Breite geht). Der Inhalt ist zentriert angeordnet.
 
 }
