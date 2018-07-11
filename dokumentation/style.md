@@ -39,7 +39,12 @@ Laut Layout sollte beides mit Maisonry umgesetzt werden. Aus
 Zeitgründen wurde jedoch nur der news-Teil entsprechend umgesetzt.  
  
 ##Festivalübersicht
-Die Texte sind vom padding / margin her anders als im Styleguide. 
-Sie sind nun alle einheitlich, und passen auch, wenn der Text länger ist.  
+Die Texte sind vom padding / margin her anders als im Styleguide, diese sind 
+schlicht zu breit für die jeweiligen Breakpoints. 
+Damit es auf allen Viewports einigermassen anständig aussieht wurde am Ende 
+grid gewählt.
+###Breadcrump
+Wegen dem Border beim letzten Teil Text "Festival" gesetzt. Wird aus 
+Zeitgründen nicht gefixt.
 
  

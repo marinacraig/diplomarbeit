@@ -619,24 +619,8 @@ footer {
   .breadcrumb .breadcrump {
     display: flex;
     height: 14px;
-    list-style-type: none;
-    /*
-    &__icon{
-      .icon__breadcrumb {
-        fill: $grauC2_hex;
-      }
-      &:hover{
-        .icon__breadcrumb {
-          fill: $schwarz_hex;
-        }
-      }
-        .rotate{
-          transform: rotate(90deg);
-        }
-
-
-    }
-*/ }
+    align-items: center;
+    list-style-type: none; }
     .breadcrumb .breadcrump > a {
       text-decoration: none; }
     .breadcrumb .breadcrump .breadcrump {
@@ -644,6 +628,60 @@ footer {
       display: inline-flex; }
       .breadcrumb .breadcrump .breadcrump:hover {
         color: #000; }
+    .breadcrumb .breadcrump .dropdown {
+      position: relative;
+      display: inline-block;
+      list-style-type: none; }
+      .breadcrumb .breadcrump .dropdown > a {
+        text-decoration: none;
+        color: #C2C2C2;
+        display: flex; }
+        .breadcrumb .breadcrump .dropdown > a svg {
+          float: right; }
+        .breadcrumb .breadcrump .dropdown > a span {
+          float: left;
+          padding-top: 13px; }
+        .breadcrumb .breadcrump .dropdown > a:hover {
+          color: #000; }
+          .breadcrumb .breadcrump .dropdown > a:hover li {
+            height: 48px;
+            width: 343px;
+            border: #C2C2C2 1px solid; }
+          .breadcrumb .breadcrump .dropdown > a:hover .dropdown-up {
+            transform: rotate(180deg); }
+    .breadcrumb .breadcrump .dropdown__content {
+      display: none;
+      position: absolute;
+      max-width: 343px;
+      z-index: 1; }
+      .breadcrumb .breadcrump .dropdown__content li {
+        height: 48px;
+        width: 343px;
+        border: #C2C2C2 1px solid; }
+      .breadcrumb .breadcrump .dropdown__content ul {
+        list-style-type: none; }
+        .breadcrumb .breadcrump .dropdown__content ul > a {
+          text-decoration: none;
+          color: #C2C2C2;
+          display: block; }
+          .breadcrumb .breadcrump .dropdown__content ul > a:hover {
+            color: #000; }
+    .breadcrumb .breadcrump .dropdown:hover .dropdown__content {
+      display: block; }
+  .breadcrumb__icon {
+    fill: #C2C2C2;
+    background-color: #FFF;
+    height: 1em;
+    width: 1em; }
+    .breadcrumb__icon:hover {
+      fill: #000; }
+  .breadcrumb .rotate {
+    transform: rotate(-90deg); }
+  .breadcrumb .circle {
+    height: 17px;
+    width: 17px;
+    border-radius: 50%;
+    border: #C2C2C2 1px solid; }
 
 #akkordeon:not(:target) .content {
   display: none; }

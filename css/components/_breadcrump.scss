@@ -3,48 +3,116 @@
   text-decoration: none;
   font-size: 0.7647058824rem;
 
+  //für die Listenelemente (li):
   .breadcrump {
     display: flex;
     height: 14px;
+    align-items: center;
     list-style-type: none;
-    >a {
+
+    > a {
       text-decoration: none;
     }
     .breadcrump {
       color: $grauC2_hex;
       display: inline-flex;
-      //fill: $grauC2_hex;
 
-      &:hover{
+      &:hover {
         color: $schwarz_hex;
-        //fill: $schwarz_hex;
       }
     }
-    /*
-    &__icon{
-      .icon__breadcrumb {
-        fill: $grauC2_hex;
-      }
-      &:hover{
-        .icon__breadcrumb {
-          fill: $schwarz_hex;
-        }
-      }
-        .rotate{
-          transform: rotate(90deg);
-        }
-
-
-    }
-*/
 
     //zusätzliche Liste mit jedem einzelnen Festival - ist wie ein Dropdown
-    .dropdown{
-      //display: inline-block;
 
+
+    .dropdown{
+      position: relative;
+      display: inline-block;
+      list-style-type: none;
+
+
+      > a {
+        text-decoration: none;
+        color: $grauC2_hex;
+        display: flex;
+
+
+
+        svg{
+          float: right;
+        }
+        span{
+          float: left;
+          padding-top: 13px;
+        }
+
+        &:hover{
+          color:$schwarz_hex;
+          li {
+            height: 48px;
+            width: 343px; //wie button (selbst entschieden)
+            border: $grauC2_hex 1px solid;
+          }
+          .dropdown-up{
+            transform: rotate(180deg);
+          }
+        }
+      }
+
+    }
+    .dropdown__button {
+
+    }
+
+    .dropdown__content {
+      display: none;
+      position: absolute;
+      max-width: 343px; //wie button (selbst entschieden)
+      z-index: 1;
+      li {
+        height: 48px;
+        width: 343px; //wie button (selbst entschieden)
+        border: $grauC2_hex 1px solid;
+      }
+
+      ul{
+        list-style-type: none;
+        > a{
+          text-decoration: none;
+          color: $grauC2_hex;
+          display: block;
+
+          &:hover{
+            color:$schwarz_hex;
+
+          }
+        }
+      }
+    }
+    .dropdown:hover .dropdown__content{
+      display: block;
     }
   }
 
+  //Styling der icons bzw. svg's
+  &__icon {
+    fill: $grauC2_hex;
+    background-color: $weiss_hex;
+    height: 1em;
+    width: 1em;
+    &:hover {
+      fill: $schwarz_hex;
+    }
+  }
+  .rotate {
+    transform: rotate(-90deg);
+  }
+  .circle {
+    //padding: 5px;
+    height: 17px;
+    width: 17px;
+    border-radius: 50%;
+    border: $grauC2_hex 1px solid;
+  }
 }
 
-//todo: tbd - breadcrump svg... fill hover...
