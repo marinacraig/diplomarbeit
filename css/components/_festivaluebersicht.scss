@@ -4,7 +4,7 @@
   padding-top: 100px; //ggf anpassen
 }
 
-.festivaluebersicht__filter {
+.festivaluebersicht__filter   {
   background-color: $grauF0_hex;
   //evtl. hier: padding:16px; etc. analog Hauptseite
 
@@ -12,7 +12,7 @@
   .filternavigation {
     text-decoration: none;
     //laptop margin: 0 120px; tablet: margin: 0 24px;
-    //margin: 16px;
+    margin: 16px;
     height: 48px;
     max-width: 100%;
 
@@ -56,18 +56,39 @@
   // einzelne Festival-Kurzübersicht
   .festival__list {
     //laptop margin: 0 120px; tablet: margin: 0 24px;
-    margin: 0 16px;
-    display: inline-block;
+    padding: 0 16px;
+    //display: inline-block;
+
+
+    ul {
+      //width soll ausgenützt werden
+      width: 100%;
+      display:inline-grid;
+      grid-template-columns: auto 50px;
+      grid-template-rows: 48px auto auto auto;
+      justify-items: center;
+      align-items: center;
+    }
+
 
     li {
-      float: left;
+      //float: left;
+      width: 100%;
       list-style-type: none;
       p, svg {
         display: inline;
       }
     }
 
+    //zusätzliches Listenelement, für Abstand zwischen den einzelnen Festivals
+    &--margin{
+      height: 16px;
+      //width: 100%;
+      background-color: $grauF0_hex;
+    }
+
     //Abschluss-Border
+
     &--jazz {
       border-bottom: $gelb_hex 4px solid;
     }
@@ -86,15 +107,16 @@
 
     &--item {
       background-color: $weiss_hex;
-      margin: 8px 0;
-      width: 100%;
+      //margin: 8px 0;
 
       //nicht mobile: .teaser__kachel{}
       .filter {
         &__music {
           //ab tablet height und width 104px
-          height: 48px;
-          width: 100%;
+         // height: 48px;
+          grid-column-start: 1;
+          grid-column-end: 3;
+          grid-row: 1;
 
           &--jazz {
             background-color: $gelb_hex;
@@ -119,21 +141,40 @@
         }
 
         &__name {
-          margin: 8px;
-          width: 100%;
+          //margin: 8px;
+          //width: 100%;
+          padding: 8px;
+          grid-column-start: 1;
+          grid-column-end: 3;
+          grid-row: 2;
         }
         &__detail {
+          &--ort{
+            padding-left: 8px;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row: 3;
+          }
+          &--datum{
+            padding:8px;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row: 4;
+          }
           &--ort, &--datum {
-            margin: 0 8px 8px 8px;
-            width: calc(100% - 80px);
+            //margin: 0 8px 8px 8px;
+            //width: calc(100% - 80px);
             color: $grau76_hex;
           }
         }
         &__merken, &__gemerkt {
           //ab Tablet anders
-          float: right;
-          width: 50px;
+          //float: right;
+          //width: 50px;
           //margin-top: -12px;
+          grid-column-start: 2;
+          grid-column-end: 3;
+          grid-row: 4;
         }
       }
 
@@ -177,8 +218,12 @@
       ul {
         height: 104px;
         //width soll ausgenützt werden
-        width: calc(100vw - 68px);
-
+        //  width: calc(100vw - 68px);
+        //display:inline-grid;
+        grid-template-columns: 104px 20fr 14fr 14fr;//statt 20 müssten es über 30 sein
+        grid-template-rows: 52px 52px;
+        justify-items: center;
+        align-items: center;
       }
 
       //Abschluss-Border
@@ -206,59 +251,61 @@
       &--item {
         text-align: start;
 
+
         //nicht mobile: .teaser__kachel{}
         .filter {
+          height: 100%;
+          padding:0;
+          margin:0;
+          border-right: $grauF0_hex 1px solid;
 
           &__music {
             //ab tablet height und width 104px
-            width: 104px;
             height: 100%;
-            padding: 8px;
+            grid-column: 1;
+            grid-row-start: 1;
+            grid-row-end: 3;
+
             svg {
               height: 60px;
               width: auto;
-
+              padding: auto;
             }
 
           }
 
           &__name {
-            margin: 0; //statt 8px
-            width: 374px;
-            max-width: 100%;
-            height: 100%;
-            border-right: $grauF0_hex 1px solid;
-            inline-size: 40%; //von console - ist sonst zu breit
-            padding: 16px;
+            padding: 12px;
+            grid-column: 2;
+            grid-row-start: 1;
+            grid-row-end: 3;
+
 
           }
           &__detail {
-            margin: 0; // statt margin: 0 8px 8px 8px;
-            height: 100%;
-            width: 184px; //höher: 184 und 210
-            max-width: 100%;
 
-            &--ort, &--datum {
-              float: none;
-              width: 100%;
-            }
             &--ort {
-              padding: 16px;
+              padding: 12px;
+              grid-column: 3;
+              grid-row-start: 1;
+              grid-row-end: 2;
+
             }
             &--datum {
-              padding: 0 16px 16px 16px;
+              padding: 12px;
+              grid-column: 3;
+              grid-row-start: 2;
+              grid-row-end: 3;
             }
           }
           &__merken, &__gemerkt {
-            //ab Tablet anders
-            width: 104px;
-            height: 100%;
-            border-left: $grauF0_hex 1px solid;
-            margin: auto;
-            padding: 4px;
-            text-align: center;
-            .gemerkt, .merken {
-              padding: 12px;
+            display: inline-flex;
+            grid-column: 4;
+            grid-row-start: 1;
+            grid-row-end: 3;
+
+            .merken, .gemerkt{
+              padding: 12px 12px 0 0;
             }
           }
         }
@@ -296,24 +343,55 @@
       ul {
         height: 104px;
         //width soll ausgenützt werden
-        max-width: calc(100vw - 270px); //ggf anpassen
+        //width: calc(100vw - 240px);
+        //display:inline-grid;
+        grid-template-columns: 15fr 104px 25fr 9fr 18fr 13fr; //statt 25 eigentlich 33fr
+        grid-template-rows: 52px 52px;
+        justify-items: center;
+        align-items: center;
 
       }
 
+      //Abschluss-Border
+      &--jazz {
+        border-right: $gelb_hex 4px solid;
+        border-bottom: $gelb_hex 0 solid;
+      }
+      &--hiphop {
+        border-right: $pink_hex 4px solid;
+        border-bottom: $pink_hex 0 solid;
+      }
+      &--indie {
+        border-right: $mint_hex 4px solid;
+        border-bottom: $mint_hex 0 solid;
+      }
+      &--poprock {
+        border-right: $blau_hex 4px solid;
+        border-bottom: $blau_hex 0 solid;
+      }
+      &--electronic {
+        border-right: $violett_hex 4px solid;
+        border-bottom: $violett_hex 0 solid;
+      }
+
       &--item {
+        text-align: start;
 
-        .teaser__kachel {
-          width: 169px;
+        //nicht mobile:
+        .teaser__liste{
+          grid-column: 1;
+          grid-row-start: 1;
+          grid-row-end: span 2;
         }
-
-        //nicht mobile: .teaser__kachel{}
         .filter {
 
           &__music {
             //ab tablet height und width 104px
-            width: 104px;
             height: 100%;
-            padding: 8px;
+            grid-column: 2;
+            grid-row-start: 1;
+            grid-row-end: span 2;
+
             svg {
               height: 60px;
               width: auto;
@@ -323,56 +401,34 @@
           }
 
           &__name {
-            inline-size: 15%; //von console - ist sonst zu breit
+            grid-column: 3;
+            grid-row-start: 1;
+            grid-row-end: span 2;
+
 
           }
           &__detail {
-            display: inline-flex; //test
-            //margin: 0; // statt margin: 0 8px 8px 8px;
-            //width: 100%;//höher: 184 und 210
-            padding-top: 0;
-            margin: 0;
-            width: calc(184px + 210px);
-            max-width: 100%;
-            //inline-size: 10%;
 
             &--ort {
-              display: inline-block;
-              height: 100%;
-              width: 184px;
-              max-width: 100%;
-              //margin: 0;
-              padding: 16px;
-              //align-items: center;
-              //text-align: center;
-            }
+              grid-column: 4;
+              grid-row-start: 1;
+              grid-row-end: span 2;
 
+            }
             &--datum {
-              display: inline-block;
-              width: 210px;
-              max-width: 100%;
-              height: 100%;
-              border-left: $grauF0_hex 1px solid;
-              padding: 16px;
-              //text-align: center;
-              //justify-items: center;
+              grid-column: 5;
+              grid-row-start: 1;
+              grid-row-end: span 2;
             }
           }
           &__merken, &__gemerkt {
-            display: inline-flex;
-            width: 156px;
-            display: inline-flex;
-            .merken, .gemerkt {
-              padding-top: 12px;
-            }
+            grid-column: 6;
+            grid-row-start: 1;
+            grid-row-end: span 2;
 
-            //ab Tablet anders
-            /*width: 104px;
-            height: 100%;
-            border-left: $grauF0_hex 1px solid;
-            margin: auto;
-            padding-top: 8px;
-            text-align: center;*/
+            .merken, .gemerkt{
+              //padding-bottom: 12px;
+            }
           }
         }
 

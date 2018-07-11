@@ -3,21 +3,47 @@
   text-decoration: none;
   font-size: 0.7647058824rem;
 
-  ul{
-    display: inline-block;
+  .breadcrump {
+    display: flex;
     height: 14px;
-  }
-  li{
-    color: $grauC2_hex;
-    float: left;
     list-style-type: none;
-    &:hover{
-      color: $schwarz_hex;
+    >a {
+      text-decoration: none;
+    }
+    .breadcrump {
+      color: $grauC2_hex;
+      display: inline-flex;
+      //fill: $grauC2_hex;
+
+      &:hover{
+        color: $schwarz_hex;
+        //fill: $schwarz_hex;
+      }
+    }
+    /*
+    &__icon{
+      .icon__breadcrumb {
+        fill: $grauC2_hex;
+      }
+      &:hover{
+        .icon__breadcrumb {
+          fill: $schwarz_hex;
+        }
+      }
+        .rotate{
+          transform: rotate(90deg);
+        }
+
+
+    }
+*/
+
+    //zusätzliche Liste mit jedem einzelnen Festival - ist wie ein Dropdown
+    .dropdown{
+      //display: inline-block;
+
     }
   }
-/*  svg:hover{
-    fill: $schwarz_hex;
-  }*/
 
 }
 

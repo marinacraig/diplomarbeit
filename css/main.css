@@ -615,58 +615,36 @@ footer {
 
 .breadcrumb {
   text-decoration: none;
-  font-size: 0.7647058824rem;
-  /*  svg:hover{
-    fill: $schwarz_hex;
-  }*/ }
-  .breadcrumb ul {
-    display: inline-block;
-    height: 14px; }
-  .breadcrumb li {
-    color: #C2C2C2;
-    float: left;
-    list-style-type: none; }
-    .breadcrumb li:hover {
-      color: #000; }
+  font-size: 0.7647058824rem; }
+  .breadcrumb .breadcrump {
+    display: flex;
+    height: 14px;
+    list-style-type: none;
+    /*
+    &__icon{
+      .icon__breadcrumb {
+        fill: $grauC2_hex;
+      }
+      &:hover{
+        .icon__breadcrumb {
+          fill: $schwarz_hex;
+        }
+      }
+        .rotate{
+          transform: rotate(90deg);
+        }
 
-/*
-.container {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  column-gap: 24px;
-  grid-auto-rows: minmax(8px, auto);
-  justify-items: start;
-  align-content: center;
-}
 
-.item {
-  .__1 {
-    grid-column: 1 / 12;
-    grid-row: 8;
-  }
+    }
+*/ }
+    .breadcrumb .breadcrump > a {
+      text-decoration: none; }
+    .breadcrumb .breadcrump .breadcrump {
+      color: #C2C2C2;
+      display: inline-flex; }
+      .breadcrumb .breadcrump .breadcrump:hover {
+        color: #000; }
 
-.__2{
-  grid-column: span 2;
-}
-.__3{
-  grid-column: span 3;
-}
-.__4{
-  grid-column: span 4;
-}
-.__5{
-  grid-column: span 5;
-}
-.__6{
-  grid-column: span 6;
-}
-.__12{
-  grid-column: span 12;
-}
-//ggf erweitern bis 12
-}
-
-*/
 #akkordeon:not(:target) .content {
   display: none; }
 
@@ -826,6 +804,7 @@ footer {
   background-color: #F0F0F0; }
   .festivaluebersicht__filter .filternavigation {
     text-decoration: none;
+    margin: 16px;
     height: 48px;
     max-width: 100%;
     display: grid;
@@ -850,13 +829,22 @@ footer {
       .festivaluebersicht__filter .filternavigation .filter:active {
         color: #000; }
   .festivaluebersicht__filter .festival__list {
-    margin: 0 16px;
-    display: inline-block; }
+    padding: 0 16px; }
+    .festivaluebersicht__filter .festival__list ul {
+      width: 100%;
+      display: inline-grid;
+      grid-template-columns: auto 50px;
+      grid-template-rows: 48px auto auto auto;
+      justify-items: center;
+      align-items: center; }
     .festivaluebersicht__filter .festival__list li {
-      float: left;
+      width: 100%;
       list-style-type: none; }
       .festivaluebersicht__filter .festival__list li p, .festivaluebersicht__filter .festival__list li svg {
         display: inline; }
+    .festivaluebersicht__filter .festival__list--margin {
+      height: 16px;
+      background-color: #F0F0F0; }
     .festivaluebersicht__filter .festival__list--jazz {
       border-bottom: #FDD835 4px solid; }
     .festivaluebersicht__filter .festival__list--hiphop {
@@ -868,12 +856,11 @@ footer {
     .festivaluebersicht__filter .festival__list--electronic {
       border-bottom: #5E35B1 4px solid; }
     .festivaluebersicht__filter .festival__list--item {
-      background-color: #FFF;
-      margin: 8px 0;
-      width: 100%; }
+      background-color: #FFF; }
       .festivaluebersicht__filter .festival__list--item .filter__music {
-        height: 48px;
-        width: 100%; }
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row: 1; }
         .festivaluebersicht__filter .festival__list--item .filter__music--jazz {
           background-color: #FDD835;
           text-align: center; }
@@ -890,15 +877,26 @@ footer {
           background-color: #5E35B1;
           text-align: center; }
       .festivaluebersicht__filter .festival__list--item .filter__name {
-        margin: 8px;
-        width: 100%; }
+        padding: 8px;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row: 2; }
+      .festivaluebersicht__filter .festival__list--item .filter__detail--ort {
+        padding-left: 8px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row: 3; }
+      .festivaluebersicht__filter .festival__list--item .filter__detail--datum {
+        padding: 8px;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row: 4; }
       .festivaluebersicht__filter .festival__list--item .filter__detail--ort, .festivaluebersicht__filter .festival__list--item .filter__detail--datum {
-        margin: 0 8px 8px 8px;
-        width: calc(100% - 80px);
         color: #767676; }
       .festivaluebersicht__filter .festival__list--item .filter__merken, .festivaluebersicht__filter .festival__list--item .filter__gemerkt {
-        float: right;
-        width: 50px; }
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row: 4; }
   .festivaluebersicht__filter .icon__music {
     fill: #FFF; }
   .festivaluebersicht__filter .item__hidden {
@@ -913,7 +911,10 @@ footer {
     margin: 0 24px; }
     .festivaluebersicht__filter .festival__list ul {
       height: 104px;
-      width: calc(100vw - 68px); }
+      grid-template-columns: 104px 20fr 14fr 14fr;
+      grid-template-rows: 52px 52px;
+      justify-items: center;
+      align-items: center; }
     .festivaluebersicht__filter .festival__list--jazz {
       border-right: #FDD835 4px solid;
       border-bottom: #FDD835 0 solid; }
@@ -931,42 +932,42 @@ footer {
       border-bottom: #5E35B1 0 solid; }
     .festivaluebersicht__filter .festival__list--item {
       text-align: start; }
-      .festivaluebersicht__filter .festival__list--item .filter__music {
-        width: 104px;
+      .festivaluebersicht__filter .festival__list--item .filter {
         height: 100%;
-        padding: 8px; }
-        .festivaluebersicht__filter .festival__list--item .filter__music svg {
-          height: 60px;
-          width: auto; }
-      .festivaluebersicht__filter .festival__list--item .filter__name {
+        padding: 0;
         margin: 0;
-        width: 374px;
-        max-width: 100%;
-        height: 100%;
-        border-right: #F0F0F0 1px solid;
-        inline-size: 40%;
-        padding: 16px; }
-      .festivaluebersicht__filter .festival__list--item .filter__detail {
-        margin: 0;
-        height: 100%;
-        width: 184px;
-        max-width: 100%; }
-        .festivaluebersicht__filter .festival__list--item .filter__detail--ort, .festivaluebersicht__filter .festival__list--item .filter__detail--datum {
-          float: none;
-          width: 100%; }
+        border-right: #F0F0F0 1px solid; }
+        .festivaluebersicht__filter .festival__list--item .filter__music {
+          height: 100%;
+          grid-column: 1;
+          grid-row-start: 1;
+          grid-row-end: 3; }
+          .festivaluebersicht__filter .festival__list--item .filter__music svg {
+            height: 60px;
+            width: auto;
+            padding: auto; }
+        .festivaluebersicht__filter .festival__list--item .filter__name {
+          padding: 12px;
+          grid-column: 2;
+          grid-row-start: 1;
+          grid-row-end: 3; }
         .festivaluebersicht__filter .festival__list--item .filter__detail--ort {
-          padding: 16px; }
+          padding: 12px;
+          grid-column: 3;
+          grid-row-start: 1;
+          grid-row-end: 2; }
         .festivaluebersicht__filter .festival__list--item .filter__detail--datum {
-          padding: 0 16px 16px 16px; }
-      .festivaluebersicht__filter .festival__list--item .filter__merken, .festivaluebersicht__filter .festival__list--item .filter__gemerkt {
-        width: 104px;
-        height: 100%;
-        border-left: #F0F0F0 1px solid;
-        margin: auto;
-        padding: 4px;
-        text-align: center; }
-        .festivaluebersicht__filter .festival__list--item .filter__merken .gemerkt, .festivaluebersicht__filter .festival__list--item .filter__merken .merken, .festivaluebersicht__filter .festival__list--item .filter__gemerkt .gemerkt, .festivaluebersicht__filter .festival__list--item .filter__gemerkt .merken {
-          padding: 12px; }
+          padding: 12px;
+          grid-column: 3;
+          grid-row-start: 2;
+          grid-row-end: 3; }
+        .festivaluebersicht__filter .festival__list--item .filter__merken, .festivaluebersicht__filter .festival__list--item .filter__gemerkt {
+          display: inline-flex;
+          grid-column: 4;
+          grid-row-start: 1;
+          grid-row-end: 3; }
+          .festivaluebersicht__filter .festival__list--item .filter__merken .merken, .festivaluebersicht__filter .festival__list--item .filter__merken .gemerkt, .festivaluebersicht__filter .festival__list--item .filter__gemerkt .merken, .festivaluebersicht__filter .festival__list--item .filter__gemerkt .gemerkt {
+            padding: 12px 12px 0 0; }
   .festivaluebersicht__filter .item__hidden {
     display: inline; } }
 
@@ -979,49 +980,55 @@ footer {
       margin: 0 120px; }
       .festivaluebersicht__filter .festival__list ul {
         height: 104px;
-        max-width: calc(100vw - 270px); }
-      .festivaluebersicht__filter .festival__list--item .teaser__kachel {
-        width: 169px; }
-      .festivaluebersicht__filter .festival__list--item .filter__music {
-        width: 104px;
-        height: 100%;
-        padding: 8px; }
-        .festivaluebersicht__filter .festival__list--item .filter__music svg {
-          height: 60px;
-          width: auto; }
-      .festivaluebersicht__filter .festival__list--item .filter__name {
-        inline-size: 15%; }
-      .festivaluebersicht__filter .festival__list--item .filter__detail {
-        display: inline-flex;
-        padding-top: 0;
-        margin: 0;
-        width: calc(184px + 210px);
-        max-width: 100%; }
+        grid-template-columns: 15fr 104px 25fr 9fr 18fr 13fr;
+        grid-template-rows: 52px 52px;
+        justify-items: center;
+        align-items: center; }
+      .festivaluebersicht__filter .festival__list--jazz {
+        border-right: #FDD835 4px solid;
+        border-bottom: #FDD835 0 solid; }
+      .festivaluebersicht__filter .festival__list--hiphop {
+        border-right: #D81B60 4px solid;
+        border-bottom: #D81B60 0 solid; }
+      .festivaluebersicht__filter .festival__list--indie {
+        border-right: #00D79F 4px solid;
+        border-bottom: #00D79F 0 solid; }
+      .festivaluebersicht__filter .festival__list--poprock {
+        border-right: #3949AB 4px solid;
+        border-bottom: #3949AB 0 solid; }
+      .festivaluebersicht__filter .festival__list--electronic {
+        border-right: #5E35B1 4px solid;
+        border-bottom: #5E35B1 0 solid; }
+      .festivaluebersicht__filter .festival__list--item {
+        text-align: start; }
+        .festivaluebersicht__filter .festival__list--item .teaser__liste {
+          grid-column: 1;
+          grid-row-start: 1;
+          grid-row-end: span 2; }
+        .festivaluebersicht__filter .festival__list--item .filter__music {
+          height: 100%;
+          grid-column: 2;
+          grid-row-start: 1;
+          grid-row-end: span 2; }
+          .festivaluebersicht__filter .festival__list--item .filter__music svg {
+            height: 60px;
+            width: auto; }
+        .festivaluebersicht__filter .festival__list--item .filter__name {
+          grid-column: 3;
+          grid-row-start: 1;
+          grid-row-end: span 2; }
         .festivaluebersicht__filter .festival__list--item .filter__detail--ort {
-          display: inline-block;
-          height: 100%;
-          width: 184px;
-          max-width: 100%;
-          padding: 16px; }
+          grid-column: 4;
+          grid-row-start: 1;
+          grid-row-end: span 2; }
         .festivaluebersicht__filter .festival__list--item .filter__detail--datum {
-          display: inline-block;
-          width: 210px;
-          max-width: 100%;
-          height: 100%;
-          border-left: #F0F0F0 1px solid;
-          padding: 16px; }
-      .festivaluebersicht__filter .festival__list--item .filter__merken, .festivaluebersicht__filter .festival__list--item .filter__gemerkt {
-        display: inline-flex;
-        width: 156px;
-        display: inline-flex;
-        /*width: 104px;
-            height: 100%;
-            border-left: $grauF0_hex 1px solid;
-            margin: auto;
-            padding-top: 8px;
-            text-align: center;*/ }
-        .festivaluebersicht__filter .festival__list--item .filter__merken .merken, .festivaluebersicht__filter .festival__list--item .filter__merken .gemerkt, .festivaluebersicht__filter .festival__list--item .filter__gemerkt .merken, .festivaluebersicht__filter .festival__list--item .filter__gemerkt .gemerkt {
-          padding-top: 12px; }
+          grid-column: 5;
+          grid-row-start: 1;
+          grid-row-end: span 2; }
+        .festivaluebersicht__filter .festival__list--item .filter__merken, .festivaluebersicht__filter .festival__list--item .filter__gemerkt {
+          grid-column: 6;
+          grid-row-start: 1;
+          grid-row-end: span 2; }
     .festivaluebersicht__filter .item__hidden--tablet {
       display: inline; } }
 

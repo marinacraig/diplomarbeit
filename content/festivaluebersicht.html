@@ -24,13 +24,15 @@
     </nav>
 </header>
 
-<!--breadcrump s. 31  - entweder im Header oder direkt darunter, wegen Festivalseite darunter-->
+<!--breadcrump s. 31  - entweder im Header oder direkt darunter, wegen Festivalseite darunter
+id pagetop: von unten nach oben hierhin-->
 
 <div class="breadcrumb" id="pagetop">
-    <ul class="nav__breadcrump">
-        <a href="#" class="nav__breadcrumb--home">
-            <li class="nav__breadcrump nav__breadcrump--icon">
-                <svg width="24px" height="23px" viewBox="0 0 24 23" version="1.1" xmlns="http://www.w3.org/2000/svg"
+    <ul class="breadcrump">
+        <a href="festivaluebersicht.html">
+            <li class="breadcrump breadcrumb__home">
+                <svg class="breadcrumb__icon " width="24px" height="23px" viewBox="0 0 24 23" version="1.1"
+                     xmlns="http://www.w3.org/2000/svg"
                      xmlns:xlink="http://www.w3.org/1999/xlink">
                     <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
                     <title>navigation_home</title>
@@ -44,34 +46,8 @@
                         </g>
                     </g>
                 </svg>
-            </li>
-        </a>
-
-        <li class="nav__breadcrump nav__breadcrump--icon">
-            <svg width="13px" height="24px" viewBox="0 0 13 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                 xmlns:xlink="http://www.w3.org/1999/xlink">
-                <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
-                <title>steuerung_pfeil_rechts</title>
-                <desc>Created with Sketch.</desc>
-                <defs></defs>
-                <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                    <g id="steuerung_pfeil_rechts" class="icon__breadcrumb"
-                       transform="translate(-19.000000, -12.000000)">
-                        <g transform="translate(19.000000, 12.000000)" id="Shape">
-                            <path d="M12.5380457,11.5215592 L1.21641314,0.199926652 C0.949844267,-0.0666422172 0.522328156,-0.0666422172 0.255759288,0.199926652 C-0.0108095812,0.466495521 -0.0108095812,0.894011631 0.255759288,1.1605805 L11.0945501,11.9993713 L0.255759288,22.8381621 C-0.0108095812,23.104731 -0.0108095812,23.5322471 0.255759288,23.7988159 C0.386528921,23.9295856 0.562564967,24 0.733571411,24 C0.904577855,24 1.0806139,23.9346152 1.21138353,23.7988159 L12.5330161,12.4771834 C12.7995849,12.2156442 12.7995849,11.7830984 12.5380457,11.5215592 L12.5380457,11.5215592 Z"></path>
-                        </g>
-                    </g>
-                </g>
-            </svg>
-        </li>
-
-        <a href="#" class="nav__breadcrumb--festivals">
-            <li class="nav__breadcrump nav__breadcrump--text">
-                Festivals
-            </li>
-
-            <li class="nav__breadcrump nav__breadcrump--icon">
-                <svg width="17px" height="10px" viewBox="0 0 17 10" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                <svg class="breadcrumb__icon rotate" width="17px" height="10px" viewBox="0 0 17 10" version="1.1"
+                     xmlns="http://www.w3.org/2000/svg"
                      xmlns:xlink="http://www.w3.org/1999/xlink">
                     <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
                     <title>steuerung_dropdown</title>
@@ -90,9 +66,62 @@
                 </svg>
             </li>
         </a>
-        <li class="nav__breadcrump nav__breadcrump--text">
-            irgendein Festival
-            <!--Todo: bei hover dropdown, ausgewähltes als Text anzeigen  s. 31-->
+
+        <a href="#">
+            <li class="breadcrump breadcrumb__festival--uebersicht">
+                <p class="breadcrumb__text">Festivals</p>
+                <svg class="breadcrumb__icon circle" width="17px" height="10px" viewBox="0 0 17 10" version="1.1"
+                     xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+                    <title>steuerung_dropdown</title>
+                    <desc>Created with Sketch.</desc>
+                    <defs></defs>
+                    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="steuerung_dropdown" class="icon__breadcrumb icon__breadcrumb--dropdown"
+                           transform="translate(-16.000000, -19.000000)">
+                            <g transform="translate(24.363636, 24.000000) rotate(-90.000000) translate(-24.363636, -24.000000) translate(20.000000, 16.000000)"
+                               id="Shape">
+                                <polygon
+                                        points="8.2329697 15.9516768 0.0206060606 7.97559596 8.2329697 0 8.65842424 0.437818182 0.89769697 7.97559596 8.65842424 15.5135354"></polygon>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </li>
+        </a>
+
+        <!--hier kann man draufklicken, dann gehen alle einzelnen Festivals auf, sind jeweils direkt zur
+        Einzelseite verlinkt-->
+
+        <li class="breadcrump breadcrumb__festival--einzelansicht">
+            <svg class="breadcrumb__icon rotate" width="17px" height="10px" viewBox="0 0 17 10" version="1.1"
+                 xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink">
+                <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+                <title>steuerung_dropdown</title>
+                <desc>Created with Sketch.</desc>
+                <defs></defs>
+                <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="steuerung_dropdown" class="icon__breadcrumb icon__breadcrumb--dropdown"
+                       transform="translate(-16.000000, -19.000000)">
+                        <g transform="translate(24.363636, 24.000000) rotate(-90.000000) translate(-24.363636, -24.000000) translate(20.000000, 16.000000)"
+                           id="Shape">
+                            <polygon
+                                    points="8.2329697 15.9516768 0.0206060606 7.97559596 8.2329697 0 8.65842424 0.437818182 0.89769697 7.97559596 8.65842424 15.5135354"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+            <ul class="dropdown">
+                <li>Sur le Lac</li>
+                <li>Sur le Lac</li>
+                <li>Sur le Lac in Lausanne</li>
+            </ul>
+        </li>
+
+
+        <!--Todo: bei hover dropdown, ausgewähltes als Text anzeigen  s. 31-->
 
         </li>
     </ul>
@@ -227,11 +256,10 @@
                     </li>
                     <!--hier muss wohl ein h3 hin, Ort, Datum-->
                     <li class="filter filter__name h3">Sur le Lac</li>
-                    <li class="filter filter__detail">
-                        <ul class="filter__detail">
-                            <li class="filter filter__detail--ort">Eggersriet SG</li>
-                            <li class="filter filter__detail--datum">20. Jul - 23. Jul 2018</li>
-                        </ul>
+
+                    <li class="filter filter__detail--ort">Eggersriet SG</li>
+                    <li class="filter filter__detail--datum">20. Jul - 23. Jul 2018</li>
+
                     </li>
 
 
@@ -261,7 +289,9 @@
             </li>
 
 
+
             <!--zweites Festival -->
+            <li class="festival__list--margin"></li>
             <li class="festival__list--item festival__list--jazz">
                 <ul>
                     <li class="teaser__liste item__hidden--tablet">
@@ -286,12 +316,10 @@
                     </li>
                     <!--hier muss wohl ein h3 hin, Ort, Datum-->
                     <li class="filter filter__name h3">Sur le Lac</li>
-                    <li class="filter filter__detail">
-                    <ul class="filter__detail">
+
                     <li class="filter filter__detail--ort">Eggersriet SG</li>
                     <li class="filter filter__detail--datum">20. Jul - 23. Jul 2018</li>
-                    </ul>
-                    </li>
+
 
                     <!-- Stern aktiv oder eben nicht, dementsprechend merken (leerer Stern) oder gemerkt (ausgefüllter Stern)-->
                     <li class="filter filter__merken">
@@ -319,20 +347,25 @@
 
             </li>
 
+
+
             <!--drittes Festival-->
+            <li class="festival__list--margin"></li>
             <li class="festival__list--item festival__list--hiphop">
                 <ul>
                     <li class="teaser__liste item__hidden--tablet">
                         <span role="img" aria-label="Festivalbild"> </span>
                     </li>
                     <li class="filter filter__music filter__music--hiphop">
-                        <svg width="20px" height="23px" viewBox="0 0 20 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <svg width="20px" height="23px" viewBox="0 0 20 23" version="1.1"
+                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
                             <title>music_hiphop</title>
                             <desc>Created with Sketch.</desc>
                             <defs></defs>
                             <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                <g class="icon icon__music icon__music--hiphop" id="music_hiphop" transform="translate(-14.000000, -13.000000)" >
+                                <g class="icon icon__music icon__music--hiphop" id="music_hiphop"
+                                   transform="translate(-14.000000, -13.000000)">
                                     <g transform="translate(14.000000, 13.000000)">
                                         <path d="M1.42857143,4.28571429 C0.639642857,4.28571429 0,4.92526786 0,5.71428571 L0,17.1428571 C0,17.9317857 0.639642857,18.5714286 1.42857143,18.5714286 C2.2175,18.5714286 2.85714286,17.9317857 2.85714286,17.1428571 L2.85714286,5.71428571 C2.85714286,4.92526786 2.2175,4.28571429 1.42857143,4.28571429 Z M5.71428571,7.14285714 C4.92535714,7.14285714 4.28571429,7.78241071 4.28571429,8.57142857 L4.28571429,14.2857143 C4.28571429,15.0746429 4.92535714,15.7142857 5.71428571,15.7142857 C6.50321429,15.7142857 7.14285714,15.0746429 7.14285714,14.2857143 L7.14285714,8.57142857 C7.14285714,7.78241071 6.50321429,7.14285714 5.71428571,7.14285714 Z M10,0 C9.21107143,0 8.57142857,0.639553571 8.57142857,1.42857143 L8.57142857,21.4285714 C8.57142857,22.2175 9.21107143,22.8571429 10,22.8571429 C10.7889286,22.8571429 11.4285714,22.2175 11.4285714,21.4285714 L11.4285714,1.42857143 C11.4285714,0.639553571 10.7889286,0 10,0 Z M14.2857143,3.57142857 C13.4967857,3.57142857 12.8571429,4.21098214 12.8571429,5 L12.8571429,17.8571429 C12.8571429,18.6460714 13.4967857,19.2857143 14.2857143,19.2857143 C15.0746429,19.2857143 15.7142857,18.6460714 15.7142857,17.8571429 L15.7142857,5 C15.7142857,4.21098214 15.0746429,3.57142857 14.2857143,3.57142857 Z M18.5714286,7.14285714 C17.7825,7.14285714 17.1428571,7.78241071 17.1428571,8.57142857 L17.1428571,14.2857143 C17.1428571,15.0746429 17.7825,15.7142857 18.5714286,15.7142857 C19.3603571,15.7142857 20,15.0746429 20,14.2857143 L20,8.57142857 C20,7.78241071 19.3603571,7.14285714 18.5714286,7.14285714 Z"></path>
                                     </g>
@@ -340,14 +373,13 @@
                             </g>
                         </svg>
                     </li>
+
                     <!--hier muss wohl ein h3 hin, Ort, Datum-->
                     <li class="filter filter__name h3">Sur le Lac in Lausanne</li>
-                    <li class="filter filter__detail">
-                        <ul class="filter__detail">
-                            <li class="filter filter__detail--ort">Eggersriet und noch etwas SG</li>
-                            <li class="filter filter__detail--datum">20. Jul - 23. Jul 2018</li>
-                        </ul>
-                    </li>
+
+                    <li class="filter filter__detail--ort">Eggersriet und noch etwas SG</li>
+                    <li class="filter filter__detail--datum">20. Jul - 23. Jul 2018</li>
+
 
                     <!-- Stern aktiv oder eben nicht, dementsprechend merken (leerer Stern) oder gemerkt (ausgefüllter Stern)-->
                     <li class="filter filter__merken">
