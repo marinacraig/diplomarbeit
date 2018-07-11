@@ -910,9 +910,9 @@ footer {
   .festivaluebersicht__filter .festival__list {
     margin: 0 24px; }
     .festivaluebersicht__filter .festival__list ul {
-      height: 104px;
+      min-height: 104px;
       grid-template-columns: 104px 20fr 14fr 14fr;
-      grid-template-rows: 52px 52px;
+      grid-template-rows: 50% 50%;
       justify-items: center;
       align-items: center; }
     .festivaluebersicht__filter .festival__list--jazz {
@@ -962,12 +962,12 @@ footer {
           grid-row-start: 2;
           grid-row-end: 3; }
         .festivaluebersicht__filter .festival__list--item .filter__merken, .festivaluebersicht__filter .festival__list--item .filter__gemerkt {
-          display: inline-flex;
+          display: inline;
           grid-column: 4;
           grid-row-start: 1;
           grid-row-end: 3; }
           .festivaluebersicht__filter .festival__list--item .filter__merken .merken, .festivaluebersicht__filter .festival__list--item .filter__merken .gemerkt, .festivaluebersicht__filter .festival__list--item .filter__gemerkt .merken, .festivaluebersicht__filter .festival__list--item .filter__gemerkt .gemerkt {
-            padding: 12px 12px 0 0; }
+            padding: 12px 12px 0; }
   .festivaluebersicht__filter .item__hidden {
     display: inline; } }
 

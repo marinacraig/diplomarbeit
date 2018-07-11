@@ -216,12 +216,13 @@
       margin: 0 24px;
 
       ul {
-        height: 104px;
+        min-height: 104px;
+
         //width soll ausgenützt werden
         //  width: calc(100vw - 68px);
         //display:inline-grid;
         grid-template-columns: 104px 20fr 14fr 14fr;//statt 20 müssten es über 30 sein
-        grid-template-rows: 52px 52px;
+        grid-template-rows: 50% 50%;
         justify-items: center;
         align-items: center;
       }
@@ -299,13 +300,13 @@
             }
           }
           &__merken, &__gemerkt {
-            display: inline-flex;
+            display: inline;
             grid-column: 4;
             grid-row-start: 1;
             grid-row-end: 3;
 
             .merken, .gemerkt{
-              padding: 12px 12px 0 0;
+              padding: 12px 12px 0;
             }
           }
         }
