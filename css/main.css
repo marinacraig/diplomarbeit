@@ -1209,17 +1209,31 @@ footer {
     margin-top: 480px; }
   .einleitung .filter .filter__festival {
     width: 25%; }
-  .tickets .btnschwarz, .tickets .btnweiss {
-    margin: 8px auto; }
-  .tickets .btnmerken {
-    display: inline-flex; }
-  .tickets .sponsoring {
-    width: 200px; } }
+  .asidemargin {
+    margin-right: -120px; }
+  .beschreibung {
+    display: inline-block;
+    float: left;
+    width: 70%;
+    max-width: calc(100% - 300px); }
+  .tickets {
+    display: inline-block;
+    float: right;
+    width: 200px;
+    height: 100%;
+    padding: 0;
+    margin: 380px 0; }
+    .tickets .btnschwarz, .tickets .btnweiss {
+      margin: 8px auto; }
+    .tickets .btnmerken {
+      display: inline-flex; }
+    .tickets .sponsoring {
+      width: 200px; } }
 
 #pagetop {
   padding-top: 68px; }
 
-.musikrichtung, .vorstellung {
+.musikrichtung, .festivalmargin {
   margin: 0 16px; }
 
 .musikrichtung .btnweiss, .musikrichtung .btnschwarz {
@@ -1304,7 +1318,7 @@ p {
   background-size: cover; }
 
 @media screen and (min-width: 376px) {
-  .musikrichtung, .vorstellung {
+  .musikrichtung, .festivalmargin {
     margin: 0 24px; }
   article {
     padding-top: 32px;
@@ -1315,7 +1329,7 @@ p {
     background-size: cover; } }
 
 @media screen and (min-width: 769px) {
-  .musikrichtung, .vorstellung {
+  .musikrichtung, .festivalmargin {
     margin: 0 120px; }
   article {
     padding-top: 40px;

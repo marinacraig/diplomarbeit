@@ -216,7 +216,7 @@
 
     .btnschwarz, .btnweiss{
       margin: 8px;
-      //todo: nur tablet: nebeneinander
+      //todo: nur tablet: nebeneinander, keine Prio
     }
     .btnmerken{
       display: none;
@@ -263,8 +263,24 @@
   }
 
 
+  .asidemargin{
+    margin-right: -120px;
+  }
+  .beschreibung{
+    display: inline-block;
+    float: left;
+    width: 70%;
+    max-width: calc(100% - 300px);
+  }
+
   .tickets {
     //desktop: wird aus dem Fluss genommen und rechts platziert
+    display: inline-block;
+    float: right;
+    width: 200px;
+    height: 100%;
+    padding:0;
+    margin: 380px 0;
 
     .btnschwarz, .btnweiss{
       margin: 8px auto;
@@ -277,4 +293,6 @@
       width: 200px;
     }
   }
+
+
 }
