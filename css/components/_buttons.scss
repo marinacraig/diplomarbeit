@@ -31,6 +31,8 @@ button {
 }
 
 //Todo: class active via js wenn filter aktiv bzw. s. 38 mittels checkbox aktivieren
+// von der Startseite:
+//todo: musikrichtung - on click alle anzeigen
 
 .btngrau__jazz {
   &:hover {
@@ -79,7 +81,7 @@ button {
   width: 343px;
   max-width: 100%;
   padding: auto 32px;
-  margin: 8px;
+  margin: 8px auto; // statt 8px
 
   &:hover {
     background-color: $grau76_hex;
@@ -95,13 +97,12 @@ button {
   width: 343px;
   max-width: 100%;
   padding: auto 32px;
-  margin: 8px;
+  margin: 8px auto;
 
   &:hover {
     background-color: $schwarz_hex;
     color: $weiss_hex;
   }
-  //todo: tabs: S. 34 styleguide, pfeile hinzufügen
 }
 
 .news .btnweiss {
@@ -113,21 +114,34 @@ button {
   }
 }
 
-// von der Startseite:
-//todo: musikrichtung - on click alle anzeigen (js)
-
-//mittels akkordeon  - jedoch: wie kann man es für grösser phone ausblenden?
-// -> mittels "Filter zurücksetzen" akkordion schliessen
-
 .item__hidden--buttons {
   display: none;
 }
 
-.musikrichtung {
-  //todo: zentriert
+//von der Festival-Einzelansicht
+.btnmerken {
+  font-weight: bold;
+  border: none;
+  background-color: $weiss_hex;
+  width: 343px;
+  max-width: 100%;
+  padding: auto 32px;
+  margin: 8px auto;
+  display: inline-flex;
+
+  svg{
+    margin: auto 6px auto auto;
+  }
+  span{
+    display: flex;
+    margin: auto auto auto 6px;
+  }
+
+  &:hover {
+    background-color: $grauF0_hex; //damit auch hier etwas passiert
+  }
 
 }
-
 
 //tablet
 @media screen and (min-width: 376px) {

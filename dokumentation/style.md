@@ -47,4 +47,11 @@ grid gewählt.
 Wegen dem Border beim letzten Teil Text "Festival" gesetzt. Wird aus 
 Zeitgründen nicht gefixt.
 
+##Festival
+###Sponsoring
+Scheint laut Styleguide ein Div bestimmter Höhe und Breite 
+mit Text und Logo zu sein. Zudem ist das "merken" darüber links-bündig.
+Da mir dies nicht gefällt und ich von einem Versehen ausgehe ist es 
+eingemittet und eine Hintergrundfarbe gewählt.
+
  

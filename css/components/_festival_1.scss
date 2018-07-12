@@ -20,7 +20,7 @@
       fill: $weiss_hex;
     }
 
-    h1 {
+    .schriftfestival {
       padding: 172px 12px 0 12px;
       text-align: left;
     }
@@ -99,10 +99,63 @@
 }
 
 .beschreibung{
+
   //Seitenabstand im main.scss
+  p {
+    margin-top: 2.2em;
+  }
+
   .breadcrump{
     margin-top: 0;
   }
+
+  .filter__detail {
+    //ab tablet:
+    //display: inline-flex;
+    //float: left;
+  p {
+    margin-top:0;
+  }
+  &--ort {
+    padding: 0 28px;
+    height: 24px;
+  }
+    &--datum{
+      padding: 0 32px;
+      height: 24px;
+    }
+  }
+
+  &__intro{
+    font-weight: bolder; //steht nirgends etwas, aber so kommt es am nächsten
+  }
+
+}
+
+.tickets {
+  //tablet: btn nebeneinander, sponsoring unten
+  //desktop: wird aus dem Fluss genommen und rechts platziert
+  //tablet: .btnschwarz, .btnweiss{margin: 8px}, btnmerken: display none
+  //desktop: .btnschwarz, .btnweiss{margin: 8px auto}, btnmerken: display yes
+  //entweder Text und logo oder ein Bild mit allem
+
+  .sponsoring{
+    width: 200px;
+    height: 153px;
+    margin: 0 auto;
+  }
+  /*    für tablet:
+      .sponsoring{
+      width: 400px; //keine Angabe - verdoppelt
+      height: 153px;
+    }
+    für desktop:
+      .sponsoring{
+      width: 200px;
+      height: 153px;
+    }
+
+    */
 }
 
 
@@ -119,7 +172,7 @@
           width: auto;
         }
 
-        h1 {
+        .schriftfestival {
           padding: 250px 12px 0 12px; //greift nicht immer 290 ideal, aber wegen kleinstem weniger
           margin-top: 160px;
         }
@@ -147,6 +200,32 @@
       }
     }
   }
+
+  .beschreibung{
+
+    //Seitenabstand im main.scss
+
+    .filter__detail {
+      display: inline-flex;
+      float: left;
+    }
+  }
+
+  .tickets {
+    //tablet: btn nebeneinander, sponsoring unten
+
+    .btnschwarz, .btnweiss{
+      margin: 8px;
+      //todo: nur tablet: nebeneinander
+    }
+    .btnmerken{
+      display: none;
+    }
+    .sponsoring{
+      max-width: 100%;
+      width: 400px;
+    }
+  }
 }
 
 //laptop
@@ -162,7 +241,7 @@
           width: auto;
         }
 
-        h1 {
+        .schriftfestival {
           padding: 320px 12px 0 12px; //greift nicht immer 460 ideal, aber wegen kleinstem weniger
           margin-top: 480px;
         }
@@ -180,6 +259,22 @@
       .filter__festival {
         width: 25%; // bei Tablet 50% dann 25%
       }
+    }
+  }
+
+
+  .tickets {
+    //desktop: wird aus dem Fluss genommen und rechts platziert
+
+    .btnschwarz, .btnweiss{
+      margin: 8px auto;
+      //todo: nur tablet: nebeneinander
+    }
+    .btnmerken{
+      display: inline-flex;
+    }
+    .sponsoring{
+      width: 200px;
     }
   }
 }

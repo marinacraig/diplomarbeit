@@ -49,7 +49,7 @@ für html 17px:
 body {
   font-family: 'Encode Sans Semi Expanded', sans-serif; }
 
-h1, h2, h3, h4, h5, h6, h1.h2 {
+h1, h2, h3, h4, h5, h6, h1.h2, .schriftfestival {
   font-family: 'Bitter', serif; }
 
 h1 {
@@ -67,7 +67,7 @@ h3, .h3 {
   font-weight: bold;
   margin-bottom: 1em; }
 
-.festivalgross {
+.schriftfestival {
   font-size: 2.823529412rem;
   font-weight: bold;
   margin: 40px auto; }
@@ -90,7 +90,7 @@ header, button {
     font-size: 1.882352941rem; }
   h3 {
     font-size: 1.176470588rem; }
-  .festivalgross {
+  .schriftfestival {
     font-size: 5.647058824rem;
     margin: 100px auto; } }
 
@@ -102,7 +102,7 @@ header, button {
     margin: 40px auto; }
   h3 {
     font-size: 1.176470588rem; }
-  .festivalgross {
+  .schriftfestival {
     font-size: 8.470588235rem;
     margin: 144px auto; } }
 
@@ -325,7 +325,7 @@ button {
   width: 343px;
   max-width: 100%;
   padding: auto 32px;
-  margin: 8px; }
+  margin: 8px auto; }
   .btnschwarz:hover {
     background-color: #767676; }
 
@@ -336,7 +336,7 @@ button {
   width: 343px;
   max-width: 100%;
   padding: auto 32px;
-  margin: 8px; }
+  margin: 8px auto; }
   .btnweiss:hover {
     background-color: #000;
     color: #FFF; }
@@ -350,6 +350,23 @@ button {
 
 .item__hidden--buttons {
   display: none; }
+
+.btnmerken {
+  font-weight: bold;
+  border: none;
+  background-color: #FFF;
+  width: 343px;
+  max-width: 100%;
+  padding: auto 32px;
+  margin: 8px auto;
+  display: inline-flex; }
+  .btnmerken svg {
+    margin: auto 6px auto auto; }
+  .btnmerken span {
+    display: flex;
+    margin: auto auto auto 6px; }
+  .btnmerken:hover {
+    background-color: #F0F0F0; }
 
 @media screen and (min-width: 376px) {
   .item__hidden--buttons {
@@ -1069,7 +1086,7 @@ footer {
       width: auto; }
     .einleitung .intro .intro__festival .icon__music {
       fill: #FFF; }
-    .einleitung .intro .intro__festival h1 {
+    .einleitung .intro .intro__festival .schriftfestival {
       padding: 172px 12px 0 12px;
       text-align: left; }
   .einleitung .intro .background {
@@ -1115,15 +1132,50 @@ footer {
     background-color: #673AB7;
     border: #5E35B1 1px solid; }
 
+.beschreibung p {
+  margin-top: 2.2em; }
+
 .beschreibung .breadcrump {
   margin-top: 0; }
+
+.beschreibung .filter__detail p {
+  margin-top: 0; }
+
+.beschreibung .filter__detail--ort {
+  padding: 0 28px;
+  height: 24px; }
+
+.beschreibung .filter__detail--datum {
+  padding: 0 32px;
+  height: 24px; }
+
+.beschreibung__intro {
+  font-weight: bolder; }
+
+.tickets {
+  /*    für tablet:
+      .sponsoring{
+      width: 400px; //keine Angabe - verdoppelt
+      height: 153px;
+    }
+    für desktop:
+      .sponsoring{
+      width: 200px;
+      height: 153px;
+    }
+
+    */ }
+  .tickets .sponsoring {
+    width: 200px;
+    height: 153px;
+    margin: 0 auto; }
 
 @media screen and (min-width: 376px) {
   .einleitung .intro .intro__festival svg {
     padding-top: 48px;
     height: 104px;
     width: auto; }
-  .einleitung .intro .intro__festival h1 {
+  .einleitung .intro .intro__festival .schriftfestival {
     padding: 250px 12px 0 12px;
     margin-top: 160px; }
   .einleitung .intro .background {
@@ -1135,24 +1187,43 @@ footer {
     float: left;
     font-size: 1.5em; }
     .einleitung .filter .filter__festival .filter__name {
-      padding-top: 52px; } }
+      padding-top: 52px; }
+  .beschreibung .filter__detail {
+    display: inline-flex;
+    float: left; }
+  .tickets .btnschwarz, .tickets .btnweiss {
+    margin: 8px; }
+  .tickets .btnmerken {
+    display: none; }
+  .tickets .sponsoring {
+    max-width: 100%;
+    width: 400px; } }
 
 @media screen and (min-width: 769px) {
   .einleitung .intro .intro__festival svg {
     padding-top: 120px;
     height: 200px;
     width: auto; }
-  .einleitung .intro .intro__festival h1 {
+  .einleitung .intro .intro__festival .schriftfestival {
     padding: 320px 12px 0 12px;
     margin-top: 480px; }
   .einleitung .filter .filter__festival {
-    width: 25%; } }
+    width: 25%; }
+  .tickets .btnschwarz, .tickets .btnweiss {
+    margin: 8px auto; }
+  .tickets .btnmerken {
+    display: inline-flex; }
+  .tickets .sponsoring {
+    width: 200px; } }
 
 #pagetop {
   padding-top: 68px; }
 
-.musikrichtung, .beschreibung {
+.musikrichtung, .vorstellung {
   margin: 0 16px; }
+
+.musikrichtung .btnweiss, .musikrichtung .btnschwarz {
+  margin: 8px; }
 
 article {
   padding-top: 24px;
@@ -1185,6 +1256,17 @@ p {
       background-image: url("../assets/audio_poprock.svg"); }
     .entdeckungen__music--electronic {
       background-image: url("../assets/audio_electronic.svg"); }
+
+.beschreibung .filter__detail--ort {
+  background: url("../assets/detail_place.svg") no-repeat; }
+
+.beschreibung .filter__detail--datum {
+  background: url("../assets/detail_kalender.svg") no-repeat; }
+
+.sponsoring {
+  background-image: url("../images/rsz_sponsoring.jpg");
+  background-position: center;
+  background-size: cover; }
 
 .festivalbild {
   background-image: url("../images/rsz_startseite_1.jpg");
@@ -1222,18 +1304,24 @@ p {
   background-size: cover; }
 
 @media screen and (min-width: 376px) {
-  .musikrichtung, .beschreibung {
+  .musikrichtung, .vorstellung {
     margin: 0 24px; }
   article {
     padding-top: 32px;
-    padding-bottom: 32px; } }
+    padding-bottom: 32px; }
+  .sponsoring {
+    background-image: url("../images/rsz_sponsoring_tablet.jpg");
+    background-position: center;
+    background-size: cover; } }
 
 @media screen and (min-width: 769px) {
-  .musikrichtung, .beschreibung {
+  .musikrichtung, .vorstellung {
     margin: 0 120px; }
   article {
     padding-top: 40px;
-    padding-bottom: 40px; } }
+    padding-bottom: 40px; }
+  .sponsoring {
+    background-image: url("../images/rsz_sponsoring.jpg"); } }
 
 /*
 

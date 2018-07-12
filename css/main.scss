@@ -38,10 +38,14 @@ html {
   padding-top: 68px;//nav Höhe = 64px
 }
 
-.musikrichtung, .beschreibung {
+.musikrichtung, .vorstellung {
   margin: 0 16px;
 }
-
+.musikrichtung{
+  .btnweiss, .btnschwarz{
+    margin: 8px;
+  }
+}
 //Styleguide, s. 9 Absätze
 
 //Hauptseite:
@@ -56,7 +60,7 @@ article{
   text-align: center;
 }
 
-//jeder Paragraph hat einen abstand
+//jeder Paragraph hat einen Abstand
 p {
   margin-bottom: 1em;
 }
@@ -71,6 +75,7 @@ p {
   .btnweiss {
     margin: auto;
   }
+
   &__music {
     height: 120px;
     margin:48px -16px;
@@ -97,6 +102,21 @@ p {
 
 //article news
 
+//Festival-Einzelansicht
+.beschreibung{
+  .filter__detail--ort{
+    background: url("../assets/detail_place.svg") no-repeat;
+  }
+  .filter__detail--datum{
+    background: url("../assets/detail_kalender.svg") no-repeat;
+  }
+}
+.sponsoring{
+  //anderes Bild nur für Tablet
+  background-image: url("../images/rsz_sponsoring.jpg");
+  background-position: center;
+  background-size: cover;
+}
 
 //Bilder wegen URL:
 .festivalbild {
@@ -149,28 +169,34 @@ p {
 
 //tablet
 @media screen and (min-width: 376px) {
-  .musikrichtung, .beschreibung {
+  .musikrichtung, .vorstellung {
     margin: 0 24px;
   }
   //jede article trennt sich wie h2
 article{
   padding-top:32px;
   padding-bottom: 32px;
-
-
   }
-
+  .sponsoring{
+    //anderes Bild nur für Tablet
+    background-image: url("../images/rsz_sponsoring_tablet.jpg");
+    background-position: center;
+    background-size: cover;
+  }
 }
 
 //laptop
 @media screen and (min-width: 769px) {
-  .musikrichtung, .beschreibung {
+  .musikrichtung, .vorstellung {
     margin: 0 120px;
   }
   article{
     padding-top:40px;
     padding-bottom: 40px;
-
+  }
+  .sponsoring{
+    //anderes Bild nur für Tablet
+    background-image: url("../images/rsz_sponsoring.jpg");
   }
 }
 
