@@ -1,3 +1,5 @@
+
+
 // Navigation weiss, ul li in nav verschachtelt, da diese in der Regel immer anders als andere ul li
 
 @import "login";
@@ -11,7 +13,8 @@ nav {
   top: 0;
   width: 100%;
 
-
+  //immer sichtbar
+  z-index:10;
 
   .nav__top {
     height: 64px;

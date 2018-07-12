@@ -2,6 +2,8 @@
 .breadcrumb {
   text-decoration: none;
   font-size: 0.7647058824rem;
+  margin-top:8px;
+  margin-bottom: 8px;
 
   //für die Listenelemente (li):
   .breadcrump {
@@ -43,7 +45,7 @@
         }
         span{
           float: left;
-          padding-top: 13px;
+          padding:12px;
         }
 
         &:hover{
@@ -73,6 +75,7 @@
         height: 48px;
         width: 343px; //wie button (selbst entschieden)
         border: $grauC2_hex 1px solid;
+        padding:12px ;
       }
 
       ul{

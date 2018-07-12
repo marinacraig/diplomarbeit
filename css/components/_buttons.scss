@@ -104,6 +104,15 @@ button {
   //todo: tabs: S. 34 styleguide, pfeile hinzufügen
 }
 
+.news .btnweiss {
+  margin: 16px auto;
+  padding: auto;
+  background-color: $grauF0_hex;
+  &:hover {
+    background-color: $schwarz_hex;
+  }
+}
+
 // von der Startseite:
 //todo: musikrichtung - on click alle anzeigen (js)
 

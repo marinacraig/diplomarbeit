@@ -153,13 +153,11 @@ img {
   max-width: 100vw; }
 
 .image__big {
-  max-height: 46.93333333%;
   max-width: 100%;
   height: 176px;
   width: 375px; }
 
 .banner__mobile {
-  max-height: 115.2%;
   max-width: 100%;
   height: 432px;
   width: 375px;
@@ -169,31 +167,26 @@ img {
   display: none; }
 
 .news__content--image {
-  max-height: 67.63848397%;
   max-width: 100%;
   height: 232px;
   width: 343px; }
 
 .gallery {
-  max-height: 67.63848397%;
   max-width: 100%;
   height: 232px;
   width: 343px; }
 
 .teaser {
-  max-height: 100%;
   max-width: 100%;
   width: 128px;
   height: 128px; }
 
 .teaser__big {
-  max-height: 89.86666667%;
   max-width: 100%;
   height: 337px;
   width: 375px; }
 
 .teaser__kachel {
-  max-height: 67.63848397%;
   max-width: 100%;
   height: 232px;
   width: 343px; }
@@ -205,25 +198,21 @@ img {
   width: 169px; }
 
 .teaser__share {
-  max-height: 61.86666667%;
   max-width: 100%;
   height: 232px;
   width: 375px; }
 
 .profile {
-  max-height: 100%;
   max-width: 100%;
   height: 110px;
   width: 110px; }
 
 @media screen and (min-width: 376px) {
   .image__big {
-    max-height: 45.57291667%;
     max-width: 100%;
     height: 350px;
     width: 768px; }
   .banner__tablet {
-    max-height: 57.29166667%;
     max-width: 100%;
     height: 440px;
     width: 768px;
@@ -231,7 +220,6 @@ img {
   .banner__desktop, .banner__mobile {
     display: none; }
   .news__content--image {
-    max-height: 65.15837104%;
     max-width: 100%;
     height: 144px;
     width: 221px; }
@@ -241,7 +229,6 @@ img {
   .teaser {
     width: 312px; }
   .teaser__big {
-    max-height: 84.375%;
     max-width: 100%;
     height: 648px;
     width: 768px; }
@@ -252,12 +239,10 @@ img {
 
 @media screen and (min-width: 769px) {
   .image__big {
-    max-height: 31.25%;
     max-width: 100%;
     height: 450px;
     width: 1440px; }
   .banner__desktop {
-    max-height: 26.11111111%;
     max-width: 100%;
     height: 376px;
     width: 1440px;
@@ -268,7 +253,6 @@ img {
     height: 593px;
     width: 392px; }
   .teaser__big {
-    max-height: 89.51388889%;
     max-width: 100%;
     height: 1289px;
     width: 1440px; }
@@ -282,12 +266,10 @@ img {
 
 @media screen and (min-width: 1441px) {
   img .image__big {
-    max-height: 31.25%;
     max-width: 1600px;
     height: 450px;
     width: 1440px; }
   .teaser__big {
-    max-height: 89.51388889%;
     max-width: 100%;
     height: 1289px;
     width: 1440px; } }
@@ -358,6 +340,13 @@ button {
   .btnweiss:hover {
     background-color: #000;
     color: #FFF; }
+
+.news .btnweiss {
+  margin: 16px auto;
+  padding: auto;
+  background-color: #F0F0F0; }
+  .news .btnweiss:hover {
+    background-color: #000; }
 
 .item__hidden--buttons {
   display: none; }
@@ -443,7 +432,8 @@ ul {
 nav {
   position: fixed;
   top: 0;
-  width: 100%; }
+  width: 100%;
+  z-index: 10; }
   nav .nav__top {
     height: 64px;
     padding: 0 3px;
@@ -615,7 +605,9 @@ footer {
 
 .breadcrumb {
   text-decoration: none;
-  font-size: 0.7647058824rem; }
+  font-size: 0.7647058824rem;
+  margin-top: 8px;
+  margin-bottom: 8px; }
   .breadcrumb .breadcrump {
     display: flex;
     height: 14px;
@@ -640,7 +632,7 @@ footer {
           float: right; }
         .breadcrumb .breadcrump .dropdown > a span {
           float: left;
-          padding-top: 13px; }
+          padding: 12px; }
         .breadcrumb .breadcrump .dropdown > a:hover {
           color: #000; }
           .breadcrumb .breadcrump .dropdown > a:hover li {
@@ -657,7 +649,8 @@ footer {
       .breadcrumb .breadcrump .dropdown__content li {
         height: 48px;
         width: 343px;
-        border: #C2C2C2 1px solid; }
+        border: #C2C2C2 1px solid;
+        padding: 12px; }
       .breadcrumb .breadcrump .dropdown__content ul {
         list-style-type: none; }
         .breadcrumb .breadcrump .dropdown__content ul > a {
@@ -778,12 +771,6 @@ footer {
   padding-right: 16px;
   background-color: #F0F0F0;
   text-align: center; }
-  .news .btnweiss {
-    margin: 16px auto;
-    padding: auto;
-    background-color: #F0F0F0; }
-    .news .btnweiss:hover {
-      background-color: #000; }
   .news__article {
     text-align: left; }
   .news__content {
@@ -834,9 +821,6 @@ footer {
     padding-right: 120px; }
     .news__article {
       column-count: 5; } }
-
-#pagetop__inclbreadcrump {
-  padding-top: 100px; }
 
 .festivaluebersicht__filter {
   background-color: #F0F0F0; }
@@ -893,6 +877,9 @@ footer {
       border-bottom: #3949AB 4px solid; }
     .festivaluebersicht__filter .festival__list--electronic {
       border-bottom: #5E35B1 4px solid; }
+    .festivaluebersicht__filter .festival__list a {
+      text-decoration: none;
+      color: #000; }
     .festivaluebersicht__filter .festival__list--item {
       background-color: #FFF; }
       .festivaluebersicht__filter .festival__list--item .filter__music {
@@ -1070,8 +1057,57 @@ footer {
     .festivaluebersicht__filter .item__hidden--tablet {
       display: inline; } }
 
-#pagetop {
+.intro {
   padding-top: 64px; }
+  .intro .intro__festival {
+    color: #FFF;
+    text-align: center;
+    position: absolute; }
+    .intro .intro__festival svg {
+      padding-top: 12px;
+      height: 60px;
+      width: auto; }
+    .intro .intro__festival .icon__music {
+      fill: #FFF; }
+    .intro .intro__festival h1 {
+      padding: 172px 12px 0 12px;
+      text-align: left; }
+  .intro .background {
+    margin-top: 0;
+    min-height: 272px; }
+  .intro .jazz {
+    background-color: #FDD835; }
+  .intro .hiphop {
+    background-color: #D81B60; }
+  .intro .indie {
+    background-color: #00D79F; }
+  .intro .poprock {
+    background-color: #3949AB; }
+  .intro .electronic {
+    background-color: #5E35B1; }
+
+@media screen and (min-width: 376px) {
+  .intro .intro__festival svg {
+    padding-top: 48px;
+    height: 104px;
+    width: auto; }
+  .intro .intro__festival h1 {
+    padding: 250px 12px 0 12px;
+    margin-top: 160px; }
+  .intro .background {
+    min-height: 528px; } }
+
+@media screen and (min-width: 769px) {
+  .intro .intro__festival svg {
+    padding-top: 120px;
+    height: 200px;
+    width: auto; }
+  .intro .intro__festival h1 {
+    padding: 320px 12px 0 12px;
+    margin-top: 480px; } }
+
+#pagetop {
+  padding-top: 68px; }
 
 .musikrichtung {
   margin: 0 16px; }
@@ -1134,6 +1170,11 @@ p {
   background-size: cover; }
 
 .teaser__liste {
+  background-image: url("../images/rsz_festival.jpg");
+  background-position: center;
+  background-size: cover; }
+
+.teaser__big {
   background-image: url("../images/rsz_festival.jpg");
   background-position: center;
   background-size: cover; }

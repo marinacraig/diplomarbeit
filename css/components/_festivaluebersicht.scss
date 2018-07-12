@@ -1,8 +1,5 @@
 //Styleguide: mindestBreite für Tablet / bwz. Desktop (mind. 1200 ohne Rahmen etc) zu gross -> zusätzlicher Breakpoint
 
-#pagetop__inclbreadcrump {
-  padding-top: 100px; //ggf anpassen
-}
 
 .festivaluebersicht__filter   {
   background-color: $grauF0_hex;
@@ -57,6 +54,7 @@
   .festival__list {
     //laptop margin: 0 120px; tablet: margin: 0 24px;
     padding: 0 16px;
+
     //display: inline-block;
 
 
@@ -104,13 +102,19 @@
     &--electronic {
       border-bottom: $violett_hex 4px solid;
     }
-
+    a{
+      text-decoration: none;
+      color: $schwarz_hex;
+    }
     &--item {
       background-color: $weiss_hex;
+
+
       //margin: 8px 0;
 
       //nicht mobile: .teaser__kachel{}
       .filter {
+
         &__music {
           //ab tablet height und width 104px
          // height: 48px;
@@ -194,8 +198,10 @@
   .item__hidden--tablet {
     display: none;
   }
-
 }
+
+
+
 
 //tablet
 @media screen and (min-width: 376px) {

@@ -10,7 +10,7 @@ img {
 
 .image__big {
   //evtl. zu gross, daher flexibel
-  max-height: 46.93333333%;
+  //max-height: 46.93333333%;
   max-width: 100%;
   height: 176px;
   width: 375px;
@@ -19,7 +19,7 @@ img {
 
 .banner__mobile {
   //evtl. zu gross, daher flexibel - todo Banner: überstehendes phone & button zusätzlich berücksichtigen s. 45
-  max-height: 115.2%;
+  //max-height: 115.2%;
   max-width: 100%;
   height: 432px;
   width: 375px;
@@ -31,7 +31,7 @@ img {
 }
 
 .news__content--image {
-  max-height: 67.63848397%;
+  //max-height: 67.63848397%;
   max-width: 100%;
     height: 232px;
   width: 343px;
@@ -39,14 +39,14 @@ img {
 
 //Todo: Bildergalerie: S. 16ff und s. 40ff Styleguide, ggf Klassen anpassen; ab seite 18 noch nichts erfasst
 .gallery {
-  max-height: 67.63848397%;
+  //max-height: 67.63848397%;
   max-width: 100%;
   height: 232px;
   width: 343px;
 }
 
 .teaser {
-  max-height: 100%;
+  //max-height: 100%;
   max-width: 100%;
   width: 128px;
   height: 128px;
@@ -54,14 +54,14 @@ img {
 
 .teaser__big {
   //evtl. zu gross, daher flexibel
-  max-height: 89.86666667%;
+  //max-height: 89.86666667%;
   max-width: 100%;
   height: 337px;
   width: 375px;
 }
 
 .teaser__kachel {
-  max-height: 67.63848397%;
+  //max-height: 67.63848397%;
   max-width: 100%;
   height: 232px;
   width: 343px;
@@ -76,14 +76,14 @@ img {
 }
 
 .teaser__share {
-  max-height: 61.86666667%;
+  //max-height: 61.86666667%;
   max-width: 100%;
   height: 232px;
   width: 375px;
 }
 
 .profile {
-  max-height: 100%;
+  //max-height: 100%;
   max-width: 100%;
   height: 110px;
   width: 110px;
@@ -98,7 +98,7 @@ img {
   }
   .image__big {
     //evtl. zu gross, daher flexibel
-    max-height: 45.57291667%;
+    //max-height: 45.57291667%;
     max-width: 100%;
     //min-height: 176px;
     //min-width: 375px;
@@ -107,7 +107,7 @@ img {
   }
   .banner__tablet {
     //evtl. zu gross, daher flexibel
-    max-height: 57.29166667%;
+    //max-height: 57.29166667%;
     max-width: 100%;
     height: 440px;
     width: 768px;
@@ -118,7 +118,7 @@ img {
   }
 
   .news__content--image {
-    max-height:65.15837104%;
+    //max-height:65.15837104%;
     max-width:100%;
     height: 144px;
     width: 221px;
@@ -132,7 +132,7 @@ img {
   }
   .teaser__big {
     //evtl. zu gross, daher flexibel
-    max-height: 84.375%;
+    //max-height: 84.375%;
     max-width: 100%;
     //min-height: 337px;
     //min-width: 375px;
@@ -156,7 +156,7 @@ img {
   }
   .image__big {
     //evtl. zu gross, daher flexibel
-    max-height: 31.25%;
+    //max-height: 31.25%;
     max-width: 100%;
     //min-height: 350px;
     //min-width: 768px;
@@ -166,7 +166,7 @@ img {
 
   .banner__desktop {
     //evtl. zu gross, daher
-    max-height: 26.11111111%;
+    //max-height: 26.11111111%;
     max-width: 100%;
     height: 376px;
     width: 1440px;
@@ -181,7 +181,7 @@ img {
   }
   .teaser__big {
     //evtl. zu gross, daher flexibel
-    max-height: 89.51388889%;
+    //max-height: 89.51388889%;
     max-width: 100%;
     //min-height: 648px;
     //min-width: 768px;
@@ -206,7 +206,7 @@ img {
   img {
     .image__big {
       //evtl. zu gross, daher flexibel
-      max-height: 31.25%;
+      //max-height: 31.25%;
       max-width: 1600px;
       //min-height: 350px;
       //min-width: 768px;
@@ -217,7 +217,7 @@ img {
   }
   .teaser__big {
     //evtl. zu gross, daher flexibel
-    max-height: 89.51388889%;
+    //max-height: 89.51388889%;
     max-width: 100%;
     //min-height: 648px;
     //min-width: 768px;

@@ -29,11 +29,13 @@ html {
 @import "components/magazin";
 @import "components/news";
 @import "components/festivaluebersicht";
+@import "components/festival_1";
+
 
 
 
 #pagetop {
-  padding-top: 64px;
+  padding-top: 68px;//nav Höhe = 64px
 }
 
 .musikrichtung {
@@ -135,6 +137,11 @@ p {
   background-size: cover;
 }
 
+.teaser__big{
+  background-image: url("../images/rsz_festival.jpg");
+  background-position: center;
+  background-size: cover;
+}
 
 
 
