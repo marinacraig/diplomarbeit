@@ -114,6 +114,40 @@ button {
   }
 }
 
+.programm .btnweiss{
+  display:inline-block;
+  padding: 10px;
+  background-color: $grauF0_hex;
+  &:hover {
+    background-color: $schwarz_hex;
+  }
+  .pfeil-unten {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+
+    border-top: 10px solid transparent;//soll nicht sichtbar sein
+    margin: 16px auto 0 auto;
+  }
+}
+.programm .btnschwarz {
+  display:inline-block;
+  padding: 10px;
+  .pfeil-unten {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+
+    border-top: 10px solid $schwarz_hex;
+    margin: 16px auto 0 auto;
+  }
+}
+
+
+
+
 .item__hidden--buttons {
   display: none;
 }

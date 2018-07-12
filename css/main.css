@@ -351,6 +351,31 @@ button {
   .news .btnweiss:hover {
     background-color: #000; }
 
+.programm .btnweiss {
+  display: inline-block;
+  padding: 10px;
+  background-color: #F0F0F0; }
+  .programm .btnweiss:hover {
+    background-color: #000; }
+  .programm .btnweiss .pfeil-unten {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid transparent;
+    margin: 16px auto 0 auto; }
+
+.programm .btnschwarz {
+  display: inline-block;
+  padding: 10px; }
+  .programm .btnschwarz .pfeil-unten {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #000;
+    margin: 16px auto 0 auto; }
+
 .item__hidden--buttons {
   display: none; }
 
@@ -1076,36 +1101,6 @@ footer {
     .festivaluebersicht__filter .item__hidden--tablet {
       display: inline; } }
 
-.tagesprogramm {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border-radius: 0;
-  font-size: 1em;
-  max-width: 100%;
-  width: 343px;
-  height: 48px;
-  border: #000 1px solid;
-  background-color: #F0F0F0;
-  text-transform: uppercase;
-  padding-left: 12px; }
-  .tagesprogramm:hover {
-    background-color: #000;
-    color: #FFF; }
-
-.btntab {
-  max-width: 100%;
-  width: 343px;
-  height: 48px;
-  border: #000 1px solid;
-  background-color: #F0F0F0;
-  color: #000;
-  text-transform: uppercase;
-  font-weight: 1em; }
-  .btntab:hover {
-    background-color: #000;
-    color: #FFF; }
-
 .einleitung {
   padding-top: 0; }
   .einleitung .intro {
@@ -1186,27 +1181,45 @@ footer {
 .beschreibung__intro {
   font-weight: bolder; }
 
-.tickets {
-  /*    für tablet:
-      .sponsoring{
-      width: 400px; //keine Angabe - verdoppelt
-      height: 153px;
-    }
-    für desktop:
-      .sponsoring{
-      width: 200px;
-      height: 153px;
-    }
-
-    */ }
-  .tickets .sponsoring {
-    width: 200px;
-    height: 153px;
-    margin: 0 auto; }
+.tickets .sponsoring {
+  width: 200px;
+  height: 153px;
+  margin: 0 auto; }
 
 .programm {
   background-color: #F0F0F0;
   padding: 0 16px; }
+  .programm .wochentag {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 48px 48px;
+    grid-gap: 8px;
+    margin: 8px; }
+    .programm .wochentag__zeit {
+      grid-column: 1;
+      grid-row: 1; }
+    .programm .wochentag__band {
+      height: 100%;
+      background-color: #FFF; }
+      .programm .wochentag__band--1 {
+        grid-column: 2;
+        grid-row: 1; }
+      .programm .wochentag__band--2 {
+        grid-column: 2;
+        grid-row: 2; }
+      .programm .wochentag__band--3 {
+        grid-row: 2;
+        height: 0; }
+  .programm .jazz {
+    border-right: #FDD835 3px solid; }
+  .programm .hiphop {
+    border-right: #D81B60 3px solid; }
+  .programm .indie {
+    border-right: #00D79F 3px solid; }
+  .programm .poprock {
+    border-right: #3949AB 3px solid; }
+  .programm .electronic {
+    border-right: #5E35B1 3px solid; }
 
 @media screen and (min-width: 376px) {
   .einleitung .intro .intro__festival svg {
@@ -1354,10 +1367,6 @@ p {
   background-image: url("../images/rsz_festival.jpg");
   background-position: center;
   background-size: cover; }
-
-.tagesprogramm {
-  background: url("../assets/steuerung_dropdown.svg") no-repeat;
-  background-position: 90%; }
 
 @media screen and (min-width: 376px) {
   .musikrichtung, .festivalmargin {

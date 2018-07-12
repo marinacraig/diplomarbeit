@@ -808,14 +808,41 @@
             der Texte zur Pflicht werden. Nichteinhaltung wird mit bis zu 245 €
         </p>
 
-        <select onChange="dropdownTip(this.value)" name="Tagesprogramm" class="tagesprogramm">
-            <option class="btntab" selected="selected"
-                    value="freitag">Freitag</option>
-            <option class="btntab" value="samstag">Samstag</option>
-            <option class="btntab" value="sonntag">Sonntag</option>
-        </select>
+        <button id="freitag" class="btnschwarz"> Freitag<p class="pfeil-unten"></p></button>
 
-        <div id="result"></div>
+        <button id="samstag" class="btnweiss">Samstag<p class="pfeil-unten"></button>
+        <button id="sonntag" class="btnweiss">Sonntag<p class="pfeil-unten"></button>
+
+        <div id="show_freitag">
+            <div class="wochentag" >
+                <p class="wochentag--zeit">19:00</p>
+                <p class="wochentag__band wochentag__band--1 hiphop">Yeezy</p>
+                <p class="wochentag__band wochentag__band--2 indie">Mahalia</p>
+            </div>
+
+            <div class="wochentag">
+                <p class="wochentag--zeit">20:00</p>
+                <p class="wochentag__band wochentag__band--1 jazz">James Brown</p>
+                <p class="wochentag__band wochentag__band--2 electronic">Snap</p>
+            </div>
+
+            <div class="wochentag" >
+                <p class="wochentag--zeit">21:00</p>
+                <p class="wochentag__band wochentag__band--1 indie">Honolulu</p>
+                <p class="wochentag__band wochentag__band--3 indie"></p>
+            </div>
+
+            <div class="wochentag" >
+                <p class="wochentag--zeit">21:00</p>
+                <p class="wochentag__band wochentag__band--1 indie">Honolulu</p>
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+
+        <!--ein- und ausblenden mit javascript-->
+        <div id="show_samstag"></div>
+        <div id="show_sonntag"></div>
 
 
     </article>
@@ -953,6 +980,5 @@
 <!--scripts-->
 
 <script src="../js/navigation.js"></script>
-<script src="../js/dropdown.js"></script>
 </body>
 </html>
