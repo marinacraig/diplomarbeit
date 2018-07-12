@@ -436,7 +436,6 @@ nav {
   z-index: 10; }
   nav .nav__top {
     height: 64px;
-    padding: 0 3px;
     border: #C2C2C2 1px solid; }
   nav .nav__top--original {
     background-color: #FFF; }
@@ -1057,59 +1056,102 @@ footer {
     .festivaluebersicht__filter .item__hidden--tablet {
       display: inline; } }
 
-.intro {
-  padding-top: 64px; }
-  .intro .intro__festival {
+.einleitung .intro {
+  padding-top: 64px;
+  padding-bottom: 0; }
+  .einleitung .intro .intro__festival {
     color: #FFF;
     text-align: center;
     position: absolute; }
-    .intro .intro__festival svg {
+    .einleitung .intro .intro__festival svg {
       padding-top: 12px;
       height: 60px;
       width: auto; }
-    .intro .intro__festival .icon__music {
+    .einleitung .intro .intro__festival .icon__music {
       fill: #FFF; }
-    .intro .intro__festival h1 {
+    .einleitung .intro .intro__festival h1 {
       padding: 172px 12px 0 12px;
       text-align: left; }
-  .intro .background {
-    margin-top: 0;
+  .einleitung .intro .background {
+    margin: 0;
     min-height: 272px; }
-  .intro .jazz {
+  .einleitung .intro .jazz {
     background-color: #FDD835; }
-  .intro .hiphop {
+  .einleitung .intro .hiphop {
     background-color: #D81B60; }
-  .intro .indie {
+  .einleitung .intro .indie {
     background-color: #00D79F; }
-  .intro .poprock {
+  .einleitung .intro .poprock {
     background-color: #3949AB; }
-  .intro .electronic {
+  .einleitung .intro .electronic {
     background-color: #5E35B1; }
 
+.einleitung .filter {
+  padding-top: 0; }
+  .einleitung .filter .filter__festival {
+    height: 136px;
+    width: 100%;
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center; }
+    .einleitung .filter .filter__festival .filter__name {
+      padding-top: 20px; }
+    .einleitung .filter .filter__festival .filter__anzahl {
+      font-weight: bold;
+      font-size: 1.2em; }
+  .einleitung .filter .jazz {
+    background-color: #FFEB3B;
+    border: #FDD835 1px solid; }
+  .einleitung .filter .hiphop {
+    background-color: #E91E63;
+    border: #D81B60 1px solid; }
+  .einleitung .filter .indie {
+    background-color: #1DE9B6;
+    border: #00D79F 1px solid; }
+  .einleitung .filter .poprock {
+    background-color: #3F51B5;
+    border: #3949AB 1px solid; }
+  .einleitung .filter .electronic {
+    background-color: #673AB7;
+    border: #5E35B1 1px solid; }
+
+.beschreibung .breadcrump {
+  margin-top: 0; }
+
 @media screen and (min-width: 376px) {
-  .intro .intro__festival svg {
+  .einleitung .intro .intro__festival svg {
     padding-top: 48px;
     height: 104px;
     width: auto; }
-  .intro .intro__festival h1 {
+  .einleitung .intro .intro__festival h1 {
     padding: 250px 12px 0 12px;
     margin-top: 160px; }
-  .intro .background {
-    min-height: 528px; } }
+  .einleitung .intro .background {
+    min-height: 528px; }
+  .einleitung .filter .filter__festival {
+    height: 264px;
+    width: 50%;
+    display: inline-block;
+    float: left;
+    font-size: 1.5em; }
+    .einleitung .filter .filter__festival .filter__name {
+      padding-top: 52px; } }
 
 @media screen and (min-width: 769px) {
-  .intro .intro__festival svg {
+  .einleitung .intro .intro__festival svg {
     padding-top: 120px;
     height: 200px;
     width: auto; }
-  .intro .intro__festival h1 {
+  .einleitung .intro .intro__festival h1 {
     padding: 320px 12px 0 12px;
-    margin-top: 480px; } }
+    margin-top: 480px; }
+  .einleitung .filter .filter__festival {
+    width: 25%; } }
 
 #pagetop {
   padding-top: 68px; }
 
-.musikrichtung {
+.musikrichtung, .beschreibung {
   margin: 0 16px; }
 
 article {
@@ -1180,14 +1222,14 @@ p {
   background-size: cover; }
 
 @media screen and (min-width: 376px) {
-  .musikrichtung {
+  .musikrichtung, .beschreibung {
     margin: 0 24px; }
   article {
     padding-top: 32px;
     padding-bottom: 32px; } }
 
 @media screen and (min-width: 769px) {
-  .musikrichtung {
+  .musikrichtung, .beschreibung {
     margin: 0 120px; }
   article {
     padding-top: 40px;

@@ -18,7 +18,7 @@ nav {
 
   .nav__top {
     height: 64px;
-    padding: 0 3px;
+    //padding: 0 3px; wären eigentlich 4, aber sieht dann nicht gut aus, rausgelöscht wegen breadcrump
     border: $grauC2_hex 1px solid;
   }
   .nav__top--original {

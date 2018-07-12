@@ -38,7 +38,7 @@ html {
   padding-top: 68px;//nav Höhe = 64px
 }
 
-.musikrichtung {
+.musikrichtung, .beschreibung {
   margin: 0 16px;
 }
 
@@ -149,7 +149,7 @@ p {
 
 //tablet
 @media screen and (min-width: 376px) {
-  .musikrichtung {
+  .musikrichtung, .beschreibung {
     margin: 0 24px;
   }
   //jede article trennt sich wie h2
@@ -164,7 +164,7 @@ article{
 
 //laptop
 @media screen and (min-width: 769px) {
-  .musikrichtung {
+  .musikrichtung, .beschreibung {
     margin: 0 120px;
   }
   article{
