@@ -49,11 +49,10 @@ html {
 //Styleguide, s. 9 Absätze
 
 //Hauptseite:
-//jede article trennt sich wie h2
-article{
+//jeder article trennt sich wie h2
+article, .programm {
   padding-top:24px;
   padding-bottom: 24px;
-
 }
 //1. article, musikrichtung und entdeckungen, Titel von news und magazin zentriert
 .musikrichtung, .entdeckungen{
@@ -163,7 +162,10 @@ p {
   background-size: cover;
 }
 
-
+.tagesprogramm {
+  background: url("../assets/steuerung_dropdown.svg") no-repeat;
+  background-position: 90%;
+}
 
 
 

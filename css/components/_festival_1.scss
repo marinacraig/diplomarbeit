@@ -1,4 +1,9 @@
+
+@import 'btntab';
+
+
 .einleitung{
+padding-top: 0;
 
 .intro {
   //damit es schön angrenzt:
@@ -156,6 +161,11 @@
     }
 
     */
+}
+
+.programm {
+  background-color: $grauF0_hex;
+  padding: 0 16px; //desktop:0 120px; tablet: 0 24px;
 }
 
 

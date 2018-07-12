@@ -1,0 +1,58 @@
+//statt button bzw. .news .btnweiss:
+
+.tagesprogramm {
+  //zurücksetzen:
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  //border:none;
+  border-radius: 0;
+  font-size: 1em;
+  max-width: 100%;
+  width: 343px;
+  //height:calc(3 * 48px);
+  height: 48px;
+  border: $schwarz_hex 1px solid;
+  background-color: $grauF0_hex;
+  text-transform: uppercase;
+  //margin: 16px auto; //ab tablet: 16px 32px
+  padding-left: 12px; //padding auto
+
+  &:hover{
+    background-color: $schwarz_hex;
+    color:$weiss_hex;
+  }
+}
+
+//greift nicht:
+.btntab{
+
+  max-width: 100%;
+  width: 343px;
+  height: 48px;
+  border: $schwarz_hex 1px solid;
+  background-color: $grauF0_hex;
+  color:$schwarz_hex;
+  text-transform: uppercase;
+  font-weight: 1em;
+  //margin: 16px auto; //ab tablet: 16px 32px
+  //padding: auto;
+  &:hover{
+    background-color: $schwarz_hex;
+    color:$weiss_hex;
+  }
+}
+//triangle: ab tablet
+//pfeil zum öffnen: nur mobile
+
+
+//tablet
+@media screen and (min-width : 376px) {
+
+}
+
+
+//laptop
+@media screen and (min-width : 769px) {
+
+}
