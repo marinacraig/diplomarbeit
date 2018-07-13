@@ -149,38 +149,33 @@ padding-top: 0;
 
 .programm {
   background-color: $grauF0_hex;
-  padding: 0 16px; //desktop:0 120px; tablet: 0 24px;
+  padding: 0 16px; //stimmt zwar nicht laut styleguide, aber einheitlich: desktop:0 120px; tablet: 0 24px;
 
  .wochentag{
-   display: grid;
-   grid-template-columns: 30% 70%;//20% 40% 40%;
-   grid-template-rows: 48px 48px;
-   grid-gap: 8px;
-   margin: 8px;
+   display: inline;
+   width: 100%;
+   margin: 2px;
 
    &__zeit{
-     grid-column: 1;
-     grid-row:1;
-
+     width: 25%;
+     float: left;
+     min-height: 48px;
+     padding: 4px 8px;
    }
    &__band{
-     height: 100%;
      background-color: $weiss_hex;
+     width: 68%;
+     min-height: 48px;
+     padding: 4px 8px;
 
      &--1{
-       grid-column: 2;
-       grid-row:1;
+       float: right;
 
      }
      &--2{
-       grid-column: 2;
-       grid-row: 2;
+       float: right;
+     }
 
-     }
-     &--3{
-       grid-row:2;
-       height:0;
-     }
    }
  }
 
@@ -273,6 +268,33 @@ padding-top: 0;
       width: 400px;
     }
   }
+
+  .programm {
+    padding: 0 24px; //desktop:0 120px;
+
+    .wochentag{
+      //margin: 2px;
+
+      &__zeit{
+        width: 15%;
+        margin-right: 16px;
+      }
+      &__band{
+        width: 36%;
+
+        &--1{
+          float: left;
+          margin-right: 16px;
+        }
+        &--2{
+          float: left;
+        }
+
+      }
+    }
+
+  }
+
 }
 
 //laptop
@@ -341,5 +363,8 @@ padding-top: 0;
     }
   }
 
+  .programm {
+    padding: 0 120px;
+  }
 
 }

@@ -357,13 +357,13 @@ button {
   background-color: #F0F0F0; }
   .programm .btnweiss:hover {
     background-color: #000; }
-  .programm .btnweiss .pfeil-unten {
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-top: 10px solid transparent;
-    margin: 16px auto 0 auto; }
+    .programm .btnweiss:hover .pfeil-unten {
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 10px solid #000;
+      margin: 16px auto 0 auto; }
 
 .programm .btnschwarz {
   display: inline-block;
@@ -400,7 +400,11 @@ button {
   .item__hidden--buttons {
     display: inline; }
   .item__hidden--button {
-    display: none; } }
+    display: none; }
+  .programm .btnweiss {
+    margin-right: 8px; }
+  .programm .btnschwarz {
+    margin-right: 8px; } }
 
 .nav__dropdown {
   position: relative;
@@ -1190,26 +1194,23 @@ footer {
   background-color: #F0F0F0;
   padding: 0 16px; }
   .programm .wochentag {
-    display: grid;
-    grid-template-columns: 30% 70%;
-    grid-template-rows: 48px 48px;
-    grid-gap: 8px;
-    margin: 8px; }
+    display: inline;
+    width: 100%;
+    margin: 2px; }
     .programm .wochentag__zeit {
-      grid-column: 1;
-      grid-row: 1; }
+      width: 25%;
+      float: left;
+      min-height: 48px;
+      padding: 4px 8px; }
     .programm .wochentag__band {
-      height: 100%;
-      background-color: #FFF; }
+      background-color: #FFF;
+      width: 68%;
+      min-height: 48px;
+      padding: 4px 8px; }
       .programm .wochentag__band--1 {
-        grid-column: 2;
-        grid-row: 1; }
+        float: right; }
       .programm .wochentag__band--2 {
-        grid-column: 2;
-        grid-row: 2; }
-      .programm .wochentag__band--3 {
-        grid-row: 2;
-        height: 0; }
+        float: right; }
   .programm .jazz {
     border-right: #FDD835 3px solid; }
   .programm .hiphop {
@@ -1248,7 +1249,19 @@ footer {
     display: none; }
   .tickets .sponsoring {
     max-width: 100%;
-    width: 400px; } }
+    width: 400px; }
+  .programm {
+    padding: 0 24px; }
+    .programm .wochentag__zeit {
+      width: 15%;
+      margin-right: 16px; }
+    .programm .wochentag__band {
+      width: 36%; }
+      .programm .wochentag__band--1 {
+        float: left;
+        margin-right: 16px; }
+      .programm .wochentag__band--2 {
+        float: left; } }
 
 @media screen and (min-width: 769px) {
   .einleitung .intro .intro__festival svg {
@@ -1279,7 +1292,9 @@ footer {
     .tickets .btnmerken {
       display: inline-flex; }
     .tickets .sponsoring {
-      width: 200px; } }
+      width: 200px; }
+  .programm {
+    padding: 0 120px; } }
 
 #pagetop {
   padding-top: 68px; }

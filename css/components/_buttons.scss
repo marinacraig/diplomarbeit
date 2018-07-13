@@ -120,16 +120,17 @@ button {
   background-color: $grauF0_hex;
   &:hover {
     background-color: $schwarz_hex;
-  }
-  .pfeil-unten {
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
+    .pfeil-unten {
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
 
-    border-top: 10px solid transparent;//soll nicht sichtbar sein
-    margin: 16px auto 0 auto;
+      border-top: 10px solid $schwarz_hex;//soll nicht sichtbar sein
+      margin: 16px auto 0 auto;
+    }
   }
+
 }
 .programm .btnschwarz {
   display:inline-block;
@@ -185,6 +186,15 @@ button {
   .item__hidden--button {
     display: none;
   }
+
+  .programm .btnweiss{
+    margin-right: 8px;
+  }
+  .programm .btnschwarz {
+    margin-right: 8px;
+
+  }
+
 }
 
 //laptop
