@@ -14,6 +14,7 @@ html {
 .body {
   max-width:1600px;
   width:100%;
+  hyphens: auto; //Textumbrüche automatisch erlaubt
 }
 
 
@@ -29,7 +30,8 @@ html {
 @import "components/magazin";
 @import "components/news";
 @import "components/festivaluebersicht";
-@import "components/festival_1";
+@import "components/player";
+@import "components/festival";
 
 
 
@@ -158,6 +160,13 @@ p {
 
 .teaser__big{
   background-image: url("../images/rsz_festival.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+//Platzhalter für video
+.player{
+  background-image: url("../images/rsz_startseite_1.jpg");
   background-position: center;
   background-size: cover;
 }

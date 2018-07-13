@@ -28,6 +28,7 @@
   eingefügt - beachten bei DB Teil
 - Auf welchen Wegen kommt man zur Festivalübersicht?
 -> Tom schickt etwas, Todo: ggf. anpassen
+- idee: kopie festival_1.html alle indie ersetzen
  
  
  

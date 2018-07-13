@@ -6,16 +6,6 @@ html {
 }
 
 /*
-für html 13px:
-17px=1.30769230rem;
-20px=1.53846153rem;
-24px=1.84615384rem;
-32px=2.46153846rem;
-48px=3.69230769rem;
-56px=4.30769230rem;
-96px=7.38461538rem;
-144px=11.0769230rem;
-
 für html 17px:
 13	0.7647058824rem
 17	1rem
@@ -38,13 +28,13 @@ h1, h2, h3, h4, h5, h6, h1.h2, .schriftfestival{
   font-family: 'Bitter', serif;
 }
 
-h1 {
+h1, h2.h1 {
   font-size: 1.882352941rem; //32
   font-weight: bold;
   margin:40px auto;
 }
 
-h2, h1.h2 {
+h2, h1.h2, h3.h2 {
   font-size: 1.411764706rem; //24
   font-weight: bold;
   margin:32px auto;
@@ -82,21 +72,21 @@ header, button {
   font-size: 0.7647058824rem; //13
 }
 
-p {
+p:not(.schriftfestival) {
   line-height: 2;
 }
 
 //tablet
 @media screen and (min-width : 376px) {
-  h1 {
+  h1, h2.h1  {
     font-size: 2.823529412rem; //48
     margin:64px auto;
   }
-  h2, h1.h2 {
+  h2, h1.h2, h3.h2 {
     font-size: 1.882352941rem; //32
     //margin:32px auto;
   }
-  h3 {
+  h3 .h3 {
     font-size: 1.176470588rem; //20
     //margin:20px auto;
   }
@@ -110,14 +100,14 @@ p {
 
 //laptop
 @media screen and (min-width : 769px) {
-  h1 {
+  h1, h2.h1 {
     font-size: 3.294117647rem; //56
     margin:80px auto;
   }
-  h2, h1.h2 {
+  h2, h1.h2, h3.h2 {
     margin:40px auto;
   }
-  h3 {
+  h3, .h3 {
     font-size: 1.176470588rem; //20
     //margin:32px auto;
   }

@@ -1,58 +1,75 @@
-#akkordeon:not(:target) .content {
-  display: none;
+/*
+Funktionalität:
+id's dürfen nur einmal vergeben werden, da mehrere Akkordions: hochzählen
+*/
+
+#accordeon {
+  &__1, &__2, &__3, &__4 {
+    &:not(:target) .accordeon__content {
+      display: none;
+    }
+  }
 }
 
-#akkordeon:target .content {
-  display: block;
+#accordeon {
+
+  &__1, &__2, &__3, &__4 {
+    &:target .accordeon__content {
+      display: block;
+    }
+  }
 }
 
-#akkordeon:target .show {
-  display: none;
+#accordeon {
+  &__1, &__2, &__3, &__4 {
+    &:target .show {
+      display: none;
+    }
+  }
 }
 
-#akkordeon:not(:target) .hide {
-  display: none;
-}
-//Todo: Style Akkordion s. 37
-// wo genau kommt dieses zum einsatz?
-//https://elbnetz.com/elemente-nur-mit-css-ein-und-ausblenden/
-//Idee: show und hide in ein gemeinsames div, und unterstreichen (24px)
-.show:not(.btnschwarz, .btnweiss){
-  font-family: 'Bitter', serif;
-  font-size: 1.882352941rem;
-  font-weight: bold;
-}
-.hiden:not(.btnschwarz, .btnweiss){
-  // sollte unnötig sein
-  // font-family: 'Encode Sans Semi Expanded', sans-serif;
-  font-weight: bold;
-}
-.content:not(.btnschwarz, .btnweiss, .btngrau){
-  color: $schwarz_rgba;
-
+#accordeon {
+  &__1, &__2, &__3, &__4 {
+    &:not(:target) .hide {
+      display: none;
+    }
+  }
 }
 
+//Styling:
+.accordeon {
+  &__intro {
+    margin: 32px 0 0 0;
+    padding: 0;
+    display: flex;
+    //justify-content: space-between;
+    width: 100%;
+    //height: 100%; //h3.h2= 1.4rem //32
+    border-bottom: $schwarz_hex 4px solid;
 
-//idee: item__hidden--buttons bw. item__hidden--button passend hier ein / ausblenden
-//-> führt nicht zum ziel
-
-//tablet
-@media screen and (min-width : 376px) {
-  #akkordeon:not(:target) .content {
-    display: inline;
+    h3 {
+      //margin-top:0;
+      //margin-bottom:12px; //vorgabe ist 24px, optisch aber zuviel
+      margin: 0 auto 12px 0;
+      max-width: 70%;
+      //float: left;
+      hyphens: auto;
+      text-align: start;
+      align-self: flex-end;
+    }
+    .show, .hide {
+      margin-bottom: 12px; //vorgabe ist 24px, optisch aber zuviel
+      text-decoration: none;
+      color: $schwarz_hex;
+      //float: right;
+      max-width: 30%;
+      hyphens: auto;
+      text-align: end;
+      align-self: flex-end;
+    }
   }
 
-  #akkordeon:target .show {
-    display: inline;
+  &__content {
+
   }
-
-  #akkordeon:not(:target) .hide {
-    display: inline;
-  }
-
-}
-
-//laptop
-@media screen and (min-width: 769px) {
-
 }

@@ -144,6 +144,11 @@ button {
     border-top: 10px solid $schwarz_hex;
     margin: 16px auto 0 auto;
   }
+  &:hover {
+    .pfeil-unten {
+    border-top: 10px solid $grau76_hex;
+  }
+  }
 }
 
 
