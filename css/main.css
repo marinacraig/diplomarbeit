@@ -151,7 +151,7 @@ img {
   height: 176px;
   width: 375px; }
 
-.banner__mobile {
+.banner__mobile, .outro .background {
   max-width: 100%;
   height: 432px;
   width: 375px;
@@ -196,6 +196,10 @@ img {
   height: 232px;
   width: 375px; }
 
+.teaser__next {
+  height: 128px;
+  width: 128px; }
+
 .profile {
   max-width: 100%;
   height: 110px;
@@ -206,7 +210,7 @@ img {
     max-width: 100%;
     height: 350px;
     width: 768px; }
-  .banner__tablet {
+  .banner__tablet, .outro .background {
     max-width: 100%;
     height: 440px;
     width: 768px;
@@ -229,14 +233,17 @@ img {
   .teaser__kachel {
     width: 348px; }
   .teaser__share {
-    max-width: 534px; } }
+    max-width: 534px; }
+  .teaser__next {
+    max-width: 100%;
+    width: 312px; } }
 
 @media screen and (min-width: 769px) {
   .image__big {
     max-width: 100%;
     height: 450px;
     width: 1440px; }
-  .banner__desktop {
+  .banner__desktop, .outro .background {
     max-width: 100%;
     height: 376px;
     width: 1440px;
@@ -335,26 +342,20 @@ button {
     background-color: #000;
     color: #FFF; }
 
-.news .btnweiss {
+.news .btnweiss, .programm .btnweiss {
   margin: 16px auto;
   padding: auto;
-  background-color: #F0F0F0; }
-  .news .btnweiss:hover {
+  background-color: transparent; }
+  .news .btnweiss:hover, .programm .btnweiss:hover {
     background-color: #000; }
 
-.programm .btnweiss {
-  display: inline-block;
-  padding: 10px;
-  background-color: #F0F0F0; }
-  .programm .btnweiss:hover {
-    background-color: #000; }
-    .programm .btnweiss:hover .pfeil-unten {
-      width: 0;
-      height: 0;
-      border-left: 10px solid transparent;
-      border-right: 10px solid transparent;
-      border-top: 10px solid #000;
-      margin: 16px auto 0 auto; }
+.programm .btnweiss:hover .pfeil-unten {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #000;
+  margin: 16px auto 0 auto; }
 
 .programm .btnschwarz {
   display: inline-block;
@@ -368,6 +369,10 @@ button {
     margin: 16px auto 0 auto; }
   .programm .btnschwarz:hover .pfeil-unten {
     border-top: 10px solid #767676; }
+
+.outro .btnschwarz {
+  border-color: #FFF;
+  background-color: transparent; }
 
 .item__hidden--buttons {
   display: none; }
@@ -1104,11 +1109,6 @@ id's dürfen nur einmal vergeben werden, da mehrere Akkordions: hochzählen
     .festivaluebersicht__filter .item__hidden--tablet {
       display: inline; } }
 
-.player {
-  height: 392px;
-  max-width: 1440px;
-  width: 100%; }
-
 .einleitung {
   padding-top: 0; }
   .einleitung .intro {
@@ -1169,6 +1169,143 @@ id's dürfen nur einmal vergeben werden, da mehrere Akkordions: hochzählen
       background-color: #673AB7;
       border: #5E35B1 1px solid; }
 
+.abschluss {
+  padding: 0;
+  margin: 0; }
+  .abschluss .outro {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 0;
+    margin: 0; }
+    .abschluss .outro .background {
+      text-align: center;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center; }
+      .abschluss .outro .background svg {
+        align-self: center;
+        max-height: 80%;
+        height: auto;
+        width: 80%;
+        z-index: 1; }
+      .abschluss .outro .background .outro__festival {
+        align-self: center;
+        text-align: center;
+        color: #FFF;
+        position: absolute;
+        z-index: 2;
+        max-width: 100%; }
+        .abschluss .outro .background .outro__festival h2 {
+          margin: 8px; }
+    .abschluss .outro .icon__music--jazz {
+      fill: #FFEB3B; }
+    .abschluss .outro .icon__music--hiphop {
+      fill: #E91E63; }
+    .abschluss .outro .icon__music--indie {
+      fill: #1DE9B6; }
+    .abschluss .outro .icon__music--poprock {
+      fill: #3F51B5; }
+    .abschluss .outro .icon__music--electronic {
+      fill: #673AB7; }
+    .abschluss .outro .jazz {
+      background-color: #FDD835; }
+    .abschluss .outro .hiphop {
+      background-color: #D81B60; }
+    .abschluss .outro .indie {
+      background-color: #00D79F; }
+    .abschluss .outro .poprock {
+      background-color: #3949AB; }
+    .abschluss .outro .electronic {
+      background-color: #5E35B1; }
+  .abschluss .more {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    color: #FFF;
+    text-align: center; }
+    .abschluss .more a {
+      text-decoration: none;
+      color: #FFF; }
+    .abschluss .more p {
+      margin: 0; }
+    .abschluss .more .more__back, .abschluss .more .more__next {
+      max-width: 100%;
+      height: 128px; }
+    .abschluss .more .more__back--content, .abschluss .more .more__next--content {
+      display: inline-flex;
+      justify-content: space-between;
+      align-items: center;
+      align-content: center;
+      width: 100%; }
+      .abschluss .more .more__back--content p, .abschluss .more .more__back--content span, .abschluss .more .more__next--content p, .abschluss .more .more__next--content span {
+        hyphens: auto;
+        align-self: center; }
+      .abschluss .more .more__back--content img, .abschluss .more .more__next--content img {
+        align-self: center; }
+    .abschluss .more .teaser__next {
+      object-fit: cover; }
+    .abschluss .more .rotate {
+      transform: rotate(180deg); }
+    .abschluss .more .icon__music {
+      fill: #FFF; }
+    .abschluss .more .jazz {
+      background-color: #FFEB3B; }
+    .abschluss .more .hiphop {
+      background-color: #E91E63; }
+    .abschluss .more .indie {
+      background-color: #1DE9B6; }
+    .abschluss .more .poprock {
+      background-color: #3F51B5; }
+    .abschluss .more .electronic {
+      background-color: #673AB7; }
+
+@media screen and (min-width: 376px) {
+  .einleitung .intro .intro__festival svg {
+    padding-top: 48px;
+    height: 104px;
+    width: auto; }
+  .einleitung .intro .intro__festival .schriftfestival {
+    padding: 250px 12px 0 12px;
+    margin-top: 160px; }
+  .einleitung .intro .background {
+    min-height: 528px; }
+  .einleitung .filter .filter__festival {
+    height: 264px;
+    width: 50%;
+    display: inline-block;
+    float: left;
+    font-size: 1.5em; }
+    .einleitung .filter .filter__festival .filter__name {
+      padding-top: 52px; }
+  .abschluss .more .more__back--content img, .abschluss .more .more__next--content img {
+    max-width: 70%; } }
+
+@media screen and (min-width: 769px) {
+  .einleitung .intro .intro__festival svg {
+    padding-top: 120px;
+    height: 200px;
+    width: auto; }
+  .einleitung .intro .intro__festival .schriftfestival {
+    padding: 320px 12px 0 12px;
+    margin-top: 480px; }
+  .einleitung .filter .filter__festival {
+    width: 25%; }
+  .abschluss .more {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    color: #FFF;
+    text-align: center;
+    height: 128px;
+    display: inline-flex; }
+    .abschluss .more .more__back, .abschluss .more .more__next {
+      width: 50%; } }
+
+.player {
+  height: 392px;
+  max-width: 1440px;
+  width: 100%; }
+
 .beschreibung p {
   margin-top: 2.2em; }
 
@@ -1194,6 +1331,8 @@ id's dürfen nur einmal vergeben werden, da mehrere Akkordions: hochzählen
 .programm {
   background-color: #F0F0F0;
   padding: 0 16px; }
+  .programm .inklpadding {
+    min-height: 40px; }
   .programm .wochentag {
     display: inline;
     width: 100%;
@@ -1227,23 +1366,6 @@ id's dürfen nur einmal vergeben werden, da mehrere Akkordions: hochzählen
   font-weight: bolder; }
 
 @media screen and (min-width: 376px) {
-  .einleitung .intro .intro__festival svg {
-    padding-top: 48px;
-    height: 104px;
-    width: auto; }
-  .einleitung .intro .intro__festival .schriftfestival {
-    padding: 250px 12px 0 12px;
-    margin-top: 160px; }
-  .einleitung .intro .background {
-    min-height: 528px; }
-  .einleitung .filter .filter__festival {
-    height: 264px;
-    width: 50%;
-    display: inline-block;
-    float: left;
-    font-size: 1.5em; }
-    .einleitung .filter .filter__festival .filter__name {
-      padding-top: 52px; }
   .beschreibung .filter__detail {
     display: inline-flex;
     float: left; }
@@ -1256,6 +1378,8 @@ id's dürfen nur einmal vergeben werden, da mehrere Akkordions: hochzählen
     width: 400px; }
   .programm {
     padding: 0 24px; }
+    .programm .inklpadding {
+      min-height: 64px; }
     .programm .wochentag__zeit {
       width: 15%;
       margin-right: 16px; }
@@ -1268,15 +1392,6 @@ id's dürfen nur einmal vergeben werden, da mehrere Akkordions: hochzählen
         float: left; } }
 
 @media screen and (min-width: 769px) {
-  .einleitung .intro .intro__festival svg {
-    padding-top: 120px;
-    height: 200px;
-    width: auto; }
-  .einleitung .intro .intro__festival .schriftfestival {
-    padding: 320px 12px 0 12px;
-    margin-top: 480px; }
-  .einleitung .filter .filter__festival {
-    width: 25%; }
   .asidemargin {
     margin-right: -120px; }
   .beschreibung {
@@ -1298,7 +1413,9 @@ id's dürfen nur einmal vergeben werden, da mehrere Akkordions: hochzählen
     .tickets .sponsoring {
       width: 200px; }
   .programm {
-    padding: 0 120px; } }
+    padding: 0 120px; }
+    .programm .inklpadding {
+      min-height: 80px; } }
 
 #pagetop {
   padding-top: 68px; }
@@ -1388,7 +1505,7 @@ p {
   background-size: cover; }
 
 .player {
-  background-image: url("../images/rsz_startseite_1.jpg");
+  background-image: url("../images/rsz_platzhalter_player.jpg");
   background-position: center;
   background-size: cover; }
 

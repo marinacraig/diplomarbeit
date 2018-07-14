@@ -17,7 +17,7 @@ img {
 
 }
 
-.banner__mobile {
+.banner__mobile, .outro .background {
   //evtl. zu gross, daher flexibel - todo Banner: überstehendes phone & button zusätzlich berücksichtigen s. 45
   //max-height: 115.2%;
   max-width: 100%;
@@ -82,6 +82,11 @@ img {
   width: 375px;
 }
 
+.teaser__next {
+  height: 128px;
+  width: 128px;
+}
+
 .profile {
   //max-height: 100%;
   max-width: 100%;
@@ -105,7 +110,7 @@ img {
     height: 350px;
     width: 768px;
   }
-  .banner__tablet {
+  .banner__tablet, .outro .background {
     //evtl. zu gross, daher flexibel
     //max-height: 57.29166667%;
     max-width: 100%;
@@ -148,6 +153,11 @@ img {
   .teaser__share {
     max-width: 534px;
   }
+
+  .teaser__next {
+    max-width: 100%;
+    width: 312px;
+  }
 }
 
 //laptop
@@ -165,7 +175,7 @@ img {
     width: 1440px;
   }
 
-  .banner__desktop {
+  .banner__desktop, .outro .background {
     //evtl. zu gross, daher
     //max-height: 26.11111111%;
     max-width: 100%;

@@ -1,0 +1,383 @@
+//ist für die Einzelansicht eines Festivals
+.einleitung {
+  padding-top: 0;
+
+  .intro {
+    //damit es schön angrenzt:
+    padding-top: 64px;
+    padding-bottom: 0;
+
+    .intro__festival {
+      //margin-top: 48px;
+      color: $weiss_hex;
+      text-align: center;
+      position: absolute;
+
+      svg {
+        padding-top: 12px;
+        height: 60px;
+        width: auto;
+      }
+      .icon__music {
+        fill: $weiss_hex;
+      }
+
+      .schriftfestival {
+        padding: 172px 12px 0 12px;
+        text-align: left;
+      }
+    }
+
+    .background {
+      margin: 0;
+      min-height: 272px; //ab tablet 528
+    }
+    .jazz {
+      background-color: $gelb_hex;
+    }
+
+    .hiphop {
+      background-color: $pink_hex;
+    }
+
+    .indie {
+      background-color: $mint_hex;
+    }
+
+    .poprock {
+      background-color: $blau_hex;
+    }
+
+    .electronic {
+      background-color: $violett_hex;
+    }
+  }
+
+  //die verschiedenen Filter für countdown, tickets etc
+  .filter {
+    padding-top: 0;
+    .filter__festival {
+      height: 136px; //tablet und desktop= 264px
+      width: 100%; // bei Tablet 50% dann 25%
+      color: $weiss_hex;
+      text-transform: uppercase;
+      text-align: center;
+
+      .filter__name {
+        padding-top: 20px;
+
+      }
+
+      .filter__anzahl {
+        font-weight: bold;
+        font-size: 1.2em;
+      }
+    }
+    .jazz {
+      background-color: $gelb_hell_hex;
+      border: $gelb_hex 1px solid;
+    }
+
+    .hiphop {
+      background-color: $pink_hell_hex;
+      border: $pink_hex 1px solid;
+    }
+
+    .indie {
+      background-color: $mint_hell_hex;
+      border: $mint_hex 1px solid;
+    }
+
+    .poprock {
+      background-color: $blau_hell_hex;
+      border: $blau_hex 1px solid;
+    }
+
+    .electronic {
+      background-color: $violett_hell_hex;
+      border: $violett_hex 1px solid;
+    }
+  }
+}
+
+.abschluss {
+  padding: 0;
+  margin:0;
+
+  .outro {
+    //damit es schön angrenzt:
+    //padding-top: 64px;
+    //padding-bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding-bottom:0;
+    margin:0;
+
+
+    .background {
+      //grösse wie banner, Grösse bei Bildern definiert
+      text-align: center;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+
+      svg {
+        align-self: center;
+        max-height:80%;
+        height: auto;
+        width: 80%;
+        z-index: 1;
+      }
+
+      .outro__festival {
+        align-self: center;
+        text-align: center;
+        color: $weiss_hex;
+        position: absolute;
+        z-index: 2;
+        max-width: 100%;
+        h2 {
+          margin: 8px;
+        }
+      }
+
+    }
+
+    .icon__music {
+
+      &--jazz {
+        fill: $gelb_hell_hex;
+      }
+
+      &--hiphop {
+        fill: $pink_hell_hex;
+      }
+
+      &--indie {
+        fill: $mint_hell_hex;
+      }
+
+      &--poprock {
+        fill: $blau_hell_hex;
+      }
+
+      &--electronic {
+        fill: $violett_hell_hex;
+      }
+    }
+
+    //Hintergrundfarbe
+    .jazz {
+      background-color: $gelb_hex;
+    }
+
+    .hiphop {
+      background-color: $pink_hex;
+    }
+
+    .indie {
+      background-color: $mint_hex;
+    }
+
+    .poprock {
+      background-color: $blau_hex;
+    }
+
+    .electronic {
+      background-color: $violett_hex;
+    }
+  }
+
+  .more {
+    padding: 0;
+    margin:0;
+    width: 100%;
+    color: $weiss_hex;
+    text-align: center;
+
+    a {
+      text-decoration: none;
+      color: $weiss_hex;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .more__back, .more__next {
+      //height: 136px; //tablet und desktop= hälfte??
+      max-width: 100%;
+      height:128px;
+    }
+
+    .more__back--content, .more__next--content {
+      display: inline-flex;
+      //flex-flow: row wrap; //mehrere Zeilen möglich, nötig, wegen Text
+      justify-content: space-between;
+      align-items: center;
+      align-content: center;
+      width: 100%;
+
+
+      p, span {
+        //float: right;
+        hyphens: auto;
+        align-self: center;
+      }
+      img {
+        //float: left;
+        align-self: center;
+      }
+    }
+
+
+    //Bild
+    .teaser__next{
+      object-fit: cover;
+    }
+
+    //svg
+    .rotate {
+      transform: rotate(180deg);
+    }
+
+    .icon__music{
+      fill: $weiss_hex;
+    }
+
+    //Hintergrundfarben
+    .jazz {
+      background-color: $gelb_hell_hex;
+    }
+
+    .hiphop {
+      background-color: $pink_hell_hex;
+    }
+
+    .indie {
+      background-color: $mint_hell_hex;
+    }
+
+    .poprock {
+      background-color: $blau_hell_hex;
+    }
+
+    .electronic {
+      background-color: $violett_hell_hex;
+    }
+
+  }
+}
+
+//tablet
+@media screen and (min-width: 376px) {
+  .einleitung {
+    .intro {
+
+      .intro__festival {
+
+        svg {
+          padding-top: 48px;
+          height: 104px;
+          width: auto;
+        }
+
+        .schriftfestival {
+          padding: 250px 12px 0 12px; //greift nicht immer 290 ideal, aber wegen kleinstem weniger
+          margin-top: 160px;
+        }
+      }
+
+      .background {
+        min-height: 528px; //ab tablet 528
+      }
+
+    }
+
+    //die verschiedenen Filter für countdown, tickets etc
+    .filter {
+
+      .filter__festival {
+        height: 264px; //tablet und desktop= 264px
+        width: 50%; // bei Tablet 50% dann 25%
+        display: inline-block;
+        float: left;
+        font-size: 1.5em;
+
+        .filter__name {
+          padding-top: 52px;
+        }
+      }
+    }
+  }
+
+  .abschluss {
+
+    .more {
+
+      .more__back--content, .more__next--content {
+
+        img {
+          max-width: 70%;
+        }
+      }
+
+    }
+  }
+
+}
+
+//laptop
+@media screen and (min-width: 769px) {
+  .einleitung {
+    .intro {
+
+      .intro__festival {
+
+        svg {
+          padding-top: 120px;
+          height: 200px;
+          width: auto;
+        }
+
+        .schriftfestival {
+          padding: 320px 12px 0 12px; //greift nicht immer 460 ideal, aber wegen kleinstem weniger
+          margin-top: 480px;
+        }
+      }
+
+      .background {
+        //min-height: 528px; //ab tablet 528
+      }
+
+    }
+
+    //die verschiedenen Filter für countdown, tickets etc
+    .filter {
+
+      .filter__festival {
+        width: 25%; // bei Tablet 50% dann 25%
+      }
+    }
+  }
+
+  .abschluss {
+
+    .more {
+      padding: 0;
+      margin:0;
+      width: 100%;
+      color: $weiss_hex;
+      text-align: center;
+      height:128px;
+      display: inline-flex;
+
+
+      .more__back, .more__next {
+        width: 50%;
+
+      }
+    }
+  }
+
+}

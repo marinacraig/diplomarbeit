@@ -1,103 +1,4 @@
-.einleitung{
-padding-top: 0;
-
-.intro {
-  //damit es schön angrenzt:
-  padding-top: 64px;
-  padding-bottom: 0;
-
-  .intro__festival {
-    //margin-top: 48px;
-    color: $weiss_hex;
-    text-align: center;
-    position: absolute;
-
-    svg {
-      padding-top: 12px;
-      height: 60px;
-      width: auto;
-    }
-    .icon__music {
-      fill: $weiss_hex;
-    }
-
-    .schriftfestival {
-      padding: 172px 12px 0 12px;
-      text-align: left;
-    }
-  }
-
-  .background {
-    margin: 0;
-    min-height: 272px; //ab tablet 528
-  }
-  .jazz {
-    background-color: $gelb_hex;
-  }
-
-  .hiphop {
-    background-color: $pink_hex;
-  }
-
-  .indie {
-    background-color: $mint_hex;
-  }
-
-  .poprock {
-    background-color: $blau_hex;
-  }
-
-  .electronic {
-    background-color: $violett_hex;
-  }
-}
-
-//die verschiedenen Filter für countdown, tickets etc
-.filter {
-  padding-top: 0;
-  .filter__festival {
-    height: 136px; //tablet und desktop= 264px
-    width: 100%; // bei Tablet 50% dann 25%
-    color: $weiss_hex;
-    text-transform: uppercase;
-    text-align: center;
-
-    .filter__name {
-      padding-top: 20px;
-
-    }
-
-    .filter__anzahl {
-      font-weight: bold;
-      font-size: 1.2em;
-    }
-  }
-  .jazz {
-    background-color: $gelb_hell_hex;
-    border: $gelb_hex 1px solid;
-  }
-
-  .hiphop {
-    background-color: $pink_hell_hex;
-    border: $pink_hex 1px solid;
-  }
-
-  .indie {
-    background-color: $mint_hell_hex;
-    border: $mint_hex 1px solid;
-  }
-
-  .poprock {
-    background-color: $blau_hell_hex;
-    border: $blau_hex 1px solid;
-  }
-
-  .electronic {
-    background-color: $violett_hell_hex;
-    border: $violett_hex 1px solid;
-  }
-}
-}
+//intro und outro seperat
 
 .beschreibung{
 
@@ -145,6 +46,9 @@ padding-top: 0;
 .programm {
   background-color: $grauF0_hex;
   padding: 0 16px; //stimmt zwar nicht laut styleguide, aber einheitlich: desktop:0 120px; tablet: 0 24px;
+  .inklpadding {
+    min-height: 40px; //hack damit unterer Abstand stimmt
+  }
 
  .wochentag{
    display: inline;
@@ -207,45 +111,6 @@ padding-top: 0;
 
 //tablet
 @media screen and (min-width: 376px) {
-  .einleitung {
-    .intro {
-
-      .intro__festival {
-
-        svg {
-          padding-top: 48px;
-          height: 104px;
-          width: auto;
-        }
-
-        .schriftfestival {
-          padding: 250px 12px 0 12px; //greift nicht immer 290 ideal, aber wegen kleinstem weniger
-          margin-top: 160px;
-        }
-      }
-
-      .background {
-        min-height: 528px; //ab tablet 528
-      }
-
-    }
-
-    //die verschiedenen Filter für countdown, tickets etc
-    .filter {
-
-      .filter__festival {
-        height: 264px; //tablet und desktop= 264px
-        width: 50%; // bei Tablet 50% dann 25%
-        display: inline-block;
-        float: left;
-        font-size: 1.5em;
-
-        .filter__name {
-          padding-top: 52px;
-        }
-      }
-    }
-  }
 
   .beschreibung{
 
@@ -275,6 +140,9 @@ padding-top: 0;
 
   .programm {
     padding: 0 24px; //desktop:0 120px;
+    .inklpadding {
+      min-height: 64px;
+    }
 
     .wochentag{
       //margin: 2px;
@@ -303,38 +171,6 @@ padding-top: 0;
 
 //laptop
 @media screen and (min-width: 769px) {
-  .einleitung {
-    .intro {
-
-      .intro__festival {
-
-        svg {
-          padding-top: 120px;
-          height: 200px;
-          width: auto;
-        }
-
-        .schriftfestival {
-          padding: 320px 12px 0 12px; //greift nicht immer 460 ideal, aber wegen kleinstem weniger
-          margin-top: 480px;
-        }
-      }
-
-      .background {
-        //min-height: 528px; //ab tablet 528
-      }
-
-    }
-
-    //die verschiedenen Filter für countdown, tickets etc
-    .filter {
-
-      .filter__festival {
-        width: 25%; // bei Tablet 50% dann 25%
-      }
-    }
-  }
-
 
   .asidemargin{
     margin-right: -120px;
@@ -369,6 +205,9 @@ padding-top: 0;
 
   .programm {
     padding: 0 120px;
+    .inklpadding {
+      min-height: 80px;
+    }
   }
 
 }

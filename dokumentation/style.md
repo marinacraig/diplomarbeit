@@ -1,6 +1,10 @@
-#Styleanpassungen
+#Styleanpassungen von Design Vorgaben von Stephanie Batliner bzw. Webprofessionals
+##Bilder
+Da unklar ist, ob die Bilder öffentlich verwendet werden dürfen, habe ich 
+welche zur freien Verfügung herunter geladen. Entgegen der Styleangaben sind es 
+Stockfotos.
 
-##Schriften: 
+##Schriften 
 Adelle und Proxima Nova:  
 Diese Schriften können nicht via google fonts bzw. kostenlos 
 eingebunden werden.  
@@ -31,8 +35,8 @@ Unterstrichener Button wechselt beim Hover die Farbe,
 wirkt so einheitlicher.  
 Auf der Hauptseite bei Entdeckungen fehlt auf dem Mobile Bild 
 der Button für mehr Samples. Ich habe den Button dennoch eingebunden,
- da es auf mich sonst wie vergessen wirkt. 
- 
+ da es auf mich sonst wie vergessen wirkt.  
+
 ##Hauptseite
 ###news und magazin
 Laut Layout sollte beides mit Maisonry umgesetzt werden. Aus 

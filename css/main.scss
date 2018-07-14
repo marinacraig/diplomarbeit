@@ -2,21 +2,22 @@
 html {
   box-sizing: border-box;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
+
 /* Border Box Trick Ende */
 
 .clearfix {
-  clear:both;
+  clear: both;
 }
 
 .body {
-  max-width:1600px;
-  width:100%;
+  max-width: 1600px;
+  width: 100%;
   hyphens: auto; //Textumbrüche automatisch erlaubt
 }
-
 
 @import 'components/colors';
 @import 'components/fonts';
@@ -30,34 +31,35 @@ html {
 @import "components/magazin";
 @import "components/news";
 @import "components/festivaluebersicht";
+@import "components/intro-outro";
 @import "components/player";
 @import "components/festival";
 
-
-
-
 #pagetop {
-  padding-top: 68px;//nav Höhe = 64px
+  padding-top: 68px; //nav Höhe = 64px
 }
 
 .musikrichtung, .festivalmargin {
   margin: 0 16px;
 }
-.musikrichtung{
-  .btnweiss, .btnschwarz{
+
+.musikrichtung {
+  .btnweiss, .btnschwarz {
     margin: 8px;
   }
 }
+
 //Styleguide, s. 9 Absätze
 
 //Hauptseite:
 //jeder article trennt sich wie h2
 article, .programm {
-  padding-top:24px;
+  padding-top: 24px;
   padding-bottom: 24px;
 }
+
 //1. article, musikrichtung und entdeckungen, Titel von news und magazin zentriert
-.musikrichtung, .entdeckungen{
+.musikrichtung, .entdeckungen {
   text-align: center;
 }
 
@@ -79,40 +81,40 @@ p {
 
   &__music {
     height: 120px;
-    margin:48px -16px;
+    margin: 48px -16px;
     background-position: center;
     background-size: cover;
     &--jazz {
       background-image: url("../assets/audio_jazz.svg");
     }
-    &--hiphop{
+    &--hiphop {
       background-image: url("../assets/audio_hiphop.svg");
     }
-    &--indie{
+    &--indie {
       background-image: url("../assets/audio_indie.svg");
     }
-    &--poprock{
+    &--poprock {
       background-image: url("../assets/audio_poprock.svg");
     }
-    &--electronic{
+    &--electronic {
       background-image: url("../assets/audio_electronic.svg");
     }
   }
 }
 
-
 //article news
 
 //Festival-Einzelansicht
-.beschreibung{
-  .filter__detail--ort{
+.beschreibung {
+  .filter__detail--ort {
     background: url("../assets/detail_place.svg") no-repeat;
   }
-  .filter__detail--datum{
+  .filter__detail--datum {
     background: url("../assets/detail_kalender.svg") no-repeat;
   }
 }
-.sponsoring{
+
+.sponsoring {
   //anderes Bild nur für Tablet
   background-image: url("../images/rsz_sponsoring.jpg");
   background-position: center;
@@ -158,15 +160,16 @@ p {
   background-size: cover;
 }
 
-.teaser__big{
+.teaser__big {
   background-image: url("../images/rsz_festival.jpg");
   background-position: center;
   background-size: cover;
 }
 
+
 //Platzhalter für video
-.player{
-  background-image: url("../images/rsz_startseite_1.jpg");
+.player {
+  background-image: url("../images/rsz_platzhalter_player.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -178,11 +181,11 @@ p {
     margin: 0 24px;
   }
   //jede article trennt sich wie h2
-article{
-  padding-top:32px;
-  padding-bottom: 32px;
+  article {
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
-  .sponsoring{
+  .sponsoring {
     //anderes Bild nur für Tablet
     background-image: url("../images/rsz_sponsoring_tablet.jpg");
     background-position: center;
@@ -195,11 +198,11 @@ article{
   .musikrichtung, .festivalmargin {
     margin: 0 120px;
   }
-  article{
-    padding-top:40px;
+  article {
+    padding-top: 40px;
     padding-bottom: 40px;
   }
-  .sponsoring{
+  .sponsoring {
     //anderes Bild nur für Tablet
     background-image: url("../images/rsz_sponsoring.jpg");
   }

@@ -105,21 +105,17 @@ button {
   }
 }
 
-.news .btnweiss {
+.news .btnweiss, .programm .btnweiss {
   margin: 16px auto;
   padding: auto;
-  background-color: $grauF0_hex;
+  background-color: transparent;
   &:hover {
     background-color: $schwarz_hex;
   }
 }
 
 .programm .btnweiss{
-  display:inline-block;
-  padding: 10px;
-  background-color: $grauF0_hex;
   &:hover {
-    background-color: $schwarz_hex;
     .pfeil-unten {
       width: 0;
       height: 0;
@@ -130,8 +126,8 @@ button {
       margin: 16px auto 0 auto;
     }
   }
-
 }
+
 .programm .btnschwarz {
   display:inline-block;
   padding: 10px;
@@ -151,7 +147,10 @@ button {
   }
 }
 
-
+.outro .btnschwarz{
+  border-color: $weiss_hex;
+  background-color: transparent;
+}
 
 
 .item__hidden--buttons {
