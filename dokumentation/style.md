@@ -36,6 +36,9 @@ wirkt so einheitlicher.
 Auf der Hauptseite bei Entdeckungen fehlt auf dem Mobile Bild 
 der Button für mehr Samples. Ich habe den Button dennoch eingebunden,
  da es auf mich sonst wie vergessen wirkt.  
+In Nicht-Chrome Browsern kann man die Buttons als solche erkennen. 
+Eine Umwandlung in Divs oder Links kommt aus Zeitgründen nicht in Frage, zudem
+merkt man so, dass etwas passiert (sollte) wenn man draufklickt.  
 
 ##Hauptseite
 ###news und magazin

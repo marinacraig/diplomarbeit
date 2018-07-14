@@ -28,19 +28,21 @@ nav {
   a {
     text-decoration: none;
   }
+
   li {
     list-style-type: none;
     height: 100%;
     display: flex;
 
     }
-
-  .nav__menu, .nav__login, .nav__ticket {
-
+ //Abstand
+ .nav__login, .nav__ticket, .nav__menu {
     p{
       margin: auto 1em auto 0;
     }
   }
+
+
   .nav__festivallovers{
 
     &--1{
@@ -53,38 +55,46 @@ nav {
       fill:$schwarz_hex;
     }
   }
+
   //Schriften
-  .nav__menu > a, .nav__festivallovers > a {
+  .nav__menu, .nav__festivallovers > a {
     text-decoration: none;
     color: $schwarz_hex;
 
   }
+
   .icon__nav--menu{
     fill:$schwarz_hex;
   }
-  .nav__menu > a:hover {
+
+  .nav__menu:hover {
     color: $grau76_hex;
     .icon__nav--menu{
       fill:$grau76_hex;
     }
   }
 
-  .nav__login > span, .nav__ticket > span {
+  .nav__login, .nav__ticket {
     text-decoration: none;
     color: $grauC2_hex;
-    border-left: $grauC2_hex 1px solid;
-    height: 100%;
-    &:hover{
+    > p {
+      border-left: $grauC2_hex 1px solid;
+      height: 100%;
+    }
+    .icon__nav--login, .icon__nav--ticket{
+      fill:$grauC2_hex;
+    }
+
+    &:hover {
       background-color: $grauC2_hex;
       color: $schwarz_hex;
-      .icon__nav--login, .icon__nav--ticket{
-        fill:$schwarz_hex;
+      .icon__nav--login, .icon__nav--ticket {
+        fill: $schwarz_hex;
       }
     }
-  }
-  .icon__nav--login, .icon__nav--ticket{
-    fill:$grauC2_hex;
-  }
+    }
+
+
 
 
   @import "overlay";

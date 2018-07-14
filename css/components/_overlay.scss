@@ -1,3 +1,5 @@
+//Todo: p und span wurden ausgetauscht
+
 // overlay
 
 .overlay {
@@ -12,31 +14,35 @@
   overflow-x: hidden;
   transition: 0.5s;
 
-  .icon__nav, .icon__footer, .icon__nav--login, .icon__nav--ticket, .icon__nav--herz{
+
+  .icon__nav, .icon__footer, .icon__nav--login, .icon__nav--ticket, .icon__nav--herz {
     fill: $weiss_hex;
   }
-  a, span{
-    text-decoration: none;
-    color: $weiss_hex;
-    display: block;
-    transition: 0.3s;
 
-    &:hover, &:focus{
+
+  .nav__login, .nav__ticket, .nav__menu, .nav__festivallovers > a{
+
+      text-decoration: none;
+      color: $weiss_hex;
+
+
+    &:hover {
       color: $schwarz_hex;
       background-color: $weiss_hex;
-      width: 100%;
 
-      .icon__nav, .icon__footer, .icon__nav--login, .icon__nav--ticket, .icon__nav--herz{
+      .icon__nav, .icon__footer, .icon__nav--login, .icon__nav--ticket, .icon__nav--herz {
         fill: $schwarz_hex;
       }
     }
   }
-  li .nav__login, li .nav__ticket {
-    &:not(p){
+
+  .nav__login, .nav__ticket {
+    > p {
       border-left: $weiss_hex 1px solid;
+      height: 100%;
+    }
   }
 
-  }
 }
 
 .overlay__content {
@@ -48,8 +54,21 @@
   //mobile schriftgrösse
   font-size: 1.882352941rem; //32
   font-weight: bold;
-}
 
+  a {
+    text-decoration: none;
+    color: $weiss_hex;
+    display: block;
+    transition: 0.3s;
+
+    &:hover, &:focus {
+      color: $schwarz_hex;
+      background-color: $weiss_hex;
+      width: 100%;
+
+    }
+  }
+}
 
 .overlay .item {
   .item__hidden {
@@ -57,9 +76,10 @@
   }
 
 }
+
 // suche und socialmedia ohne border, unten
 
-.nav__bottom{
+.nav__bottom {
   position: relative;
   display: block;
   top: 40%; //wo beginnt es, ggf noch anpassen
@@ -79,8 +99,8 @@
 //styling des Suchfeldes im overlay
 .nav__suche {
   border-bottom: $grauC2_hex 1px solid;
-  color:$weiss_hex;
-  input{
+  color: $weiss_hex;
+  input {
     background-color: rgba(0, 0, 0, 0.0);
     border: none;
     color: $weiss_hex;
@@ -88,21 +108,19 @@
 
 }
 
-
-
 //tablet
-@media screen and (min-width : 376px) {
+@media screen and (min-width: 376px) {
 
-    .overlay__content {
-      font-size: 2.823529412rem; //17
-    }
+  .overlay__content {
+    font-size: 2.823529412rem; //17
+  }
   .nav__bottom {
     top: 40%;
   }
 }
 
 // weil mich die Schrift in der Navi stört noch ein zusätzlicher Breakpoint
-@media screen and (min-width : 450px) {
+@media screen and (min-width: 450px) {
   .overlay .item {
     .nav__display--tablet.item__hidden {
       display: flex;
@@ -111,24 +129,22 @@
 }
 
 //laptop
-@media screen and (min-width : 769px) {
+@media screen and (min-width: 769px) {
 
-    .overlay__content {
-      font-size: 3.294117647rem;//56
-    }
+  .overlay__content {
+    font-size: 3.294117647rem; //56
+  }
 
-  .nav__bottom{
-    ul{
+  .nav__bottom {
+    ul {
       display: flex;
       width: 60%;
       margin: auto;
-      .nav__suche{
-        order:10;
+      .nav__suche {
+        order: 10;
       }
     }
 
   }
-
-
 
 }

@@ -27,77 +27,77 @@ html {
 
 /*
 für html 17px:
-13	0.7647058824rem
-17	1rem
-20	1.176470588rem
-24	1.411764706rem
-32	1.882352941rem
-48	2.823529412rem
-56	3.294117647rem
-96	5.647058824rem
-144	8.470588235rem
+13	0.7647058824em
+17	1em
+20	1.176470588em
+24	1.411764706em
+32	1.882352941em
+48	2.823529412em
+56	3.294117647em
+96	5.647058824em
+144	8.470588235em
  */
 body {
   font-family: 'Encode Sans Semi Expanded', sans-serif; }
 
-h1, h2, h3, h4, h5, h6, h1.h2, .schriftfestival {
+h1, h2, h3, h4, h5, h6, h1 .titel-height-2, .schriftfestival {
   font-family: 'Bitter', serif; }
 
-h1, h2.h1 {
-  font-size: 1.882352941rem;
+h1, h2 .titel-height-1 {
+  font-size: 1.882352941em;
   font-weight: bold;
   margin: 40px auto; }
 
-h2, h1.h2, h3.h2 {
-  font-size: 1.411764706rem;
+h2, h1 .titel-height-2, h3 .titel-height-2 {
+  font-size: 1.411764706em;
   font-weight: bold;
   margin: 32px auto; }
 
-h3, .h3 {
-  font-size: 1.176470588rem;
+h3, .titel-height-3 {
+  font-size: 1.176470588em;
   font-weight: bold;
   margin-bottom: 1em; }
 
 .schriftfestival {
-  font-size: 2.823529412rem;
+  font-size: 2.823529412em;
   font-weight: bold;
   margin: 40px auto; }
 
 .nav__festivallovers {
   font-family: 'Niconne', cursive;
-  font-size: 1.8rem; }
+  font-size: 1.8em; }
 
 header, button {
   font-weight: bold; }
 
 .nav__breadcrumb, .results {
-  font-size: 0.7647058824rem; }
+  font-size: 0.7647058824em; }
 
 p:not(.schriftfestival) {
   line-height: 2; }
 
 @media screen and (min-width: 376px) {
-  h1, h2.h1 {
-    font-size: 2.823529412rem;
+  h1, h2 .titel-height-1 {
+    font-size: 2.823529412em;
     margin: 64px auto; }
-  h2, h1.h2, h3.h2 {
-    font-size: 1.882352941rem; }
-  h3 .h3 {
-    font-size: 1.176470588rem; }
+  h2, h1 .titel-height-2, h3 .titel-height-2 {
+    font-size: 1.882352941em; }
+  h3 .titel-height-3 {
+    font-size: 1.176470588em; }
   .schriftfestival {
-    font-size: 5.647058824rem;
+    font-size: 5.647058824em;
     margin: 100px auto; } }
 
 @media screen and (min-width: 769px) {
-  h1, h2.h1 {
-    font-size: 3.294117647rem;
+  h1, h2 .titel-height-1 {
+    font-size: 3.294117647em;
     margin: 80px auto; }
-  h2, h1.h2, h3.h2 {
+  h2, h1 .titel-height-2, h3 .titel-height-2 {
     margin: 40px auto; }
-  h3, .h3 {
-    font-size: 1.176470588rem; }
+  h3, .titel-height-3 {
+    font-size: 1.176470588em; }
   .schriftfestival {
-    font-size: 8.470588235rem;
+    font-size: 8.470588235em;
     margin: 144px auto; } }
 
 svg {
@@ -492,7 +492,7 @@ nav {
     list-style-type: none;
     height: 100%;
     display: flex; }
-  nav .nav__menu p, nav .nav__login p, nav .nav__ticket p {
+  nav .nav__login p, nav .nav__ticket p, nav .nav__menu p {
     margin: auto 1em auto 0; }
   nav .nav__festivallovers--1 {
     margin-left: 1em; }
@@ -500,27 +500,28 @@ nav {
     margin-right: 1em; }
   nav .nav__festivallovers .icon__nav--herz {
     fill: #000; }
-  nav .nav__menu > a, nav .nav__festivallovers > a {
+  nav .nav__menu, nav .nav__festivallovers > a {
     text-decoration: none;
     color: #000; }
   nav .icon__nav--menu {
     fill: #000; }
-  nav .nav__menu > a:hover {
+  nav .nav__menu:hover {
     color: #767676; }
-    nav .nav__menu > a:hover .icon__nav--menu {
+    nav .nav__menu:hover .icon__nav--menu {
       fill: #767676; }
-  nav .nav__login > span, nav .nav__ticket > span {
+  nav .nav__login, nav .nav__ticket {
     text-decoration: none;
-    color: #C2C2C2;
-    border-left: #C2C2C2 1px solid;
-    height: 100%; }
-    nav .nav__login > span:hover, nav .nav__ticket > span:hover {
+    color: #C2C2C2; }
+    nav .nav__login > p, nav .nav__ticket > p {
+      border-left: #C2C2C2 1px solid;
+      height: 100%; }
+    nav .nav__login .icon__nav--login, nav .nav__login .icon__nav--ticket, nav .nav__ticket .icon__nav--login, nav .nav__ticket .icon__nav--ticket {
+      fill: #C2C2C2; }
+    nav .nav__login:hover, nav .nav__ticket:hover {
       background-color: #C2C2C2;
       color: #000; }
-      nav .nav__login > span:hover .icon__nav--login, nav .nav__login > span:hover .icon__nav--ticket, nav .nav__ticket > span:hover .icon__nav--login, nav .nav__ticket > span:hover .icon__nav--ticket {
+      nav .nav__login:hover .icon__nav--login, nav .nav__login:hover .icon__nav--ticket, nav .nav__ticket:hover .icon__nav--login, nav .nav__ticket:hover .icon__nav--ticket {
         fill: #000; }
-  nav .icon__nav--login, nav .icon__nav--ticket {
-    fill: #C2C2C2; }
   nav .overlay {
     max-width: 100vw;
     height: 100%;
@@ -534,19 +535,17 @@ nav {
     transition: 0.5s; }
     nav .overlay .icon__nav, nav .overlay .icon__footer, nav .overlay .icon__nav--login, nav .overlay .icon__nav--ticket, nav .overlay .icon__nav--herz {
       fill: #FFF; }
-    nav .overlay a, nav .overlay span {
+    nav .overlay .nav__login, nav .overlay .nav__ticket, nav .overlay .nav__menu, nav .overlay .nav__festivallovers > a {
       text-decoration: none;
-      color: #FFF;
-      display: block;
-      transition: 0.3s; }
-      nav .overlay a:hover, nav .overlay a:focus, nav .overlay span:hover, nav .overlay span:focus {
+      color: #FFF; }
+      nav .overlay .nav__login:hover, nav .overlay .nav__ticket:hover, nav .overlay .nav__menu:hover, nav .overlay .nav__festivallovers > a:hover {
         color: #000;
-        background-color: #FFF;
-        width: 100%; }
-        nav .overlay a:hover .icon__nav, nav .overlay a:hover .icon__footer, nav .overlay a:hover .icon__nav--login, nav .overlay a:hover .icon__nav--ticket, nav .overlay a:hover .icon__nav--herz, nav .overlay a:focus .icon__nav, nav .overlay a:focus .icon__footer, nav .overlay a:focus .icon__nav--login, nav .overlay a:focus .icon__nav--ticket, nav .overlay a:focus .icon__nav--herz, nav .overlay span:hover .icon__nav, nav .overlay span:hover .icon__footer, nav .overlay span:hover .icon__nav--login, nav .overlay span:hover .icon__nav--ticket, nav .overlay span:hover .icon__nav--herz, nav .overlay span:focus .icon__nav, nav .overlay span:focus .icon__footer, nav .overlay span:focus .icon__nav--login, nav .overlay span:focus .icon__nav--ticket, nav .overlay span:focus .icon__nav--herz {
+        background-color: #FFF; }
+        nav .overlay .nav__login:hover .icon__nav, nav .overlay .nav__login:hover .icon__footer, nav .overlay .nav__login:hover .icon__nav--login, nav .overlay .nav__login:hover .icon__nav--ticket, nav .overlay .nav__login:hover .icon__nav--herz, nav .overlay .nav__ticket:hover .icon__nav, nav .overlay .nav__ticket:hover .icon__footer, nav .overlay .nav__ticket:hover .icon__nav--login, nav .overlay .nav__ticket:hover .icon__nav--ticket, nav .overlay .nav__ticket:hover .icon__nav--herz, nav .overlay .nav__menu:hover .icon__nav, nav .overlay .nav__menu:hover .icon__footer, nav .overlay .nav__menu:hover .icon__nav--login, nav .overlay .nav__menu:hover .icon__nav--ticket, nav .overlay .nav__menu:hover .icon__nav--herz, nav .overlay .nav__festivallovers > a:hover .icon__nav, nav .overlay .nav__festivallovers > a:hover .icon__footer, nav .overlay .nav__festivallovers > a:hover .icon__nav--login, nav .overlay .nav__festivallovers > a:hover .icon__nav--ticket, nav .overlay .nav__festivallovers > a:hover .icon__nav--herz {
           fill: #000; }
-    nav .overlay li .nav__login:not(p), nav .overlay li .nav__ticket:not(p) {
-      border-left: #FFF 1px solid; }
+    nav .overlay .nav__login > p, nav .overlay .nav__ticket > p {
+      border-left: #FFF 1px solid;
+      height: 100%; }
   nav .overlay__content {
     position: relative;
     top: 25%;
@@ -555,6 +554,15 @@ nav {
     text-align: center;
     font-size: 1.882352941rem;
     font-weight: bold; }
+    nav .overlay__content a {
+      text-decoration: none;
+      color: #FFF;
+      display: block;
+      transition: 0.3s; }
+      nav .overlay__content a:hover, nav .overlay__content a:focus {
+        color: #000;
+        background-color: #FFF;
+        width: 100%; }
   nav .overlay .item .item__hidden {
     display: none; }
   nav .nav__bottom {
@@ -1195,7 +1203,7 @@ id's dürfen nur einmal vergeben werden, da mehrere Akkordions: hochzählen
         position: absolute;
         z-index: 2;
         max-width: 100%; }
-        .abschluss .outro .background .outro__festival h2 {
+        .abschluss .outro .background .outro__festival .titel-height-2 {
           margin: 8px; }
     .abschluss .outro .icon__music--jazz {
       fill: #FFEB3B; }
@@ -1515,10 +1523,10 @@ p {
   article {
     padding-top: 32px;
     padding-bottom: 32px; }
-  .sponsoring {
-    background-image: url("../images/rsz_sponsoring_tablet.jpg");
-    background-position: center;
-    background-size: cover; } }
+    article .sponsoring {
+      background-image: url("../images/rsz_sponsoring_tablet.jpg");
+      background-position: center;
+      background-size: cover; } }
 
 @media screen and (min-width: 769px) {
   .musikrichtung, .festivalmargin {

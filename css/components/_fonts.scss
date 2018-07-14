@@ -7,15 +7,15 @@ html {
 
 /*
 für html 17px:
-13	0.7647058824rem
-17	1rem
-20	1.176470588rem
-24	1.411764706rem
-32	1.882352941rem
-48	2.823529412rem
-56	3.294117647rem
-96	5.647058824rem
-144	8.470588235rem
+13	0.7647058824em
+17	1em
+20	1.176470588em
+24	1.411764706em
+32	1.882352941em
+48	2.823529412em
+56	3.294117647em
+96	5.647058824em
+144	8.470588235em
  */
 
 //statt Proxima Nova:
@@ -24,24 +24,24 @@ body {
 }
 
 // statt Adelle wird Bitter eingesetzt
-h1, h2, h3, h4, h5, h6, h1.h2, .schriftfestival{
+h1, h2, h3, h4, h5, h6, h1 .titel-height-2, .schriftfestival{
   font-family: 'Bitter', serif;
 }
 
-h1, h2.h1 {
-  font-size: 1.882352941rem; //32
+h1, h2 .titel-height-1 {
+  font-size: 1.882352941em; //32
   font-weight: bold;
   margin:40px auto;
 }
 
-h2, h1.h2, h3.h2 {
-  font-size: 1.411764706rem; //24
+h2, h1 .titel-height-2, h3 .titel-height-2 {
+  font-size: 1.411764706em; //24
   font-weight: bold;
   margin:32px auto;
 }
 
-h3, .h3 {
-  font-size: 1.176470588rem; //20
+h3, .titel-height-3 {
+  font-size: 1.176470588em; //20
   font-weight: bold;
   margin-bottom: 1em; // sieht besser aus
    //margin:32px auto;
@@ -49,7 +49,7 @@ h3, .h3 {
 
 //für grosses Festival
  .schriftfestival {
-  font-size: 2.823529412rem; //48
+  font-size: 2.823529412em; //48
   font-weight: bold;
   margin:40px auto;
 }
@@ -58,7 +58,7 @@ h3, .h3 {
 //Navigation Schrift von Festival Lovers ist kein Icon bzw. Bild
 .nav__festivallovers {
   font-family: 'Niconne', cursive;
-  font-size: 1.8rem;
+  font-size: 1.8em;
 }
 
 //Todo: class für tabs sobald klar ist wo diese sind
@@ -69,7 +69,7 @@ header, button {
 //Breadcrumb, Zusatzinfos (Datum, Likes)
 //.results von Musikfilter auf der Startseite
 .nav__breadcrumb, .results {
-  font-size: 0.7647058824rem; //13
+  font-size: 0.7647058824em; //13
 }
 
 p:not(.schriftfestival) {
@@ -78,21 +78,21 @@ p:not(.schriftfestival) {
 
 //tablet
 @media screen and (min-width : 376px) {
-  h1, h2.h1  {
-    font-size: 2.823529412rem; //48
+  h1, h2 .titel-height-1 {
+    font-size: 2.823529412em; //48
     margin:64px auto;
   }
-  h2, h1.h2, h3.h2 {
-    font-size: 1.882352941rem; //32
+  h2, h1 .titel-height-2, h3 .titel-height-2 {
+    font-size: 1.882352941em; //32
     //margin:32px auto;
   }
-  h3 .h3 {
-    font-size: 1.176470588rem; //20
+  h3 .titel-height-3 {
+    font-size: 1.176470588em; //20
     //margin:20px auto;
   }
   //für grosses Festival
   .schriftfestival {
-    font-size: 5.647058824rem; //96
+    font-size: 5.647058824em; //96
     margin:100px auto;
   }
 }
@@ -100,20 +100,20 @@ p:not(.schriftfestival) {
 
 //laptop
 @media screen and (min-width : 769px) {
-  h1, h2.h1 {
-    font-size: 3.294117647rem; //56
+  h1, h2 .titel-height-1 {
+    font-size: 3.294117647em; //56
     margin:80px auto;
   }
-  h2, h1.h2, h3.h2 {
+  h2, h1 .titel-height-2, h3 .titel-height-2 {
     margin:40px auto;
   }
-  h3, .h3 {
-    font-size: 1.176470588rem; //20
+  h3, .titel-height-3 {
+    font-size: 1.176470588em; //20
     //margin:32px auto;
   }
   //für grosses Festival
   .schriftfestival {
-    font-size: 8.470588235rem; //144
+    font-size: 8.470588235em; //144
     margin:144px auto;
   }
 
