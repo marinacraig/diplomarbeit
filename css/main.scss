@@ -53,7 +53,7 @@ html {
 
 //Hauptseite:
 //jeder article trennt sich wie h2
-article, .programm {
+article, .programm, .festivaluebersicht__filter {
   padding-top: 24px;
   padding-bottom: 24px;
 }
@@ -181,7 +181,7 @@ p {
     margin: 0 24px;
   }
   //jede article trennt sich wie h2
-  article {
+  article, .programm, .festivaluebersicht__filter  {
     padding-top: 32px;
     padding-bottom: 32px;
 
@@ -200,7 +200,7 @@ p {
   .musikrichtung, .festivalmargin {
     margin: 0 120px;
   }
-  article {
+  article, .programm, .festivaluebersicht__filter  {
     padding-top: 40px;
     padding-bottom: 40px;
   }
