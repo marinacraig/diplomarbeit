@@ -19,6 +19,12 @@ Zudem ist keine passende Schrift oder Logoteile für
  Festival Lovers in der Navigation vorhanden. Dort 
  wird eine weitere Google Font
 verwendet.
+###Titel
+Zwar sind h1-h3 im Styleguide definiert, aber sie werden nicht 
+webgerecht umgesetzt. 
+Irgendwie scheinen alle Titel h1 zu sein. 
+Nach dem vergeblichen Versuch mit "class xy" gibt es 
+nun Richtige h1, h2 und h3, da dies den Web-Vorgaben entspricht.
 
 ##Header und Footer
 Flexbox wurde im Header und
@@ -60,9 +66,7 @@ Scheint laut Styleguide ein Div bestimmter Höhe und Breite
 mit Text und Logo zu sein. Zudem ist das "merken" darüber links-bündig.
 Da mir dies nicht gefällt und ich von einem Versehen ausgehe ist es 
 eingemittet und eine Hintergrundfarbe gewählt.
-###Titel
-Irgendwie scheinen laut Styleguide alle Titel h1 zu sein. Da keine
- Rücksprache möglich ist, nach dem ersten h1 nun immer h2. 
+
 ###Select mit Tagesprogramm
  
  

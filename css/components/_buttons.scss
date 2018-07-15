@@ -1,7 +1,16 @@
-button {
+.button {
   height: 48px;
   //buttons max-width wegen devices
   max-width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin:8px;
+  p {
+    margin: 0;
+    padding:0;
+  }
+
   &:not(.btnunterstrichen) {
     text-transform: uppercase;
     text-decoration: none; // falls button mit <a> auf etwas verlinkt ist
@@ -77,13 +86,8 @@ button {
 
 //Primarybutton, Mobile über die ganze Breite
 .btnschwarz {
-  font-weight: bold;
   background-color: $schwarz_hex;
   color: $weiss_hex;
-  width: 343px;
-  max-width: 100%;
-  padding: auto 32px;
-  margin: 8px auto; // statt 8px
 
   &:hover {
     background-color: $grau76_hex;
@@ -93,13 +97,9 @@ button {
 
 //Secondrybutton, Text kann verlinkt sein
 .btnweiss {
-  font-weight: bold;
   border: $schwarz_hex 1px solid;
   background-color: $weiss_hex;
-  width: 343px;
-  max-width: 100%;
-  padding: auto 32px;
-  margin: 8px auto;
+  color: $schwarz_hex;
 
   &:hover {
     background-color: $schwarz_hex;
@@ -107,32 +107,40 @@ button {
   }
 }
 
+.btnschwarz, .btnweiss , .button .merken{
+  width: 343px;
+  max-width: 100%;
+  height: 48px; //neu
+  p {
+    //padding: auto 32px;
+    //margin: 8px auto;
+    align-self: center;
+    text-align: center;
+  }
+}
+
 .news .btnweiss, .programm .btnweiss {
-  margin: 16px auto;
-  padding: auto;
+
   background-color: transparent;
   &:hover {
     background-color: $schwarz_hex;
   }
 }
+.programm .btnweiss {
 
-.programm .btnweiss{
+  .pfeil-unten {
+
+  }
   &:hover {
     .pfeil-unten {
-      width: 0;
-      height: 0;
-      border-left: 10px solid transparent;
-      border-right: 10px solid transparent;
-
       border-top: 10px solid $schwarz_hex;//soll nicht sichtbar sein
-      margin: 16px auto 0 auto;
+
     }
   }
 }
 
 .programm .btnschwarz {
-  display:inline-block;
-  padding: 10px;
+
   .pfeil-unten {
     width: 0;
     height: 0;
@@ -140,12 +148,26 @@ button {
     border-right: 10px solid transparent;
 
     border-top: 10px solid $schwarz_hex;
-    margin: 16px auto 0 auto;
+    margin: 4px auto 0 auto;
   }
   &:hover {
     .pfeil-unten {
     border-top: 10px solid $grau76_hex;
   }
+  }
+}
+
+.programm .btnweiss, .programm .btnschwarz{
+  display:inline-block;
+  padding: 8px;
+  &:hover {
+    .pfeil-unten {
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      margin: 4px auto 0 auto;
+    }
   }
 }
 
@@ -161,20 +183,22 @@ button {
 
 //von der Festival-Einzelansicht
 .btnmerken {
-  font-weight: bold;
   border: none;
   background-color: $weiss_hex;
-  width: 343px;
-  max-width: 100%;
-  padding: auto 32px;
-  margin: 8px auto;
-  display: inline-flex;
+
+  p {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+  }
 
   svg{
     margin: auto 6px auto auto;
+    align-self: center;
   }
   span{
-    display: flex;
+    align-self: center;
     margin: auto auto auto 6px;
   }
 

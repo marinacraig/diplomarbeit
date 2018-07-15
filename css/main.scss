@@ -16,7 +16,7 @@ html {
 .body {
   max-width: 1600px;
   width: 100%;
-  hyphens: auto; //Textumbrüche automatisch erlaubt
+  //hyphens: auto; //Textumbrüche automatisch erlaubt
 }
 
 @import 'components/colors';
@@ -28,6 +28,7 @@ html {
 @import "components/footer";
 @import "components/breadcrump";
 @import "components/accordeon";
+@import "components/musikrichtung";
 @import "components/magazin";
 @import "components/news";
 @import "components/festivaluebersicht";
@@ -37,6 +38,21 @@ html {
 
 #pagetop {
   padding-top: 68px; //nav Höhe = 64px
+}
+
+a {
+  text-decoration: none;
+  color:$schwarz_hex;
+  .underlined{
+    text-underline: $schwarz_hex;
+  }
+}
+
+
+
+//jeder Paragraph hat einen Abstand
+p {
+  margin-bottom: 1em;
 }
 
 .musikrichtung, .festivalmargin {
@@ -63,10 +79,6 @@ article, .programm, .festivaluebersicht__filter {
   text-align: center;
 }
 
-//jeder Paragraph hat einen Abstand
-p {
-  margin-bottom: 1em;
-}
 
 //entdeckungen - nicht seperat wegen svg-links
 

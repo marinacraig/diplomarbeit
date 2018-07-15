@@ -112,7 +112,7 @@
                                     <input type="password" placeholder="Passwort">
                                 </li>
                                 <li>
-                                    <button class="btnweiss">anmelden</button>
+                                    <div class="button btnweiss"><p>anmelden</p></div>
                                 </li>
                                 <li>
                                     <p><a href="#">Passwort</a> vergessen?</p>
@@ -176,7 +176,7 @@
                                             <input type="password" placeholder="Passwort">
                                         </li>
                                         <li>
-                                            <button class="btnweiss">anmelden</button>
+                                            <div class="button btnweiss"><p>anmelden</p></div>
                                         </li>
                                         <li>
                                             <p><a href="#">Passwort</a> vergessen?</p>
@@ -421,7 +421,7 @@
                                 <input type="password" placeholder="Passwort">
                             </li>
                             <li>
-                                <button class="btnweiss">anmelden</button>
+                                <div class="button btnweiss"><p>anmelden</p></div>
                             </li>
                             <li>
                                 <p><a href="#">Passwort</a> vergessen?</p>
@@ -483,7 +483,7 @@
                                         <input type="password" placeholder="Passwort">
                                     </li>
                                     <li>
-                                        <button class="btnweiss">anmelden</button>
+                                        <div class="button btnweiss"><p>anmelden</p></div>
                                     </li>
                                     <li>
                                         <p><a href="#">Passwort</a> vergessen?</p>
@@ -568,11 +568,11 @@
         </div>
     </div>
 
-    <!--breadcrump id pagetop = Festivalübersicht, id pageup für einzelansichtvon unten nach oben hierhin-->
+    <!--breadcrump id pagetop = Festivalübersicht, id pageup für einzelansicht von unten nach oben hierhin-->
 
     <!--breadcrump einfügen-->
 
-    <div class="breadcrumb" id="pageup">
+    <div class="breadcrumb" id="pagetop">
         <ul class="breadcrump">
 
             <li class="breadcrump breadcrumb__home">
@@ -702,7 +702,7 @@
     <div class="festivalmargin">
 
         <div class="asidemargin">
-            <section class="beschreibung">
+            <article class="beschreibung">
 
                 <!--hier der h1-->
                 <h1>Spannende, innovative und progressive Musik</h1>
@@ -747,7 +747,7 @@
                     </p>
                 </div>
 
-            </section>
+            </article>
 
             <!-- merken, Ticket kaufen, teilen, Sponsoring, da aus dem Fluss genommen wird:aside -->
 
@@ -756,27 +756,28 @@
                 <!--Todo: btnmerken und gemerkt: je nachdem anderes icon
                 - siehe auch Festivalübersicht, hier gemerkt, dann stimmts überein-->
 
-                <button class="btnmerken gemerkt">
-                    <svg width="24px" height="23px" viewBox="0 0 24 23" version="1.1"
-                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
-                        <title>detail_merken_filled</title>
-                        <desc>Created with Sketch.</desc>
-                        <defs></defs>
-                        <g  stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                            <g  class="icon__gemerkt"
-                               transform="translate(-12.000000, -12.000000)">
-                                <g transform="translate(12.000000, 12.000000)" >
-                                    <path d="M12.2412,0.9096 L15.2148,7.9476 L22.8276,8.6016 C23.3556,8.6472 23.5704,9.306 23.1696,9.6528 L17.3952,14.6556 L19.1256,22.098 C19.2456,22.6152 18.6852,23.022 18.2316,22.7472 L11.6892,18.8016 L5.1468,22.7472 C4.692,23.0208 4.1328,22.614 4.2528,22.098 L5.9832,14.6556 L0.2076,9.6516 C-0.1932,9.3048 0.0204,8.646 0.5496,8.6004 L8.1624,7.9464 L11.136,0.9096 C11.3424,0.42 12.0348,0.42 12.2412,0.9096 L12.2412,0.9096 Z"></path>
+                <div class="button btnmerken gemerkt">
+                    <p>
+                        <svg width="24px" height="23px" viewBox="0 0 24 23" version="1.1"
+                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+                            <title>detail_merken_filled</title>
+                            <desc>Created with Sketch.</desc>
+                            <defs></defs>
+                            <g  stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g  class="icon__gemerkt"
+                                    transform="translate(-12.000000, -12.000000)">
+                                    <g transform="translate(12.000000, 12.000000)" >
+                                        <path d="M12.2412,0.9096 L15.2148,7.9476 L22.8276,8.6016 C23.3556,8.6472 23.5704,9.306 23.1696,9.6528 L17.3952,14.6556 L19.1256,22.098 C19.2456,22.6152 18.6852,23.022 18.2316,22.7472 L11.6892,18.8016 L5.1468,22.7472 C4.692,23.0208 4.1328,22.614 4.2528,22.098 L5.9832,14.6556 L0.2076,9.6516 C-0.1932,9.3048 0.0204,8.646 0.5496,8.6004 L8.1624,7.9464 L11.136,0.9096 C11.3424,0.42 12.0348,0.42 12.2412,0.9096 L12.2412,0.9096 Z"></path>
+                                    </g>
                                 </g>
                             </g>
-                        </g>
-                    </svg>
-                    <span class="gemerkt">gemerkt</span>
-
-                </button>
-                <button class="btnschwarz">Tickets kaufen</button>
-                <button class="btnweiss">Festival teilen</button>
+                        </svg>
+                        <span class="gemerkt">gemerkt</span>
+                    </p>
+                </div>
+                <div class="button btnschwarz"><p>Tickets kaufen</p></div>
+                <div class="button btnweiss"><p>Festival teilen</p></div>
                 <div class="sponsoring"></div>
 
             </aside>
@@ -792,15 +793,15 @@
 
     <!--Progamm: Übersicht je Tag-->
     <article class="programm">
-        <h2 class="titel-height-1">Line Up</h2>
+        <h2 class="">Line Up</h2>
         <p>1975 fehlen in den meisten Testtexten die Zahlen, weswegen nach TypoGb. 204 § ab dem Jahr 2034 Zahlen in 86
             der Texte zur Pflicht werden. Nichteinhaltung wird mit bis zu 245 €
         </p>
 
-        <button id="freitag" class="btnschwarz"> Freitag<span class="pfeil-unten"></span></button>
+        <div id="freitag" class="button btnschwarz"><p>Freitag</p><div class="pfeil-unten"></div></div>
 
-        <button id="samstag" class="btnweiss">Samstag<span class="pfeil-unten"></span></button>
-        <button id="sonntag" class="btnweiss">Sonntag<span class="pfeil-unten"></span></button>
+        <div id="samstag" class="button btnweiss"><p> Samstag</p> <div class="pfeil-unten"></div></div>
+        <div id="sonntag" class="button btnweiss"><p> Sonntag</p> <div class="pfeil-unten"></div></div>
 
         <!--ein- und ausblenden mit javascript-->
         <div id="show_freitag">
@@ -845,14 +846,14 @@
 
         <article class="nice-to-know">
 
-            <h2 class="titel-height-1">Wissenswertes</h2>
+            <h2 class="">Wissenswertes</h2>
 
             <p class="beschreibung__intro">VAIL® and Wefox™ are testing aussi la Kerning), um die Wirkung in anderen Sprachen zu testen. In Lateinisch sieht zum Beispiel fast jede Schrift gut aus. Quod erat demonstrandum. Seit 1975 fehlen in den meis
             </p>
 
             <div id="accordeon__1">
                 <div class="accordeon__intro">
-            <h3 id="accordeon__close--1" class="titel-height-2">Anreise & Rückreise</h3>
+            <h3 id="accordeon__close--1" class="">Anreise & Rückreise</h3>
 
             <a class="show" href="#accordeon__1">Zusätzliche Infos</a>
             <a class="hide" href="#accordeon__close--1">Weniger Infos</a>
@@ -876,7 +877,7 @@
 
             <div id="accordeon__2">
                 <div class="accordeon__intro">
-                    <h3 id="accordeon__close--2" class="titel-height-2">Einlassregeln</h3>
+                    <h3 id="accordeon__close--2" class="">Einlassregeln</h3>
 
                     <a class="show" href="#accordeon__2">Zusätzliche Infos</a>
                     <a class="hide" href="#accordeon__close--2">Weniger Infos</a>
@@ -892,7 +893,7 @@
 
             <div id="accordeon__3">
                 <div class="accordeon__intro">
-                    <h3 id="accordeon__close--3" class="titel-height-2">Zelten & Naturschutz</h3>
+                    <h3 id="accordeon__close--3" class="">Zelten & Naturschutz</h3>
 
                     <a class="show" href="#accordeon__3">Zusätzliche Infos</a>
                     <a class="hide" href="#accordeon__close--3">Weniger Infos</a>
@@ -908,7 +909,7 @@
 
             <div id="accordeon__4">
                 <div class="accordeon__intro">
-                    <h3 id="accordeon__close--4" class="titel-height-2">Fragen & Antworten</h3>
+                    <h3 id="accordeon__close--4" class="">Fragen & Antworten</h3>
 
                     <a class="show" href="#accordeon__4">Zusätzliche Infos</a>
                     <a class="hide" href="#accordeon__close--4">Weniger Infos</a>
@@ -939,8 +940,8 @@
             <div class="background indie">
                 <div class="outro__festival">
 
-                    <h2 class="titel-height-1">Sei ein Teil von Sur le Lac</h2>
-                    <button class="btnschwarz">Tickets kaufen</button>
+                    <h2 class="">Sei ein Teil von Sur le Lac</h2>
+                    <div class="button btnschwarz"><p>Tickets kaufen</p></div>
                 </div>
 
                 <svg width="20px" height="15px" viewBox="0 0 20 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">

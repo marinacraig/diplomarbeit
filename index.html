@@ -106,7 +106,7 @@
                                     <input type="password" placeholder="Passwort">
                                 </li>
                                 <li>
-                                    <button class="btnweiss">anmelden</button>
+                                    <div class="button btnschwarz"><p>anmelden</p></div>
                                 </li>
                                 <li>
                                     <p><a href="#">Passwort</a> vergessen?</p>
@@ -116,9 +116,9 @@
 
                                 <li>
                                     <p>Neu bei FestivalLovers?</p>
-                                    <p>Jetzt <a href="#">registieren.</a></p>
+                                    <p>Jetzt <a href="#" class="underlined">registieren.</a></p>
 
-
+                                </li>
                                 </li>
 
                             </ul>
@@ -170,7 +170,7 @@
                                             <input type="password" placeholder="Passwort">
                                         </li>
                                         <li>
-                                            <button class="btnweiss">anmelden</button>
+                                            <div class="button btnschwarz"><p>anmelden</p></div>
                                         </li>
                                         <li>
                                             <p><a href="#">Passwort</a> vergessen?</p>
@@ -415,7 +415,7 @@
                                 <input type="password" placeholder="Passwort">
                             </li>
                             <li>
-                                <button class="btnweiss">anmelden</button>
+                                <div class="button btnschwarz"><p>anmelden</p></div>
                             </li>
                             <li>
                                 <p><a href="#">Passwort</a> vergessen?</p>
@@ -477,7 +477,7 @@
                                         <input type="password" placeholder="Passwort">
                                     </li>
                                     <li>
-                                        <button class="btnweiss">anmelden</button>
+                                        <div class="button btnschwarz"><p>anmelden</p></div>
                                     </li>
                                     <li>
                                         <p><a href="#">Passwort</a> vergessen?</p>
@@ -512,12 +512,12 @@
     <!-- Musikrichtung-->
     <article id="musikrichtung" class="musikrichtung">
         <!--eigentlich gehört hier SEO h1 hin -> class h2 wegen Schriftgrösse-->
-        <h1 class="titel-height-2">Auf welche Musik stehst du?</h1>
+        <h1 class="">Auf welche Musik stehst du?</h1>
         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
         </p>
-        <button class="btnschwarz item__hidden--button" id="filter_anzeigen">Filter anzeigen</button>
+        <div class="button btnschwarz item__hidden--button" id="filter_anzeigen">Filter anzeigen</div>
         <div class="item item__hidden--buttons">
-            <button class="btngrau btngrau__jazz">
+            <div class=" button btngrau btngrau__jazz">
                 <svg class="icon icon__music" viewBox="0 0 20 18" version="1.1" xmlns="http://www.w3.org/2000/svg"
                      xmlns:xlink="http://www.w3.org/1999/xlink">
                     <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
@@ -534,8 +534,8 @@
                     </g>
                 </svg>
                 <p>Jazz<span class="results">27</span></p>
-            </button>
-            <button class="btngrau btngrau__hiphop">
+            </div>
+            <div class="button btngrau btngrau__hiphop">
                 <svg class="icon icon__music" viewBox="0 0 20 23" version="1.1" xmlns="http://www.w3.org/2000/svg"
                      xmlns:xlink="http://www.w3.org/1999/xlink">
                     <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
@@ -551,8 +551,10 @@
                         </g>
                     </g>
                 </svg>
-                <p>HipHop<span class="results">33</span></button>
-            <button class="btngrau btngrau__indie">
+                <p>HipHop<span class="results">33</span></div>
+
+
+            <div class="button btngrau btngrau__indie">
                 <svg class="icon icon__music" viewBox="0 0 20 15" version="1.1" xmlns="http://www.w3.org/2000/svg"
                      xmlns:xlink="http://www.w3.org/1999/xlink">
                     <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
@@ -568,8 +570,8 @@
                         </g>
                     </g>
                 </svg>
-                <p>Indie<span class="results">25</span></p></button>
-            <button class="btngrau btngrau__poprock">
+                <p>Indie<span class="results">25</span></p></div>
+            <div class="button btngrau btngrau__poprock">
                 <svg class="icon  icon__music" viewBox="0 0 24 19" version="1.1" xmlns="http://www.w3.org/2000/svg"
                      xmlns:xlink="http://www.w3.org/1999/xlink">
                     <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
@@ -585,8 +587,8 @@
                         </g>
                     </g>
                 </svg>
-                <p>Pop & Rock<span class="results">18</span></p></button>
-            <button class="btngrau btngrau__electronic active">
+                <p>Pop & Rock<span class="results">18</span></p></div>
+            <div class="button btngrau btngrau__electronic active">
                 <svg class="icon  icon__music" viewBox="0 0 20 16" version="1.1" xmlns="http://www.w3.org/2000/svg"
                      xmlns:xlink="http://www.w3.org/1999/xlink">
                     <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
@@ -602,12 +604,12 @@
                         </g>
                     </g>
                 </svg>
-                <p>Electronic<span class="results">43</span></p></button>
+                <p>Electronic<span class="results">43</span></p></div>
 
-            <button class="btnunterstrichen">Mehr Genres</button>
+            <div class="button btnunterstrichen">Mehr Genres</div>
             <br>
-            <button class="btnweiss">Filter zurücksetzen</button>
-            <button class="btnschwarz">Ergebnis anzeigen</button>
+            <div class="button btnweiss"><p>Filter zurücksetzen</p></div>
+            <div  class="button btnschwarz"><p>Ergebnis anzeigen</p></div>
         </div>
     </article>
 
@@ -709,7 +711,7 @@
 
         </div>
         <a href="#">
-            <button class="btnweiss">Mehr anzeigen</button>
+            <div class="button btnweiss"><p>Mehr anzeigen</p></div>
         </a>
 
     </article>
@@ -749,7 +751,7 @@
         <div class="entdeckungen__music entdeckungen__music--electronic"></div>
 
         <a href="#">
-            <button class="btnweiss">Mehr Samples</button>
+            <div class="button btnweiss"><p>Mehr Samples</p></div>
         </a>
     </article>
 
@@ -1049,7 +1051,7 @@
         </div>
         <div class="news__content--button">
             <a href="#">
-                <button class="btnweiss">Mehr Anzeigen</button>
+                <div class="button btnweiss"><p>Mehr Anzeigen</p></div>
             </a>
         </div>
     </article>
