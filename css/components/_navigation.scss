@@ -28,6 +28,9 @@ nav {
   a {
     text-decoration: none;
   }
+  ul{
+    width: 100%;
+  }
 
   li {
     list-style-type: none;
@@ -35,22 +38,24 @@ nav {
     display: flex;
 
     }
- //Abstand
- .nav__login, .nav__ticket, .nav__menu {
+  //Abstand
+
+  .nav__login, .nav__ticket, .nav__menu {
     p{
-      margin: auto 1em auto 0;
+      margin: 0;
     }
   }
 
 
-  .nav__festivallovers{
 
+  .nav__festivallovers{
+/*nur ab desktop
     &--1{
       margin-left: 1em;
     }
     &--2{
       margin-right: 1em;
-    }
+    }*/
     .icon__nav--herz{
       fill:$schwarz_hex;
     }
@@ -120,11 +125,26 @@ nav {
 @media screen and (min-width : 376px) {
   nav {
 
-  }
-}
 
-// weil mich die Schrift in der Navi stört noch ein zusätzlicher Breakpoint
-@media screen and (min-width : 450px) {
+    .nav__festivallovers{
+     min-font-size: 0,5em; //hoffnung wird kleiner
+      max-width: 50%;
+          &--1{
+            margin-left: 4px;
+          }
+          &--2{
+            margin-right: 4px;
+          }
+    }
+
+
+
+  }
+
+  }
+
+//zusätzlicher Breakpoint weil es mich sonst stressed
+@media screen and (min-width : 484px) {
   nav {
     .item {
       .nav__display--tablet.item__hidden {
@@ -133,6 +153,7 @@ nav {
     }
   }
 }
+
 
 //laptop
 @media screen and (min-width : 769px) {
@@ -143,8 +164,19 @@ nav {
     li {
      //padding-left: 32px;
     }
-    .container {
+    .nav__login, .nav__ticket, .nav__menu {
+      p{
+        margin: auto 20px auto 0;
+      }
+    }
+    .nav__festivallovers{
 
+      &--1{
+        margin-left: 20px;
+      }
+      &--2{
+        margin-right: 20px;
+      }
     }
     .item {
       .nav__display--desktop.item__hidden {

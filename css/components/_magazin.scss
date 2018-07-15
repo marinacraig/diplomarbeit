@@ -15,6 +15,7 @@
 
 .magazin__content {
   border-bottom: $grauF0_hex solid 1px;
+  padding-bottom: 1em;
   width: 100%;
   .item__hidden{
     display: inline;
@@ -43,6 +44,7 @@
   .magazin__content--mehr:checked ~ .magazin__content--weniger:before {
     content: 'WENIGER';
   }
+
 }
 
 
