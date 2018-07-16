@@ -32,11 +32,13 @@
       }
       &__kacheln{
         grid-column:3;
-        justify-self: end;
+        //justify-self: end;
+        //align-self: end;
       }
       &__liste{
         grid-column:4;
-        justify-self: end;
+        //justify-self: end;
+        //align-self: end;
       }
 
       p, svg {
@@ -62,7 +64,7 @@
       display:grid;
       grid-template-columns: auto 50px;
       grid-template-rows: 48px auto auto auto;
-      justify-items: center;
+      //justify-items: center;
       align-items: center;
     }
 
@@ -112,6 +114,10 @@
           grid-column-end: 3;
           grid-row: 1;
 
+          svg {
+            margin: 12px auto;
+          }
+
           &--jazz {
             background-color: $gelb_hex;
             text-align: center;
@@ -141,6 +147,9 @@
           grid-column-start: 1;
           grid-column-end: 3;
           grid-row: 2;
+          h3 {
+            margin: 0;
+          }
         }
         &__detail {
           &--ort{
@@ -213,7 +222,7 @@
         //display:inline-grid;
         grid-template-columns: 104px auto 25% 20%;//statt 20 müssten es über 30 sein
         grid-template-rows: 50% 50%;
-        justify-items: center;
+        //justify-items: center;
         align-items: center;
       }
 
@@ -279,6 +288,7 @@
             grid-row-end: 3;
             align-self: center;
 
+
           }
           &__detail {
             width: 100%;
@@ -302,26 +312,30 @@
             grid-column: 4;
             grid-row-start: 1;
             grid-row-end: 3;
-            width: 100%;
-            max-width: 100%;
+            //width: 100%;
+            //max-width: 100%;
             align-self: center;
-            padding: auto 0;
+            //padding: auto;
 
-
+p{
+  display: inline-block;
+  align-self: center;
+  padding: 0 12px;
 
             svg{
               //padding: auto;
-              align-self: center;
-              min-height: 1em;
-              display:inline-block;
+             // align-self: center;
+              height: 23px;
+              width: auto;
             }
 
             .merken, .gemerkt{
-              display: inline-block;
               //padding: 12px 12px 0;
-              align-self: center;
+              //align-self: center;
+              width: 100%;
 
             }
+          }
           }
         }
 
@@ -353,9 +367,9 @@
         //width soll ausgenützt werden
         //width: calc(100vw - 240px);
         //display:inline-grid;
-        grid-template-columns: 15% 104px auto 15% 15% 15%; //statt 25 eigentlich 33fr
+        grid-template-columns: 15% 104px auto 15% 15% 19%; //statt 25 eigentlich 33fr
         grid-template-rows: 52px 52px;
-        justify-items: center;
+        //justify-items: center;
         align-items: center;
 
       }
@@ -412,9 +426,24 @@
             grid-row-start: 1;
             grid-row-end: span 2;
 
-            .merken, .gemerkt{
-              //padding-bottom: 12px;
+            p {
+              display: inline-flex;
+              align-self: center;
+
+
+              svg{
+                //padding: auto;
+                // align-self: center;
+                height: 35px;
+                width: 36px;
+                margin: 0 12px;
+              }
+              .merken, .gemerkt{
+                //padding-bottom: 12px;
+              }
             }
+
+
           }
         }
 

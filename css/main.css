@@ -623,7 +623,6 @@ nav {
 
 @media screen and (min-width: 376px) {
   nav .nav__festivallovers {
-    min-font-size: 0,5em;
     max-width: 50%; }
     nav .nav__festivallovers--1 {
       margin-left: 4px; }
@@ -776,7 +775,6 @@ footer {
     align-items: center;
     align-content: center;
     margin-left: 12px;
-    padding: auto;
     height: 20px;
     width: 20px;
     border-radius: 50%;
@@ -867,8 +865,7 @@ id's dürfen nur einmal vergeben werden, da mehrere Akkordions: hochzählen
     margin: 0 24px; }
   .magazin__content {
     border-bottom: none;
-    flex-basis: 43%;
-    align-self: self-start; }
+    flex-basis: 43%; }
     .magazin__content .item__hidden {
       display: none; }
   .magazin__content--mehr ~ .magazin__content--inhalt .magazin__content--text {
@@ -924,7 +921,6 @@ id's dürfen nur einmal vergeben werden, da mehrere Akkordions: hochzählen
       margin: 8px;
       max-width: 100%;
       width: 221px;
-      padding: auto;
       /*  tablet und desktop: margin:8px;
         masse wie .news__content--image
         max-height:65.15837104%;
@@ -959,11 +955,9 @@ id's dürfen nur einmal vergeben werden, da mehrere Akkordions: hochzählen
       .festivaluebersicht__filter .filternavigation .filter__liste {
         grid-column: 2; }
       .festivaluebersicht__filter .filternavigation .filter__kacheln {
-        grid-column: 3;
-        justify-self: end; }
+        grid-column: 3; }
       .festivaluebersicht__filter .filternavigation .filter__liste {
-        grid-column: 4;
-        justify-self: end; }
+        grid-column: 4; }
       .festivaluebersicht__filter .filternavigation .filter p, .festivaluebersicht__filter .filternavigation .filter svg {
         display: inline;
         margin: 0; }
@@ -976,7 +970,6 @@ id's dürfen nur einmal vergeben werden, da mehrere Akkordions: hochzählen
       display: grid;
       grid-template-columns: auto 50px;
       grid-template-rows: 48px auto auto auto;
-      justify-items: center;
       align-items: center; }
     .festivaluebersicht__filter .festival__list li {
       width: 100%;
@@ -1001,6 +994,8 @@ id's dürfen nur einmal vergeben werden, da mehrere Akkordions: hochzählen
         grid-column-start: 1;
         grid-column-end: 3;
         grid-row: 1; }
+        .festivaluebersicht__filter .festival__list--item .filter__music svg {
+          margin: 12px auto; }
         .festivaluebersicht__filter .festival__list--item .filter__music--jazz {
           background-color: #FDD835;
           text-align: center; }
@@ -1021,6 +1016,8 @@ id's dürfen nur einmal vergeben werden, da mehrere Akkordions: hochzählen
         grid-column-start: 1;
         grid-column-end: 3;
         grid-row: 2; }
+        .festivaluebersicht__filter .festival__list--item .filter__name h3 {
+          margin: 0; }
       .festivaluebersicht__filter .festival__list--item .filter__detail--ort {
         padding-left: 8px;
         grid-column-start: 1;
@@ -1052,7 +1049,6 @@ id's dürfen nur einmal vergeben werden, da mehrere Akkordions: hochzählen
       max-width: 100%;
       grid-template-columns: 104px auto 25% 20%;
       grid-template-rows: 50% 50%;
-      justify-items: center;
       align-items: center; }
     .festivaluebersicht__filter .festival__list--jazz {
       border-right: #FDD835 4px solid;
@@ -1114,17 +1110,16 @@ id's dürfen nur einmal vergeben werden, da mehrere Akkordions: hochzählen
           grid-column: 4;
           grid-row-start: 1;
           grid-row-end: 3;
-          width: 100%;
-          max-width: 100%;
-          align-self: center;
-          padding: auto 0; }
-          .festivaluebersicht__filter .festival__list--item .filter__merken svg, .festivaluebersicht__filter .festival__list--item .filter__gemerkt svg {
-            align-self: center;
-            min-height: 1em;
-            display: inline-block; }
-          .festivaluebersicht__filter .festival__list--item .filter__merken .merken, .festivaluebersicht__filter .festival__list--item .filter__merken .gemerkt, .festivaluebersicht__filter .festival__list--item .filter__gemerkt .merken, .festivaluebersicht__filter .festival__list--item .filter__gemerkt .gemerkt {
+          align-self: center; }
+          .festivaluebersicht__filter .festival__list--item .filter__merken p, .festivaluebersicht__filter .festival__list--item .filter__gemerkt p {
             display: inline-block;
-            align-self: center; }
+            align-self: center;
+            padding: 0 12px; }
+            .festivaluebersicht__filter .festival__list--item .filter__merken p svg, .festivaluebersicht__filter .festival__list--item .filter__gemerkt p svg {
+              height: 23px;
+              width: auto; }
+            .festivaluebersicht__filter .festival__list--item .filter__merken p .merken, .festivaluebersicht__filter .festival__list--item .filter__merken p .gemerkt, .festivaluebersicht__filter .festival__list--item .filter__gemerkt p .merken, .festivaluebersicht__filter .festival__list--item .filter__gemerkt p .gemerkt {
+              width: 100%; }
     .festivaluebersicht__filter .item__hidden {
       display: inline; } }
 
@@ -1133,9 +1128,8 @@ id's dürfen nur einmal vergeben werden, da mehrere Akkordions: hochzählen
     padding: 0 120px; }
     .festivaluebersicht__filter .festival__list ul {
       height: 104px;
-      grid-template-columns: 15% 104px auto 15% 15% 15%;
+      grid-template-columns: 15% 104px auto 15% 15% 19%;
       grid-template-rows: 52px 52px;
-      justify-items: center;
       align-items: center; }
     .festivaluebersicht__filter .festival__list--item {
       text-align: start; }
@@ -1167,6 +1161,13 @@ id's dürfen nur einmal vergeben werden, da mehrere Akkordions: hochzählen
         grid-column: 6;
         grid-row-start: 1;
         grid-row-end: span 2; }
+        .festivaluebersicht__filter .festival__list--item .filter__merken p, .festivaluebersicht__filter .festival__list--item .filter__gemerkt p {
+          display: inline-flex;
+          align-self: center; }
+          .festivaluebersicht__filter .festival__list--item .filter__merken p svg, .festivaluebersicht__filter .festival__list--item .filter__gemerkt p svg {
+            height: 35px;
+            width: 36px;
+            margin: 0 12px; }
     .festivaluebersicht__filter .item__hidden--tablet {
       display: inline; } }
 
@@ -1486,8 +1487,6 @@ id's dürfen nur einmal vergeben werden, da mehrere Akkordions: hochzählen
 a {
   text-decoration: none;
   color: #000; }
-  a .underlined {
-    text-underline: #000; }
 
 p {
   margin-bottom: 1em; }
