@@ -1369,6 +1369,15 @@ id's dürfen nur einmal vergeben werden, da mehrere Akkordions: hochzählen
   max-width: 1440px;
   width: 100%; }
 
+.map {
+  /* Optional: Makes the sample page fill the window. */ }
+  .map #map {
+    height: 100%; }
+  .map html, .map body {
+    height: 100%;
+    margin: 0;
+    padding: 0; }
+
 .beschreibung p {
   margin-top: 2.2em; }
 
