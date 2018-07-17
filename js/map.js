@@ -5,11 +5,12 @@ key=API_KEY (=API Schlüssel:)
 
 AIzaSyDc_-zGaTkngPM2I0zlbMFUXi67n93Gxw8
 
+Doku: https://developers.google.com/maps/documentation/javascript/examples/icon-simple?hl=de
 
  */
 function initMap() {
     let map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 14,
+        zoom: 12,
         center: {lat: 47.44, lng: 9.46}
     });
 

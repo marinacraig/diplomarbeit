@@ -1,10 +1,17 @@
-#map {
-    height: 100%;
+.nice-to-know{
+
+  #map {
+    //height: 100%;
+    width: 100%;
+    height: 400px;
+
   }
   /* Optional: Makes the sample page fill the window. */
-  html, body {
+/*  html, body {
     height: 100%;
     margin: 0;
     padding: 0;
 
-  }
+  }*/
+}
+

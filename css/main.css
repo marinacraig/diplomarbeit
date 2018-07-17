@@ -785,6 +785,18 @@ footer {
       align-self: center;
       margin: 3px; }
 
+.nice-to-know {
+  /* Optional: Makes the sample page fill the window. */
+  /*  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+  }*/ }
+  .nice-to-know #map {
+    width: 100%;
+    height: 400px; }
+
 /*
 Funktionalität:
 id's dürfen nur einmal vergeben werden, da mehrere Akkordions: hochzählen
@@ -1368,15 +1380,6 @@ id's dürfen nur einmal vergeben werden, da mehrere Akkordions: hochzählen
   height: 392px;
   max-width: 1440px;
   width: 100%; }
-
-.map {
-  /* Optional: Makes the sample page fill the window. */ }
-  .map #map {
-    height: 100%; }
-  .map html, .map body {
-    height: 100%;
-    margin: 0;
-    padding: 0; }
 
 .beschreibung p {
   margin-top: 2.2em; }
