@@ -171,9 +171,11 @@
   }
 }
 
-.outro .btnschwarz{
-  border-color: $weiss_hex;
+.outro .btnweiss{
+  border: $weiss_hex 1px solid;
   background-color: transparent;
+  color: $weiss_hex;
+  width: 90%;
 }
 
 

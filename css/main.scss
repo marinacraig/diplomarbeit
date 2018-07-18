@@ -28,6 +28,7 @@ html {
 @import "components/footer";
 @import "components/breadcrump";
 @import "components/maps";
+@import "components/slider";
 @import "components/accordeon";
 @import "components/musikrichtung";
 @import "components/magazin";
@@ -183,6 +184,27 @@ article, .programm, .festivaluebersicht__filter {
   background-position: center;
   background-size: cover;
 }
+
+
+//slider
+.slick-arrow{
+  &.slick-prev {
+    &:before {
+      background: url("../assets/steuerung_pfeil_links.svg") no-repeat;
+      background-position: center;
+      //Farbe im Original geändert
+    }
+    }
+  &.slick-next {
+
+    &:before {
+      background: url("../assets/steuerung_pfeil_rechts.svg") no-repeat;
+      background-position: center;
+      //Farbe im Original geändert
+    }
+  }
+}
+
 
 
 //tablet
