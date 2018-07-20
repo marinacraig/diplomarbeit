@@ -1,11 +1,19 @@
-//let end_time = document.querySelector('#remaining-time');
+/*
+Überlegung: eigentlich wird das Startdatum des Festivals mit dem Festival
+erfasst
+- es macht keinen Sinn das Datum aus dem HTML zu nehmen
+- das Datum soll von der Festival-Klasse kommen
+- da aktuell keine solche Klasse existiert, macht es wenig Sinn hier herum zu basteln
 
 
-//Startdatum Festival ist das Enddatum für den Countdown: aktuell ohne this, festival - js - class fehlt
+Annahmen:
+- mehr als 60 Tage: Zeige Datum
+- Dazwischen: Countdown
+- danach: Datum
 
-//let end_time = '30.09.2018'
-
-//console.log(end_time)
+Da aktuell dieser Teil einfach funktionieren soll, quick & dirty Variante
+weiter unten wird countdown('mm/dd/yyyy hh/mm/ss AM') angepasst
+ */
 
 
 function countdown(endDate) {
@@ -37,27 +45,28 @@ function countdown(endDate) {
 
             seconds = parseInt(timeRemaining);
 
-            if(parseInt(days, 10) >= 2) {
+            if (parseInt(days, 10) >= 60) {
+                document.getElementById("remaining-time").innerHTML = value
+            }
+
+            else if(parseInt(days, 10) >= 2) {
                 document.getElementById("remaining-time").innerHTML = parseInt(days, 10) + " Tage";
-            }else{
+            }else {
                 if(("0" + hours).slice(-2) >= 2){
                     document.getElementById("remaining-time").innerHTML = ("0" + hours).slice(-2) +':'+ ("0" + minutes).slice(-2) + " Stunden";
                 } else if(("0" + hours).slice(-2) < 1){
                     document.getElementById("remaining-time").innerHTML = ("0" + minutes).slice(-2) + " Minuten";
+                } else {
+                    document.getElementById("remaining-time").innerHTML = value
                 }
             }
 
-            // document.getElementById("hours").innerHTML = ("0" + hours).slice(-2) + " Stunden";
-           // document.getElementById("minutes").innerHTML = ("0" + minutes).slice(-2) + "Minuten";
-           // document.getElementById("seconds").innerHTML = ("0" + seconds).slice(-2);
-        } else {
-            return;
         }
     }
 }
 
 
-//hier kommt die Zeit rein dd/mm/yyyy hh/mm/ss AM oder PM
+//hier kommt die Zeit rein countdown('mm/dd/yyyy hh/mm/ss AM')
 (function () {
     countdown('09/30/2018 11:00:00 AM');
 }());
