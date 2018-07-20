@@ -39,13 +39,15 @@
     li {
       padding: 12px;
       display: block;
+      border-left: transparent;
+
       p {
         color: $weiss_hex;
         font-weight: normal;
         text-align: center;
         padding-bottom: 4px;
 
-        > a {
+         a {
           text-decoration: underline;
           border-bottom: $weiss_hex;
           font-weight: bold;
@@ -56,17 +58,19 @@
     }
 
     .horizontal-line {
-      width: 100%;
+      padding: 0 -12px;
       border-bottom: $weiss_hex 1px solid;
     }
 
-
+    button {
+      margin:12px 0 0 0;
+    }
     input {
       height: 48px;
       max-width: 100%;
       background-color: $weiss_hex;
       width: 343px;
-      margin-top: 8px;
+      margin: 8px 0;
       padding-left: 12px;
       color: $schwarz_hex;
 

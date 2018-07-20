@@ -93,6 +93,7 @@ nav {
     &:hover {
       background-color: $grauC2_hex;
       color: $schwarz_hex;
+
       .icon__nav--login, .icon__nav--ticket {
         fill: $schwarz_hex;
       }

@@ -55,7 +55,9 @@
 
   //die verschiedenen Filter für countdown, tickets etc
   .filter {
-    padding-top: 0;
+    p{
+      margin:0;
+    }
     .filter__festival {
       height: 136px; //tablet und desktop= 264px
       width: 100%; // bei Tablet 50% dann 25%
@@ -63,14 +65,20 @@
       text-transform: uppercase;
       text-align: center;
 
+
+
       .filter__name {
-        padding-top: 20px;
+        padding-top: 24px;
+        height: calc(136px / 2);
+        margin: auto 0;
 
       }
 
       .filter__anzahl {
         font-weight: bold;
         font-size: 1.2em;
+        height: calc(136px / 2);
+
       }
     }
     .jazz {
@@ -306,7 +314,11 @@
         font-size: 1.5em;
 
         .filter__name {
-          padding-top: 52px;
+          padding-top: 56px;
+          height: calc(264px / 2);
+        }
+        .filter__anzahl {
+          height: calc(264px / 2);
         }
       }
     }

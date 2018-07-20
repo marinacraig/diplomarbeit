@@ -22,8 +22,7 @@
 
             <ul class="nav container nav__top nav__top--overlay">
                 <li class="nav nav__menu item">
-                    <!--Todo: Eventlistener statt inline fkt onclick-->
-                    <p class="closebtn container" onclick="closeNav()">
+                    <p class="closebtn container" id="closeNav">
 
                         <svg class="icon icon__nav icon__nav--menu" width="24px" height="24px" viewBox="0 0 24 24"
                              version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -100,25 +99,24 @@
                                 </li>
 
                                 <li>
-                                    <input type="email" placeholder="E-Mail Adresse">
-                                </li>
-                                <li>
-                                    <input type="password" placeholder="Passwort">
-                                </li>
-                                <li>
-                                    <div class="button btnschwarz"><p>anmelden</p></div>
+
+                                    <form>
+                                        <input type="email" placeholder="E-Mail Adresse" autocomplete="section-blue shipping">
+
+                                        <input type="password" placeholder="Passwort" autocomplete="section-blue shipping">
+
+                                        <button type="submit" class="button btnschwarz">anmelden</button>
+                                    </form>
                                 </li>
                                 <li>
                                     <p><a href="#">Passwort</a> vergessen?</p>
                                 </li>
-
                                 <li class="horizontal-line"></li>
-
                                 <li>
                                     <p>Neu bei FestivalLovers?</p>
-                                    <p>Jetzt <a href="#" class="underlined">registieren.</a></p>
+                                    <p>Jetzt <a href="#">registieren.</a></p>
 
-                                </li>
+
                                 </li>
 
                             </ul>
@@ -332,7 +330,7 @@
 
         <ul class="nav container nav__top nav__top--original">
             <li class="nav nav__menu item">
-                <p class="container" onclick="openNav()">
+                <p class="container" id="openNav">
                     <svg class="icon icon__nav icon__nav--menu" width="24px" height="19px" viewBox="0 0 24 19"
                          version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                         <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
@@ -389,7 +387,7 @@
                                 <desc>Created with Sketch.</desc>
                                 <defs></defs>
                                 <g  stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                    <g class="icon__nav--login" 
+                                    <g class="icon__nav--login"
                                        transform="translate(-12.000000, -12.000000)" >
                                         <g transform="translate(12.000000, 12.000000)" >
                                             <path d="M11.99968,0 C5.37256,0 8e-05,5.37264 8e-05,11.99976 C8e-05,18.62672 5.37256,23.99976 11.99968,23.99976 C18.6268,23.99976 23.99968,18.62672 23.99968,11.99976 C23.99968,5.37248 18.6268,0 11.99968,0 L11.99968,0 Z M12.03624,17.66104 L12.03624,17.66088 L11.96296,17.66088 L6.8372,17.66088 C6.8372,13.9124 10.12936,13.91328 10.85992,12.93312 L10.94352,12.48616 C9.91712,11.966 9.19256,10.71192 9.19256,9.2452 C9.19256,7.31288 10.44952,5.74616 11.99968,5.74616 C13.54984,5.74616 14.8068,7.31288 14.8068,9.2452 C14.8068,10.69944 14.09512,11.94568 13.0824,12.47408 L13.1776,12.982 C13.97912,13.91464 17.16176,13.97544 17.16176,17.66104 L12.03624,17.66104 L12.03624,17.66104 Z"></path>
@@ -409,13 +407,14 @@
                             </li>
 
                             <li>
-                                <input type="email" placeholder="E-Mail Adresse">
-                            </li>
-                            <li>
-                                <input type="password" placeholder="Passwort">
-                            </li>
-                            <li>
-                                <div class="button btnschwarz"><p>anmelden</p></div>
+
+                            <form>
+                                <input type="email" placeholder="E-Mail Adresse" autocomplete="section-blue shipping">
+
+                                <input type="password" placeholder="Passwort" autocomplete="section-blue shipping">
+
+                                <button type="submit" class="button btnschwarz">anmelden</button>
+                            </form>
                             </li>
                             <li>
                                 <p><a href="#">Passwort</a> vergessen?</p>
@@ -446,7 +445,7 @@
                                 <desc>Created with Sketch.</desc>
                                 <defs></defs>
                                 <g  stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                    <g class="icon__nav--ticket" 
+                                    <g class="icon__nav--ticket"
                                        transform="translate(-12.000000, -13.000000)" >
                                         <g transform="translate(12.000000, 13.000000)" >
                                             <path d="M23.8414118,8.42552941 L22.688549,6.77960784 C22.681451,6.78458824 22.6747451,6.79007843 22.6677255,6.79494118 C21.3627451,7.70937255 19.5636471,7.39219608 18.649451,6.08709804 C17.7352549,4.78223529 18.0522745,2.98301961 19.3574118,2.06890196 C19.3645098,2.06392157 19.3717647,2.05956863 19.3788627,2.05470588 L18.2260392,0.409019608 C17.9483922,0.0125098039 17.4016471,-0.0837254902 17.005098,0.193921569 L12.4452941,3.38803922 L13.4432941,4.81286275 L12.3613333,5.57015686 L11.3636471,4.14568627 L0.373960784,11.8439608 C-0.0227843137,12.1213725 -0.119137255,12.6681569 0.158862745,13.0646667 L5.77423529,21.0811765 C6.05188235,21.4776863 6.59866667,21.5739216 6.99490196,21.2960392 L17.9845098,13.5981961 L16.9989804,12.191098 L18.0808627,11.4333725 L19.0662353,12.8405882 L23.6263137,9.64635294 C24.0224706,9.36843137 24.1190588,8.82188235 23.8414118,8.42552941 L23.8414118,8.42552941 Z M13.1307451,6.61670588 L14.2125882,5.85909804 L15.5077255,7.70760784 L14.4253725,8.46545098 L13.1307451,6.61670588 L13.1307451,6.61670588 Z M16.300902,11.1944314 L15.1063529,9.48937255 L16.1882353,8.73176471 L17.3826275,10.4368235 L16.300902,11.1944314 L16.300902,11.1944314 Z"></path>
@@ -504,7 +503,7 @@
 
 <!--eigentliche Seite-->
 
-<section>
+<main>
     <!--anker für nach oben-->
     <div id="pagetop"></div>
 
@@ -512,7 +511,7 @@
     <!-- Musikrichtung-->
     <article id="musikrichtung" class="musikrichtung">
         <!--eigentlich gehört hier SEO h1 hin -> class h2 wegen Schriftgrösse-->
-        <h1 class="">Auf welche Musik stehst du?</h1>
+        <h1>Auf welche Musik stehst du?</h1>
         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
         </p>
         <div class="button btnschwarz item__hidden--button" id="filter_anzeigen">Filter anzeigen</div>
@@ -1057,7 +1056,7 @@
     </article>
 
 
-</section>
+</main>
 
 <!--footer-->
 

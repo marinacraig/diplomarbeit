@@ -65,9 +65,19 @@ Zeitgründen nicht gefixt.
 Scheint laut Styleguide ein Div bestimmter Höhe und Breite 
 mit Text und Logo zu sein. Zudem ist das "merken" darüber links-bündig.
 Da mir dies nicht gefällt und ich von einem Versehen ausgehe ist es 
-eingemittet und eine Hintergrundfarbe gewählt.
+eingemittet und eine Hintergrundfarbe gewählt.  
+Zudem scheint bei der Desktop Version dieser Teil dauernd mitzuscrollen. 
+Alternativ wäre ein anderer Einzug auf der Rechten Seite vorstellbar, was 
+mir allerdings nicht gefällt. Da dies nicht ganz klar ist, und mich lieber 
+auf andere Task fokussieren möchte, lasse ich es so stehen. 
 
 ###Select mit Tagesprogramm
+
+
+
+###weitere Festivalseiten
+Weitere Einzelübersichten sind zwar vorhanden, jedoch evtl. nicht vollständig. 
+Entweder fehlen Elemente, Links oder Klassenanpassungen der Musikrichtungen. 
  
  
 
