@@ -10,3 +10,22 @@ werden sie gebraucht?
 | countdown | wann es ist, bzw. Datum <br>oder in einem Monat <br>(index.html bei news) | x |  |
 |  |  |  |  |
 |  |  |  |  |
+
+
+
+#Aufbau der Site
+Begonnen wurde mit der Hauptseite. Dann folgte die Festivalübersichtsseite
+und die Einzelansicht. Je Abschnitt wurden Klassen, und wenn nötig 
+ID's, vergeben. Daraufhin wurden die jeweiligen Abschnitte in einem, selten 
+in mehreren (z.B. zusätzlich button oder main) scss files gestyled. 
+Im Rahmen des HTML - Checks wurden aus mehreren articles div, da 
+articles jeweils einen Titel benötigen.  
+Zu Beginn wurde stark auf 
+Barrierefreiheit geachtet (auch Hintergrundbilder mit alt-Text). 
+Irgendwo habe ich in diesem Zusammenhang gelesen, dass man svg's besser 
+direkt in das HTML einbindet, da Screenreader mit diesen umgehen und 
+ Blindengerecht ausgelesen werden können.  Vereinzelt sind svg's 
+ am Ende doch noch via "background-image" eingebunden worden.  
+ Beim Erstellen der Ticket-Seiten bot sich ein Copy-Paste der Festival-
+ Seiten an. Die Stylings waren bereits vorhanden, jedoch stimmen 
+ die Klassennamen nicht immer gleich schön.

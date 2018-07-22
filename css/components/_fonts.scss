@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Bitter|Encode+Sans+Semi+Expanded|Niconne');
 
-
 html {
   font-size: 17px;
 }
@@ -24,36 +23,35 @@ body {
 }
 
 // statt Adelle wird Bitter eingesetzt
-h1, h2, h3, h4, h5, h6, h1, .schriftfestival{
+h1, h2, h3, h4, h5, h6, h1, .schriftfestival {
   font-family: 'Bitter', serif;
 }
 
 h1, h2 {
   font-size: 1.882352941em; //32
   font-weight: bold;
-  margin:40px auto;
+  margin: 40px auto;
 }
 
 h2, h1, h3 {
   font-size: 1.411764706em; //24
   font-weight: bold;
-  margin:32px auto;
+  margin: 32px auto;
 }
 
 h3 {
   font-size: 1.176470588em; //20
   font-weight: bold;
   margin-bottom: 1em; // sieht besser aus
-   //margin:32px auto;
+  //margin:32px auto;
 }
 
 //für grosses Festival
- .schriftfestival {
+.schriftfestival {
   font-size: 2.823529412em; //48
   font-weight: bold;
-  margin:40px auto;
+  margin: 40px auto;
 }
-
 
 //Navigation Schrift von Festival Lovers ist kein Icon bzw. Bild
 .nav__festivallovers {
@@ -65,6 +63,7 @@ h3 {
 header, .button {
   font-weight: bold; //bold laut Schriften, im Nav Design jedoch Regular
 }
+
 //Breadcrumb, Zusatzinfos (Datum, Likes)
 //.results von Musikfilter auf der Startseite
 .nav__breadcrumb, .results {
@@ -76,10 +75,10 @@ p:not(.schriftfestival) {
 }
 
 //tablet
-@media screen and (min-width : 376px) {
+@media screen and (min-width: 376px) {
   h1, h2 {
     font-size: 2.823529412em; //48
-    margin:64px auto;
+    margin: 64px auto;
   }
   h2, h1, h3 {
     font-size: 1.882352941em; //32
@@ -92,28 +91,27 @@ p:not(.schriftfestival) {
   //für grosses Festival
   .schriftfestival {
     font-size: 5.647058824em; //96
-    margin:100px auto;
+    margin: 100px auto;
   }
 }
 
-
 //laptop
-@media screen and (min-width : 769px) {
-  h1, h2  {
+@media screen and (min-width: 769px) {
+  h1, h2 {
     font-size: 3.294117647em; //56
-    margin:80px auto;
+    margin: 80px auto;
   }
   h2, h1, h3 {
-    margin:40px auto;
+    margin: 40px auto;
   }
-  h3{
+  h3 {
     font-size: 1.176470588em; //20
     //margin:32px auto;
   }
   //für grosses Festival
   .schriftfestival {
     font-size: 8.470588235em; //144
-    margin:144px auto;
+    margin: 144px auto;
   }
 
 }

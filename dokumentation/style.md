@@ -18,7 +18,7 @@ hauptsächlich für Fliesstext, Labels, Buttons genutzt.
 Zudem ist keine passende Schrift oder Logoteile für
  Festival Lovers in der Navigation vorhanden. Dort 
  wird eine weitere Google Font
-verwendet.
+verwendet.  
 ###Titel
 Zwar sind h1-h3 im Styleguide definiert, aber sie werden nicht 
 webgerecht umgesetzt. 
@@ -26,7 +26,7 @@ Irgendwie scheinen alle Titel h1 zu sein.
 Nach dem vergeblichen Versuch mit "class xy" gibt es 
 nun Richtige h1, h2 und h3, da dies den Web-Vorgaben entspricht.
 
-##Header und Footer
+##Header und Footer  
 Flexbox wurde im Header und
 Footer verwendet. Daher konnten nicht alle px-Abstände 
 zu 100 % eingehalten werden. Festival-Lovers liegt daher nicht exakt 
@@ -35,6 +35,9 @@ Laut Styleguide ist Header-Schrift bold (s. 6), bei Navigationsbeschreibung
  jedoch nicht. Ich habe mich für bold entschieden.  
  Das Drop-Down vom Login hat laut Bildern einen Abstand. Damit man auch mit der Maus
  die Eingabefelder auswählen kann, wurde dieser entfernt.  
+ Des weiteren wurde 1mal ein Login definiert, welches für alle Devices gilt. 
+ Aufgrund des Buttons bzw. einheitlicher Button Gestaltung unterscheidet sich 
+ dieser von der Vorgabe.
  
 ##Buttons  
 Unterstrichener Button wechselt beim Hover die Farbe, 
@@ -46,12 +49,12 @@ In Nicht-Chrome Browsern kann man die Buttons als solche erkennen.
 Eine Umwandlung in Divs oder Links kommt aus Zeitgründen nicht in Frage, zudem
 merkt man so, dass etwas passiert (sollte) wenn man draufklickt.  
 
-##Hauptseite
-###news und magazin
+##Hauptseite  
+###news und magazin  
 Laut Layout sollte beides mit Maisonry umgesetzt werden. Aus 
 Zeitgründen wurde jedoch nur der news-Teil entsprechend umgesetzt.  
  
-##Festivalübersicht
+##Festivalübersicht  
 Die Texte sind vom padding / margin her anders als im Styleguide, diese sind 
 schlicht zu breit für die jeweiligen Breakpoints. 
 Damit es auf allen Viewports einigermassen anständig aussieht wurde am Ende 
@@ -71,11 +74,12 @@ Alternativ wäre ein anderer Einzug auf der Rechten Seite vorstellbar, was
 mir allerdings nicht gefällt. Da dies nicht ganz klar ist, und mich lieber 
 auf andere Task fokussieren möchte, lasse ich es so stehen. 
 
-###Select mit Tagesprogramm
+###Select mit Tagesprogramm  
 
 
 
-###weitere Festivalseiten
+
+###weitere Festivalseiten  
 Weitere Einzelübersichten sind zwar vorhanden, jedoch evtl. nicht vollständig. 
 Entweder fehlen Elemente, Links oder Klassenanpassungen der Musikrichtungen. 
  

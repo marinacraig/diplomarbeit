@@ -1,32 +1,31 @@
-footer{
+footer {
   color: $grau76_hex;
   max-height: 112px;
   min-height: 64px;
   //width: 100%;
   border: $grauC2_hex 1px solid;
 
-
   a {
     text-decoration: none;
     color: $grau76_hex;
   }
-  .icon__footer{
+  .icon__footer {
     fill: $grau76_hex;
   }
   li {
     list-style-type: none;
 
   }
-  .footer__menu>a {
+  .footer__menu > a {
     //margin: 0 10px;
   }
-  .footer__socialmedia>a, .footer__up>a{
+  .footer__socialmedia > a, .footer__up > a {
 
   }
 
   //flexbox:
 
-  .container{
+  .container {
     display: flex;
     flex-direction: row;
     //tablet desktop flex-wrap: nowrap, gehört rein da mehrzeilig
@@ -37,47 +36,45 @@ footer{
     align-content: center;
   }
   .item {
-    .item__hidden{
+    .item__hidden {
       display: none;
     }
   }
-  .footer__socialmedia{
+  .footer__socialmedia {
     order: 5;
   }
-  .footer__up{
+  .footer__up {
     order: 4;
   }
 
 }
 
-
 //tablet
-@media screen and (min-width : 376px) {
-  footer{
+@media screen and (min-width: 376px) {
+  footer {
 
     padding: 0 24px;
 
-    .container{
+    .container {
       //flex-wrap: nowrap; eingeblendet furchtbar
     }
-    .item{
-      .item__hidden{
+    .item {
+      .item__hidden {
         display: flex;
       }
     }
-    .footer__socialmedia{
+    .footer__socialmedia {
       order: 4;
     }
-    .footer__up{
+    .footer__up {
       order: 5;
     }
   }
 }
 
-
 //laptop
-@media screen and (min-width : 769px) {
-  footer{
+@media screen and (min-width: 769px) {
+  footer {
     padding: 0 120px;
 
   }

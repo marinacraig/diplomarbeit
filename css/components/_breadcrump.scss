@@ -5,9 +5,8 @@
   margin: 8px 0;
   max-width: 100vw;
 
-
   svg {
-    margin:6px;
+    margin: 6px;
   }
 
   //für die Listenelemente (ul):
@@ -20,12 +19,12 @@
     list-style-type: none;
 
     //für die li's teilweise verlinkt
-    .breadcrump, .breadcrump > a  {
+    .breadcrump, .breadcrump > a {
       text-decoration: none;
       color: $grauC2_hex;
-      margin:0 4px; //evtl. erst ab tablet
+      margin: 0 4px; //evtl. erst ab tablet
       align-self: center;
-      display:flex;
+      display: flex;
       align-items: center;
       align-content: center;
 
@@ -37,29 +36,27 @@
 
     //zusätzliche Liste mit jedem einzelnen Festival - ist wie ein Dropdown
 
-
-    .dropdown{
+    .dropdown {
       position: relative;
       list-style-type: none;
       align-self: center;
-      display:flex;
+      display: flex;
       align-items: center;
       align-content: center;
-
 
       a {
         text-decoration: none;
         color: $grauC2_hex;
       }
-        svg{
-          //align-self: center;
-        }
-/*        span{
-          float: left;
-          padding:12px;
-        }*/
+      svg {
+        //align-self: center;
+      }
+      /*        span{
+                float: left;
+                padding:12px;
+              }*/
 
-      li{
+      li {
         height: 48px;
         max-width: 343px; //wie button (selbst entschieden)
         width: 100%;
@@ -69,14 +66,14 @@
           padding-left: 8px;
           max-width: 100%;
           a, p {
-            display:flex;
+            display: flex;
             align-items: center;
             align-content: center;
 
-            .circle{
+            .circle {
               margin-right: 8px;
             }
-            &:hover{
+            &:hover {
               color: $schwarz_hex;
             }
           }
@@ -84,17 +81,17 @@
 
       }
 
-        &:hover{
-          color:$schwarz_hex;
-          li {
-      &:first-child {
-              border: $grauC2_hex 1px solid;
-            }
-          }
-          .dropdown-up{
-            transform: rotate(180deg);
+      &:hover {
+        color: $schwarz_hex;
+        li {
+          &:first-child {
+            border: $grauC2_hex 1px solid;
           }
         }
+        .dropdown-up {
+          transform: rotate(180deg);
+        }
+      }
 
     }
     .dropdown__button {
@@ -111,22 +108,22 @@
 
         background-color: $weiss_hex;
         border: $grauC2_hex 1px solid;
-        padding:12px ;
+        padding: 12px;
 
         list-style-type: none;
-        > a{
+        > a {
           text-decoration: none;
           color: $grauC2_hex;
           display: block;
 
-          &:hover{
-            color:$schwarz_hex;
+          &:hover {
+            color: $schwarz_hex;
 
           }
         }
       }
     }
-    .dropdown:hover .dropdown__content{
+    .dropdown:hover .dropdown__content {
       display: block;
     }
   }
@@ -145,19 +142,19 @@
     transform: rotate(-90deg);
   }
 
-  .circle{
-    display:flex;
+  .circle {
+    display: flex;
     align-items: center;
     align-content: center;
-      margin-left: 12px;
-     // padding: auto;
+    margin-left: 12px;
+    // padding: auto;
     height: 20px;
     width: 20px;
 
     border-radius: 50%;
     border: $grauC2_hex 1px solid;
-    svg{
-      max-height:17px;
+    svg {
+      max-height: 17px;
       max-width: 17px;
       align-self: center;
       margin: 3px;

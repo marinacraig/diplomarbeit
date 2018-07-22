@@ -1,12 +1,11 @@
-
-
 // Navigation weiss, ul li in nav verschachtelt, da diese in der Regel immer anders als andere ul li
-
 @import "login";
+
 ul {
   margin: 0;
   padding: 0;
 }
+
 nav {
   //CSS für Nav mit weissem Hintergrund
   position: fixed;
@@ -14,7 +13,7 @@ nav {
   width: 100%;
 
   //immer sichtbar
-  z-index:10;
+  z-index: 10;
 
   .nav__top {
     height: 64px;
@@ -28,7 +27,7 @@ nav {
   a {
     text-decoration: none;
   }
-  ul{
+  ul {
     width: 100%;
   }
 
@@ -37,27 +36,25 @@ nav {
     height: 100%;
     display: flex;
 
-    }
+  }
   //Abstand
 
   .nav__login, .nav__ticket, .nav__menu {
-    p{
+    p {
       margin: 0;
     }
   }
 
-
-
-  .nav__festivallovers{
-/*nur ab desktop
-    &--1{
-      margin-left: 1em;
-    }
-    &--2{
-      margin-right: 1em;
-    }*/
-    .icon__nav--herz{
-      fill:$schwarz_hex;
+  .nav__festivallovers {
+    /*nur ab desktop
+        &--1{
+          margin-left: 1em;
+        }
+        &--2{
+          margin-right: 1em;
+        }*/
+    .icon__nav--herz {
+      fill: $schwarz_hex;
     }
   }
 
@@ -68,26 +65,23 @@ nav {
 
   }
 
-  .icon__nav--menu{
-    fill:$schwarz_hex;
+  .icon__nav--menu {
+    fill: $schwarz_hex;
   }
 
   .nav__menu:hover {
     color: $grau76_hex;
-    .icon__nav--menu{
-      fill:$grau76_hex;
+    .icon__nav--menu {
+      fill: $grau76_hex;
     }
   }
 
   .nav__login, .nav__ticket {
     text-decoration: none;
     color: $grauC2_hex;
-    > p {
-      border-left: $grauC2_hex 1px solid;
-      height: 100%;
-    }
-    .icon__nav--login, .icon__nav--ticket{
-      fill:$grauC2_hex;
+
+    .icon__nav--login, .icon__nav--ticket {
+      fill: $grauC2_hex;
     }
 
     &:hover {
@@ -98,13 +92,14 @@ nav {
         fill: $schwarz_hex;
       }
     }
-    }
+  }
+  .nav__login > p, .nav__ticket > a {
+    border-left: $grauC2_hex 1px solid;
+    height: 100%;
 
-
-
+  }
 
   @import "overlay";
-
 
   // flexbox:
   .container, .overlay .container {
@@ -123,29 +118,26 @@ nav {
 }
 
 //tablet
-@media screen and (min-width : 376px) {
+@media screen and (min-width: 376px) {
   nav {
 
-
-    .nav__festivallovers{
-     //min-font-size: 0,5em; //hoffnung wird kleiner
+    .nav__festivallovers {
+      //min-font-size: 0,5em; //hoffnung wird kleiner
       max-width: 50%;
-          &--1{
-            margin-left: 4px;
-          }
-          &--2{
-            margin-right: 4px;
-          }
+      &--1 {
+        margin-left: 4px;
+      }
+      &--2 {
+        margin-right: 4px;
+      }
     }
 
-
-
   }
 
-  }
+}
 
 //zusätzlicher Breakpoint weil es mich sonst stressed
-@media screen and (min-width : 484px) {
+@media screen and (min-width: 484px) {
   nav {
     .item {
       .nav__display--tablet.item__hidden {
@@ -155,27 +147,26 @@ nav {
   }
 }
 
-
 //laptop
-@media screen and (min-width : 769px) {
+@media screen and (min-width: 769px) {
   nav {
     .nav__ticket {
       //padding: 0 20px 0 0;
     }
     li {
-     //padding-left: 32px;
+      //padding-left: 32px;
     }
     .nav__login, .nav__ticket, .nav__menu {
-      p{
+      p {
         margin: auto 20px auto 0;
       }
     }
-    .nav__festivallovers{
+    .nav__festivallovers {
 
-      &--1{
+      &--1 {
         margin-left: 20px;
       }
-      &--2{
+      &--2 {
         margin-right: 20px;
       }
     }

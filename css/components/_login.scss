@@ -3,7 +3,6 @@
   display: inline-block;
   height: 100%;
 
-
   ul {
     //muss nach links, kommt sonst direkt darunter
     margin-left: calc(-65vw);
@@ -49,7 +48,7 @@
         text-align: center;
         padding-bottom: 4px;
 
-         a {
+        a {
           text-decoration: underline;
           border-bottom: $weiss_hex;
           font-weight: bold;
@@ -61,7 +60,7 @@
 
     .horizontal-line {
       border-bottom: $weiss_hex 1px solid;
-      padding:0;
+      padding: 0;
       margin: 16px -12px;
     }
 

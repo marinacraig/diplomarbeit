@@ -1,11 +1,10 @@
 //von der Hauptseite, ohne Bilder wegen URL
 .news {
-    //anpassen tablet 24, desktop 120
-    padding-left: 16px;
-    padding-right: 16px;
-    background-color: $grauF0_hex;
-    text-align: center;
-
+  //anpassen tablet 24, desktop 120
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: $grauF0_hex;
+  text-align: center;
 
   &__article {
     text-align: left;
@@ -24,7 +23,6 @@
       width: 221px;
       für tablet: max-width:100%, width: 221px;*/
 
-
     &--content {
       padding: 16px;
       .container {
@@ -39,7 +37,6 @@
   }
 
 }
-
 
 //tablet
 @media screen and (min-width: 376px) {
@@ -89,8 +86,6 @@
       column-count: 5;
       //column-gap: 0;
     }
-
-
 
   }
 }

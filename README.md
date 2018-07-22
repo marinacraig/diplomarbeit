@@ -6,7 +6,7 @@
 Basisdisposition:  
 - [Technologiekonzept](dokumentation/basisdisposition.md) 
 - [über mich](dokumentation/basisdisposition.md)  
-Zeitplan / Meilensteine
+- Zeitplan / Meilensteine
 ([Grob- und Feinkonzept](https://docs.google.com/spreadsheets/d/1eV_7Tlo0QKG4BIn0B93sUNnICly4tzJ4m1kySTdQwCs/edit?usp=sharing))  
 - [Offerte](https://docs.google.com/document/d/1dCjLOwE2s_naJFpOfdwf1nAEW1BeifqMymJoFDwuWrs/edit?usp=sharing)  
 

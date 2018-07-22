@@ -1,40 +1,40 @@
 //MIXINS
 // ADDS A BROWSER PREFIX TO THE PROPERTY
 @mixin css3-prefix($property, $value) {
-    -webkit-#{$property}: #{$value};
-    -khtml-#{$property}: #{$value};
-    -moz-#{$property}: #{$value};
-    -ms-#{$property}: #{$value};
-    -o-#{$property}: #{$value};
-    #{$property}: #{$value};
+  -webkit-#{$property}: #{$value};
+  -khtml-#{$property}: #{$value};
+  -moz-#{$property}: #{$value};
+  -ms-#{$property}: #{$value};
+  -o-#{$property}: #{$value};
+  #{$property}: #{$value};
 }
+
 // TRANSFORM
 @mixin transform($params) {
-    @include css3-prefix('transform', $params);
+  @include css3-prefix('transform', $params);
 }
+
 //CSS FILTERS
 @mixin filter($filter-type,$filter-amount) {
-    -webkit-filter: $filter-type+unquote('(#{$filter-amount})');
-    -moz-filter: $filter-type+unquote('(#{$filter-amount})');
-    -ms-filter: $filter-type+unquote('(#{$filter-amount})');
-    -o-filter: $filter-type+unquote('(#{$filter-amount})');
-    filter: $filter-type+unquote('(#{$filter-amount})');
+  -webkit-filter: $filter-type+unquote('(#{$filter-amount})');
+  -moz-filter: $filter-type+unquote('(#{$filter-amount})');
+  -ms-filter: $filter-type+unquote('(#{$filter-amount})');
+  -o-filter: $filter-type+unquote('(#{$filter-amount})');
+  filter: $filter-type+unquote('(#{$filter-amount})');
 }
+
 // TRANSITION
 @mixin transition($what: all, $length: 1s, $easing: ease-in-out) {
-    @include css3-prefix('transition', $what $length $easing);
+  @include css3-prefix('transition', $what $length $easing);
 }
-
-
-
 
 //ANIMATIONS stuff
 $hover: all, 0.2s, ease-in;
-$slide: all, 0.3s,  cubic-bezier(.55,0,.1,1);
-$slide-delay: all, 0.4s 0.1s,  cubic-bezier(.55,0,.1,1);
-$slide-slow: all, 0.5s,  cubic-bezier(.55,0,.1,1);
-$zoom: all, 1s,  cubic-bezier(.55,0,.1,1);
-$zoom-slow: all, 2.4s,  cubic-bezier(.55,0,.1,1);
+$slide: all, 0.3s, cubic-bezier(.55, 0, .1, 1);
+$slide-delay: all, 0.4s 0.1s, cubic-bezier(.55, 0, .1, 1);
+$slide-slow: all, 0.5s, cubic-bezier(.55, 0, .1, 1);
+$zoom: all, 1s, cubic-bezier(.55, 0, .1, 1);
+$zoom-slow: all, 2.4s, cubic-bezier(.55, 0, .1, 1);
 
 //SLIDER STUFF
 .slider-wrapper {
@@ -47,6 +47,7 @@ $zoom-slow: all, 2.4s,  cubic-bezier(.55,0,.1,1);
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .slick-arrow {
   position: absolute;
   //width: 32px;
@@ -68,24 +69,24 @@ $zoom-slow: all, 2.4s,  cubic-bezier(.55,0,.1,1);
   position: absolute;
   bottom: -40px;
   text-align: center;
-  
+
   li {
-     display: inline-block;
-     vertical-align: middle;
+    display: inline-block;
+    vertical-align: middle;
     margin: 0 6px;
-    
+
     &.slick-active {
       button {
         background-color: $schwarz_hex;
         width: 18px;
         height: 4px;
-        
+
         &:hover {
-        background-color: $grauC2_hex;
+          background-color: $grauC2_hex;
         }
       }
     }
-    
+
     button {
       outline: none;
       display: block;
@@ -97,7 +98,7 @@ $zoom-slow: all, 2.4s,  cubic-bezier(.55,0,.1,1);
       //border-radius: 0;
       cursor: pointer;
       @include transition($hover);
-      
+
       &:hover {
         background-color: $schwarz_hex;
       }
@@ -106,7 +107,7 @@ $zoom-slow: all, 2.4s,  cubic-bezier(.55,0,.1,1);
 }
 
 //von men:
-.gallery{
+.gallery {
   width: 100%;
   padding: 16px 16px 80px 16px; //Tablet 32 und desktop 40 (h2) (plus 40px)
 }
@@ -120,8 +121,8 @@ $zoom-slow: all, 2.4s,  cubic-bezier(.55,0,.1,1);
 */
 
 //tablet
-@media screen and (min-width : 376px) {
-  .slider{
+@media screen and (min-width: 376px) {
+  .slider {
     //nötig damit kein scollbalken  - dafür nun Bilder verschoben
     margin: 0 60px;
   }
@@ -138,7 +139,7 @@ $zoom-slow: all, 2.4s,  cubic-bezier(.55,0,.1,1);
       z-index: 2;
     }
   }
-//slick-arrow: bereits mobile wenn's stimmt
+  //slick-arrow: bereits mobile wenn's stimmt
   .slick-arrow {
 
     &:before {
@@ -179,25 +180,24 @@ $zoom-slow: all, 2.4s,  cubic-bezier(.55,0,.1,1);
       &:hover {
 
         &:after {
-         // opacity: 1;
+          // opacity: 1;
         }
       }
     }
 
   }
   //von men:
-  .gallery{
+  .gallery {
     padding: 32px 24px 100px 24px; //Tablet 32 und desktop 40 (h2) (plus 40px)
   }
 
 }
 
-
 //laptop
-@media screen and (min-width : 769px) {
+@media screen and (min-width: 769px) {
 
   //von men:
-  .gallery{
+  .gallery {
     padding: 40px 60px 120px 60px; //Tablet 32 und desktop 40 (h2) (plus 40px)
 
   }

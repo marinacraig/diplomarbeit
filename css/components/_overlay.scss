@@ -14,17 +14,14 @@
   overflow-x: hidden;
   transition: 0.5s;
 
-
   .icon__nav, .icon__footer, .icon__nav--login, .icon__nav--ticket, .icon__nav--herz {
     fill: $weiss_hex;
   }
 
+  .nav__login, .nav__ticket, .nav__menu, .nav__festivallovers > a {
 
-  .nav__login, .nav__ticket, .nav__menu, .nav__festivallovers > a{
-
-      text-decoration: none;
-      color: $weiss_hex;
-
+    text-decoration: none;
+    color: $weiss_hex;
 
     &:hover {
       color: $schwarz_hex;

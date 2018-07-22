@@ -30,13 +30,13 @@ html {
 @import "components/maps";
 @import "components/slider";
 @import "components/accordeon";
-@import "components/musikrichtung";
 @import "components/magazin";
 @import "components/news";
 @import "components/festivaluebersicht";
 @import "components/intro-outro";
 @import "components/player";
 @import "components/festival";
+@import "components/ticketuebersicht";
 
 #pagetop {
   padding-top: 68px; //nav Höhe = 64px
@@ -44,10 +44,8 @@ html {
 
 a {
   text-decoration: none;
-  color:$schwarz_hex;
+  color: $schwarz_hex;
 }
-
-
 
 //jeder Paragraph hat einen Abstand
 p {
@@ -77,7 +75,6 @@ article, .programm, .festivaluebersicht__filter {
 .musikrichtung, .entdeckungen {
   text-align: center;
 }
-
 
 //entdeckungen - nicht seperat wegen svg-links
 
@@ -177,7 +174,6 @@ article, .programm, .festivaluebersicht__filter {
   background-size: cover;
 }
 
-
 //Platzhalter für video
 .player {
   background-image: url("../images/rsz_platzhalter_player.jpg");
@@ -185,16 +181,15 @@ article, .programm, .festivaluebersicht__filter {
   background-size: cover;
 }
 
-
 //slider
-.slick-arrow{
+.slick-arrow {
   &.slick-prev {
     &:before {
       background: url("../assets/steuerung_pfeil_links.svg") no-repeat;
       background-position: center;
       //Farbe im Original geändert
     }
-    }
+  }
   &.slick-next {
 
     &:before {
@@ -205,15 +200,13 @@ article, .programm, .festivaluebersicht__filter {
   }
 }
 
-
-
 //tablet
 @media screen and (min-width: 376px) {
   .musikrichtung, .festivalmargin {
     margin: 0 24px;
   }
   //jede article trennt sich wie h2
-  article, .programm, .festivaluebersicht__filter  {
+  article, .programm, .festivaluebersicht__filter {
     padding-top: 32px;
     padding-bottom: 32px;
 
@@ -232,7 +225,7 @@ article, .programm, .festivaluebersicht__filter {
   .musikrichtung, .festivalmargin {
     margin: 0 120px;
   }
-  article, .programm, .festivaluebersicht__filter  {
+  article, .programm, .festivaluebersicht__filter {
     padding-top: 40px;
     padding-bottom: 40px;
   }

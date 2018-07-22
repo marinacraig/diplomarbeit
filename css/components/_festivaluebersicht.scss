@@ -1,7 +1,6 @@
 //Styleguide: mindestBreite für Tablet / bwz. Desktop (mind. 1200 ohne Rahmen etc) zu gross -> zusätzlicher Breakpoint
 
-
-.festivaluebersicht__filter   {
+.festivaluebersicht__filter {
   background-color: $grauF0_hex;
   max-width: 100%;
   //evtl. hier: padding:16px; etc. analog Hauptseite
@@ -22,28 +21,28 @@
     .filter {
       color: $grauC2_hex;
       list-style-type: none;
-      margin:6px;
+      margin: 6px;
 
-      &__datum{
+      &__datum {
         grid-column: 1;
       }
-      &__liste{
-        grid-column:2;
+      &__liste {
+        grid-column: 2;
       }
-      &__kacheln{
-        grid-column:3;
+      &__kacheln {
+        grid-column: 3;
         //justify-self: end;
         //align-self: end;
       }
-      &__liste{
-        grid-column:4;
+      &__liste {
+        grid-column: 4;
         //justify-self: end;
         //align-self: end;
       }
 
       p, svg {
         display: inline;
-        margin:0;
+        margin: 0;
       }
 
       &:active {
@@ -61,13 +60,12 @@
       //width soll ausgenützt werden
       //max-width: 100%;
       hyphens: auto;
-      display:grid;
+      display: grid;
       grid-template-columns: auto 50px;
       grid-template-rows: 48px auto auto auto;
       //justify-items: center;
       align-items: center;
     }
-
 
     li {
       //float: left;
@@ -99,8 +97,7 @@
 
     &--item {
       background-color: $weiss_hex;
-      margin-bottom:16px;
-
+      margin-bottom: 16px;
 
       //margin: 8px 0;
 
@@ -109,13 +106,13 @@
 
         &__music {
           //ab tablet height und width 104px
-         // height: 48px;
+          // height: 48px;
           grid-column-start: 1;
           grid-column-end: 3;
           grid-row: 1;
 
           svg {
-            margin: 12px auto;
+            margin: 16px auto;
           }
 
           &--jazz {
@@ -143,23 +140,24 @@
         &__name {
           //margin: 8px;
           //width: 100%;
-          padding: 8px;
+          padding: 12px;
           grid-column-start: 1;
           grid-column-end: 3;
           grid-row: 2;
           h3 {
-            margin: 0;
+            margin: 0.5em 0;
           }
         }
         &__detail {
-          &--ort{
-            padding-left: 8px;
+
+          &--ort {
+            padding-left: 12px;
             grid-column-start: 1;
             grid-column-end: 2;
             grid-row: 3;
           }
-          &--datum{
-            padding:8px;
+          &--datum {
+            padding: 12px;
             grid-column-start: 1;
             grid-column-end: 2;
             grid-row: 4;
@@ -178,6 +176,9 @@
           grid-row: 4;
           grid-column-start: 2;
           grid-column-end: 3;
+          > p {
+            margin: 0;
+          }
 
         }
       }
@@ -200,16 +201,12 @@
   }
 }
 
-
-
-
 //tablet
 @media screen and (min-width: 376px) {
   .festivaluebersicht__filter {
     //evtl. hier: padding:16px; etc. analog Hauptseite
     //laptop margin: 0 120px; tablet: margin: 0 24px;
     padding: 0 24px;
-
 
     // einzelne Festival-Kurzübersicht
     .festival__list {
@@ -220,7 +217,7 @@
         //width soll ausgenützt werden
         //  width: calc(100vw - 68px);
         //display:inline-grid;
-        grid-template-columns: 104px auto 25% 20%;//statt 20 müssten es über 30 sein
+        grid-template-columns: 104px auto 25% 20%; //statt 20 müssten es über 30 sein
         grid-template-rows: 50% 50%;
         //justify-items: center;
         align-items: center;
@@ -254,12 +251,12 @@
         //nicht mobile: .teaser__kachel{}
         .filter {
           height: 100%;
-          padding:0;
-          margin:0;
+          padding: 0;
+          margin: 0;
           border-right: $grauF0_hex 1px solid;
           //justify-self: center;
           //align-self: center;
-          display:flex;
+          display: flex;
           align-items: center;
           align-content: center;
 
@@ -271,14 +268,12 @@
             grid-row-end: 3;
             align-self: center;
 
-
             svg {
-              height: 60px;
+              height: 48px;
               width: auto;
               align-self: center;
               margin: auto;
             }
-
           }
 
           &__name {
@@ -287,7 +282,6 @@
             grid-row-start: 1;
             grid-row-end: 3;
             align-self: center;
-
 
           }
           &__detail {
@@ -317,25 +311,25 @@
             align-self: center;
             //padding: auto;
 
-p{
-  display: inline-block;
-  align-self: center;
-  padding: 0 12px;
+            p {
+              display: inline-block;
+              align-self: center;
+              padding: 0 12px;
 
-            svg{
-              //padding: auto;
-             // align-self: center;
-              height: 23px;
-              width: auto;
+              svg {
+                //padding: auto;
+                // align-self: center;
+                height: 23px;
+                width: auto;
+              }
+
+              .merken, .gemerkt {
+                //padding: 12px 12px 0;
+                //align-self: center;
+                width: 100%;
+
+              }
             }
-
-            .merken, .gemerkt{
-              //padding: 12px 12px 0;
-              //align-self: center;
-              width: 100%;
-
-            }
-          }
           }
         }
 
@@ -358,7 +352,6 @@ p{
     padding: 0 120px;
     //width: 100%;
 
-
     // einzelne Festival-Kurzübersicht
     .festival__list {
 
@@ -378,7 +371,7 @@ p{
         text-align: start;
 
         //nicht mobile:
-        .teaser__liste{
+        .teaser__liste {
           grid-column: 1;
           grid-row-start: 1;
           grid-row-end: span 2;
@@ -395,17 +388,13 @@ p{
             svg {
               height: 60px;
               width: auto;
-
             }
-
           }
 
           &__name {
             grid-column: 3;
             grid-row-start: 1;
             grid-row-end: span 2;
-
-
           }
           &__detail {
 
@@ -430,19 +419,17 @@ p{
               display: inline-flex;
               align-self: center;
 
-
-              svg{
+              svg {
                 //padding: auto;
                 // align-self: center;
                 height: 35px;
                 width: 36px;
                 margin: 0 12px;
               }
-              .merken, .gemerkt{
+              .merken, .gemerkt {
                 //padding-bottom: 12px;
               }
             }
-
 
           }
         }

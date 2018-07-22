@@ -1,13 +1,13 @@
 //intro und outro seperat
 
-.beschreibung{
+.beschreibung {
 
   //Seitenabstand im main.scss
   p {
     margin-top: 2.2em;
   }
 
-  .breadcrump{
+  .breadcrump {
     margin-top: 0;
   }
 
@@ -15,14 +15,14 @@
     //ab tablet:
     //display: inline-flex;
     //float: left;
-  p {
-    margin-top:0;
-  }
-  &--ort {
-    padding: 0 28px;
-    height: 24px;
-  }
-    &--datum{
+    p {
+      margin-top: 0;
+    }
+    &--ort {
+      padding: 0 28px;
+      height: 24px;
+    }
+    &--datum {
       padding: 0 32px;
       height: 24px;
     }
@@ -36,7 +36,7 @@
   //desktop: .btnschwarz, .btnweiss{margin: 8px auto}, btnmerken: display yes
   //entweder Text und logo oder ein Bild mit allem
 
-  .sponsoring{
+  .sponsoring {
     width: 200px;
     height: 153px;
     margin: 0 auto;
@@ -50,34 +50,34 @@
     min-height: 40px; //hack damit unterer Abstand stimmt
   }
 
- .wochentag{
-   display: inline;
-   width: 100%;
-   margin: 2px;
+  .wochentag {
+    display: inline;
+    width: 100%;
+    margin: 2px;
 
-   &__zeit{
-     width: 25%;
-     float: left;
-     min-height: 48px;
-     padding: 4px 8px;
-   }
-   &__band{
-     background-color: $weiss_hex;
-     width: 68%;
-     min-height: 48px;
-     padding: 4px 8px;
+    &__zeit {
+      width: 25%;
+      float: left;
+      min-height: 48px;
+      padding: 4px 8px;
+    }
+    &__band {
+      background-color: $weiss_hex;
+      width: 68%;
+      min-height: 48px;
+      padding: 4px 8px;
 
-     &--1{
-       float: right;
+      &--1 {
+        float: right;
 
-     }
-     &--2{
-       float: right;
-     }
+      }
+      &--2 {
+        float: right;
+      }
 
-   }
- }
-//4px = einheitlich, 3 wäre styleguide näher
+    }
+  }
+  //4px = einheitlich, 3 wäre styleguide näher
   .jazz {
     border-right: $gelb_hex 4px solid;
   }
@@ -108,11 +108,10 @@
   font-weight: bolder;
 }
 
-
 //tablet
 @media screen and (min-width: 376px) {
 
-  .beschreibung{
+  .beschreibung {
 
     //Seitenabstand im main.scss
 
@@ -125,14 +124,14 @@
   .tickets {
     //tablet: btn nebeneinander, sponsoring unten
 
-    .btnschwarz, .btnweiss{
+    .btnschwarz, .btnweiss {
       margin: 8px;
       //todo: nur tablet: nebeneinander, keine Prio
     }
-    .btnmerken{
+    .btnmerken {
       display: none;
     }
-    .sponsoring{
+    .sponsoring {
       max-width: 100%;
       width: 400px;
     }
@@ -144,21 +143,21 @@
       min-height: 64px;
     }
 
-    .wochentag{
+    .wochentag {
       //margin: 2px;
 
-      &__zeit{
+      &__zeit {
         width: 15%;
         margin-right: 16px;
       }
-      &__band{
+      &__band {
         width: 36%;
 
-        &--1{
+        &--1 {
           float: left;
           margin-right: 16px;
         }
-        &--2{
+        &--2 {
           float: left;
         }
 
@@ -172,10 +171,10 @@
 //laptop
 @media screen and (min-width: 769px) {
 
-  .asidemargin{
+  .asidemargin {
     margin-right: -120px;
   }
-  .beschreibung{
+  .beschreibung {
     display: inline-block;
     float: left;
     width: 70%;
@@ -188,18 +187,18 @@
     float: right;
     width: 200px;
     height: 100%;
-    padding:0;
+    padding: 0;
     margin-top: 380px;
-    margin-left:0;
+    margin-left: 0;
 
-    .btnschwarz, .btnweiss{
+    .btnschwarz, .btnweiss {
       margin: 8px auto;
       //todo: nur tablet: nebeneinander
     }
-    .btnmerken{
+    .btnmerken {
       display: inline-flex;
     }
-    .sponsoring{
+    .sponsoring {
       width: 200px;
     }
   }

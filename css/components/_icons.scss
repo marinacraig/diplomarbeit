@@ -4,7 +4,7 @@ svg {
     width: 32px;
     //sind weiter im navigation.scss definiert
   }
-  .icon__breadcrumb{
+  .icon__breadcrumb {
     height: 13px;
     width: 100%;
     fill: $grauC2_hex;
@@ -12,11 +12,12 @@ svg {
 }
 
 //für die Hauptseite
-.musikrichtung{
+.musikrichtung {
   .icon__music {
     height: 17px;
   }
 }
+
 //die farbigen waves auf der Hauptseite
 .entdeckungen {
   .icon__music {
@@ -26,43 +27,45 @@ svg {
     margin: 48px 0; //ggf nochmals anpassen, sieht nach identischem h2-Abstand aus
   }
 
-.icon__music--jazz {
-  fill: $gelb_hex;
-}
+  .icon__music--jazz {
+    fill: $gelb_hex;
+  }
 
-.icon__music--hiphop {
-  fill: $pink_hex;
-}
+  .icon__music--hiphop {
+    fill: $pink_hex;
+  }
 
-.icon__music--indie {
-  fill: $mint_hex;
-}
+  .icon__music--indie {
+    fill: $mint_hex;
+  }
 
-.icon__music--poprock {
-  fill: $blau_hex;
-}
+  .icon__music--poprock {
+    fill: $blau_hex;
+  }
 
-.icon__music--electronic {
-  fill: $violett_hex;
-}
-}
-//für die Festivalübersichtsseite
-.icon__filter{
-  fill:$grauC2_hex;//stimmt das?
-  :active{
-    fill:$schwarz_hex;
+  .icon__music--electronic {
+    fill: $violett_hex;
   }
 }
+
+//für die Festivalübersichtsseite
+.icon__filter {
+  fill: $grauC2_hex; //stimmt das?
+  :active {
+    fill: $schwarz_hex;
+  }
+}
+
 .icon__merken, .icon__gemerkt {
   fill: $schwarz_hex;
 }
 
 //tablet
-@media screen and (min-width : 376px) {
+@media screen and (min-width: 376px) {
 
 }
 
 //laptop
-@media screen and (min-width : 769px) {
+@media screen and (min-width: 769px) {
 
 }
