@@ -50,3 +50,222 @@ body {
   background-color: $weiss_hex;
 }
 
+.programm {
+  .jazz {
+    border-right: $gelb_hex 4px solid;
+  }
+
+  .hiphop {
+    border-right: $pink_hex 4px solid;
+  }
+
+  .indie {
+    border-right: $mint_hex 4px solid;
+  }
+
+  .poprock {
+    border-right: $blau_hex 4px solid;
+  }
+
+  .electronic {
+    border-right: $violett_hex 4px solid;
+  }
+}
+
+.festival__list, .festival__tickets {
+  &--jazz {
+    border-bottom: $gelb_hex 4px solid;
+  }
+  &--hiphop {
+    border-bottom: $pink_hex 4px solid;
+  }
+  &--indie {
+    border-bottom: $mint_hex 4px solid;
+  }
+  &--poprock {
+    border-bottom: $blau_hex 4px solid;
+  }
+  &--electronic {
+    border-bottom: $violett_hex 4px solid;
+  }
+}
+
+.intro, .banner-music, .festival__list--item .filter__music ,.festival__tickets--item .filter__music{
+  .jazz, &__jazz, &--jazz  {
+    background-color: $gelb_hex;
+  }
+
+  .hiphop, &__hiphop, &--hiphop {
+    background-color: $pink_hex;
+  }
+
+  .indie, &__indie , &--indie{
+    background-color: $mint_hex;
+  }
+
+  .poprock, &__poprock, &--poprock {
+    background-color: $blau_hex;
+  }
+
+  .electronic, &__electronic, &--electronic {
+    background-color: $violett_hex;
+  }
+}
+
+.einleitung .filter{
+  .jazz {
+    border: $gelb_hex 1px solid;
+  }
+
+  .hiphop {
+    border: $pink_hex 1px solid;
+  }
+
+  .indie {
+    border: $mint_hex 1px solid;
+  }
+
+  .poprock {
+    border: $blau_hex 1px solid;
+  }
+
+  .electronic {
+    border: $violett_hex 1px solid;
+  }
+}
+
+.einleitung .filter, .abschluss .more {
+  .jazz {
+    background-color: $gelb_hell_hex;
+  }
+
+  .hiphop {
+    background-color: $pink_hell_hex;
+  }
+
+  .indie {
+    background-color: $mint_hell_hex;
+  }
+
+  .poprock {
+    background-color: $blau_hell_hex;
+  }
+
+  .electronic {
+    background-color: $violett_hell_hex;
+  }
+}
+
+
+.festival__tickets, .bestellen__tickets {
+  .total-tickets {
+    color: $grauC2_hex;
+  }
+
+  &--jazz {
+
+    .filter__detail--tickets-verfuegbar {
+      color: $gelb_hex;
+    }
+   .vorhanden {
+        background-color: $gelb_hex;
+      }
+  }
+  &--hiphop {
+
+    .filter__detail--tickets-verfuegbar {
+      color: $pink_hex;
+    }
+.vorhanden {
+        background-color: $pink_hex;
+      }
+
+  }
+  &--indie {
+
+    .filter__detail--tickets-verfuegbar {
+      color: $mint_hex;
+    }
+  .vorhanden {
+        background-color: $mint_hex;
+      }
+
+  }
+  &--poprock {
+
+    .filter__detail--tickets-verfuegbar {
+      color: $blau_hex;
+    }
+.vorhanden {
+        background-color: $blau_hex;
+      }
+  }
+  &--electronic {
+
+    .filter__detail--tickets-verfuegbar {
+      color: $violett_hex;
+    }
+.vorhanden {
+        background-color: $violett_hex;
+      }
+
+  }
+}
+
+//tablet
+@media screen and (min-width: 376px) {
+ .festival__list{
+   //Abschluss-Border
+   &--jazz {
+     border-right: $gelb_hex 4px solid;
+     border-bottom: $gelb_hex 0 solid;
+   }
+   &--hiphop {
+     border-right: $pink_hex 4px solid;
+     border-bottom: $pink_hex 0 solid;
+   }
+   &--indie {
+     border-right: $mint_hex 4px solid;
+     border-bottom: $mint_hex 0 solid;
+   }
+   &--poprock {
+     border-right: $blau_hex 4px solid;
+     border-bottom: $blau_hex 0 solid;
+   }
+   &--electronic {
+     border-right: $violett_hex 4px solid;
+     border-bottom: $violett_hex 0 solid;
+   }
+
+ }
+
+}
+
+
+//laptop
+@media screen and (min-width: 769px) {
+.festival__tickets {
+  //Abschluss-Border
+  &--jazz {
+    border-right: $gelb_hex 4px solid;
+    border-bottom: $gelb_hex 0 solid;
+  }
+  &--hiphop {
+    border-right: $pink_hex 4px solid;
+    border-bottom: $pink_hex 0 solid;
+  }
+  &--indie {
+    border-right: $mint_hex 4px solid;
+    border-bottom: $mint_hex 0 solid;
+  }
+  &--poprock {
+    border-right: $blau_hex 4px solid;
+    border-bottom: $blau_hex 0 solid;
+  }
+  &--electronic {
+    border-right: $violett_hex 4px solid;
+    border-bottom: $violett_hex 0 solid;
+  }
+}
+
+}

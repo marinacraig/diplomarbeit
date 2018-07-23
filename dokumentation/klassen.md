@@ -25,7 +25,8 @@ Barrierefreiheit geachtet (auch Hintergrundbilder mit alt-Text).
 Irgendwo habe ich in diesem Zusammenhang gelesen, dass man svg's besser 
 direkt in das HTML einbindet, da Screenreader mit diesen umgehen und 
  Blindengerecht ausgelesen werden können.  Vereinzelt sind svg's 
- am Ende doch noch via "background-image" eingebunden worden.  
- Beim Erstellen der Ticket-Seiten bot sich ein Copy-Paste der Festival-
- Seiten an. Die Stylings waren bereits vorhanden, jedoch stimmen 
- die Klassennamen nicht immer gleich schön.
+ am Ende doch noch via "background-image" eingebunden worden.   
+ Farben: Die Farben würden eigentlich in das entsprechende scss gehören. Da diese einfacher
+ in den jeweiligen files zu definieren sind, teilweise gleiche Kombinationen für andere
+ Devices zum Einsatz kommen, sowie aus Zeitgründen, wurden diese teilweise doppelt definiert
+ (Bsp. Ticketübersicht und Festivalübersicht).

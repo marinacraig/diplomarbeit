@@ -1,0 +1,145 @@
+.bestellen {
+  max-width: 100vw;
+  .banner-music{
+    height: 104px; //ab Tablet 104px (evtl. doch anders)
+
+    text-align: center;
+
+    svg {
+      height: 48px;
+      width: auto;
+      margin: 28px 0;
+    }
+    .icon__music {
+      fill:$weiss_hex;
+    }
+
+  }
+
+//filter__detail Ort und Datum in festival.scss
+//filter__detail--tickets -> check mit ticketübersicht
+
+  &__tickets{
+    padding: 32px 16px;//padding: 0 24px padding: 40 120px;
+    background-color: $grauF0_hex;
+
+    .icon__ticket {
+      fill: $weiss_hex;
+    }
+
+
+    .vorhanden {
+      color: $weiss_hex;
+      text-align: center;
+      height: 224px;
+
+
+      svg{
+        height: 48px;
+        width: auto;
+        margin: 32px auto 24px;
+      }
+
+      h3 {
+        margin: 12px;
+      }
+    }
+
+    ul {
+      max-width: 100%;
+      width: 343px;
+    }
+
+    li {
+      list-style-type: none;
+    }
+
+
+    .filter__detail{ //gemeinsam 88px
+      //hintergrundfarbe muss genau sein - Ort & Datum
+      &--tickets-verfuegbar {
+        height: 44px; // 65% = 58px;
+        background-color: $weiss_hex;
+      }
+      &--ticket-grafik {
+        height: 44px; // 35% = 30px;
+        background-color: $weiss_hex;
+      }
+    }
+
+    &--variante {
+      height: 88px;
+      display: inline-flex;
+      width: 100%;
+      justify-content: space-evenly;
+      margin-bottom: 16px; //ggf anpassen
+      .plus, .minus{
+        height: 48px;
+        width: 48px;
+        border: $schwarz_hex 1px solid;
+
+        svg {
+          height: 24px;
+          width: 24px;
+        }
+
+        .icon__filter {
+          fill: $schwarz_hex;
+        }
+      }
+    }
+
+    .verkauft {
+      .vorhanden {
+        background-color: $grauC2_hex;
+      }
+      .filter__detail {
+        color:$grauC2_hex;
+      }
+      .bestellen__tickets--variante{
+        color: $grauC2_hex;
+        .plus, .minus {
+          border: $grauC2_hex 1px solid;
+        }
+          .icon__filter {
+            fill: $grauC2_hex;
+          }
+        }
+    }
+  }
+
+}
+
+
+//tablet
+@media screen and (min-width : 376px) {
+  .bestellen__tickets {
+    display: inline-block;
+    padding: 40px 24px;//padding: 0 24px padding: 40 120px;
+    ul {
+      max-width: 46%;
+      min-width: 221px;
+      display: inline-block;
+      margin-left: 12px;
+    }
+
+  }
+
+}
+
+
+//laptop
+@media screen and (min-width : 769px) {
+
+  .bestellen__tickets {
+    display: inline-block;
+    padding: 40px 120px;//padding: 0 24px padding: 40 120px;
+    ul {
+      max-width: 23%;
+      min-width: 221px;
+      display: inline-block;
+      margin-left: 12px;
+    }
+  }
+
+}

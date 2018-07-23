@@ -177,7 +177,9 @@
   border: $weiss_hex 1px solid;
   background-color: transparent;
   color: $weiss_hex;
-  width: 90%;
+  //width: 90%;
+  width: 343px;
+  max-width: 100%;
 }
 
 .item__hidden--buttons {

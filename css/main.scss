@@ -37,9 +37,11 @@ html {
 @import "components/player";
 @import "components/festival";
 @import "components/ticketuebersicht";
+@import "components/ticketbestellen";
+
 
 #pagetop {
-  padding-top: 68px; //nav Höhe = 64px
+  padding-top: 64px; //nav Höhe = 64px
 }
 
 a {
@@ -113,7 +115,7 @@ article, .programm, .festivaluebersicht__filter {
 //article news
 
 //Festival-Einzelansicht
-.beschreibung {
+.beschreibung, .bestellen {
   .filter__detail--ort {
     background: url("../assets/detail_place.svg") no-repeat;
   }
