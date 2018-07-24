@@ -1,0 +1,87 @@
+//identische Grösse wie login und alle Kaufen-Seiten -> siehe _login.scss
+.kaufen__maske {
+  background-color: $weiss_hex;
+  padding: 24px 12px 16px 12px;
+  display: inline-block;
+  p {
+    margin:0;
+  }
+
+
+  .horizontal-line {
+    border-bottom: $schwarz_hex 1px solid;
+    padding:0;
+    margin: 16px -12px;
+  }
+
+  input {
+
+    //background-color: $weiss_hex;
+    // color: $schwarz_hex;
+
+    &:hover {
+      // background-color: $schwarz_hex;
+      //color: $weiss_hex;
+    }
+  }
+
+  .btnschwarz {
+    margin: 18px 0;
+  }
+
+}
+
+.kaufen {
+  text-align: center;
+
+  h1 {
+    color: $weiss_hex;
+  }
+
+  svg {
+    height: 32px; //tablet 48 desktop 56
+    min-width: 80%;
+    margin: 32px;//tablet 48 desktop 56
+    .icon__music {
+      fill: $weiss_hex;
+    }
+  }
+}
+
+.kaufen__zahlen{
+
+}
+
+.kaufen__zahlen--check{
+
+}
+
+.kaufen__danke {
+
+}
+
+
+//tablet
+@media screen and (min-width: 376px) {
+  .kaufen {
+
+    svg {
+      height: 48px; //tablet 48 desktop 56
+      margin: 48px;//tablet 48 desktop 56
+    }
+  }
+
+}
+
+//laptop
+@media screen and (min-width: 769px) {
+  .kaufen {
+
+    svg {
+      height: 56px; //tablet 48 desktop 56
+      margin: 56px;//tablet 48 desktop 56
+    }
+  }
+
+
+}

@@ -50,6 +50,7 @@ body {
   background-color: $weiss_hex;
 }
 
+//border-right
 .programm {
   .jazz {
     border-right: $gelb_hex 4px solid;
@@ -72,6 +73,8 @@ body {
   }
 }
 
+
+//border-bottom
 .festival__list, .festival__tickets {
   &--jazz {
     border-bottom: $gelb_hex 4px solid;
@@ -90,7 +93,9 @@ body {
   }
 }
 
-.intro, .banner-music, .festival__list--item .filter__music ,.festival__tickets--item .filter__music{
+
+//Hintergrund
+.intro, .banner-music, .festival__list--item .filter__music ,.festival__tickets--item .filter__music, .kaufen{
   .jazz, &__jazz, &--jazz  {
     background-color: $gelb_hex;
   }

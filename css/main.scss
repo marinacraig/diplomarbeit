@@ -38,6 +38,7 @@ html {
 @import "components/festival";
 @import "components/ticketuebersicht";
 @import "components/ticketbestellen";
+@import "components/kaufen";
 
 
 #pagetop {
@@ -237,11 +238,6 @@ article, .programm, .festivaluebersicht__filter {
   }
 }
 
-//TV
-@media screen and (min-width: 1441px) {
-  // Todo: Ab 1600 Pixel Breite wächst das Design nicht mehr mit (Ausnahme ist die Linie des Header, die immer über die komplette Viewport Breite geht). Der Inhalt ist zentriert angeordnet.
-
-}
 
 /*
 

@@ -51,19 +51,19 @@ body {
 .festival__list--electronic, .festival__tickets--electronic {
   border-bottom: #5E35B1 4px solid; }
 
-.intro .jazz, .intro__jazz, .intro--jazz, .banner-music .jazz, .banner-music__jazz, .banner-music--jazz, .festival__list--item .filter__music .jazz, .festival__list--item .filter__music__jazz, .festival__list--item .filter__music--jazz, .festival__tickets--item .filter__music .jazz, .festival__tickets--item .filter__music__jazz, .festival__tickets--item .filter__music--jazz {
+.intro .jazz, .intro__jazz, .intro--jazz, .banner-music .jazz, .banner-music__jazz, .banner-music--jazz, .festival__list--item .filter__music .jazz, .festival__list--item .filter__music__jazz, .festival__list--item .filter__music--jazz, .festival__tickets--item .filter__music .jazz, .festival__tickets--item .filter__music__jazz, .festival__tickets--item .filter__music--jazz, .kaufen .jazz, .kaufen__jazz, .kaufen--jazz {
   background-color: #FDD835; }
 
-.intro .hiphop, .intro__hiphop, .intro--hiphop, .banner-music .hiphop, .banner-music__hiphop, .banner-music--hiphop, .festival__list--item .filter__music .hiphop, .festival__list--item .filter__music__hiphop, .festival__list--item .filter__music--hiphop, .festival__tickets--item .filter__music .hiphop, .festival__tickets--item .filter__music__hiphop, .festival__tickets--item .filter__music--hiphop {
+.intro .hiphop, .intro__hiphop, .intro--hiphop, .banner-music .hiphop, .banner-music__hiphop, .banner-music--hiphop, .festival__list--item .filter__music .hiphop, .festival__list--item .filter__music__hiphop, .festival__list--item .filter__music--hiphop, .festival__tickets--item .filter__music .hiphop, .festival__tickets--item .filter__music__hiphop, .festival__tickets--item .filter__music--hiphop, .kaufen .hiphop, .kaufen__hiphop, .kaufen--hiphop {
   background-color: #D81B60; }
 
-.intro .indie, .intro__indie, .intro--indie, .banner-music .indie, .banner-music__indie, .banner-music--indie, .festival__list--item .filter__music .indie, .festival__list--item .filter__music__indie, .festival__list--item .filter__music--indie, .festival__tickets--item .filter__music .indie, .festival__tickets--item .filter__music__indie, .festival__tickets--item .filter__music--indie {
+.intro .indie, .intro__indie, .intro--indie, .banner-music .indie, .banner-music__indie, .banner-music--indie, .festival__list--item .filter__music .indie, .festival__list--item .filter__music__indie, .festival__list--item .filter__music--indie, .festival__tickets--item .filter__music .indie, .festival__tickets--item .filter__music__indie, .festival__tickets--item .filter__music--indie, .kaufen .indie, .kaufen__indie, .kaufen--indie {
   background-color: #00D79F; }
 
-.intro .poprock, .intro__poprock, .intro--poprock, .banner-music .poprock, .banner-music__poprock, .banner-music--poprock, .festival__list--item .filter__music .poprock, .festival__list--item .filter__music__poprock, .festival__list--item .filter__music--poprock, .festival__tickets--item .filter__music .poprock, .festival__tickets--item .filter__music__poprock, .festival__tickets--item .filter__music--poprock {
+.intro .poprock, .intro__poprock, .intro--poprock, .banner-music .poprock, .banner-music__poprock, .banner-music--poprock, .festival__list--item .filter__music .poprock, .festival__list--item .filter__music__poprock, .festival__list--item .filter__music--poprock, .festival__tickets--item .filter__music .poprock, .festival__tickets--item .filter__music__poprock, .festival__tickets--item .filter__music--poprock, .kaufen .poprock, .kaufen__poprock, .kaufen--poprock {
   background-color: #3949AB; }
 
-.intro .electronic, .intro__electronic, .intro--electronic, .banner-music .electronic, .banner-music__electronic, .banner-music--electronic, .festival__list--item .filter__music .electronic, .festival__list--item .filter__music__electronic, .festival__list--item .filter__music--electronic, .festival__tickets--item .filter__music .electronic, .festival__tickets--item .filter__music__electronic, .festival__tickets--item .filter__music--electronic {
+.intro .electronic, .intro__electronic, .intro--electronic, .banner-music .electronic, .banner-music__electronic, .banner-music--electronic, .festival__list--item .filter__music .electronic, .festival__list--item .filter__music__electronic, .festival__list--item .filter__music--electronic, .festival__tickets--item .filter__music .electronic, .festival__tickets--item .filter__music__electronic, .festival__tickets--item .filter__music--electronic, .kaufen .electronic, .kaufen__electronic, .kaufen--electronic {
   background-color: #5E35B1; }
 
 .einleitung .filter .jazz {
@@ -184,12 +184,12 @@ body {
 h1, h2, h3, h4, h5, h6, h1, .schriftfestival {
   font-family: 'Bitter', serif; }
 
-h1, h2 {
+h1 {
   font-size: 1.882352941em;
   font-weight: bold;
   margin: 40px auto; }
 
-h2, h1, h3 {
+h2 {
   font-size: 1.411764706em;
   font-weight: bold;
   margin: 32px auto; }
@@ -218,10 +218,9 @@ p:not(.schriftfestival) {
   line-height: 2; }
 
 @media screen and (min-width: 376px) {
-  h1, h2 {
-    font-size: 2.823529412em;
-    margin: 64px auto; }
-  h2, h1, h3 {
+  h1 {
+    font-size: 2.823529412em; }
+  h2 {
     font-size: 1.882352941em; }
   h3 {
     font-size: 1.176470588em; }
@@ -230,10 +229,10 @@ p:not(.schriftfestival) {
     margin: 100px auto; } }
 
 @media screen and (min-width: 769px) {
-  h1, h2 {
+  h1 {
     font-size: 3.294117647em;
     margin: 80px auto; }
-  h2, h1, h3 {
+  h2 {
     margin: 40px auto; }
   h3 {
     font-size: 1.176470588em; }
@@ -574,37 +573,19 @@ img {
     display: none;
     position: absolute;
     background-color: #000;
-    max-width: 100vw;
-    width: 350px;
     padding: 0 12px 16px 12px;
     z-index: 1;
     color: #FFF; }
-    .nav__dropdown--content li {
-      padding: 16px;
-      display: block;
-      border-left: transparent; }
-      .nav__dropdown--content li p {
-        color: #FFF;
-        font-weight: normal;
-        text-align: center;
-        padding-bottom: 4px; }
-        .nav__dropdown--content li p a {
-          text-decoration: underline;
-          border-bottom: #FFF;
-          font-weight: bold;
-          color: #FFF; }
+    .nav__dropdown--content li p {
+      color: #FFF; }
+      .nav__dropdown--content li p a {
+        color: #FFF; }
     .nav__dropdown--content .horizontal-line {
       border-bottom: #FFF 1px solid;
       padding: 0;
       margin: 16px -12px; }
     .nav__dropdown--content input {
-      height: 48px;
-      max-width: 100%;
       background-color: #FFF;
-      width: 343px;
-      margin: 8px 0 12px 0;
-      padding-left: 12px;
-      padding-bottom: 8px;
       color: #000; }
       .nav__dropdown--content input:hover {
         background-color: #000;
@@ -613,6 +594,28 @@ img {
       margin: 18px 0; }
   .nav__dropdown:hover .nav__dropdown--content, .nav__dropdown:active .nav__dropdown--content {
     display: block; }
+
+.kaufen__maske, .nav__dropdown--content {
+  max-width: 100vw;
+  width: 350px; }
+  .kaufen__maske li, .nav__dropdown--content li {
+    padding: 16px;
+    display: block;
+    border-left: transparent; }
+    .kaufen__maske li p, .nav__dropdown--content li p {
+      font-weight: normal;
+      text-align: center;
+      padding-bottom: 4px; }
+      .kaufen__maske li p a, .nav__dropdown--content li p a {
+        text-decoration: underline;
+        font-weight: bold; }
+  .kaufen__maske input, .nav__dropdown--content input {
+    height: 48px;
+    max-width: 100%;
+    width: 343px;
+    margin: 8px 0 12px 0;
+    padding-left: 12px;
+    padding-bottom: 8px; }
 
 @media screen and (min-width: 376px) {
   .nav__dropdown ul {
@@ -1864,6 +1867,7 @@ link verschoben
       display: inline-flex;
       width: 100%;
       justify-content: space-evenly;
+      align-items: center;
       margin-bottom: 16px; }
       .bestellen__tickets--variante .plus, .bestellen__tickets--variante .minus {
         height: 48px;
@@ -1884,6 +1888,13 @@ link verschoben
         border: #C2C2C2 1px solid; }
       .bestellen__tickets .verkauft .bestellen__tickets--variante .icon__filter {
         fill: #C2C2C2; }
+  .bestellen .kaufen {
+    width: 100%;
+    border-top: #000 1px solid;
+    display: inline-block;
+    justify-content: center; }
+    .bestellen .kaufen .kaufen__button {
+      margin: 24px auto 32px auto; }
 
 @media screen and (min-width: 376px) {
   .bestellen__tickets {
@@ -1893,7 +1904,11 @@ link verschoben
       max-width: 46%;
       min-width: 221px;
       display: inline-block;
-      margin-left: 12px; } }
+      margin-left: 12px; }
+    .bestellen__tickets .kaufen {
+      display: inline-flex; }
+      .bestellen__tickets .kaufen .kaufen__button {
+        margin: 32px auto 40px auto; } }
 
 @media screen and (min-width: 769px) {
   .bestellen__tickets {
@@ -1904,6 +1919,40 @@ link verschoben
       min-width: 221px;
       display: inline-block;
       margin-left: 12px; } }
+
+.kaufen__maske {
+  background-color: #FFF;
+  padding: 24px 12px 16px 12px;
+  display: inline-block; }
+  .kaufen__maske p {
+    margin: 0; }
+  .kaufen__maske .horizontal-line {
+    border-bottom: #000 1px solid;
+    padding: 0;
+    margin: 16px -12px; }
+  .kaufen__maske .btnschwarz {
+    margin: 18px 0; }
+
+.kaufen {
+  text-align: center; }
+  .kaufen h1 {
+    color: #FFF; }
+  .kaufen svg {
+    height: 32px;
+    min-width: 80%;
+    margin: 32px; }
+    .kaufen svg .icon__music {
+      fill: #FFF; }
+
+@media screen and (min-width: 376px) {
+  .kaufen svg {
+    height: 48px;
+    margin: 48px; } }
+
+@media screen and (min-width: 769px) {
+  .kaufen svg {
+    height: 56px;
+    margin: 56px; } }
 
 #pagetop {
   padding-top: 64px; }

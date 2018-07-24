@@ -27,13 +27,13 @@ h1, h2, h3, h4, h5, h6, h1, .schriftfestival {
   font-family: 'Bitter', serif;
 }
 
-h1, h2 {
+h1 {
   font-size: 1.882352941em; //32
   font-weight: bold;
   margin: 40px auto;
 }
 
-h2, h1, h3 {
+h2 {
   font-size: 1.411764706em; //24
   font-weight: bold;
   margin: 32px auto;
@@ -76,11 +76,11 @@ p:not(.schriftfestival) {
 
 //tablet
 @media screen and (min-width: 376px) {
-  h1, h2 {
+  h1 {
     font-size: 2.823529412em; //48
-    margin: 64px auto;
+    //margin: 64px auto;
   }
-  h2, h1, h3 {
+  h2 {
     font-size: 1.882352941em; //32
     //margin:32px auto;
   }
@@ -97,11 +97,11 @@ p:not(.schriftfestival) {
 
 //laptop
 @media screen and (min-width: 769px) {
-  h1, h2 {
+  h1 {
     font-size: 3.294117647em; //56
     margin: 80px auto;
   }
-  h2, h1, h3 {
+  h2 {
     margin: 40px auto;
   }
   h3 {
