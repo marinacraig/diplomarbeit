@@ -37,7 +37,8 @@ Laut Styleguide ist Header-Schrift bold (s. 6), bei Navigationsbeschreibung
  die Eingabefelder auswählen kann, wurde dieser entfernt.  
  Des weiteren wurde 1mal ein Login definiert, welches für alle Devices gilt. 
  Aufgrund des Buttons bzw. einheitlicher Button Gestaltung unterscheidet sich 
- dieser von der Vorgabe.
+ dieser von der Vorgabe. Dies hat entsprechend auch Konsequenzen für den Login 
+ im Zusammenhang mit der Ticketbestellung.
  
 ##Buttons  
 Unterstrichener Button wechselt beim Hover die Farbe, 
@@ -78,11 +79,22 @@ auf andere Task fokussieren möchte, lasse ich es so stehen.
 
 
 
-
 ###weitere Festivalseiten  
 Weitere Einzelübersichten sind zwar vorhanden, jedoch evtl. nicht vollständig. 
 Entweder fehlen Elemente, Links oder Klassenanpassungen der Musikrichtungen. 
  
+##Bestellvorgang
+Wie bereits beim Header erwähnt, hat jene Login-Entscheidung 
+Einfluss auf den Bestellvorgang. Da man auch als Gast bestellen 
+kann, gibt es eine weitere Möglichkeit.  
+Weiter ist im Zusammenhang 
+mit der Zahlung unlogisch, wieso dort 2 verschiedene Screens 
+(bezahlen und bezahlt ohne weiter) vorgegeben sind. Dies ergibt 
+so keinen Sinn.  
+Die Kreditkartenbilder stammen von den offiziellen Seiten.
+
+
+
  
 
  

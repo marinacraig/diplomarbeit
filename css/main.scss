@@ -203,6 +203,12 @@ article, .programm, .festivaluebersicht__filter {
   }
 }
 
+.icon__schloss {
+  background: url("../assets/tickets_securtiy.svg") no-repeat;
+  background-position: left;
+}
+
+
 //tablet
 @media screen and (min-width: 376px) {
   .musikrichtung, .festivalmargin {

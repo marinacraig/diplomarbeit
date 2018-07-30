@@ -117,7 +117,7 @@
   }
 }
 
-.news .btnweiss, .programm .btnweiss {
+.news .btnweiss, .programm .btnweiss, .kaufen__maske--bestaetigung .btnweiss:nth-child(odd) {
 
   background-color: transparent;
   .results {
@@ -140,6 +140,17 @@
     }
   }
 }
+
+.kaufen__maske--bestaetigung .btnweiss:nth-child(odd){
+  color: $weiss_hex;
+  border-color: $weiss_hex;
+  border-left: $weiss_hex 1px solid;
+}
+
+.kaufen__maske--bestaetigung .btnweiss:nth-child(even){
+  border-color: $weiss_hex  ;
+}
+
 
 .programm .btnschwarz {
 
