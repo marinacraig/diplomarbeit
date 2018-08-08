@@ -1942,31 +1942,65 @@ link verschoben
   .kaufen__maske .btnschwarz, .kaufen__maske .btnweiss {
     margin: 18px 0; }
   .kaufen__maske--zahlen {
-    /*   .kreditkarte {
-     width: 100%;
-     height: 48px;
-     background-color: $weiss_hex;
-     border-radius: 0;
-   }
+    padding: 16px;
+    /*
+    select, option {
+      max-width: 100%;
+      width: 343px;
+      height: 48px;
+    }
 
-   .creditcard {
-     display: flex;
-     height: 48px;
-     background-color: $weiss_hex;
-     border-radius: 0;
-     option{
-       width: 30%;
-     }
+  .kreditkarte {
+         width: 100%;
+         height: 48px;
+         background-color: $weiss_hex;
+         border-radius: 0;
+       }
 
-     img {
-       height: 100%;
-       width: auto;
-     }
-   }*/ }
+       .creditcard {
+         display: flex;
+         height: 48px;
+         background-color: $weiss_hex;
+         border-radius: 0;
+         option{
+           width: 30%;
+         }
+
+         img {
+           height: 100%;
+           width: auto;
+         }
+       }*/ }
     .kaufen__maske--zahlen .btnschwarz span {
       height: 100%;
       width: auto;
       padding: 12px; }
+    .kaufen__maske--zahlen .creditcards {
+      justify-content: space-between;
+      display: flex;
+      max-width: 100%; }
+    .kaufen__maske--zahlen .creditcard {
+      max-width: 29%;
+      height: 48px;
+      margin-top: 12px;
+      border-radius: 5px; }
+    .kaufen__maske--zahlen .form-width {
+      width: 50%;
+      float: left; }
+    .kaufen__maske--zahlen input {
+      background-color: #F0F0F0;
+      border: none; }
+      .kaufen__maske--zahlen input[placeholder] {
+        color: #767676; }
+      .kaufen__maske--zahlen input[placeholder="CVC"] {
+        border-left: #767676 solid 1px; }
+      .kaufen__maske--zahlen input:focus::-webkit-input-placeholder {
+        text-align: right; }
+  .kaufen__maske--bestaetigung {
+    color: #FFF;
+    padding: 0 12px; }
+    .kaufen__maske--bestaetigung .e-mail {
+      font-weight: bolder; }
 
 .kaufen {
   text-align: center; }
@@ -1978,12 +2012,6 @@ link verschoben
     margin: 32px; }
     .kaufen svg .icon__music {
       fill: #FFF; }
-
-.kaufen__maske--bestaetigung {
-  color: #FFF;
-  padding: 0 12px 16px 12px; }
-  .kaufen__maske--bestaetigung .e-mail {
-    font-weight: bolder; }
 
 @media screen and (min-width: 376px) {
   .kaufen svg {
@@ -2102,6 +2130,21 @@ article, .programm, .festivaluebersicht__filter {
 .icon__schloss {
   background: url("../assets/tickets_securtiy.svg") no-repeat;
   background-position: left; }
+
+#visa {
+  background: url("../assets/logo/vnwmpvi3h5b592u4wj76.jpg") no-repeat #F0F0F0;
+  background-position: center;
+  background-size: 80%, cover; }
+
+#mastercard {
+  background: url("../assets/logo/mc_vrt_pos.svg") no-repeat #F0F0F0;
+  background-position: center;
+  background-size: 60%, cover; }
+
+#paypal {
+  background: url("../assets/logo/de-pp-logo-100px.png") no-repeat #F0F0F0;
+  background-position: center;
+  background-size: 80%, cover; }
 
 @media screen and (min-width: 376px) {
   .musikrichtung, .festivalmargin {

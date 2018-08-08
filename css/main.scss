@@ -208,6 +208,26 @@ article, .programm, .festivaluebersicht__filter {
   background-position: left;
 }
 
+#visa {
+  background: url("../assets/logo/vnwmpvi3h5b592u4wj76.jpg") no-repeat $grauF0_hex;
+  background-position: center;
+  background-size: 80%, cover;
+}
+
+#mastercard {
+  background: url("../assets/logo/mc_vrt_pos.svg") no-repeat $grauF0_hex;
+  background-position: center;
+  background-size: 60%, cover;
+}
+
+#paypal {
+  background: url("../assets/logo/de-pp-logo-100px.png") no-repeat $grauF0_hex;
+  background-position: center;
+  background-size: 80%, cover;
+}
+
+
+
 
 //tablet
 @media screen and (min-width: 376px) {
