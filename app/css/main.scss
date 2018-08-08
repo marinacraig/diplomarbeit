@@ -96,19 +96,19 @@ article, .programm, .festivaluebersicht__filter {
     background-position: center;
     background-size: cover;
     &--jazz {
-      background-image: url("../assets/audio_jazz.svg");
+      background-image: url("../images/assets/audio_jazz.svg");
     }
     &--hiphop {
-      background-image: url("../assets/audio_hiphop.svg");
+      background-image: url("../images/assets/audio_hiphop.svg");
     }
     &--indie {
-      background-image: url("../assets/audio_indie.svg");
+      background-image: url("../images/assets/audio_indie.svg");
     }
     &--poprock {
-      background-image: url("../assets/audio_poprock.svg");
+      background-image: url("../images/assets/audio_poprock.svg");
     }
     &--electronic {
-      background-image: url("../assets/audio_electronic.svg");
+      background-image: url("../images/assets/audio_electronic.svg");
     }
   }
 }
@@ -118,10 +118,10 @@ article, .programm, .festivaluebersicht__filter {
 //Festival-Einzelansicht
 .beschreibung, .bestellen {
   .filter__detail--ort {
-    background: url("../assets/detail_place.svg") no-repeat;
+    background: url("../images/assets/detail_place.svg") no-repeat;
   }
   .filter__detail--datum {
-    background: url("../assets/detail_kalender.svg") no-repeat;
+    background: url("../images/assets/detail_kalender.svg") no-repeat;
   }
 }
 
@@ -188,7 +188,7 @@ article, .programm, .festivaluebersicht__filter {
 .slick-arrow {
   &.slick-prev {
     &:before {
-      background: url("../assets/steuerung_pfeil_links.svg") no-repeat;
+      background: url("../images/assets/steuerung_pfeil_links.svg") no-repeat;
       background-position: center;
       //Farbe im Original geändert
     }
@@ -196,7 +196,7 @@ article, .programm, .festivaluebersicht__filter {
   &.slick-next {
 
     &:before {
-      background: url("../assets/steuerung_pfeil_rechts.svg") no-repeat;
+      background: url("../images/assets/steuerung_pfeil_rechts.svg") no-repeat;
       background-position: center;
       //Farbe im Original geändert
     }
@@ -204,24 +204,24 @@ article, .programm, .festivaluebersicht__filter {
 }
 
 .icon__schloss {
-  background: url("../assets/tickets_securtiy.svg") no-repeat;
+  background: url("../images/assets/tickets_securtiy.svg") no-repeat;
   background-position: left;
 }
 
 #visa {
-  background: url("../assets/logo/vnwmpvi3h5b592u4wj76.jpg") no-repeat $grauF0_hex;
+  background: url("../images/assets/logo/vnwmpvi3h5b592u4wj76.jpg") no-repeat $grauF0_hex;
   background-position: center;
   background-size: 80%, cover;
 }
 
 #mastercard {
-  background: url("../assets/logo/mc_vrt_pos.svg") no-repeat $grauF0_hex;
+  background: url("../images/assets/logo/mc_vrt_pos.svg") no-repeat $grauF0_hex;
   background-position: center;
   background-size: 60%, cover;
 }
 
 #paypal {
-  background: url("../assets/logo/de-pp-logo-100px.png") no-repeat $grauF0_hex;
+  background: url("../images/assets/logo/de-pp-logo-100px.png") no-repeat $grauF0_hex;
   background-position: center;
   background-size: 80%, cover;
 }

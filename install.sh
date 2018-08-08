@@ -4,7 +4,12 @@ npm install gulp
 npm install gulp-babel
 npm install gulp-sass
 npm install gulp-sourcemaps
-npm install gulp-clean
 npm install browser-sync
-npm install gulp-run-sequence
 npm install babel-core
+npm install gulp-useref
+npm install gulp-uglify
+npm install gulp-cssnano
+npm install gulp-imagemin
+npm install gulp-cache
+npm install del
+npm install gulp-run-sequence
