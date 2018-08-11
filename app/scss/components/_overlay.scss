@@ -24,8 +24,10 @@
     color: $weiss_hex;
 
     &:hover {
-      color: $schwarz_hex;
       background-color: $weiss_hex;
+      p, span {
+        color: $schwarz_hex;
+      }
 
       .icon__nav, .icon__footer, .icon__nav--login, .icon__nav--ticket, .icon__nav--herz {
         fill: $schwarz_hex;
