@@ -4,8 +4,8 @@
 ###Inhaltsverzeichnis Dokumentation:
 
 Basisdisposition:  
-- [Technologiekonzept](dokumentation/basisdisposition.md) 
-- [über mich](dokumentation/basisdisposition.md)  
+- [Technologiekonzept](app/dokumentation/basisdisposition.md) 
+- [über mich](app/dokumentation/basisdisposition.md)  
 - Zeitplan / Meilensteine
 ([Grob- und Feinkonzept](https://docs.google.com/spreadsheets/d/1eV_7Tlo0QKG4BIn0B93sUNnICly4tzJ4m1kySTdQwCs/edit?usp=sharing))  
 - [Offerte](https://docs.google.com/document/d/1dCjLOwE2s_naJFpOfdwf1nAEW1BeifqMymJoFDwuWrs/edit?usp=sharing)  
@@ -26,10 +26,10 @@ externem Code
 
 
 Links zu diversen Erinnerungen:  
-Diplomarbeit Repo fehlt noch daher [Notizen](dokumentation/drandenken.md)  
+Diplomarbeit Repo fehlt noch daher [Notizen](app/dokumentation/drandenken.md)  
 [einzelne ToDo's auf github als Project / Kanban](githubrep)  
 http://htmlpreview.github.io/? 
 
-[Styleänderungen](dokumentation/style.md)  
-[Klassen](dokumentation/klassen.md)  
-[Funktionen](dokumentation/funktionen.md)
+[Styleänderungen](app/dokumentation/style.md)  
+[Klassen](app/dokumentation/klassen.md)  
+[Funktionen](app/dokumentation/funktionen.md)

@@ -13,3 +13,5 @@ npm install gulp-imagemin
 npm install gulp-cache
 npm install del
 npm install gulp-run-sequence
+npm install gulp-autoprefixer
+npm install gulp-postcss

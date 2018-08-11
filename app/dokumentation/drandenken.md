@@ -6,6 +6,7 @@
 - gulp aufsetzen  
     1. automatisches Laden der Seite im Browser
     2. Abstände etc. in html, css, js, php ...
+- gulp build : dist erstellen
 - CI / CD wichtigstes zusammenfassen, links festhalten -> wo? [men_tools.md]()?
 - Prototypen: falls ja wie? Oder einfach HTML und CSS?
 - Ideen zur Erfassung? Welche Angaben werden benötigt? 
@@ -29,7 +30,7 @@
 - Auf welchen Wegen kommt man zur Festivalübersicht?
 -> Tom schickt etwas, Todo: ggf. anpassen
 - idee: kopie festival_1.html alle indie ersetzen und logo oben und unten austauschen
- 
+
  
  
  

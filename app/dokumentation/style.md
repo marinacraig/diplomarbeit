@@ -77,7 +77,12 @@ auf andere Task fokussieren möchte, lasse ich es so stehen.
 
 ###Select mit Tagesprogramm  
 
-
+###maps
+Funktionierte bis vor dem 06.08.2018 noch mit einem Hack. Am 08.08.2018 
+habe ich festgestellt, dass Google diese Möglichkeit geschlossen hat. 
+Ab sofort ist eine entsprechende Umsetzung nur noch mit einer Kreditkarte, 
+welche keine Prepaid sein darf, möglich. Punktabzüge aus Geldgründen wären 
+extrem unfair. 
 
 ###weitere Festivalseiten  
 Weitere Einzelübersichten sind zwar vorhanden, jedoch evtl. nicht vollständig. 
