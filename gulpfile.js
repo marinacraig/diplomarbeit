@@ -3,7 +3,15 @@ neues Projekt:
 1. npm init -> package.json
 2. ./install.sh -> alle node module werden installiert - falls dies nicht geht, siehe ganz unten in diesem File (chmod)
 (Bedingung für 1. und 2.: npm schon installiert sonst npm zuerst installieren)
-3. Ordneraufbau:
+3. damit css files entstehen: gulp
+4. nach ctrl +c oder in zweitem Terminal
+für dist: gulp build
+5. für app / Entwicklung: gulp
+(ist ohne build und zeigt nicht auf dist, da sonst zu langsam während entwicklung)
+
+
+Hinweis: ggf. sourcemap machen
+Ordneraufbau:
 app:
 - content
 - css
@@ -18,10 +26,6 @@ app:
 .gulpfile.js
 install.sh
 
-4. für dist: gulp build
-5. für app / Entwicklung: gulp
-(ist ohne build und zeigt nicht auf dist, da sonst zu langsam während entwicklung)
-Hinweis: ggf. sourcemap machen
  */
 
 const gulp = require('gulp');  // damit gulp läuft
@@ -38,6 +42,7 @@ const cssnano = require('gulp-cssnano'); // css verkleinern
 
 const autoprefixer = require('gulp-autoprefixer'); // css für ältere browser
 const postcss = require('gulp-postcss'); //statt gulp-concat für die Combi mit Sourcemaps
+const inject = require('gulp-inject'); //damit minifizierte js und css eingefügt werden können
 
 const imagemin = require('gulp-imagemin'); // Bilder optimieren
 const cache = require('gulp-cache'); // Bilder optimieren dauert, damit nicht unnötig oft -> cachen
@@ -145,7 +150,7 @@ gulp.task('userefcss', function(){
         //.pipe(gulpIf('*.js', uglify())) // -> funktioniert nicht
         // Minifies only if it's a CSS file
         .pipe(gulpIf('*.css', cssnano()))
-        .pipe(sourcemaps.write('.'))
+        .pipe(sourcemaps.write('sourcemaps'))
         .pipe(gulp.dest('dist'))
 });
 
@@ -173,6 +178,23 @@ gulp.task('content', () => {
     return gulp.src('app/content/**/*')
         .pipe(gulp.dest('dist/content'))
 })
+
+/*
+damit die kopierten HTML - files die richtigen css bzw. js links erhalten
+
+Im HTML:
+<!-- inject:css -->
+  <!-- endinject -->
+  bzw. statt css js
+ */
+
+gulp.task('inject', () => {
+    gulp.src('dist/**/*.html')
+        .pipe(inject(gulp.src('dist/**/*.js', {read: false}), {relative: true}))
+        .pipe(inject(gulp.src('dist/**/*.css', {read: false}), {relative: true}))
+        .pipe(gulp.dest('dist'));
+});
+
 
 /*
 ganzen dist Ordner löschen: Aufruf im Terminal mit gulp clean:dist
