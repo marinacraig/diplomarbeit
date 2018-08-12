@@ -25,7 +25,9 @@
 
     &:hover {
       background-color: $weiss_hex;
-      p, span {
+
+      //muss für alle stimmen, ohne login
+       >p, >span{
         color: $schwarz_hex;
       }
 

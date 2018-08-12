@@ -70,7 +70,7 @@ gulp.task('browserSync', () => {
 });
 
 /*
-schau ob sich etwas im scss getan hat und führe dann sass aus
+schau ob sich etwas im scss getan hat und führe dann sass aus (auch bei HTML und JS Anpassungen)
  */
 gulp.task('watch', ['browserSync', 'sass'], () => {
     gulp.watch('app/scss/**/*.scss', ['sass']);
@@ -127,7 +127,7 @@ gulp.task('useref', function(){
     return gulp.src('app/**/*.html')
         .pipe(useref())
         // Minifies only if it's a JavaScript file
-        //.pipe(gulpIf('*.js', uglify())) -> funktioniert nicht
+        //.pipe(gulpIf('*.js', uglify())) // -> funktioniert nicht
         // Minifies only if it's a CSS file
         .pipe(gulpIf('*.css', cssnano()))
         .pipe(gulp.dest('dist'))
@@ -177,11 +177,12 @@ gulp.task('build', (callback) => {
 });
 /*
 damit build ausgeführt wird: gulp build
-'babel', 'autoprefixer',
+fehlen noch: 'babel', 'autoprefixer',
  */
 
 /*
 welche tasks sollen wirklich ausgeführt werden wenn man im Terminal "gulp" eingibt:
+(sind nicht alle, da es sonst zu lange dauert)
  */
 
 gulp.task('default', (callback) => {

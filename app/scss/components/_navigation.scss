@@ -86,7 +86,8 @@ nav {
 
     &:hover {
       background-color: $grauC2_hex;
-      p, span {
+      //so nur für diese beiden - anders als in Overlay wegen Login
+      .nav__login, .nav__ticket {
         color: $schwarz_hex;
       }
 

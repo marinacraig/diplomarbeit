@@ -39,12 +39,8 @@
     color: $weiss_hex;
 
     li {
-      p {
+      p, a {
         color: $weiss_hex;
-
-        a {
-          color: $weiss_hex;
-        }
       }
     }
 

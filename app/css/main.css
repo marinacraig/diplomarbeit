@@ -584,10 +584,8 @@ img {
     padding: 0 12px 16px 12px;
     z-index: 1;
     color: #FFF; }
-    .nav__dropdown--content li p {
+    .nav__dropdown--content li p, .nav__dropdown--content li a {
       color: #FFF; }
-      .nav__dropdown--content li p a {
-        color: #FFF; }
     .nav__dropdown--content .horizontal-line {
       border-bottom: #FFF 1px solid;
       padding: 0;
@@ -686,7 +684,7 @@ nav {
       fill: #C2C2C2; }
     nav .nav__login:hover, nav .nav__ticket:hover {
       background-color: #C2C2C2; }
-      nav .nav__login:hover p, nav .nav__login:hover span, nav .nav__ticket:hover p, nav .nav__ticket:hover span {
+      nav .nav__login:hover .nav__login, nav .nav__login:hover .nav__ticket, nav .nav__ticket:hover .nav__login, nav .nav__ticket:hover .nav__ticket {
         color: #000; }
       nav .nav__login:hover .icon__nav--login, nav .nav__login:hover .icon__nav--ticket, nav .nav__ticket:hover .icon__nav--login, nav .nav__ticket:hover .icon__nav--ticket {
         fill: #000; }
@@ -711,7 +709,7 @@ nav {
       color: #FFF; }
       nav .overlay .nav__login:hover, nav .overlay .nav__ticket:hover, nav .overlay .nav__menu:hover, nav .overlay .nav__festivallovers > a:hover {
         background-color: #FFF; }
-        nav .overlay .nav__login:hover p, nav .overlay .nav__login:hover span, nav .overlay .nav__ticket:hover p, nav .overlay .nav__ticket:hover span, nav .overlay .nav__menu:hover p, nav .overlay .nav__menu:hover span, nav .overlay .nav__festivallovers > a:hover p, nav .overlay .nav__festivallovers > a:hover span {
+        nav .overlay .nav__login:hover > p, nav .overlay .nav__login:hover > span, nav .overlay .nav__ticket:hover > p, nav .overlay .nav__ticket:hover > span, nav .overlay .nav__menu:hover > p, nav .overlay .nav__menu:hover > span, nav .overlay .nav__festivallovers > a:hover > p, nav .overlay .nav__festivallovers > a:hover > span {
           color: #000; }
         nav .overlay .nav__login:hover .icon__nav, nav .overlay .nav__login:hover .icon__footer, nav .overlay .nav__login:hover .icon__nav--login, nav .overlay .nav__login:hover .icon__nav--ticket, nav .overlay .nav__login:hover .icon__nav--herz, nav .overlay .nav__ticket:hover .icon__nav, nav .overlay .nav__ticket:hover .icon__footer, nav .overlay .nav__ticket:hover .icon__nav--login, nav .overlay .nav__ticket:hover .icon__nav--ticket, nav .overlay .nav__ticket:hover .icon__nav--herz, nav .overlay .nav__menu:hover .icon__nav, nav .overlay .nav__menu:hover .icon__footer, nav .overlay .nav__menu:hover .icon__nav--login, nav .overlay .nav__menu:hover .icon__nav--ticket, nav .overlay .nav__menu:hover .icon__nav--herz, nav .overlay .nav__festivallovers > a:hover .icon__nav, nav .overlay .nav__festivallovers > a:hover .icon__footer, nav .overlay .nav__festivallovers > a:hover .icon__nav--login, nav .overlay .nav__festivallovers > a:hover .icon__nav--ticket, nav .overlay .nav__festivallovers > a:hover .icon__nav--herz {
           fill: #000; }
