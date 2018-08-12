@@ -1,8 +1,9 @@
-#Diplomarbeit Frontend
-## Marina Enadeghe, 2018
+#Diplomarbeit Frontend  
 
-###Inhaltsverzeichnis Dokumentation:
+## Marina Enadeghe, 2018  
 
+###Inhaltsverzeichnis Dokumentation:  
+  
 ####Basisdisposition:  
 - [Technologiekonzept](dokumentation/basisdisposition.md) 
 - [über mich](dokumentation/basisdisposition.md)  
@@ -10,8 +11,7 @@
 ([Grob- und Feinkonzept](https://docs.google.com/spreadsheets/d/1eV_7Tlo0QKG4BIn0B93sUNnICly4tzJ4m1kySTdQwCs/edit?usp=sharing))  
 - [Offerte](https://docs.google.com/document/d/1dCjLOwE2s_naJFpOfdwf1nAEW1BeifqMymJoFDwuWrs/edit?usp=sharing)  
 
-
-####Allgemeine Dokumentation:
+####Allgemeine Dokumentation:  
 - **Setup Guide** 
 bitte folgendes im Terminal nach fork oder clone eingeben:
 1. npm init  
@@ -48,7 +48,7 @@ verständlich sein und sind daher minimal dokumentiert.
 - **[Literaturverzeichnis](dokumentation/literaturverzeichnis.md), Quellenangaben bei Nutzung von 
 externem Code** 
 
-- Eidesstattliche Erklärung _an Unterschrift / print / scan denken_  
+- **Eidesstattliche Erklärung** _an Unterschrift / print / scan denken_  
 
 
 
