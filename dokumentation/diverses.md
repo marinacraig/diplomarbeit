@@ -13,3 +13,14 @@ Evt. kaufen_login etc mit php lösen, besseren Namen wählen. Das Hintergrund-
 Grün scheint von "indie" zu kommen. Falls dem so sein sollte, 
 bei ticketbestellen_1.html und Klick auf Kaufen-Button die Farbe bzw.
 Musikrichtung übergeben damit dann die Hintergrundfarbe stimmt. 
+
+.gitignore
+package.json bzw. package-lock.json gehören auf github wegen Version, author,
+ etc. Wenn diese zwei gelöscht werden entsteht package.json durch npm init (dann müssen
+ verschiedene Angaben gemacht werden) und package-lock.json durch ./install.sh 
+ (sollte der Ordner node_modules nicht entstehen bzw. eine Fehlermeldung erscheinen siehe
+ Beschreibung chmod in gulpfile.js ganz unten)
+ 
+ 
+ 
+ [zurück zum Inhaltsverzeichnis](../README.md)  

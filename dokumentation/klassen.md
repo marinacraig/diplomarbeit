@@ -30,3 +30,7 @@ direkt in das HTML einbindet, da Screenreader mit diesen umgehen und
  in den jeweiligen files zu definieren sind, teilweise gleiche Kombinationen für andere
  Devices zum Einsatz kommen, sowie aus Zeitgründen, wurden diese teilweise doppelt definiert
  (Bsp. Ticketübersicht und Festivalübersicht).
+ 
+ 
+ 
+ [zurück zum Inhaltsverzeichnis](../README.md)  

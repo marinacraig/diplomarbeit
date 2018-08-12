@@ -1,4 +1,5 @@
-###Tools
+#Basisdisposition
+##Tools
  - **MacBook Air** wird mein wichtigstes Tool sein, da 
  mein alter Laptop mittlerweile wirklich am abkratzen
   ist und ich mir im Moment keine andere Maschine
@@ -51,11 +52,12 @@
   Doppelerfassung, sind dort, wo noch was zu tun ist)
 
 
+##Zeitplan, Meilensteine
 [1] [Grobkonzept, Feinkonzept](https://docs.google.com/spreadsheets/d/1eV_7Tlo0QKG4BIn0B93sUNnICly4tzJ4m1kySTdQwCs/edit?usp=sharing)
  und [Offerte](https://docs.google.com/document/d/1dCjLOwE2s_naJFpOfdwf1nAEW1BeifqMymJoFDwuWrs/edit?usp=sharing)  
    
    
-###über mich
+##über mich
 Kundenbedürfnisse zu verstehen, einen hohen NPS zu erreichen sowie 
 laufend dazuzulernen liegen mir seit vielen Jahren am Herzen.  
 Mein stetig gewachsenes Wissen und neue Erfahrungen zeichnen mich 
@@ -66,3 +68,5 @@ sowie die Verwendung von Jira und Confluence, CMS, Google
 Analytics und Adwords dazu. 
  
 ![Marina](marina.jpg)     
+
+[zurück zum Inhaltsverzeichnis](../README.md)  

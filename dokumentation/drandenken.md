@@ -30,7 +30,7 @@
 - Auf welchen Wegen kommt man zur Festivalübersicht?
 -> Tom schickt etwas, Todo: ggf. anpassen
 - idee: kopie festival_1.html alle indie ersetzen und logo oben und unten austauschen
-
+- unnötige icons / logo löschen
  
  
- 
+[zurück zum Inhaltsverzeichnis](../README.md)  

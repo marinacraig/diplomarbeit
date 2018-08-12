@@ -3,11 +3,10 @@ neues Projekt:
 1. npm init -> package.json
 2. ./install.sh -> alle node module werden installiert - falls dies nicht geht, siehe ganz unten in diesem File (chmod)
 (Bedingung für 1. und 2.: npm schon installiert sonst npm zuerst installieren)
-3. damit css files entstehen: gulp
-4. nach ctrl +c oder in zweitem Terminal
-für dist: gulp build
+3. für dist: gulp build
+4. für die richtigen file-links in den Unterordnern: gulp inject
 5. für app / Entwicklung: gulp
-(ist ohne build und zeigt nicht auf dist, da sonst zu langsam während entwicklung)
+(ist ohne build und zeigt nicht auf dist, da sonst zu langsam während Entwicklung)
 
 
 Hinweis: ggf. sourcemap machen
