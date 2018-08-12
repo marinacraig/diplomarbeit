@@ -1,7 +1,8 @@
 /*
 neues Projekt:
 1. npm init -> package.json
-2. ./install.sh -> alle node module
+2. ./install.sh -> alle node module werden installiert - falls dies nicht geht, siehe ganz unten in diesem File (chmod)
+(Bedingung für 1. und 2.: npm schon installiert sonst npm zuerst installieren)
 3. Ordneraufbau:
 app:
 - content
@@ -18,6 +19,9 @@ app:
 install.sh
 
 4. für dist: gulp build
+5. für app / Entwicklung: gulp
+(ist ohne build und zeigt nicht auf dist, da sonst zu langsam während entwicklung)
+Hinweis: ggf. sourcemap machen
  */
 
 const gulp = require('gulp');  // damit gulp läuft
@@ -33,7 +37,7 @@ const gulpIf = require('gulp-if'); // damit nur js verkleinert wird
 const cssnano = require('gulp-cssnano'); // css verkleinern
 
 const autoprefixer = require('gulp-autoprefixer'); // css für ältere browser
-const postcss      = require('gulp-postcss'); //statt gulp-concat für die Combi mit Sourcemaps
+const postcss = require('gulp-postcss'); //statt gulp-concat für die Combi mit Sourcemaps
 
 const imagemin = require('gulp-imagemin'); // Bilder optimieren
 const cache = require('gulp-cache'); // Bilder optimieren dauert, damit nicht unnötig oft -> cachen
@@ -81,55 +85,67 @@ gulp.task('watch', ['browserSync', 'sass'], () => {
 
 
 /*
-für ältere Browser
-Todo: seltsamer mix -> evtl mit sourcemaps fixen und js min integrieren, was ist mit babel?
-https://www.npmjs.com/package/gulp-sourcemaps
-https://www.npmjs.com/package/gulp-autoprefixer
-https://github.com/postcss/autoprefixer#gulp
- */
-
-gulp.task('autoprefixer', () => {
-
-    gulp.src('app/css/main.css')
-        .pipe(autoprefixer({
-            browsers: ['last 2 versions'],
-            cascade: false
-        }))
-
-    return gulp.src('app/css/*.css')
-
-        .pipe(sourcemaps.init())
-        .pipe(postcss([ autoprefixer() ]))
-        .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('dist'));
-});
-
-
-
-
-/*
-Babel für ES6 todo: fixen
+Babel für ES6 -> js files linken in babel Ordner, damit die richtigen files minifiziert werden
  */
 
 gulp.task('babel', () => {
-        gulp.src(['app/js/*.js'], {base: 'app/'})
+        gulp.src(['app/js/*.js'], {base: 'app/js'})
             .pipe(babel({presets: ['env']}))
-            .pipe(gulp.dest('dist'))
+            .pipe(gulp.dest('app/js/babel'))
     }
 );
 
 
 /*
-js und css soll min werden -> todo: js
+js und css soll min werden
+
+im HTML:
+<!-- build:<type> <path> -->
+...css oder ...js
+<!-- endbuild -->
+daher statt * stern:
+ return gulp.src('app/sternstern/stern.html')
  */
 
-gulp.task('useref', function(){
+
+gulp.task('userefjs', function(){
     return gulp.src('app/**/*.html')
+        .pipe(useref())
+        // Minifies only if it's a JavaScript file
+        .pipe(gulpIf('*.js', uglify())) // -> funktioniert nicht
+        // Minifies only if it's a CSS file
+        //.pipe(gulpIf('*.css', cssnano()))
+        .pipe(gulp.dest('dist'))
+});
+
+/*
+Autoprefixer für ältere bzw. verschiedene Browserversionen
+idee: zuerst sass machen dann mit autoprefixer überschreiben
+(getestet mit alternativem Ordner)
+ */
+
+gulp.task('autoprefixer', () =>
+    gulp.src('app/css/main.css')
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
+        .pipe(gulp.dest('app/css'))
+);
+
+/*
+für die minified version, entsteht aus build im html
+ */
+
+gulp.task('userefcss', function(){
+    return gulp.src('app/**/*.html')
+        .pipe(sourcemaps.init())
         .pipe(useref())
         // Minifies only if it's a JavaScript file
         //.pipe(gulpIf('*.js', uglify())) // -> funktioniert nicht
         // Minifies only if it's a CSS file
         .pipe(gulpIf('*.css', cssnano()))
+        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('dist'))
 });
 
@@ -151,7 +167,7 @@ gulp.task('images', () => {
 });
 
 /*
-statt fonts Ordner content - Todo: wie werden hier js und css min? bzw. wo sind die überhaupt gespeichert?
+Ordner content von app in dist kopieren- Todo: wie werden hier js und css min? bzw. wo sind die überhaupt gespeichert? Alternative?
  */
 gulp.task('content', () => {
     return gulp.src('app/content/**/*')
@@ -173,7 +189,7 @@ gulp.task('cache:clear', (callback) => {
 
 
 gulp.task('build', (callback) => {
-    runSequence('clean:dist', 'cache:clear', ['sass', 'useref', 'images', 'content'], callback);
+    runSequence('clean:dist', 'cache:clear', ['babel','sass'], 'autoprefixer', ['userefcss', 'userefjs', 'images', 'content'], callback);
 });
 /*
 damit build ausgeführt wird: gulp build
@@ -186,7 +202,7 @@ welche tasks sollen wirklich ausgeführt werden wenn man im Terminal "gulp" eing
  */
 
 gulp.task('default', (callback) => {
-    runSequence(['sass','browserSync', 'watch'],
+    runSequence(['sass', 'autoprefixer', 'browserSync', 'watch'],
         callback
     )
 })

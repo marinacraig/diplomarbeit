@@ -1,11 +1,10 @@
 #!/bin/bash
 npm install gulp-cli
 npm install gulp
-npm install gulp-babel
+npm install gulp-babel babel-core babel-preset-env
 npm install gulp-sass
 npm install gulp-sourcemaps
 npm install browser-sync
-npm install babel-core
 npm install gulp-useref
 npm install gulp-uglify
 npm install gulp-cssnano
