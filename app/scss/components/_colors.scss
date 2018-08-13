@@ -1,3 +1,5 @@
+//alle Farben aus styleguide, danach alle Border und Hintergründe
+
 $weiss_hex: #FFF;
 $weiss_rgb: rgb(255, 255, 255);
 
@@ -95,7 +97,7 @@ body {
 
 
 //Hintergrund
-.intro, .banner-music, .festival__list--item .filter__music ,.festival__tickets--item .filter__music, .kaufen{
+.intro, .outro, .banner-music, .festival__list--item .filter__music ,.festival__tickets--item .filter__music, .kaufen{
   .jazz, &__jazz, &--jazz  {
     background-color: $gelb_hex;
   }

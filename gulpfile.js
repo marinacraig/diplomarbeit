@@ -4,27 +4,35 @@ neues Projekt:
 2. ./install.sh -> alle node module werden installiert - falls dies nicht geht, siehe ganz unten in diesem File (chmod)
 (Bedingung für 1. und 2.: npm schon installiert sonst npm zuerst installieren)
 3. für dist: gulp build
-4. für die richtigen file-links in den Unterordnern: gulp inject
-5. für app / Entwicklung: gulp
+4. für app / Entwicklung: gulp
 (ist ohne build und zeigt nicht auf dist, da sonst zu langsam während Entwicklung)
 
 
-Hinweis: ggf. sourcemap machen
 Ordneraufbau:
 app:
 - content
-- css
-- ggf. dokumentation (md-files)
+- css (zum verlinken und via gulp verkleinern)
 - images (auch icons etc.)
-- js
+- js (mit Unterordner Babel welcher durch gulp build entsteht, files vom Unterordner im HTML verlinken bzw. via gulp verkleinern)
 - scss
 - index.html
 (dist)
 (node_modules)
+- ggf. Dokumentation (md-files), README.md
 .gitignore
 .gulpfile.js
 install.sh
+[package.json]
+[package-lock.json]
 
+für später:
+bei erstellen der js-files: check ob id xy vorhanden da am Ende evtl. Schnipsel wegen minify auf "falscher" Seite ausgeführt wird
+nie npm audit fix --force -> zuerst schauen was kaputt geht
+evtl sourcemaps ausbauen z.B.:
+gulp-postcss statt gulp-concat für die Combi mit Sourcemaps
+gulp-inject-partials: z.B. für Nav und Footer https://www.npmjs.com/package/gulp-inject-partials
+gulp-inject-file: damit bei js spezifisches file und nicht alle eingefügt werden (hat aber nicht richtig fkt, daher evt. postbuild)
+php: z.B. verkleinern oder unleserlich machen (Sicherheit und Geschwindigkeit) (task copy-php ergänzen?)
  */
 
 const gulp = require('gulp');  // damit gulp läuft
@@ -40,13 +48,12 @@ const gulpIf = require('gulp-if'); // damit nur js verkleinert wird
 const cssnano = require('gulp-cssnano'); // css verkleinern
 
 const autoprefixer = require('gulp-autoprefixer'); // css für ältere browser
-const postcss = require('gulp-postcss'); //statt gulp-concat für die Combi mit Sourcemaps
-const inject = require('gulp-inject'); //damit minifizierte js und css eingefügt werden können
+const inject = require('gulp-inject'); //damit minifizierte js und css eingefügt werden können - Achtung im HTML steht zwingend inject:css -> alle css files werden eingefügt
 
 const imagemin = require('gulp-imagemin'); // Bilder optimieren
 const cache = require('gulp-cache'); // Bilder optimieren dauert, damit nicht unnötig oft -> cachen
 const del = require('del'); // löscht gelöschte files, nötig, da diese automatisch generiert
-const runSequence = require('gulp-run-sequence');  //damit nicht alles was gemacht wurde, gleich wieder gelöscht wird
+const runSequence = require('gulp-run-sequence');  //damit nicht alles was gemacht wurde, gleich wieder gelöscht wird, Reihenfolge
 
 
 
@@ -77,28 +84,27 @@ gulp.task('browserSync', () => {
 })
 });
 
-/*
-schau ob sich etwas im scss getan hat und führe dann sass aus (auch bei HTML und JS Anpassungen)
- */
-gulp.task('watch', ['browserSync', 'sass'], () => {
-    gulp.watch('app/scss/**/*.scss', ['sass']);
-    // Reloads the browser whenever HTML or JS files change
-    gulp.watch('app/*.html', browserSync.reload);
-    gulp.watch('app/js/**/*.js', browserSync.reload);
-});
-
 
 /*
-Babel für ES6 -> js files linken in babel Ordner, damit die richtigen files minifiziert werden
+Babel für ES6 -> js files linken in js/babel Ordner, damit die richtigen files minifiziert werden
  */
 
 gulp.task('babel', () => {
         gulp.src(['app/js/*.js'], {base: 'app/js'})
             .pipe(babel({presets: ['env']}))
-            .pipe(gulp.dest('app/js/babel'))
+            .pipe(gulp.dest('app/js/babel/'))
     }
 );
-
+/*
+schau ob sich etwas im scss getan hat und führe dann sass aus (auch bei HTML und JS Anpassungen)
+ */
+gulp.task('watch', ['browserSync', 'sass', 'babel'], () => {
+    gulp.watch('app/scss/**/*.scss', ['sass']);
+    // Reloads the browser whenever HTML or JS files change
+    gulp.watch('app/*.html', browserSync.reload);
+    gulp.watch('app/js/**/*.js', ['babel']); //bei js Änderung babel
+    gulp.watch('app/js/**/*.js', browserSync.reload);
+});
 
 /*
 js und css soll min werden
@@ -107,8 +113,8 @@ im HTML:
 <!-- build:<type> <path> -->
 ...css oder ...js
 <!-- endbuild -->
-daher statt * stern:
- return gulp.src('app/sternstern/stern.html')
+
+zuerst js dann css mit autoprefixer
  */
 
 
@@ -116,7 +122,7 @@ gulp.task('userefjs', function(){
     return gulp.src('app/**/*.html')
         .pipe(useref())
         // Minifies only if it's a JavaScript file
-        .pipe(gulpIf('*.js', uglify())) // -> funktioniert nicht
+        .pipe(gulpIf('*.js', uglify()))
         // Minifies only if it's a CSS file
         //.pipe(gulpIf('*.css', cssnano()))
         .pipe(gulp.dest('dist'))
@@ -138,7 +144,7 @@ gulp.task('autoprefixer', () =>
 );
 
 /*
-für die minified version, entsteht aus build im html
+für die  css minified version, entsteht aus build im html
  */
 
 gulp.task('userefcss', function(){
@@ -171,7 +177,7 @@ gulp.task('images', () => {
 });
 
 /*
-Ordner content von app in dist kopieren- Todo: wie werden hier js und css min? bzw. wo sind die überhaupt gespeichert? Alternative?
+Ordner content von app in dist kopieren
  */
 gulp.task('content', () => {
     return gulp.src('app/content/**/*')
@@ -179,12 +185,25 @@ gulp.task('content', () => {
 })
 
 /*
+Ordner php von app in dist kopieren
+ */
+gulp.task('copy-php', () => {
+    return gulp.src('app/php/**/*')
+        .pipe(gulp.dest('dist/php'))
+})
+
+
+/*
 damit die kopierten HTML - files die richtigen css bzw. js links erhalten
+Problem: im HTML muss zwingend inject:js stehen, ansonsten stimmen bei den Unterseiten die Links nicht
+Nachteil: zuviel unnötiges js verursacht errors
 
 Im HTML:
 <!-- inject:css -->
   <!-- endinject -->
   bzw. statt css js
+
+  Problem: bei mehreren builds werden mehrere files eingefügt -> gerade im js darauf achten, dass dort ein check ausgeführt wird
  */
 
 gulp.task('inject', () => {
@@ -193,7 +212,6 @@ gulp.task('inject', () => {
         .pipe(inject(gulp.src('dist/**/*.css', {read: false}), {relative: true}))
         .pipe(gulp.dest('dist'));
 });
-
 
 /*
 ganzen dist Ordner löschen: Aufruf im Terminal mit gulp clean:dist
@@ -208,14 +226,13 @@ gulp.task('cache:clear', (callback) => {
     return cache.clearAll(callback)
 })
 
-
-gulp.task('build', (callback) => {
-    runSequence('clean:dist', 'cache:clear', ['babel','sass'], 'autoprefixer', ['userefcss', 'userefjs', 'images', 'content'], callback);
-});
 /*
-damit build ausgeführt wird: gulp build
-fehlen noch: 'babel', 'autoprefixer',
+damit build ausgeführt wird, aufpassen mit Reihenfolge, alles in [] wird gleichzeitig gemacht - Terminal: gulp build
  */
+gulp.task('build', (callback) => {
+    runSequence('clean:dist', 'cache:clear', ['babel','sass'], 'autoprefixer', ['userefcss', 'userefjs', 'images', 'content', 'copy-php'], 'inject', callback);
+});
+
 
 /*
 welche tasks sollen wirklich ausgeführt werden wenn man im Terminal "gulp" eingibt:
@@ -223,7 +240,7 @@ welche tasks sollen wirklich ausgeführt werden wenn man im Terminal "gulp" eing
  */
 
 gulp.task('default', (callback) => {
-    runSequence(['sass', 'autoprefixer', 'browserSync', 'watch'],
+    runSequence(['sass', 'browserSync', 'watch'],
         callback
     )
 })

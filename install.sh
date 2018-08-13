@@ -13,5 +13,4 @@ npm install gulp-cache
 npm install del
 npm install gulp-run-sequence
 npm install gulp-autoprefixer
-npm install gulp-postcss
 npm install gulp-inject

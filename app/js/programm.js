@@ -1,3 +1,8 @@
+/*
+Da Codeschnipsel auf der Festivalseite:
+check ob id xy vorhanden, falls ja dann ausführen
+ */
+
 function programm(){
     console.log(this)
 /*  if(freitag){

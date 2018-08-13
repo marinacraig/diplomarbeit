@@ -9,16 +9,26 @@ von Rolf: AIzaSyDu3yT8LTKpy8_BW9wPnjQ7dMlo4mUxvZY
 Doku: https://developers.google.com/maps/documentation/javascript/examples/icon-simple?hl=de
 
  */
-function initMap() {
-    let map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 12,
-        center: {lat: 47.44, lng: 9.46}
-    });
 
-    let image = '../images/assets/detail_place.svg';
-    let beachMarker = new google.maps.Marker({
-        position: {lat: 47.4456102, lng: 9.46392949999997},
-        map: map,
-        icon: image
-    });
+/*
+Da Codeschnipsel auf der Festivalseite:
+check ob id xy vorhanden, falls ja dann ausführen
+ */
+
+let map = document.getElementById('map');
+if (map!==null){
+
+    function initMap() {
+        let map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 12,
+            center: {lat: 47.44, lng: 9.46}
+        });
+
+        let image = '../images/assets/detail_place.svg';
+        let beachMarker = new google.maps.Marker({
+            position: {lat: 47.4456102, lng: 9.46392949999997},
+            map: map,
+            icon: image
+        });
+    }
 }

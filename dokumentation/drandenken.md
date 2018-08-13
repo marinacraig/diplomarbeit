@@ -31,6 +31,7 @@
 -> Tom schickt etwas, Todo: ggf. anpassen
 - idee: kopie festival_1.html alle indie ersetzen und logo oben und unten austauschen
 - unnötige icons / logo löschen
+- bei bestellvorgang: unnötigen link entfernen - entweder php oder link!
  
  
 [zurück zum Inhaltsverzeichnis](../README.md)  

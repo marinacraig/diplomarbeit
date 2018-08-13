@@ -13,60 +13,70 @@ Annahmen:
 
 Da aktuell dieser Teil einfach funktionieren soll, quick & dirty Variante
 weiter unten wird countdown('mm/dd/yyyy hh/mm/ss AM') angepasst
+https://codeburst.io/a-countdown-timer-in-pure-javascript-f3cdaae1a1a3
  */
 
 
-function countdown(endDate) {
-    let days, hours, minutes, seconds;
+/*
+Da Codeschnipsel auf der Festivalseite:
+check ob id xy vorhanden, falls ja dann ausführen
+ */
 
-    endDate = new Date(endDate).getTime();
+let map = document.getElementById('remaining-time');
+if (map!==null) {
 
-    if (isNaN(endDate)) {
-        return;
-    }
+    function countdown(endDate) {
+        let days, hours, minutes, seconds;
 
-    setInterval(calculate, 1000);
+        endDate = new Date(endDate).getTime();
 
-    function calculate() {
-        let startDate = new Date();
-        startDate = startDate.getTime();
+        if (isNaN(endDate)) {
+            return;
+        }
 
-        let timeRemaining = parseInt((endDate - startDate) / 1000);
+        setInterval(calculate, 1000);
 
-        if (timeRemaining >= 0) {
-            days = parseInt(timeRemaining / 86400);
-            timeRemaining = (timeRemaining % 86400);
+        function calculate() {
+            let startDate = new Date();
+            startDate = startDate.getTime();
 
-            hours = parseInt(timeRemaining / 3600);
-            timeRemaining = (timeRemaining % 3600);
+            let timeRemaining = parseInt((endDate - startDate) / 1000);
 
-            minutes = parseInt(timeRemaining / 60);
-            timeRemaining = (timeRemaining % 60);
+            if (timeRemaining >= 0) {
+                days = parseInt(timeRemaining / 86400);
+                timeRemaining = (timeRemaining % 86400);
 
-            seconds = parseInt(timeRemaining);
+                hours = parseInt(timeRemaining / 3600);
+                timeRemaining = (timeRemaining % 3600);
 
-            if (parseInt(days, 10) >= 60) {
-                document.getElementById("remaining-time").innerHTML = value
-            }
+                minutes = parseInt(timeRemaining / 60);
+                timeRemaining = (timeRemaining % 60);
 
-            else if(parseInt(days, 10) >= 2) {
-                document.getElementById("remaining-time").innerHTML = parseInt(days, 10) + " Tage";
-            }else {
-                if(("0" + hours).slice(-2) >= 2){
-                    document.getElementById("remaining-time").innerHTML = ("0" + hours).slice(-2) +':'+ ("0" + minutes).slice(-2) + " Stunden";
-                } else if(("0" + hours).slice(-2) < 1){
-                    document.getElementById("remaining-time").innerHTML = ("0" + minutes).slice(-2) + " Minuten";
-                } else {
+                seconds = parseInt(timeRemaining);
+
+                if (parseInt(days, 10) >= 60) {
                     document.getElementById("remaining-time").innerHTML = value
                 }
-            }
 
+                else if (parseInt(days, 10) >= 2) {
+                    document.getElementById("remaining-time").innerHTML = parseInt(days, 10) + " Tage";
+                } else {
+                    if (("0" + hours).slice(-2) >= 2) {
+                        document.getElementById("remaining-time").innerHTML = ("0" + hours).slice(-2) + ':' + ("0" + minutes).slice(-2) + " Stunden";
+                    } else if (("0" + hours).slice(-2) < 1) {
+                        document.getElementById("remaining-time").innerHTML = ("0" + minutes).slice(-2) + " Minuten";
+                    } else {
+                        document.getElementById("remaining-time").innerHTML = value
+                    }
+                }
+
+            }
         }
     }
+
+
+//hier kommt die Zeit für den countdown('mm/dd/yyyy hh/mm/ss AM') rein
+    (function () {
+        countdown('09/30/2018 11:00:00 AM');
+    }());
 }
-
-
-//hier kommt die Zeit rein countdown('mm/dd/yyyy hh/mm/ss AM')
-(function () {
-    countdown('09/30/2018 11:00:00 AM');
-}());
