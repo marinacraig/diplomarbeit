@@ -75,7 +75,7 @@ if (map!==null) {
     }
 
 
-//hier kommt die Zeit für den countdown('mm/dd/yyyy hh/mm/ss AM') rein
+//hier kommt die Zeit für den countdown('mm/dd/yyyy hh/mm/ss AM') rein (evtl. hier mit id selektor oder so)
     (function () {
         countdown('09/30/2018 11:00:00 AM');
     }());

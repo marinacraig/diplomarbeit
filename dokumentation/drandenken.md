@@ -32,6 +32,16 @@
 - idee: kopie festival_1.html alle indie ersetzen und logo oben und unten austauschen
 - unnötige icons / logo löschen
 - bei bestellvorgang: unnötigen link entfernen - entweder php oder link!
+
+
+
+svg:
+wenn immer möglich direkt in html (anscheinend besser für screenreader) und folgendes beachten:  
+svg: - class="icon  icon__music"  
+g mit fill: fill löschen, beispielsweise class="icon  icon__music icon__music--country"
+einfügen  
+id: wenn gleiches icon mehrmals auf gleicher Seite, dann löschen  
+
  
  
 [zurück zum Inhaltsverzeichnis](../README.md)  
