@@ -28,48 +28,17 @@
   .icon__music {
     fill: $weiss_hex;
   }
-  p {
+  span, p {
     display: flex;
     margin: auto;
     padding-right: 1em;
     //soll höher sein
     .results {
-      padding-left: 1em;
+      margin-top:12px;
+      padding-left: 0.5em;
+      padding-right:0;
+      font-weight: bolder;
     }
-  }
-}
-
-//Todo: class active via js wenn filter aktiv bzw. s. 38 mittels checkbox aktivieren
-// von der Startseite:
-//todo: musikrichtung - on click alle anzeigen
-
-.btngrau__jazz {
-  &:hover {
-    background-color: $gelb_hex;
-  }
-}
-
-.btngrau__hiphop {
-  &:hover {
-    background-color: $pink_hex;
-  }
-}
-
-.btngrau__indie {
-  &:hover {
-    background-color: $mint_hex;
-  }
-}
-
-.btngrau__poprock {
-  &:hover {
-    background-color: $blau_hex;
-  }
-}
-
-.btngrau__electronic {
-  .active, &:hover {
-    background-color: $violett_hex;
   }
 }
 
@@ -116,7 +85,11 @@
     text-align: center;
   }
 }
-
+.footer__musikrichtung {
+.btnweiss, .btnschwarz {
+  max-width: 90%;
+}
+}
 .news .btnweiss, .programm .btnweiss, .kaufen__maske--bestaetigung .btnweiss:nth-child(odd) {
 
   background-color: transparent;

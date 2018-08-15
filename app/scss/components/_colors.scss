@@ -44,6 +44,9 @@ $violett_rgb: rgb(94, 53, 177);
 $violett_hell_hex: #673AB7;
 $violett_hell_rgb: rgb(103, 58, 183);
 
+
+//Weitere Farben z.B. für country, soul etc
+
 html {
   color: $schwarz_hex;
 }
@@ -97,7 +100,7 @@ body {
 
 
 //Hintergrund
-.intro, .outro, .banner-music, .festival__list--item .filter__music ,.festival__tickets--item .filter__music, .kaufen{
+.intro, .outro, .banner-music, .festival__list--item .filter__music ,.festival__tickets--item .filter__music, .kaufen, .musikrichtung input:checked +.btngrau {
   .jazz, &__jazz, &--jazz  {
     background-color: $gelb_hex;
   }
@@ -118,6 +121,42 @@ body {
     background-color: $violett_hex;
   }
 }
+
+
+//buttons
+//wegen Übersicht: musikrichtung mit checked in seperatem scss
+
+.btngrau__jazz {
+  &:hover {
+    background-color: $gelb_hex;
+  }
+}
+
+.btngrau__hiphop {
+  &:hover {
+    background-color: $pink_hex;
+  }
+}
+
+.btngrau__indie {
+  &:hover {
+    background-color: $mint_hex;
+  }
+}
+
+.btngrau__poprock {
+  &:hover {
+    background-color: $blau_hex;
+  }
+}
+
+.btngrau__electronic {
+  &:hover {
+    background-color: $violett_hex;
+  }
+}
+
+
 
 .einleitung .filter{
   .jazz {
