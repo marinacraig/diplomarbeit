@@ -40,7 +40,7 @@
 
 //tablet
 @media screen and (min-width: 376px) {
-  .news {
+  .news:not(+.button) {
     //anpassen tablet 24, desktop 120
     padding-left: 24px;
     padding-right: 24px;
@@ -76,7 +76,7 @@
 
 //laptop
 @media screen and (min-width: 769px) {
-  .news {
+  .news:not(+.button) {
     //anpassen tablet 24, desktop 120
     padding-left: 120px;
     padding-right: 120px;

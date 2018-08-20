@@ -1,43 +1,40 @@
 //buttons bei buttons
 //background-colors bei colors
 
-
 .musikrichtung {
   min-height: calc(100% - 160px);
-  input{
+  input {
     display: none;
   }
-  }
+}
 
-.footer__musikrichtung{
+.footer__musikrichtung {
   max-width: 100%;
   border-top: $grauC2_hex 1px solid;
-  margin: 0;
-  padding-top: 16px;
+  padding: 16px 8px;
   height: 160px;
   background-color: $weiss_hex;
   position: sticky;
   bottom: 0;
-
-
 }
 
 //tablet
-@media screen and (min-width : 376px) {
-  .musikrichtung{
+@media screen and (min-width: 376px) {
+  .musikrichtung {
     min-height: 70vh;
-    display: inline-flex;
-
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
-
   }
 
-}
+  //display inline-flex nur für Auswahlseite, sonst scrollbalken
+  .musikrichtung:not(.item__hidden--buttons) {
+    display: inline-flex;
+  }
+  .footer__musikrichtung {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 
-
-//laptop
-@media screen and (min-width : 769px) {
-
+  }
 }

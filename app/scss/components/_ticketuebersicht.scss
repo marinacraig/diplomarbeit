@@ -74,7 +74,6 @@ link verschoben
 
       &__detail {
         //hier nur der grid, Rest seperat, da identisch mit ticketbestellen
-
         &--tickets-verfuegbar {
           grid-column: 1;
           grid-row: 3;
@@ -90,8 +89,13 @@ link verschoben
         grid-row: 5;
         width: 100%;
         margin: 16px auto;
-        .button {
-          max-width: 95%;
+        padding:0 12px;
+        p{
+          margin: 12px 0;
+        }
+        //nötig damit wenn verlinkt der Button noch Breit genug ist:
+        a {
+          min-width: 100%;
         }
       }
     }
