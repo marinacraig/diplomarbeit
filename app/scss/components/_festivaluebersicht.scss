@@ -12,6 +12,7 @@
     text-decoration: none;
     //height: 48px;
     max-width: 100%;
+    padding-bottom: 24px; //Abstand oben und unten gleich
 
     //mit grid damit letztes Element rechtsbündig ist
     display: grid;
@@ -26,17 +27,18 @@
       &__datum {
         grid-column: 1;
       }
-      &__liste {
+      &__kanton {
         grid-column: 2;
+        justify-self: center;
       }
       &__kacheln {
         grid-column: 3;
-        //justify-self: end;
+        justify-self: end;
         //align-self: end;
       }
       &__liste {
         grid-column: 4;
-        //justify-self: end;
+        justify-self: end;
         //align-self: end;
       }
 
@@ -140,6 +142,7 @@
           grid-row: 4;
           grid-column-start: 2;
           grid-column-end: 3;
+
           > p {
             margin: 0;
           }
@@ -171,6 +174,11 @@
     //evtl. hier: padding:16px; etc. analog Hauptseite
     //laptop margin: 0 120px; tablet: margin: 0 24px;
     padding: 0 24px;
+
+    .filternavigation {
+      padding-bottom: 40px; //Abstand oben und unten gleich
+      grid-template-columns: 5fr 10fr 5fr 4fr;
+    }
 
     // einzelne Festival-Kurzübersicht
     .festival__list {
@@ -260,15 +268,14 @@
 
               svg {
                 //padding: auto;
-                // align-self: center;
-                height: 23px;
+                align-self: center;
+                max-height: 23px;
                 width: auto;
               }
 
               .merken, .gemerkt {
                 //padding: 12px 12px 0;
                 //align-self: center;
-                width: 100%;
 
               }
             }
@@ -294,6 +301,10 @@
     padding: 0 120px;
     //width: 100%;
 
+    .filternavigation {
+      padding-bottom: 40px; //Abstand oben und unten gleich
+      grid-template-columns: 4fr 9fr 4fr 4fr;
+    }
     // einzelne Festival-Kurzübersicht
     .festival__list {
 
@@ -360,6 +371,7 @@
             p {
               display: inline-flex;
               align-self: center;
+              padding-left: 0; //svg hat ein Abstand von 12-> so nicht doppelt
 
               svg {
                 //padding: auto;
