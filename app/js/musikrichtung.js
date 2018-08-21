@@ -52,4 +52,5 @@ if (musikfilter !== null) {
 Anpassungen HTML:
 div mit form ersetzen
 bei input name="musikrichtung"
+Todo's im HTML bezüglich weiteren Seiten  bzw. zurücksetzen löschen
  */

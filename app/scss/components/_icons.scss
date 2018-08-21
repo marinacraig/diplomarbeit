@@ -22,7 +22,7 @@ svg {
 .entdeckungen {
   .icon__music {
     height: 120px;
-    max-width: 100%; //todo: hier lag der Fehler scrolling, wie mache ich die icons genügend lang?
+    max-width: 100%; //hier lag der Fehler scrolling, wie mache ich die icons genügend lang? -> entsprechend lange svgs einbinden
     display: block;
     margin: 48px 0; //ggf nochmals anpassen, sieht nach identischem h2-Abstand aus
   }
