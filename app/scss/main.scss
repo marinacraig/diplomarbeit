@@ -57,7 +57,7 @@ p {
   margin-bottom: 1em;
 }
 
-.musikrichtung, .festivalmargin {
+.musikrichtung, .festivalmargin, .tickets-intro {
   margin: 0 16px;
 }
 
@@ -71,7 +71,7 @@ article, .programm, .festivaluebersicht__filter {
 }
 
 //1. article, musikrichtung und entdeckungen, Titel von news und magazin zentriert
-.musikrichtung, .entdeckungen {
+.musikrichtung, .entdeckungen, .tickets-intro {
   text-align: center;
 }
 
@@ -227,7 +227,7 @@ article, .programm, .festivaluebersicht__filter {
 
 //tablet
 @media screen and (min-width: 376px) {
-  .musikrichtung, .festivalmargin {
+  .musikrichtung, .festivalmargin, .tickets-intro {
     margin: 0 24px;
   }
   //jede article trennt sich wie h2
@@ -247,7 +247,7 @@ article, .programm, .festivaluebersicht__filter {
 
 //laptop
 @media screen and (min-width: 769px) {
-  .musikrichtung, .festivalmargin {
+  .musikrichtung, .festivalmargin, .tickets-intro {
     margin: 0 120px;
   }
   article, .programm, .festivaluebersicht__filter {

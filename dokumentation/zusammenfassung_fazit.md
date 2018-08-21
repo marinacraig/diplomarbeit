@@ -23,5 +23,7 @@ eindenken muss
 - Möglichst kein js zu verwenden macht Spass, aber ist zeitaufwändiger in der Lösungsfindung.
 - nicht immer einfach den Fokus beizubehalten, wenn man etwas nicht sofort lösen kann
 - Literaturverzeichnis: besser laufend erstellen
+- Einheitliche paddings & margins von anfang an in einem seperaten scss machen - jetzt 
+sehr Suchintensiv
 
  [zurück zum Inhaltsverzeichnis](../README.md)  
