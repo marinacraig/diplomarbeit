@@ -24,22 +24,25 @@ if (favoriteMusicStyle !== null) {
     /*
     hole aus HTML favoriteMusicStyle
     da je Musikrichtung favoriteMusicStyle = FMS
-    da alle einzeln, bei fkt unchecked alle einzeln einfügen
-    (oder Array bzw. Objekt erstellen und entsprechend in fkt unchecked)
-     */
+    wenn alle einzeln, Problem mit Eventlistener z.B. für soul und mit fkt unchecked
+    -> array allFMS
+      */
 
     let jazzFMS = document.querySelector('#jazz')
     let hiphopFMS = document.querySelector('#hiphop')
     let indieFMS = document.querySelector('#indie')
     let poprockFMS = document.querySelector('#poprock')
     let electronicFMS = document.querySelector('#electronic')
-
-    /*
-    Todo: ausblenden da sie nicht musikrichtung.html blockieren?
-    */
     let countryFMS = document.querySelector('#country')
     let soulFMS = document.querySelector('#soul')
 
+    /*
+    alle in Array
+     */
+
+    let allFMS = [jazzFMS, hiphopFMS, indieFMS, poprockFMS, electronicFMS, countryFMS, soulFMS]
+
+    //zeigt nicht vorhandene mit null: console.log (allFMS) -> bei Eventlistener berücksichtigt
 
     /*
     alle Filter zurücksetzen
@@ -74,16 +77,17 @@ if (favoriteMusicStyle !== null) {
     }
 
     function unchecked() {
-        jazzFMS.checked = false
-        hiphopFMS.checked = false
-        indieFMS.checked = false
-        poprockFMS.checked = false
-        electronicFMS.checked = false
         /*
-    Todo: ausblenden da sie nicht musikrichtung.html blockieren?
-    */
-        //countryFMS.checked = false
-        //soulFMS.checked = false
+        statt alle einzeln & Probleme auf Seiten ohne
+        jazzFMS.checked = false etc. folgend ersetzt
+         */
+
+        for (let i = 0 ; i < allFMS.length ; ++i) {
+            if (allFMS[i]!=null){
+                allFMS[i].checked = false
+            }
+        }
+
 
         //Test:
         console.log(`jazzFMS ` + jazzFMS.checked)
@@ -97,18 +101,15 @@ if (favoriteMusicStyle !== null) {
 
     /*
     Eventlistener für alle checkboxes
+    statt alle einzeln & Fehlermeldung
+    (Bsp.:soulFMS.addEventListener('click', checked))
      */
-    jazzFMS.addEventListener('click', checked)
-    hiphopFMS.addEventListener('click', checked)
-    indieFMS.addEventListener('click', checked)
-    poprockFMS.addEventListener('click', checked)
-    electronicFMS.addEventListener('click', checked)
 
-    /*
-    Todo: ausblenden da sie nicht musikrichtung.html blockieren?
-    */
-    //countryFMS.addEventListener('click', checked)
-    //soulFMS.addEventListener('click', checked)
+    for (let i = 0 ; i < allFMS.length ; ++i) {
+            if (allFMS[i]!=null){
+            allFMS[i].addEventListener("click", checked)
+            }
+    }
 
     /*
     Eventlistener für zurücksetzen
