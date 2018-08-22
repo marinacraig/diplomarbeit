@@ -541,12 +541,13 @@ id pagetop: von unten nach oben hierhin-->
         <h1>Alles für deinen Musikgeschmack</h1>
         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
         </p>
-        <a href="musikrichtung.html">
-            <div class="button btnschwarz item__hidden--button" id="filter_anzeigen">Filter anzeigen</div>
+        <a href="musikrichtung.html" class="festivaluebersichtHTML">
+            <div class="button btnschwarz item__hidden--button" >Filter anzeigen</div>
         </a>
         <div class="item item__hidden--buttons">
-            <label>
-                <input type="checkbox" value="btngrau__jazz">
+
+            <label for="jazz">
+                <input type="checkbox" value="btngrau__jazz" name="musikrichtung" id="jazz">
                 <span class="button btngrau btngrau__jazz">
             <svg class="icon icon__music" viewBox="0 0 20 18" version="1.1" xmlns="http://www.w3.org/2000/svg"
                  xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -566,8 +567,8 @@ id pagetop: von unten nach oben hierhin-->
             <span>Jazz<sup class="results">27</sup></span></span>
             </label>
 
-            <label>
-                <input type="checkbox" value="btngrau__hiphop">
+            <label for="hiphop">
+                <input type="checkbox" value="btngrau__hiphop" name="musikrichtung" id="hiphop">
                 <span class="button btngrau btngrau__hiphop">
             <svg class="icon icon__music" viewBox="0 0 20 23" version="1.1" xmlns="http://www.w3.org/2000/svg"
                  xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -586,11 +587,11 @@ id pagetop: von unten nach oben hierhin-->
             </svg>
             <span>HipHop<sup class="results">33</sup></span>
 
-            </span>
+        </span>
             </label>
 
-            <label>
-                <input type="checkbox" value="btngrau__indie">
+            <label for="indie">
+                <input type="checkbox" value="btngrau__indie" name="musikrichtung" id="indie">
                 <span class="button btngrau btngrau__indie">
             <svg class="icon icon__music" viewBox="0 0 20 15" version="1.1" xmlns="http://www.w3.org/2000/svg"
                  xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -608,10 +609,11 @@ id pagetop: von unten nach oben hierhin-->
                 </g>
             </svg>
             <span>Indie<sup class="results">25</sup></span>
-             </span>
+        </span>
             </label>
-            <label>
-                <input type="checkbox" value="btngrau__electronic">
+
+            <label for="poprock">
+                <input type="checkbox" value="btngrau__poprock" name="musikrichtung" id="poprock">
                 <span class="button btngrau btngrau__poprock">
             <svg class="icon  icon__music" viewBox="0 0 24 19" version="1.1" xmlns="http://www.w3.org/2000/svg"
                  xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -632,8 +634,8 @@ id pagetop: von unten nach oben hierhin-->
             </span>
             </label>
 
-            <label>
-                <input type="checkbox" value="btngrau__electronic">
+            <label for="electronic">
+                <input type="checkbox" value="btngrau__electronic" name="musikrichtung" id="electronic">
                 <span class="button btngrau btngrau__electronic">
             <svg class="icon  icon__music" viewBox="0 0 20 16" version="1.1" xmlns="http://www.w3.org/2000/svg"
                  xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -651,17 +653,17 @@ id pagetop: von unten nach oben hierhin-->
                 </g>
             </svg>
             <span>Electronic<sup class="results">43</sup></span>
-            </span>
+       </span>
             </label>
 
-            <a href="musikrichtung.html">
+            <a href="musikrichtung.html" class="festivaluebersichtHTML">
                 <div class="button btnunterstrichen">Mehr Genres</div>
             </a>
             <br>
-            <div class="button btnweiss"><p>Filter zurücksetzen</p></div>
+            <div class="button btnweiss" id="resetFMS"><p>Filter zurücksetzen</p></div>
 
             <!--
-            <a href="festivaluebersicht.html" id="musikfilter">
+            <a href="festivaluebersicht.html" id="filterFMS">
                 <div class="button btnschwarz"><p>Ergebnis anzeigen</p></div>
             </a>
             -->

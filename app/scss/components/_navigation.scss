@@ -45,6 +45,14 @@ nav {
     }
   }
 
+  //wegen zurück-Button auf musikrichtung.html
+  .nav__menu >a >p {
+    height: 100%;
+    &:hover{
+      color: $grau76_hex;
+    }
+  }
+
   .nav__festivallovers {
     /*nur ab desktop
         &--1{

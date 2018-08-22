@@ -1,5 +1,5 @@
-let musikfilter = document.getElementById('musikfilter');
-if (musikfilter !== null) {
+let favoriteMusicStyle = document.getElementById('filterFMS');
+if (favoriteMusicStyle !== null) {
     /*
     Idee:
     merke von welcher Seite jemand kommt
@@ -23,66 +23,104 @@ if (musikfilter !== null) {
 
     /*
     hole aus HTML favoriteMusicStyle
+    da je Musikrichtung favoriteMusicStyle = FMS
+    da alle einzeln, bei fkt unchecked alle einzeln einfügen
+    (oder Array bzw. Objekt erstellen und entsprechend in fkt unchecked)
      */
 
-    //name="musikrichtung"
-
-    let favoriteMusicStyle1 = document.getElementsByName('musikrichtung')
-     //Zeigt node-list mit input und id: console.log(favoriteMusicStyle1)
-      //undefined: console.log(favoriteMusicStyle1.value)
-     //undefined: console.log(favoriteMusicStyle1.checked)
-        //undefinedconsole.log(favoriteMusicStyle1.this)
-
-    let lenfMS = favoriteMusicStyle1.length;
-
-    let favoriteMusicStyle2 = document.querySelector('checkbox')
-    // null (auch mit musikrichtung) console.log(favoriteMusicStyle2)
+    let jazzFMS = document.querySelector('#jazz')
+    let hiphopFMS = document.querySelector('#hiphop')
+    let indieFMS = document.querySelector('#indie')
+    let poprockFMS = document.querySelector('#poprock')
+    let electronicFMS = document.querySelector('#electronic')
+    let countryFMS = document.querySelector('#country')
+    let soulFMS = document.querySelector('#soul')
 
 
-    let favoriteMusicStyle3 = document.querySelectorAll('checkbox')
-    // zeigt node-list length 0 console.log(favoriteMusicStyle3)
-    // Array Iterator: console.log(favoriteMusicStyle3.values())
-   // zeigt node-list length 0 console.log(favoriteMusicStyle3.valueOf())
+    /*
+    alle Filter zurücksetzen
+     */
+    let resetFMS = document.querySelector('#resetFMS')
 
-    // undefined: console.log(favoriteMusicStyle3.value)
-    //undefined console.log(favoriteMusicStyle3.this)
+    /*
+    Damit man ans richtige Ort zurück kommt Link in nav auf passende Seite setzen
 
-    let favoriteMusicStyle4 = document.querySelector('#jazz')
-    // gibt html input aus: console.log(favoriteMusicStyle4)
-    // false: console.log(favoriteMusicStyle4.checked)
+    wissen woher man kommt: class="indexHTML" und festivaluebersichtHTML
+    (click mobile & grösser = anders, daher nicht id)
+    Todo Anmerkung: querySelector = null, querySelectorAll = NodeList
 
+    nötig: ort zum link für "zurück" setzen = id="zurueckFMS"
+     */
+    let indexHTML = document.querySelector('.indexHTML')
+    let festUebHTML = document.querySelectorAll('.festivaluebersichtHTML')
 
-    let favoriteMusicStyle5 = document.querySelectorAll('#jazz, #hiphop, #poprock')
-    // node-list mit input und id's console.log(favoriteMusicStyle5)
-    // undefined: console.log(favoriteMusicStyle5.checked)
+    console.log(indexHTML)
+    console.log(festUebHTML)
+
+    let zurueckFMS = document.querySelector('#zurueckFMS')
 
     /*
     Wurde auf die Checkbox geklickt? -> fkt checked
      */
 
     function checked() {
-        console.log(favoriteMusicStyle4.checked)
+        console.log(this) // HTML-String der ID
+        console.log(this.checked) //Ausgabe: true bzw. false
+        //todo: idee: this.checked bwz. true false in localstorage, dann dort holen und injecten
+    }
+
+    function unchecked() {
+        jazzFMS.checked = false
+        hiphopFMS.checked = false
+        indieFMS.checked = false
+        poprockFMS.checked = false
+        electronicFMS.checked = false
+        countryFMS.checked = false
+        soulFMS.checked = false
+
+        //Test:
+        console.log(`jazzFMS ` + jazzFMS.checked)
+        //todo: idee: this.checked bwz. true false in localstorage, dann dort holen und injecten
+
+    }
+
+    function backFMS () {
+        console.log('link in zurueckFMS setzen')
     }
 
     /*
     Eventlistener für alle checkboxes
      */
+    jazzFMS.addEventListener('click', checked)
+    hiphopFMS.addEventListener('click', checked)
+    indieFMS.addEventListener('click', checked)
+    poprockFMS.addEventListener('click', checked)
+    electronicFMS.addEventListener('click', checked)
+    countryFMS.addEventListener('click', checked)
+    soulFMS.addEventListener('click', checked)
 
-    //is not a function: favoriteMusicStyle1.addEventListener('click', checked)
-    //cannot read property of null favoriteMusicStyle2.addEventListener('click', checked)
-    //is not a function: favoriteMusicStyle3.addEventListener('click', checked)
+    /*
+    Eventlistener für zurücksetzen
+     */
+    resetFMS.addEventListener('click', unchecked)
 
-    //is not a function: favoriteMusicStyle5.addEventListener('click', checked)
-    favoriteMusicStyle4.addEventListener('click', checked)
+    /*
+    Eventlistener für Zurück-Link in Nav -> unnötig?!
+    zuerst schauen ob ausführbar
+     */
+   // zurueckFMS.addEventListener('click', backFMS)
 
-    //Todo: Idee: 1 array mit allen "favoriteMusicStyle4", auf diesen Eventlistener machen
+
+    indexHTML.addEventListener('click', backFMS)
 
 }
 
 /*
 Anpassungen HTML:
 div mit form ersetzen -> glaubs unnötig bzw. wieder gelöscht
-bei input name="musikrichtung"
-label mit for und input mit id
+bei input name="musikrichtung" (nicht nötig)
+label mit for und input mit id id="resetFMS"
+ergebnis anzeigen id="filterFMS"
+Filter zurücksetzen:
 Todo's im HTML bezüglich weiteren Seiten  bzw. zurücksetzen löschen
  */
