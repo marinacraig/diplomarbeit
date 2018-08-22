@@ -12,8 +12,8 @@
 - [Offerte](https://docs.google.com/document/d/1dCjLOwE2s_naJFpOfdwf1nAEW1BeifqMymJoFDwuWrs/edit?usp=sharing)  
 
 ####Allgemeine Dokumentation:  
-- **Setup Guide** 
-bitte folgendes im Terminal nach fork oder clone eingeben:
+- **Setup Guide**  
+Bitte folgendes im Terminal nach fork oder clone von github eingeben:
 1. npm init  
 Bedingung: npm vorhanden, sonst zuerst npm installieren
 2. ./install.sh  
@@ -22,12 +22,15 @@ bzw. suche nach chmod.
 Alternative: alle npm Befehle händisch eingeben.
 3. gulp build  
 Erstellt dist-Ordner
-4. gulp inject
+4. gulp inject  
 Korrekte js und css files im dist-Ordner
-5. für app / Entwicklung: gulp
-(ist ohne build und zeigt nicht auf dist, da sonst zu langsam während Entwicklung)
+5. gulp  
+für app / Entwicklung (ist ohne build und zeigt nicht auf dist, da sonst zu langsam während Entwicklung)
 
-- **URL der lauffähigen Version:** Befindet sich nur auf [https://github.com/WebProfessionals/dipl1718_marina](https://github.com/WebProfessionals/dipl1718_marina)  
+- **URL der lauffähigen Version:**   
+[http://marina.techfabrik.com/dist/](http://marina.techfabrik.com/dist/) 
+Anmerkung: Lektion Deployment: alles soll auf Server, daher ist alles hochgeladen (gültig bis 20.09.2018)  
+[https://github.com/WebProfessionals/dipl1718_marina](https://github.com/WebProfessionals/dipl1718_marina)  
 
 - **Zeitplan / Meilensteine:**   
 Grobkonzept, Feinkonzept: [https://docs.google.com/spreadsheets/d/1eV_7Tlo0QKG4BIn0B93sUNnICly4tzJ4m1kySTdQwCs/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1eV_7Tlo0QKG4BIn0B93sUNnICly4tzJ4m1kySTdQwCs/edit?usp=sharing)  
