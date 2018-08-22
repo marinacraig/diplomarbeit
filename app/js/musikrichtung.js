@@ -1,4 +1,4 @@
-let favoriteMusicStyle = document.getElementById('filterFMS');
+let favoriteMusicStyle = document.getElementById('musikrichtung');
 if (favoriteMusicStyle !== null) {
     /*
     Idee:
@@ -33,6 +33,10 @@ if (favoriteMusicStyle !== null) {
     let indieFMS = document.querySelector('#indie')
     let poprockFMS = document.querySelector('#poprock')
     let electronicFMS = document.querySelector('#electronic')
+
+    /*
+    Todo: ausblenden da sie nicht musikrichtung.html blockieren?
+    */
     let countryFMS = document.querySelector('#country')
     let soulFMS = document.querySelector('#soul')
 
@@ -75,8 +79,11 @@ if (favoriteMusicStyle !== null) {
         indieFMS.checked = false
         poprockFMS.checked = false
         electronicFMS.checked = false
-        countryFMS.checked = false
-        soulFMS.checked = false
+        /*
+    Todo: ausblenden da sie nicht musikrichtung.html blockieren?
+    */
+        //countryFMS.checked = false
+        //soulFMS.checked = false
 
         //Test:
         console.log(`jazzFMS ` + jazzFMS.checked)
@@ -96,8 +103,12 @@ if (favoriteMusicStyle !== null) {
     indieFMS.addEventListener('click', checked)
     poprockFMS.addEventListener('click', checked)
     electronicFMS.addEventListener('click', checked)
-    countryFMS.addEventListener('click', checked)
-    soulFMS.addEventListener('click', checked)
+
+    /*
+    Todo: ausblenden da sie nicht musikrichtung.html blockieren?
+    */
+    //countryFMS.addEventListener('click', checked)
+    //soulFMS.addEventListener('click', checked)
 
     /*
     Eventlistener für zurücksetzen
@@ -111,7 +122,7 @@ if (favoriteMusicStyle !== null) {
    // zurueckFMS.addEventListener('click', backFMS)
 
 
-    indexHTML.addEventListener('click', backFMS)
+    //indexHTML.addEventListener('click', backFMS)
 
 }
 
