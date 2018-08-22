@@ -20,7 +20,6 @@ if (favoriteMusicStyle !== null) {
         falls jemand auf filter zurücksetzen klickt -> alle "löschen"
      */
 
-
     /*
     hole aus HTML favoriteMusicStyle
     da je Musikrichtung favoriteMusicStyle = FMS
@@ -54,17 +53,16 @@ if (favoriteMusicStyle !== null) {
 
     wissen woher man kommt: class="indexHTML" und festivaluebersichtHTML
     (click mobile & grösser = anders, daher nicht id)
-    Todo Anmerkung: querySelector = null, querySelectorAll = NodeList
+    Anmerkung: querySelector = null, querySelectorAll = NodeList
 
     nötig: ort zum link für "zurück" setzen = id="zurueckFMS"
      */
     let indexHTML = document.querySelector('.indexHTML')
-    let festUebHTML = document.querySelectorAll('.festivaluebersichtHTML')
+    let festUebHTML = document.querySelector('.festivaluebersichtHTML')
 
-    console.log(indexHTML)
-    console.log(festUebHTML)
 
     let zurueckFMS = document.querySelector('#zurueckFMS')
+
 
     /*
     Wurde auf die Checkbox geklickt? -> fkt checked
@@ -73,6 +71,8 @@ if (favoriteMusicStyle !== null) {
     function checked() {
         console.log(this) // HTML-String der ID
         console.log(this.checked) //Ausgabe: true bzw. false
+
+
         //todo: idee: this.checked bwz. true false in localstorage, dann dort holen und injecten
     }
 
@@ -85,7 +85,7 @@ if (favoriteMusicStyle !== null) {
         for (let i = 0 ; i < allFMS.length ; ++i) {
             if (allFMS[i]!=null){
                 allFMS[i].checked = false
-            }
+ }
         }
 
 
@@ -97,6 +97,9 @@ if (favoriteMusicStyle !== null) {
 
     function backFMS () {
         console.log('link in zurueckFMS setzen')
+        //sowas oder so:
+        zurueckFMS.setAttribute("href", "https://bencollier.net/2011/05/quickly-creating-an-html-link-in-javascript/");
+
     }
 
     /*
@@ -117,13 +120,29 @@ if (favoriteMusicStyle !== null) {
     resetFMS.addEventListener('click', unchecked)
 
     /*
-    Eventlistener für Zurück-Link in Nav -> unnötig?!
-    zuerst schauen ob ausführbar
+    Eventlistener für Zurück-Link in Nav
+    zuerst schauen ob ausführbar, dann via fkt link in HTML einfügen
+    Problem: auf der index bzw. Übersichtseite ist der zurückbutton
+    nicht vorhanden
+    Todo: idee: wert für fkt in localstorage, wenn auf musikrichtung.html
+    wert holen und page einfügen
      */
-   // zurueckFMS.addEventListener('click', backFMS)
 
+    if (indexHTML != null) {
+        indexHTML.addEventListener('click', backFMS)
+    }
 
-    //indexHTML.addEventListener('click', backFMS)
+    if (festUebHTML != null) {
+        festUebHTML.addEventListener('click', backFMS)
+    }
+/*
+    if (indexHTML != null) {
+        indexHTML.addEventListener('click', e => {
+            zurueckFMS.setAttribute("href", "https://bencollier.net/2011/05/quickly-creating-an-html-link-in-javascript/");
+
+        })
+    }*/
+
 
 }
 
