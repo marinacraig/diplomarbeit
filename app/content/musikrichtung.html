@@ -217,7 +217,7 @@
     <div id="pagetop"></div>
 
     <!-- Musikrichtung-->
-    <form id="musikrichtung" class="musikrichtung" name="myform" method="" action="">
+    <div id="musikrichtung" class="musikrichtung">
         <!--eigentlich gehört hier SEO h1 hin -> class h2 wegen Schriftgrösse-->
 
         <!--
@@ -232,8 +232,8 @@
 
          -->
 
-        <label>
-            <input type="checkbox" value="btngrau__jazz" name="musikrichtung">
+        <label for="jazz">
+            <input type="checkbox" value="btngrau__jazz" name="musikrichtung" id="jazz">
             <span class="button btngrau btngrau__jazz">
             <svg class="icon icon__music" viewBox="0 0 20 18" version="1.1" xmlns="http://www.w3.org/2000/svg"
                  xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -253,8 +253,8 @@
             <span>Jazz<sup class="results">27</sup></span></span>
         </label>
 
-        <label>
-            <input type="checkbox" value="btngrau__hiphop" name="musikrichtung">
+        <label for="hiphop">
+            <input type="checkbox" value="btngrau__hiphop" name="musikrichtung" id="hiphop">
             <span class="button btngrau btngrau__hiphop">
             <svg class="icon icon__music" viewBox="0 0 20 23" version="1.1" xmlns="http://www.w3.org/2000/svg"
                  xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -276,8 +276,8 @@
         </span>
         </label>
 
-        <label>
-            <input type="checkbox" value="btngrau__indie" name="musikrichtung">
+        <label for="indie">
+            <input type="checkbox" value="btngrau__indie" name="musikrichtung" id="indie">
             <span class="button btngrau btngrau__indie">
             <svg class="icon icon__music" viewBox="0 0 20 15" version="1.1" xmlns="http://www.w3.org/2000/svg"
                  xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -297,8 +297,8 @@
             <span>Indie<sup class="results">25</sup></span>
         </span>
         </label>
-        <label>
-            <input type="checkbox" value="btngrau__electronic" name="musikrichtung">
+        <label for="poprock">
+            <input type="checkbox" value="btngrau__poprock" name="musikrichtung" id="poprock">
             <span class="button btngrau btngrau__poprock">
             <svg class="icon  icon__music" viewBox="0 0 24 19" version="1.1" xmlns="http://www.w3.org/2000/svg"
                  xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -319,8 +319,8 @@
             </span>
         </label>
 
-        <label>
-            <input type="checkbox" value="btngrau__electronic" name="musikrichtung">
+        <label for="electronic">
+            <input type="checkbox" value="btngrau__electronic" name="musikrichtung" id="electronic">
             <span class="button btngrau btngrau__electronic">
             <svg class="icon  icon__music" viewBox="0 0 20 16" version="1.1" xmlns="http://www.w3.org/2000/svg"
                  xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -342,8 +342,8 @@
         </label>
 
         <!--weitere Musikrichtungen, werden nur angezeigt wenn aktiver Filter-->
-        <label>
-            <input type="checkbox" value="btngrau__country" name="musikrichtung">
+        <label for="country">
+            <input type="checkbox" value="btngrau__country" name="musikrichtung" id="country">
             <span class="button btngrau btngrau__country">
             <svg class="icon  icon__music" width="24px" height="16px" viewBox="0 0 24 16" version="1.1"
                  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -364,8 +364,8 @@
             </span>
         </label>
 
-        <label>
-            <input type="checkbox" value="btngrau__soul" name="musikrichtung">
+        <label for="soul">
+            <input type="checkbox" value="btngrau__soul" name="musikrichtung" id="soul">
             <span class="button btngrau btngrau__soul">
             <svg class="icon  icon__music" width="24px" height="23px" viewBox="0 0 24 23" version="1.1"
                  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -396,7 +396,7 @@
         <!--
         </div>
         -->
-    </form>
+    </div>
     <div class="footer__musikrichtung">
         <div class="button btnweiss" id="resetFilter"><p>Filter zurücksetzen</p></div>
         <a href="festivaluebersicht.html" id="musikfilter" class="button btnschwarz">
