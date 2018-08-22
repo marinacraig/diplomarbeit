@@ -21,72 +21,61 @@ if (musikfilter !== null) {
      */
 
 
+    /*
+    hole aus HTML favoriteMusicStyle
+     */
+
+    //name="musikrichtung"
+
+    let favoriteMusicStyle1 = document.getElementsByName('musikrichtung')
+     //Zeigt node-list mit input und id: console.log(favoriteMusicStyle1)
+      //undefined: console.log(favoriteMusicStyle1.value)
+     //undefined: console.log(favoriteMusicStyle1.checked)
+        //undefinedconsole.log(favoriteMusicStyle1.this)
+
+    let lenfMS = favoriteMusicStyle1.length;
+
+    let favoriteMusicStyle2 = document.querySelector('checkbox')
+    // null (auch mit musikrichtung) console.log(favoriteMusicStyle2)
+
+
+    let favoriteMusicStyle3 = document.querySelectorAll('checkbox')
+    // zeigt node-list length 0 console.log(favoriteMusicStyle3)
+    // Array Iterator: console.log(favoriteMusicStyle3.values())
+   // zeigt node-list length 0 console.log(favoriteMusicStyle3.valueOf())
+
+    // undefined: console.log(favoriteMusicStyle3.value)
+    //undefined console.log(favoriteMusicStyle3.this)
+
+    let favoriteMusicStyle4 = document.querySelector('#jazz')
+    // gibt html input aus: console.log(favoriteMusicStyle4)
+    // false: console.log(favoriteMusicStyle4.checked)
+
+
+    let favoriteMusicStyle5 = document.querySelectorAll('#jazz, #hiphop, #poprock')
+    // node-list mit input und id's console.log(favoriteMusicStyle5)
+    // undefined: console.log(favoriteMusicStyle5.checked)
 
     /*
+    Wurde auf die Checkbox geklickt? -> fkt checked
+     */
 
-diese variante funktioniert halbwegs (switched nicht), aber für jede id Eventlistener....
-    let favoriteMusicStyle = document.querySelector('checkbox')
-
-    console.log(favoriteMusicStyle.value)
-
-    function changeCheckbox(checkbox) {
-        // check if checkbox is checked
-        if (checkbox.checked) {
-            // if checked
-            console.log('checked');
-        } else {
-            // if unchecked
-            console.log('unchecked');
-        }
+    function checked() {
+        console.log(favoriteMusicStyle4.checked)
     }
 
-    favoriteMusicStyle.addEventListener('change', changeCheckbox);
-*/
-
     /*
-    hole aus HTML name="musikrichtung"
+    Eventlistener für alle checkboxes
      */
-    let favoriteMusicStyle = document.getElementsByName('musikrichtung')
 
+    //is not a function: favoriteMusicStyle1.addEventListener('click', checked)
+    //cannot read property of null favoriteMusicStyle2.addEventListener('click', checked)
+    //is not a function: favoriteMusicStyle3.addEventListener('click', checked)
 
-    /*
+    //is not a function: favoriteMusicStyle5.addEventListener('click', checked)
+    favoriteMusicStyle4.addEventListener('click', checked)
 
-    Verkürze die Variable, für mehr Übersicht bzw. nur Anzahl Elemente
-
-    */
-
-    let len = favoriteMusicStyle.length
-    let i = 0;
-
-    /*
-
-    Eventlister: ausführen wenn jemand klickt
-
-
-    https://stackoverflow.com/questions/11599666/get-the-value-of-checked-checkbox
-    gibt aktuell aus welche angeklickt wurden (true, false)
-        addEventListener("click", (e => {
-        for (i = 0; i < len; i++) {
-            i + (favoriteMusicStyle[i].checked ? ' checked ' : ' unchecked ') + favoriteMusicStyle[i].value
-            console.log(favoriteMusicStyle[i].checked)
-            console.log(favoriteMusicStyle[i].value)
-
-        }
-    }))
-
-    zählt klicks und gibt Anzahl pro Value aus, allerdings egal wo man hinklickt:
-    addEventListener("click", (e => {
-        for (i = 0; i < len; i++) {
-            if (favoriteMusicStyle[i].checked==true) {
-                console.log(favoriteMusicStyle[i].value + " checked")
-
-                //damit auch bei erneutem Klick etwas passiert:
-                i++;
-
-            }
-        }
-    }))
-     */
+    //Todo: Idee: 1 array mit allen "favoriteMusicStyle4", auf diesen Eventlistener machen
 
 }
 
