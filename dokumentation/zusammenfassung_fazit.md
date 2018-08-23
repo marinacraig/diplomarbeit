@@ -10,11 +10,20 @@ Umsetzung:
 Jeder Teil jeder Seite ist irgendwie anders. Immer zuerst Mobile und dann die anderen beiden 
 Versionen erstellt. Veiths Empfehlung 2 verschiedene Versionen zu machen habe ich 
 verworfen, da ich zum einen bereits begonnen hatte, zum anderen ein fluides Design 
-wollte (Dickschädel).
+wollte (Dickschädel).  
+mehr:  
+[Aufbau](aufbausite.md) (wann was gemacht)   
+[Style Abweichungen](style.md)  
+
 
 Dokumentation:
-- laufend Sachen festgehalten (wenn auch teils recht chaotisch)
+- laufend Sachen festgehalten (wenn auch recht chaotisch)
 - hashtags auf github stören mich, sind jedoch nicht relevant
+
+Deployment:
+via Filezilla, da so am wenigsten Zeitintensiv (leider unterschätzt).
+
+##Eidesstattliche Erklärung
 
 #Fazit
 - Etwas Organisation hilft den Überblick zu bewahren
@@ -22,8 +31,11 @@ Dokumentation:
 eindenken muss
 - Möglichst kein js zu verwenden macht Spass, aber ist zeitaufwändiger in der Lösungsfindung.
 - nicht immer einfach den Fokus beizubehalten, wenn man etwas nicht sofort lösen kann
-- Literaturverzeichnis: besser laufend erstellen
+- Literaturverzeichnis: besser laufend erstellen, als im Nachgang zusammensuchen
 - Einheitliche paddings & margins von anfang an in einem seperaten scss machen - jetzt 
 sehr Suchintensiv
+- Bugfixen macht Spass wenn man mit etwas anderem gerade nicht weiter kommt.
+- Auf privatem github funktioniert http://htmlpreview.github.io/? nicht (="liveanzeige html")
+
 
  [zurück zum Inhaltsverzeichnis](../README.md)  

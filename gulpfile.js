@@ -33,6 +33,8 @@ gulp-postcss statt gulp-concat für die Combi mit Sourcemaps
 gulp-inject-partials: z.B. für Nav und Footer https://www.npmjs.com/package/gulp-inject-partials
 gulp-inject-file: damit bei js spezifisches file und nicht alle eingefügt werden (hat aber nicht richtig fkt, daher evt. postbuild)
 php: z.B. verkleinern oder unleserlich machen (Sicherheit und Geschwindigkeit) (task copy-php ergänzen?)
+
+linter hinzufügen / beautify
  */
 
 const gulp = require('gulp');  // damit gulp läuft

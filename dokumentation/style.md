@@ -59,10 +59,8 @@ Zeitgründen wurde jedoch nur der news-Teil entsprechend umgesetzt.
 Die Texte sind vom padding / margin her anders als im Styleguide, diese sind 
 schlicht zu breit für die jeweiligen Breakpoints. 
 Damit es auf allen Viewports einigermassen anständig aussieht wurde am Ende 
-grid gewählt.
-###Breadcrump
-Wegen dem Border beim letzten Teil Text "Festival" gesetzt. Wird aus 
-Zeitgründen nicht gefixt.
+grid gewählt.  
+Zusatz: Switcher bei klick auf Kachel / Liste eingefügt (Farbwechsel fehlt)  
 
 ##Festival
 ###Sponsoring
@@ -75,18 +73,16 @@ Alternativ wäre ein anderer Einzug auf der Rechten Seite vorstellbar, was
 mir allerdings nicht gefällt. Da dies nicht ganz klar ist, und mich lieber 
 auf andere Task fokussieren möchte, lasse ich es so stehen. 
 
-###Select mit Tagesprogramm  
-
 ###maps
 Funktionierte bis vor dem 06.08.2018 noch mit einem Hack. Am 08.08.2018 
 habe ich festgestellt, dass Google diese Möglichkeit geschlossen hat. 
 Ab sofort ist eine entsprechende Umsetzung nur noch mit einer Kreditkarte, 
-welche keine Prepaid sein darf, möglich. Punktabzüge aus Geldgründen wären 
-extrem unfair. 
+welche keine Prepaid sein darf, möglich. 
+Mit Key von Rolf teilweise "nur für developing" sichtbar.
 
 ###weitere Festivalseiten  
-Weitere Einzelübersichten sind zwar vorhanden, jedoch evtl. nicht vollständig. 
-Entweder fehlen Elemente, Links oder Klassenanpassungen der Musikrichtungen. 
+Weitere Einzelübersichten sind zwar zur Farbansicht vorhanden, jedoch evtl. nicht vollständig. 
+(entweder fehlen Elemente, Links oder Klassenanpassungen) 
  
 ##Bestellvorgang
 Wie bereits beim Header erwähnt, hat jene Login-Entscheidung 
@@ -99,8 +95,5 @@ so keinen Sinn.
 Die Kreditkartenbilder stammen von den offiziellen Seiten der Logoinhaber 
 und weichen daher von der Screen-Vorgabe ab.
 
-
-
- 
 
  [zurück zum Inhaltsverzeichnis](../README.md)  

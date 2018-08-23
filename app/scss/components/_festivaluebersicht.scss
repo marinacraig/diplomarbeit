@@ -50,7 +50,7 @@
         margin: 0;
       }
 
-      //funktioniert nicht, da keine Filter etc
+      //funktioniert nicht, da keine Filter etc, zudem css via js = böse
       &:active {
         color: $schwarz_hex;
       }
