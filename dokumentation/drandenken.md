@@ -42,6 +42,7 @@ g mit fill: fill löschen, beispielsweise class="icon  icon__music icon__music--
 einfügen  
 id: wenn gleiches icon mehrmals auf gleicher Seite, dann löschen  
 
- 
+alle js in festival_1.html verlinkt
+switcher verbaut 
  
 [zurück zum Inhaltsverzeichnis](../README.md)  

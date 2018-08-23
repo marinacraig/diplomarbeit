@@ -16,7 +16,7 @@
 
     //mit grid damit letztes Element rechtsbündig ist
     display: grid;
-    grid-template-columns: 7fr 7fr 2fr 2fr;
+    grid-template-columns: 7fr 7fr 4fr;
     grid-template-rows: 1fr;
 
     .filter {
@@ -31,15 +31,18 @@
         grid-column: 2;
         justify-self: center;
       }
-      &__kacheln {
+
+      //für den css switch zur Kachelansicht, ggf nochmals umbauen
+      &__css {
         grid-column: 3;
         justify-self: end;
-        //align-self: end;
-      }
-      &__liste {
-        grid-column: 4;
-        justify-self: end;
-        //align-self: end;
+
+        span.filter {
+          display: inline-block;
+        }
+        input[type=checkbox] {
+          display: none;
+        }
       }
 
       p, svg {
@@ -47,11 +50,13 @@
         margin: 0;
       }
 
+      //funktioniert nicht, da keine Filter etc
       &:active {
         color: $schwarz_hex;
       }
     }
   }
+
 
   //Liste und Listen der Festivalübersicht ("nav" und die einzelnen Festivals)
 
@@ -168,6 +173,12 @@
   }
 }
 
+//nur zum Testen
+.festival__kachel{
+  background-color: $schwarz_hex;
+  color: #D81B60;
+
+}
 //tablet
 @media screen and (min-width: 376px) {
   .festivaluebersicht__filter {
@@ -177,7 +188,7 @@
 
     .filternavigation {
       padding-bottom: 40px; //Abstand oben und unten gleich
-      grid-template-columns: 5fr 10fr 5fr 4fr;
+      grid-template-columns: 5fr 10fr 9fr;
     }
 
     // einzelne Festival-Kurzübersicht
@@ -303,7 +314,7 @@
 
     .filternavigation {
       padding-bottom: 40px; //Abstand oben und unten gleich
-      grid-template-columns: 4fr 9fr 4fr 4fr;
+      grid-template-columns: 4fr 9fr 8fr;
     }
     // einzelne Festival-Kurzübersicht
     .festival__list {
