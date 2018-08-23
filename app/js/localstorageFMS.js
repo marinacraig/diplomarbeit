@@ -1,30 +1,35 @@
-/*
-Idee: allFMS status checked in Objekt speichern
+let favoriteMusicStyle = document.getElementById('musikrichtung');
+if (favoriteMusicStyle !== null) {
 
-dieses Objekt stringify
-dann setItem
-und getItem
- */
+    /*
+    Idee: allFMS status checked in Objekt speichern
+
+    dieses Objekt stringify
+    dann setItem
+    und getItem
+     */
 
 
-/*
-hole aus localStorage
- */
+    /*
+    hole aus localStorage
+     */
 
-let json = JSON.stringify(allFMS);
+   let json = JSON.stringify(allFMS);  // eingabe console: leeres Teil mit Klammern
 
-localStorage.getItem('allFMS');
-if (json) {
-    let allFMS = JSON.parse(json);
-} else {
-    let i = 0 ; i < allFMS.length ; ++i
-    let allFMS = allFMS[i].checked = false; // Default Wert setzen, z.B. leere Liste
+    localStorage.getItem('allFMS');
+    if (json) {
+        let allFMS = JSON.parse(json);
+    } else {
+        //let allFMS = allFMS.checked = false; // Default Wert setzen, z.B. leere Liste
+    }
+
+    /*
+    füge in localStorage ein
+    wenn checked()
+     */
+  localStorage.setItem('allFMS', json);
+
+
+
+
 }
-
-/*
-füge in localStorage ein
-wenn checked()
- */
-
-localStorage.setItem('allFMS', json);
-

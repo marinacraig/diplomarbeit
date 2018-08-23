@@ -27,6 +27,7 @@ if (favoriteMusicStyle !== null) {
     -> array allFMS
       */
 
+
     let jazzFMS = document.querySelector('#jazz')
     let hiphopFMS = document.querySelector('#hiphop')
     let indieFMS = document.querySelector('#indie')
@@ -39,7 +40,9 @@ if (favoriteMusicStyle !== null) {
     alle in Array
      */
 
+
     let allFMS = [jazzFMS, hiphopFMS, indieFMS, poprockFMS, electronicFMS, countryFMS, soulFMS]
+
 
     //zeigt nicht vorhandene mit null: console.log (allFMS) -> bei Eventlistener berücksichtigt
 
@@ -69,11 +72,15 @@ if (favoriteMusicStyle !== null) {
      */
 
     function checked() {
-        console.log(this) // HTML-String der ID
-        console.log(this.checked) //Ausgabe: true bzw. false
+        // HTML-String der ID:console.log(this)
+        //Ausgabe: true bzw. false console.log(this.checked)
+
+        //enthält alle inkl. checked: true or false allFMS
+        console.log(allFMS)
 
 
-        //todo: idee: this.checked bwz. true false in localstorage, dann dort holen und injecten
+
+
     }
 
     function unchecked() {
@@ -82,12 +89,13 @@ if (favoriteMusicStyle !== null) {
         jazzFMS.checked = false etc. folgend ersetzt
          */
 
-        for (let i = 0 ; i < allFMS.length ; ++i) {
-            if (allFMS[i]!=null){
+        for (let i = 0; i < allFMS.length; ++i) {
+            if (allFMS[i] != null) {
                 allFMS[i].checked = false
- }
-        }
 
+                //Antwort alle ohne true: console.log (allFMS[i])
+            }
+        }
 
         //Test:
         console.log(`jazzFMS ` + jazzFMS.checked)
@@ -95,7 +103,7 @@ if (favoriteMusicStyle !== null) {
 
     }
 
-    function backFMS () {
+    function backFMS() {
         console.log('link in zurueckFMS setzen')
         //sowas oder so:
         zurueckFMS.setAttribute("href", "https://bencollier.net/2011/05/quickly-creating-an-html-link-in-javascript/");
@@ -108,10 +116,10 @@ if (favoriteMusicStyle !== null) {
     (Bsp.:soulFMS.addEventListener('click', checked))
      */
 
-    for (let i = 0 ; i < allFMS.length ; ++i) {
-            if (allFMS[i]!=null){
+    for (let i = 0; i < allFMS.length; ++i) {
+        if (allFMS[i] != null) {
             allFMS[i].addEventListener("click", checked)
-            }
+        }
     }
 
     /*
@@ -135,13 +143,13 @@ if (favoriteMusicStyle !== null) {
     if (festUebHTML != null) {
         festUebHTML.addEventListener('click', backFMS)
     }
-/*
-    if (indexHTML != null) {
-        indexHTML.addEventListener('click', e => {
-            zurueckFMS.setAttribute("href", "https://bencollier.net/2011/05/quickly-creating-an-html-link-in-javascript/");
+    /*
+        if (indexHTML != null) {
+            indexHTML.addEventListener('click', e => {
+                zurueckFMS.setAttribute("href", "https://bencollier.net/2011/05/quickly-creating-an-html-link-in-javascript/");
 
-        })
-    }*/
+            })
+        }*/
 
 
 }
