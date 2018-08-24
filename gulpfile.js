@@ -33,6 +33,7 @@ gulp-postcss statt gulp-concat für die Combi mit Sourcemaps
 gulp-inject-partials: z.B. für Nav und Footer https://www.npmjs.com/package/gulp-inject-partials
 gulp-inject-file: damit bei js spezifisches file und nicht alle eingefügt werden (hat aber nicht richtig fkt, daher evt. postbuild)
 php: z.B. verkleinern oder unleserlich machen (Sicherheit und Geschwindigkeit) (task copy-php ergänzen?)
+js: nicht so schnell / häufig babeln
 
 linter hinzufügen / beautify
  */
@@ -100,12 +101,12 @@ gulp.task('babel', () => {
 /*
 schau ob sich etwas im scss getan hat und führe dann sass aus (auch bei HTML und JS Anpassungen)
  */
-gulp.task('watch', ['browserSync', 'sass', 'babel'], () => {
+gulp.task('watch', ['browserSync', 'sass'], () => { //'babel' rausgenommen - rattert zuviel
     gulp.watch('app/scss/**/*.scss', ['sass']);
     // Reloads the browser whenever HTML or JS files change
     gulp.watch('app/*.html', browserSync.reload);
-    gulp.watch('app/js/**/*.js', ['babel']); //bei js Änderung babel
-    gulp.watch('app/js/**/*.js', browserSync.reload);
+   // gulp.watch('app/js/**/*.js', ['babel']); //bei js Änderung babel
+   // gulp.watch('app/js/**/*.js', browserSync.reload);
 });
 
 /*

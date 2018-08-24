@@ -26,6 +26,10 @@ Identische paddings & margins: Diese sind leider etwas durcheinander geraten.
  
  Bugfixes: Entweder sofort gefixt oder in Feinkonzept eingefügt.
  
+ JS: counter: Ich wollte noch ein js machen und habe mich für dieses
+ Entschieden. Etwas unschön sind die diversen Wiederholungen. Momentan 
+ bin ich einfach zufrieden, dass ich es überhaupt hinbekommen habe.
+ 
  ##für später
  **svg direkt im HTML**:  
  g mit fill: fill löschen, beispielsweise class="icon  icon__music icon__music--country"
@@ -37,6 +41,9 @@ Identische paddings & margins: Diese sind leider etwas durcheinander geraten.
  Einzelne js haben id-Abfrage
  Vorsichtig sein mit neuen / Reihenfolge
  ggf js anders via gulp zusammenfügen (gilt auch für **css**)
+
+**Weiterentwicklung**
+Ideen teilweise als Todo's oder Ideen für Weiterentwicklung festgehalten
  
  
 [Style Abweichungen](style.md)  

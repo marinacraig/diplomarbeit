@@ -12,6 +12,8 @@ Einzelne Ticket-Variante
 Bei klick auf plus: plus 1
 bei klick auf minus: minus 1
 -> Total dazwischen anzeigen
+Todo: Total sowie welche ausgewählt speichern bei klick auf Tickets Kaufen
+Todo: vorher herausfinden ob clickTotalTickets wirklich stimmt
 
 später:
 überprüfe Festival
@@ -58,94 +60,187 @@ später:
     let minusZeltvip = document.querySelector('#minusZeltvip')
     let totZeltvip = document.querySelector('#totZeltvip')
 
-    //array für alle plus (weniger Eventlistener code
+    //array für alle plus (weniger Eventlistener code)
     let plusTicket = [plusDay1, plusDay1vip, plusDay3, plusDay3vip, plusZelt, plusZeltvip]
 
     //array für alle minus
     let minusTicket = [minusDay1, minusDay1vip, minusDay3, minusDay3vip, minusZelt, minusZeltvip]
 
+    // idee: wenn keine mehr = ausverkauft, grammatik
+    let verkaufbar = ' Tickets'
 
-    let click=0;
+    //damit das clickTotTickets direkt im HMTL angezeigt werden kann
+    let totalTickets = document.querySelector('#totalTickets')
+
+    //damit die plus bzw. minus bei den Tickets gezählt werden können
+    let clickDay1=0;
+    let clickDay3=0;
+    let clickDay1vip=0;
+    let clickDay3vip=0;
+    let clickZelt=0;
+    let clickZeltvip=0;
+
+    //Anzahl aller ausgewählter Tickets soll gezählt werden und in Kaufen Button
+    let clickTotalTicket = 0;
+
 
     //Tickets hoch zählen
-    //für weniger code: funktion hinzu auslagern
 
-    function plus1() {
-
-        click +=1;
-
-        if (click === 1){
-            verkaufbar = ' Ticket'
-        }else{
-            verkaufbar = ' Tickets'
-        }
-        totDay1.innerHTML = click + verkaufbar;
-
-    }
 
     function hinzufuegenTicket () {
 
-        let verkaufbar = ' Tickets' // idee: wenn keine mehr = ausverkauft
-
         if(this == plusDay1){
-            plus1()
+
+            clickDay1 += 1;
+            grammatikTicketsPlus()
+            totDay1.innerHTML = clickDay1 + verkaufbar;
 
         }else if(this == plusDay3) {
 
-            click +=1;
+            clickDay3 += 1;
+            grammatikTicketsPlus()
+            totDay3.innerHTML = clickDay3 + verkaufbar;
 
-            if (click === 1){
-                verkaufbar = ' Ticket'
-            }else{
-                verkaufbar = ' Tickets'
-            }
-            totDay1.innerHTML = click + verkaufbar;
+        }else if(this == plusDay1vip) {
+
+            clickDay1vip += 1;
+            grammatikTicketsPlus()
+            totDay1vip.innerHTML = clickDay1vip + verkaufbar;
+
+        }else if(this == plusDay3vip) {
+
+            clickDay3vip += 1;
+            grammatikTicketsPlus()
+            totDay3vip.innerHTML = clickDay3vip + verkaufbar;
+
+        }else if(this == plusZelt) {
+
+            clickZelt += 1;
+            grammatikTicketsPlus()
+            totZelt.innerHTML = clickZelt + verkaufbar;
+
+        }else if(this == plusZeltvip) {
+
+            clickZeltvip += 1;
+            grammatikTicketsPlus()
+            totZeltvip.innerHTML = clickZeltvip + verkaufbar;
 
         }else{
-            console.log('plus')
+            console.log('hä? (hint: plus)')
         }
 
-    }
+        totalTickets.innerHTML = clickTotalTicket;
+        //   console.log(clickTotalTicket)
 
+    }
 
 
     //Tickets runter zählen (kann nicht weniger als 0 sein)
     function abziehenTicket () {
         if(this == minusDay1){
 
-            click -=1;
+            clickDay1 -=1;
 
-            if (click === 1){
-                verkaufbar = ' Ticket'
-                totDay1.innerHTML = click + verkaufbar;
-            }else if(click < 1){
-                click = 0;
-                totDay1.innerHTML = 0 + verkaufbar;
+            if(clickDay1 < 1){
+                clickDay1 = 0;
             }else{
-                verkaufbar = ' Tickets'
+                clickTotalTicket -=1;
             }
+            grammatikTicketsMinus()
+            totDay1.innerHTML = clickDay1 + verkaufbar;
 
 
         }else if(this == minusDay3) {
-            console.log('hi minus 3')
+
+            clickDay3 -=1;
+
+            if(clickDay3 < 1){
+                clickDay3 = 0;
+            }else{
+                clickTotalTicket -=1;
+            }
+            grammatikTicketsMinus()
+            totDay3.innerHTML = clickDay3 + verkaufbar;
+
+        }else if(this == minusDay1vip) {
+
+            clickDay1vip -=1;
+
+            if(clickDay1vip < 1){
+                clickDay1vip = 0;
+            }else{
+                clickTotalTicket -=1;
+            }
+            grammatikTicketsMinus()
+            totDay1vip.innerHTML = clickDay1vip + verkaufbar;
+
+        }else if(this == minusDay3vip) {
+
+            clickDay3vip -=1;
+
+            if(clickDay3vip < 1){
+                clickDay3vip = 0;
+            }else{
+                clickTotalTicket -=1;
+            }
+            grammatikTicketsMinus()
+            totDay3vip.innerHTML = clickDay3vip + verkaufbar;
+
+        }else if(this == minusZelt) {
+
+            clickZelt -=1;
+
+            if(clickZelt < 1){
+                clickZelt = 0;
+            }else{
+                clickTotalTicket -=1;
+            }
+            grammatikTicketsMinus()
+            totZelt.innerHTML = clickZelt + verkaufbar;
+
+        }else if(this == minusZeltvip) {
+
+            clickZeltvip -=1;
+
+            if(clickZeltvip < 1){
+                clickZeltvip = 0;
+            }else{
+                clickTotalTicket -=1;
+            }
+            grammatikTicketsMinus()
+            totZeltvip.innerHTML = clickZeltvip + verkaufbar;
+
         }else{
-            console.log('minus')
+            console.log('hä? (hint: minus)')
         }
+        //   console.log(clickTotalTicket) -> ist im grammatikTicketMinus
+    }
+
+    //für weniger code: funktion hinzu ausgelagert
+
+    function grammatikTicketsPlus() {
+        //damit im innerHTML die Grammatik stimmt
+        clickTotalTicket +=1;
+        if (clickDay1 != 1 || clickDay3 != 1 || clickDay1vip != 1 || clickDay3vip != 1 || clickZelt != 1 || clickDay1vip != 1){
+            verkaufbar = ' Tickets'
+        }else{
+            verkaufbar = ' Ticket'
+        }
+    }
+
+    function grammatikTicketsMinus() {
+        //damit im innerHTML die Grammatik stimmt
+        if (clickDay1 != 1 || clickDay3 != 1 || clickDay1vip != 1 || clickDay3vip != 1 || clickZelt != 1 || clickDay1vip != 1){
+            verkaufbar = ' Tickets'
+        }else{
+            verkaufbar = ' Ticket'
+        }
+        totalTickets.innerHTML = clickTotalTicket;
 
     }
 
-
     //Eventlistener click plus
-/*
-
-    plusDay1.addEventListener('click', hinzufuegenTicket)
-    plusDay3.addEventListener('click', hinzufuegenTicket)
-    plusDay1vip.addEventListener('click', hinzufuegenTicket)
-    plusDay3vip.addEventListener('click', hinzufuegenTicket)
-    plusZelt.addEventListener('click', hinzufuegenTicket)
-    plusZeltvip.addEventListener('click', hinzufuegenTicket)
-
-*/
+    //plusDay1.addEventListener('click', hinzufuegenTicket)
 
     for (let i = 0; i < plusTicket.length; ++i) {
         if (plusTicket[i] != null) {
@@ -162,6 +257,5 @@ später:
             minusTicket[i].addEventListener("click", abziehenTicket)
         }
     }
-
 
 }
