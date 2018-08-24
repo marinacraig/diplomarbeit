@@ -29,12 +29,14 @@
       }
       &__kanton {
         grid-column: 2;
+        //W3C - Check: gibt es nicht, aber ist trotzdem richtig positioniert:
         justify-self: center;
       }
 
       //für den css switch zur Kachelansicht, ggf nochmals umbauen
       &__css {
         grid-column: 3;
+        //W3C - Check: gibt es nicht, aber ist trotzdem richtig positioniert:
         justify-self: end;
 
         span.filter {

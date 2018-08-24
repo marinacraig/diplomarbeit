@@ -29,7 +29,8 @@ für app / Entwicklung (ist ohne build und zeigt nicht auf dist, da sonst zu lan
 
 - **URL der lauffähigen Version:**   
 [http://marina.techfabrik.com/dist/](http://marina.techfabrik.com/dist/)  
-Anmerkung: Lektion Deployment: alles soll auf Server, daher ist alles hochgeladen (gültig bis 20.09.2018)  
+Anmerkung: Lektion Deployment: alles soll auf Server, daher ist alles hochgeladen (gültig bis 20.09.2018, 
+Zugangsdaten von Rolf erhalten, falls diese benötigt werden bitte ihn fragen, ich möchte sie nicht veröffentlichen)  
 [https://github.com/WebProfessionals/dipl1718_marina](https://github.com/WebProfessionals/dipl1718_marina)  
 
 - **Zeitplan / Meilensteine:**   

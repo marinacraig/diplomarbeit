@@ -6,7 +6,7 @@
  - link check md - done nur noch obiges fehlt
 - bei bestellvorgang: unnötigen link entfernen - entweder php oder link!
 
-
+#master merge -> push -> gulp build -> alles auf server!
 
  
 [zurück zum Inhaltsverzeichnis](../README.md)  

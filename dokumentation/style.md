@@ -38,17 +38,15 @@ Laut Styleguide ist Header-Schrift bold (s. 6), bei Navigationsbeschreibung
  Des weiteren wurde 1mal ein Login definiert, welches für alle Devices gilt. 
  Aufgrund des Buttons bzw. einheitlicher Button Gestaltung unterscheidet sich 
  dieser von der Vorgabe. Dies hat entsprechend auch Konsequenzen für den Login 
- im Zusammenhang mit der Ticketbestellung.
+ im Zusammenhang mit der Ticketbestellung. (Button Anmelden: ab Tablet kleiner 
+ wurde nicht umgesetzt, dafür registrieren)
  
 ##Buttons  
 Unterstrichener Button wechselt beim Hover die Farbe, 
 wirkt so einheitlicher.  
 Auf der Hauptseite bei Entdeckungen fehlt auf dem Mobile Bild 
 der Button für mehr Samples. Ich habe den Button dennoch eingebunden,
- da es auf mich sonst wie vergessen wirkt.  
-In Nicht-Chrome Browsern kann man die Buttons als solche erkennen. 
-Eine Umwandlung in Divs oder Links kommt aus Zeitgründen nicht in Frage, zudem
-merkt man so, dass etwas passiert (sollte) wenn man draufklickt.  
+ da es auf mich sonst wie vergessen wirkt.   
 
 ##Hauptseite  
 ###news und magazin  

@@ -30,6 +30,8 @@ if (favoriteMusicStyle !== null) {
   localStorage.setItem('allFMS', json);
 
 
-
+/*
+Wenn jemand eingeloggt bzw. einloggt: auf server speichern, sonst nicht
+ */
 
 }
