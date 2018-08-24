@@ -55,7 +55,7 @@
     .filter__detail { //gemeinsam 88px
       //hintergrundfarbe muss genau sein - Ort & Datum
       &--tickets-verfuegbar {
-        height: 44px; // 65% = 58px;
+        //doofe idee, zeigt dann nicht alles: height: 44px; // 65% = 58px;
         background-color: $weiss_hex;
       }
       &--ticket-grafik {
