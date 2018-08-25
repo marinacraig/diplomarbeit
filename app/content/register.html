@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!doctype html>
 <html lang="de">
 <head>
@@ -127,7 +131,7 @@
 
                             <li>
 
-                                <form>
+                               <form action="../php/login.php" method="post">
                                     <input type="email" placeholder="E-Mail Adresse"
                                            autocomplete="section-blue shipping">
 
@@ -191,6 +195,9 @@
             <form class="kaufen__maske" action="../php/register.php" method="post">
 
    <!--name und vorname würden dazu gehören-->
+                <label for="username">Dein User-Name:</label>
+                <input type="text" placeholder="User-Name" id="username" name="username"
+                       autocomplete="section-blue shipping">
 
                 <label for="email">Deine E-Mail:</label>
                 <input type="email" placeholder="E-Mail Adresse" id="email" name="email"

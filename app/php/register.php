@@ -12,8 +12,29 @@
  * da dies nicht vorhanden -> ticketuebersicht.html (kann dann "merken")
  */
 
+require __DIR__ . '/vendor/autoload.php';
 
-//Session
+//falls Session vorhanden: weiter zur Ticketübersicht (da kein Dashboard)
+if (isset($_SESSION['username'])) {
+    header('Location: ../content/ticketuebersicht.html');
+    die();
+}
+
+if (isset($_POST['username']) && isset($_POST['email']) && isset($_POST['password'])){
+    $user = new User($_POST['username']);
+
+    if($user->getName()){
+        $error = 'Benutzer existiert bereits';
+    }else{
+        $user->setName($_POST['username']);
+        $user->setPasssword(password_hash($_POST['password'], PASSWORD_DEFAULT));
+        $user->setEmail($_POST['email']);
+        $user->create();
 
 
-//Passwort hashen etc
+        $_SESSION['user'] = $user->getName();
+        header('Location: ../content/ticketuebersicht.html');
+        die();
+    }
+
+}
