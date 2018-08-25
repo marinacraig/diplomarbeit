@@ -13,7 +13,7 @@ Bei klick auf plus: plus 1
 bei klick auf minus: minus 1
 -> Total dazwischen anzeigen
 Todo: Total sowie welche ausgewählt speichern bei klick auf Tickets Kaufen
-Todo: vorher herausfinden ob clickTotalTickets wirklich stimmt
+Todo: vorher herausfinden ob clickTotalTickets wirklich stimmt : Problem: wenn plus dann anderes plus zurück dann minus -> ignoriert
 
 später:
 überprüfe Festival
@@ -139,73 +139,76 @@ später:
     function abziehenTicket () {
         if(this == minusDay1){
 
-            clickDay1 -=1;
-
             if(clickDay1 < 1){
                 clickDay1 = 0;
             }else{
+                clickDay1 -=1;
                 clickTotalTicket -=1;
+                totalTickets.innerHTML = clickTotalTicket;
             }
             grammatikTicketsMinus()
             totDay1.innerHTML = clickDay1 + verkaufbar;
 
 
-        }else if(this == minusDay3) {
 
-            clickDay3 -=1;
+        }else if(this == minusDay3) {
 
             if(clickDay3 < 1){
                 clickDay3 = 0;
             }else{
+                clickDay3 -=1;
                 clickTotalTicket -=1;
+                totalTickets.innerHTML = clickTotalTicket;
             }
             grammatikTicketsMinus()
             totDay3.innerHTML = clickDay3 + verkaufbar;
 
         }else if(this == minusDay1vip) {
 
-            clickDay1vip -=1;
-
             if(clickDay1vip < 1){
                 clickDay1vip = 0;
             }else{
+                clickDay1vip -=1;
                 clickTotalTicket -=1;
+                totalTickets.innerHTML = clickTotalTicket;
             }
             grammatikTicketsMinus()
             totDay1vip.innerHTML = clickDay1vip + verkaufbar;
 
-        }else if(this == minusDay3vip) {
 
-            clickDay3vip -=1;
+        }else if(this == minusDay3vip) {
 
             if(clickDay3vip < 1){
                 clickDay3vip = 0;
             }else{
+                clickDay3vip -=1;
                 clickTotalTicket -=1;
+                totalTickets.innerHTML = clickTotalTicket;
             }
             grammatikTicketsMinus()
             totDay3vip.innerHTML = clickDay3vip + verkaufbar;
 
-        }else if(this == minusZelt) {
 
-            clickZelt -=1;
+        }else if(this == minusZelt) {
 
             if(clickZelt < 1){
                 clickZelt = 0;
             }else{
+                clickZelt -=1;
                 clickTotalTicket -=1;
+                totalTickets.innerHTML = clickTotalTicket;
             }
             grammatikTicketsMinus()
             totZelt.innerHTML = clickZelt + verkaufbar;
 
         }else if(this == minusZeltvip) {
 
-            clickZeltvip -=1;
-
             if(clickZeltvip < 1){
                 clickZeltvip = 0;
             }else{
+                clickZeltvip -=1;
                 clickTotalTicket -=1;
+                totalTickets.innerHTML = clickTotalTicket;
             }
             grammatikTicketsMinus()
             totZeltvip.innerHTML = clickZeltvip + verkaufbar;
@@ -235,7 +238,6 @@ später:
         }else{
             verkaufbar = ' Ticket'
         }
-        totalTickets.innerHTML = clickTotalTicket;
 
     }
 

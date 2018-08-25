@@ -44,6 +44,15 @@ if (favoriteMusicStyle !== null) {
     let allFMS = [jazzFMS, hiphopFMS, indieFMS, poprockFMS, electronicFMS, countryFMS, soulFMS]
 
 
+    // laden von eventuell bereits gesetzten elementen aus localstorage
+    getFMSSelection().forEach((e,i)=>{
+      allFMS[i].checked = e;
+    });
+
+
+
+
+
     //zeigt nicht vorhandene mit null: console.log (allFMS) -> bei Eventlistener berücksichtigt
 
     /*
@@ -66,19 +75,18 @@ if (favoriteMusicStyle !== null) {
 
     let zurueckFMS = document.querySelector('#zurueckFMS')
 
-
+    let i = 0;
     /*
     Wurde auf die Checkbox geklickt? -> fkt checked
      */
 
-    function checked() {
+    function toggleSelection() {
         // HTML-String der ID:console.log(this)
         //Ausgabe: true bzw. false console.log(this.checked)
 
         //enthält alle inkl. checked: true or false allFMS
-        console.log(allFMS)
 
-
+        localstorageSetFMS(allFMS);
 
 
     }
@@ -89,16 +97,15 @@ if (favoriteMusicStyle !== null) {
         jazzFMS.checked = false etc. folgend ersetzt
          */
 
-        for (let i = 0; i < allFMS.length; ++i) {
+        for (i = 0; i < allFMS.length; ++i) {
             if (allFMS[i] != null) {
                 allFMS[i].checked = false
 
                 //Antwort alle ohne true: console.log (allFMS[i])
             }
         }
+        localstorageSetFMS(allFMS);
 
-        //Test:
-        console.log(`jazzFMS ` + jazzFMS.checked)
         //todo: idee: this.checked bwz. true false in localstorage, dann dort holen und injecten
 
     }
@@ -116,9 +123,9 @@ if (favoriteMusicStyle !== null) {
     (Bsp.:soulFMS.addEventListener('click', checked))
      */
 
-    for (let i = 0; i < allFMS.length; ++i) {
+    for (i=0;  i < allFMS.length; ++i) {
         if (allFMS[i] != null) {
-            allFMS[i].addEventListener("click", checked)
+            allFMS[i].addEventListener("click", toggleSelection)
         }
     }
 

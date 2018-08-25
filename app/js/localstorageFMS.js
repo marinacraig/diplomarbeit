@@ -1,37 +1,20 @@
-let favoriteMusicStyle = document.getElementById('musikrichtung');
-if (favoriteMusicStyle !== null) {
+function localstorageSetFMS(allFMS) {
 
-    /*
-    Idee: allFMS status checked in Objekt speichern
+   let selection = [];
 
-    dieses Objekt stringify
-    dann setItem
-    und getItem
-     */
+   allFMS.forEach((e,i) => {
+       selection[i] = e.checked;
+   });
 
+   localStorage.setItem('allFMSSelection', JSON.stringify(selection));
 
-    /*
-    hole aus localStorage
-     */
+}
 
-   let json = JSON.stringify(allFMS);  // eingabe console: leeres Teil mit Klammern
-
-    localStorage.getItem('allFMS');
-    if (json) {
-        let allFMS = JSON.parse(json);
-    } else {
-        //let allFMS = allFMS.checked = false; // Default Wert setzen, z.B. leere Liste
+function getFMSSelection() {
+    let response = JSON.parse(localStorage.getItem('allFMSSelection'));
+    if(response === null){
+        return []
+    }else {
+        return response
     }
-
-    /*
-    füge in localStorage ein
-    wenn checked()
-     */
-  localStorage.setItem('allFMS', json);
-
-
-/*
-Wenn jemand eingeloggt bzw. einloggt: auf server speichern, sonst nicht
- */
-
 }

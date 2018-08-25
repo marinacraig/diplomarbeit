@@ -95,7 +95,7 @@ Babel für ES6 -> js files linken in js/babel Ordner, damit die richtigen files 
 gulp.task('babel', () => {
         gulp.src(['app/js/*.js'], {base: 'app/js'})
             .pipe(babel({presets: ['env']}))
-            .pipe(gulp.dest('app/js/babel/'))
+            .pipe(gulp.dest('app/babel/'))
     }
 );
 /*
@@ -105,9 +105,10 @@ gulp.task('watch', ['browserSync', 'sass'], () => { //'babel' rausgenommen - rat
     gulp.watch('app/scss/**/*.scss', ['sass']);
     // Reloads the browser whenever HTML or JS files change
     gulp.watch('app/*.html', browserSync.reload);
-   // gulp.watch('app/js/**/*.js', ['babel']); //bei js Änderung babel
-   // gulp.watch('app/js/**/*.js', browserSync.reload);
+    gulp.watch('app/js/**/*.js', ['babel']); //bei js Änderung babel
+    gulp.watch('app/js/**/*.js', browserSync.reload);
 });
+
 
 /*
 js und css soll min werden
