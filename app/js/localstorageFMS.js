@@ -1,30 +1,25 @@
-/*
-Idee: allFMS status checked in Objekt speichern
+function localstorageSetFMS(allFMS) {
 
-dieses Objekt stringify
-dann setItem
-und getItem
- */
+    //leeres Array
+   let selection = [];
 
+   //für jedes Element i füge an position i checked ein
+   allFMS.forEach((e,i) => {
+       selection[i] = e.checked;
+   });
 
-/*
-hole aus localStorage
- */
+   //in allFMSSelection (=neues Array) als json string in localStorage speichern
+   localStorage.setItem('allFMSSelection', JSON.stringify(selection));
 
-let json = JSON.stringify(allFMS);
-
-localStorage.getItem('allFMS');
-if (json) {
-    let allFMS = JSON.parse(json);
-} else {
-    let i = 0 ; i < allFMS.length ; ++i
-    let allFMS = allFMS[i].checked = false; // Default Wert setzen, z.B. leere Liste
 }
 
-/*
-füge in localStorage ein
-wenn checked()
- */
+function getFMSSelection() {
 
-localStorage.setItem('allFMS', json);
-
+    //von localStorage holen und prüfen ob null, falls nichts ausgewählt ist
+    let response = JSON.parse(localStorage.getItem('allFMSSelection'));
+    if(response === null){
+        return []
+    }else {
+        return response
+    }
+}

@@ -12,6 +12,7 @@
   }
 
 }
+
 .filter__detail {
   //ab tablet:
   //display: inline-flex;
@@ -42,49 +43,6 @@
     margin: 24px auto;
   }
 }
-
-.programm {
-  background-color: $grauF0_hex;
-  padding: 0 16px; //stimmt zwar nicht laut styleguide, aber einheitlich: desktop:0 120px; tablet: 0 24px;
-  .inklpadding {
-    min-height: 40px; //hack damit unterer Abstand stimmt
-  }
-
-  .wochentag {
-    display: inline;
-    width: 100%;
-    margin: 2px;
-
-    &__zeit {
-      width: 25%;
-      float: left;
-      min-height: 48px;
-      padding: 4px 8px;
-    }
-    &__band {
-      background-color: $weiss_hex;
-      width: 68%;
-      min-height: 48px;
-      padding: 4px 8px;
-
-      &--1 {
-        float: right;
-
-      }
-      &--2 {
-        float: right;
-      }
-
-    }
-  }
-  //4px = einheitlich, 3 wäre styleguide näher
-}
-
-/*
-.nice-to-know {
-
-}
-*/
 
 //gleiche Klasse in beschreibung und nice-to know (kommt so dem pdf am nächsten, ist nicht definiert):
 .beschreibung__intro {
@@ -117,35 +75,6 @@
       max-width: 100%;
       width: 400px;
     }
-  }
-
-  .programm {
-    padding: 0 24px; //desktop:0 120px;
-    .inklpadding {
-      min-height: 64px;
-    }
-
-    .wochentag {
-      //margin: 2px;
-
-      &__zeit {
-        width: 15%;
-        margin-right: 16px;
-      }
-      &__band {
-        width: 36%;
-
-        &--1 {
-          float: left;
-          margin-right: 16px;
-        }
-        &--2 {
-          float: left;
-        }
-
-      }
-    }
-
   }
 
 }
@@ -182,13 +111,6 @@
     }
     .sponsoring {
       width: 200px;
-    }
-  }
-
-  .programm {
-    padding: 0 120px;
-    .inklpadding {
-      min-height: 80px;
     }
   }
 

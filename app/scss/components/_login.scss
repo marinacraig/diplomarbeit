@@ -16,11 +16,8 @@
       border-right: 10px solid transparent;
       border-bottom: 10px solid $schwarz_hex;
       margin-top: -30px;
-
-    }
-    //da das Dropdown verschoben werden musste, muss Pfeil zurück
-    .login {
-      margin-left: calc(65vw - 8px);
+      //da das Dropdown verschoben werden musste, muss Pfeil zurück
+      margin-left: calc(65vw - 13px);
     }
   }
 
@@ -74,7 +71,7 @@
 //Aufpassen mit Änderungen: Feld soll gleich sein, auch beim Bestellvorgang
 .kaufen__maske, .kaufen h1, .nav__dropdown--content {
   max-width: 100%;
-  width: 350px;
+  width: 310px; //laut Designvorgabe 310 das ist aber für grösser sehr schmal (besser: 350px)
 
   li {
     padding: 16px;
@@ -111,11 +108,11 @@
 
     ul {
       //muss nach links, kommt sonst direkt darunter
-      margin-left: -260px;
+      margin-left: -245px;
 
       //da das Dropdown verschoben werden musste, muss Pfeil zurück - gilt nur je unter Menu
       .login {
-        margin-left: 250px;
+        margin-left: 232px;
       }
     }
   }
@@ -132,7 +129,7 @@
 
       //da das Dropdown verschoben werden musste, muss Pfeil zurück - gilt nur je unter Menu
       .login {
-        margin-left: 150px;
+        margin-left: 147px;
       }
     }
   }

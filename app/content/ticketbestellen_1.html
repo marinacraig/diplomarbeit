@@ -140,7 +140,7 @@
 
                                 <li>
                                     <p>Neu bei FestivalLovers?</p>
-                                    <p>Jetzt <a href="#">registrieren.</a></p>
+                                    <p>Jetzt <a href="register.html">registrieren.</a></p>
 
 
                                 </li>
@@ -414,7 +414,7 @@
 
                             <li>
                                 <p>Neu bei FestivalLovers?</p>
-                                <p>Jetzt <a href="#">registrieren.</a></p>
+                                <p>Jetzt <a href="register.html">registrieren.</a></p>
 
 
                             </li>
@@ -600,9 +600,9 @@
                     <li class="dropdown__content">
                         <!--zweiter Eintrag etc..-->
                         <ul>
-                            <li><a href="festival_2.html">Beispiel sonstwas</a></li>
+                            <li><a href="festival_2.html">Openair ZH jazz</a></li>
 
-                            <li><a href="festival_3.html"> Sur le Lac Bsp 3 </a></li>
+                            <li><a href="festival_3.html"> Musikfestwochen 3 </a></li>
                             <li><a href="#">Sur le Lac in Lausanne</a></li>
                         </ul>
                     </li>
@@ -649,7 +649,7 @@
 
     </article>
 
-    <article class="bestellen__tickets">
+    <article class="bestellen__tickets" id="ticketsBestellen">
 
 
         <div class="filter__detail">
@@ -665,7 +665,7 @@
         <h2>Festivaleintritt</h2>
 
         <!--jede Ticketvariante: Tagesticket-->
-        <ul class="bestellen__tickets--indie"> <!--hier klasse verkauft einfügen, falls verkauft-->
+        <ul id="day1" class="bestellen__tickets--indie"> <!--hier klasse verkauft einfügen, falls verkauft-->
             <!--Standard Ticket-->
             <li class="vorhanden">
                 <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -710,7 +710,7 @@
             </li>
 
             <li class="bestellen__tickets--variante">
-                <p class="plus">
+                <p id="plusDay1" class="plus">
                     <svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg"
                          xmlns:xlink="http://www.w3.org/1999/xlink">
                         <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
@@ -727,8 +727,8 @@
                         </g>
                     </svg>
                 </p>
-                <p class="bestellen__tickets--anzahl">0 Tickets</p>
-                <p class="minus">
+                <p id="totDay1" class="bestellen__tickets--anzahl">0 Tickets</p>
+                <p id="minusDay1" class="minus">
                     <svg width="16px" height="2px" viewBox="0 0 16 2" version="1.1" xmlns="http://www.w3.org/2000/svg"
                          xmlns:xlink="http://www.w3.org/1999/xlink">
                         <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
@@ -750,7 +750,7 @@
         </ul>
 
         <!--jede Ticketvariante: 3 Tagesticket - ausverkauft-->
-        <ul class="bestellen__tickets--indie verkauft"> <!--hier klasse verkauft einfügen, falls verkauft-->
+        <ul id="day3" class="bestellen__tickets--indie verkauft"> <!--hier klasse verkauft einfügen, falls verkauft-->
             <!--Standard Ticket-->
             <li class="vorhanden">
                 <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -795,7 +795,7 @@
             </li>
 
             <li class="bestellen__tickets--variante">
-                <p class="plus">
+                <p id="plusDay3" class="plus">
                     <svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg"
                          xmlns:xlink="http://www.w3.org/1999/xlink">
                         <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
@@ -812,8 +812,8 @@
                         </g>
                     </svg>
                 </p>
-                <p class="bestellen__tickets--anzahl">Ausverkauft</p>
-                <p class="minus">
+                <p id="totDay3" class="bestellen__tickets--anzahl">Ausverkauft</p>
+                <p id="minusDay3" class="minus">
                     <svg width="16px" height="2px" viewBox="0 0 16 2" version="1.1" xmlns="http://www.w3.org/2000/svg"
                          xmlns:xlink="http://www.w3.org/1999/xlink">
                         <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
@@ -835,7 +835,7 @@
         </ul>
 
         <!--jede Ticketvariante: Tagesticket: VIP 1 Tag-->
-        <ul class="bestellen__tickets--indie"> <!--hier klasse verkauft einfügen, falls verkauft-->
+        <ul id="day1vip" class="bestellen__tickets--indie"> <!--hier klasse verkauft einfügen, falls verkauft-->
             <!--Standard Ticket-->
             <li class="vorhanden">
                 <svg width="24px" height="22px" viewBox="0 0 24 22" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -876,7 +876,7 @@
             </li>
 
             <li class="bestellen__tickets--variante">
-                <p class="plus">
+                <p id="plusDay1vip" class="plus">
                     <svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg"
                          xmlns:xlink="http://www.w3.org/1999/xlink">
                         <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
@@ -893,8 +893,8 @@
                         </g>
                     </svg>
                 </p>
-                <p class="bestellen__tickets--anzahl">0 Tickets</p>
-                <p class="minus">
+                <p id="totDay1vip" class="bestellen__tickets--anzahl">0 Tickets</p>
+                <p id="minusDay1vip" class="minus">
                     <svg width="16px" height="2px" viewBox="0 0 16 2" version="1.1" xmlns="http://www.w3.org/2000/svg"
                          xmlns:xlink="http://www.w3.org/1999/xlink">
                         <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
@@ -916,7 +916,7 @@
         </ul>
 
         <!--jede Ticketvariante: Tagesticket: VIP 3 Tage-->
-        <ul class="bestellen__tickets--indie"> <!--hier klasse verkauft einfügen, falls verkauft-->
+        <ul id="day3vip" class="bestellen__tickets--indie"> <!--hier klasse verkauft einfügen, falls verkauft-->
             <!--Standard Ticket-->
             <li class="vorhanden">
                 <svg width="24px" height="22px" viewBox="0 0 24 22" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -957,7 +957,7 @@
             </li>
 
             <li class="bestellen__tickets--variante">
-                <p class="plus">
+                <p id="plusDay3vip" class="plus">
                     <svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg"
                          xmlns:xlink="http://www.w3.org/1999/xlink">
                         <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
@@ -974,8 +974,8 @@
                         </g>
                     </svg>
                 </p>
-                <p class="bestellen__tickets--anzahl">2 Tickets</p>
-                <p class="minus">
+                <p id="totDay3vip" class="bestellen__tickets--anzahl">0 Tickets</p>
+                <p id="minusDay3vip" class="minus">
                     <svg width="16px" height="2px" viewBox="0 0 16 2" version="1.1" xmlns="http://www.w3.org/2000/svg"
                          xmlns:xlink="http://www.w3.org/1999/xlink">
                         <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
@@ -1001,7 +1001,7 @@
         <h2>Camping</h2>
 
         <!--jede Ticketvariante: Tagesticket: Standard Zelt-->
-        <ul class="bestellen__tickets--indie"> <!--hier klasse verkauft einfügen, falls verkauft-->
+        <ul id="zelt" class="bestellen__tickets--indie"> <!--hier klasse verkauft einfügen, falls verkauft-->
             <!--Standard Ticket-->
             <li class="vorhanden">
                 <svg width="20px" height="24px" viewBox="0 0 20 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -1043,14 +1043,14 @@
             </li>
 
             <li class="bestellen__tickets--variante">
-                <p class="plus">
+                <p id="plusZelt" class="plus">
                     <svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg"
                          xmlns:xlink="http://www.w3.org/1999/xlink">
                         <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
                         <title>steuerung_plus</title>
                         <desc>Created with Sketch.</desc>
                         <defs></defs>
-                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g class="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                             <g class="icon__filter icon__filter--steuerung_plus"
                                transform="translate(-16.000000, -16.000000)">
                                 <g transform="translate(16.000000, 16.000000)">
@@ -1060,8 +1060,8 @@
                         </g>
                     </svg>
                 </p>
-                <p class="bestellen__tickets--anzahl">0 Tickets</p>
-                <p class="minus">
+                <p id="totZelt" class="bestellen__tickets--anzahl">0 Tickets</p>
+                <p id="minusZelt" class="minus">
                     <svg width="16px" height="2px" viewBox="0 0 16 2" version="1.1" xmlns="http://www.w3.org/2000/svg"
                          xmlns:xlink="http://www.w3.org/1999/xlink">
                         <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
@@ -1083,7 +1083,7 @@
         </ul>
 
         <!--jede Ticketvariante: Tagesticket: VIP Zelt-->
-        <ul class="bestellen__tickets--indie"> <!--hier klasse verkauft einfügen, falls verkauft-->
+        <ul id="zeltvip" class="bestellen__tickets--indie"> <!--hier klasse verkauft einfügen, falls verkauft-->
             <!--Standard Ticket-->
             <li class="vorhanden">
                 <svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -1125,7 +1125,7 @@
             </li>
 
             <li class="bestellen__tickets--variante">
-                <p class="plus">
+                <p id="plusZeltvip" class="plus">
                     <svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg"
                          xmlns:xlink="http://www.w3.org/1999/xlink">
                         <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
@@ -1142,8 +1142,8 @@
                         </g>
                     </svg>
                 </p>
-                <p class="bestellen__tickets--anzahl">1 Tickets</p>
-                <p class="minus">
+                <p id="totZeltvip" class="bestellen__tickets--anzahl">0 Tickets</p>
+                <p id="minusZeltvip" class="minus">
                     <svg width="16px" height="2px" viewBox="0 0 16 2" version="1.1" xmlns="http://www.w3.org/2000/svg"
                          xmlns:xlink="http://www.w3.org/1999/xlink">
                         <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
@@ -1170,7 +1170,7 @@
         <div class="kaufen">
             <a href="kaufen_login.html">
                 <div class="button btnschwarz kaufen__button">
-                    <p><span class="warenkorb">3</span> Tickets kaufen</p>
+                    <p><span id="totalTickets" class="warenkorb">0</span> Tickets kaufen</p>
                 </div>
             </a>
         </div>
@@ -1306,7 +1306,9 @@
 <!--scripts-->
 
 <!-- inject:js -->
-<script src="../js/babel/navigation.js"></script>
+<script src="../babel/navigation.js"></script>
+<script src="../babel/counter.js"></script>
+
 <!-- endinject -->
 
 

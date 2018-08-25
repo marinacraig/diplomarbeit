@@ -6,6 +6,11 @@
   input {
     display: none;
   }
+
+  //für die Buttons welche auf index und festivaluebersicht nicht angezeigt werden sollen
+  .item__hidden--musikrichtung {
+    display: none;
+  }
 }
 
 .footer__musikrichtung {

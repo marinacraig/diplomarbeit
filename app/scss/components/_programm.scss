@@ -1,0 +1,124 @@
+.programm {
+  background-color: $grauF0_hex;
+  padding: 0 16px; //stimmt zwar nicht laut styleguide, aber einheitlich: desktop:0 120px; tablet: 0 24px;
+  .inklpadding {
+    min-height: 40px; //hack damit unterer Abstand stimmt
+  }
+
+  .wochentag {
+    display: inline;
+    width: 100%;
+    margin: 2px;
+
+    &__zeit {
+      width: 25%;
+      float: left;
+      min-height: 48px;
+      padding: 4px 8px;
+    }
+    &__band {
+      background-color: $weiss_hex;
+      width: 68%;
+      min-height: 48px;
+      padding: 4px 8px;
+
+      &--1 {
+        float: right;
+
+      }
+      &--2 {
+        float: right;
+      }
+
+    }
+  }
+
+  //damit beim laden nur der freitag angezeigt wird, danach via js
+  #show_samstag, #show_sonntag{
+    display: none;
+  }
+
+  //Dreieck nur nicht mobile
+  .pfeil-unten {
+    display: none;
+  }
+  //werden nur mobile nich angezeigt
+  .btnweiss, .btnweiss svg {
+    display: none;
+  }
+
+  //für das graue halbe Pfeilchen
+  .btnschwarz {
+    svg {
+      float: right;
+      transform: rotate(90deg);
+      margin: 8px 12px;
+    }
+  }
+
+  //bei hover die versteckten anzeigen
+  .wochentag__auswahl:hover{
+    .btnweiss{
+      display: block;
+    }
+  }
+}
+
+//tablet
+@media screen and (min-width : 376px) {
+  .programm {
+    padding: 0 24px; //desktop:0 120px;
+    .inklpadding {
+      min-height: 64px;
+    }
+
+    .wochentag {
+      //margin: 2px;
+
+      &__zeit {
+        width: 15%;
+        margin-right: 16px;
+      }
+      &__band {
+        width: 36%;
+
+        &--1 {
+          float: left;
+          margin-right: 16px;
+        }
+        &--2 {
+          float: left;
+        }
+
+      }
+    }
+
+    //Dreieck nur nicht mobile
+    .pfeil-unten {
+      display: block;
+    }
+    //werden nur mobile nich angezeigt
+    .btnweiss {
+      display: block;
+    }
+    .btnschwarz svg {
+      display: none;
+    }
+    .wochentag__auswahl {
+      width: 100%;
+      display: flex;
+    }
+  }
+}
+
+//laptop
+@media screen and (min-width: 769px) {
+
+  .programm {
+    padding: 0 120px;
+    .inklpadding {
+      min-height: 80px;
+    }
+  }
+}
+
