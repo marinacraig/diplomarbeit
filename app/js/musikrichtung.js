@@ -23,7 +23,7 @@ if (favoriteMusicStyle !== null) {
     /*
     hole aus HTML favoriteMusicStyle
     da je Musikrichtung favoriteMusicStyle = FMS
-    wenn alle einzeln, Problem mit Eventlistener z.B. für soul und mit fkt unchecked
+    wenn alle einzeln, Problem mit Eventlistener z.B. für soul und mit fkt resetToggleSelection
     -> array allFMS
       */
 
@@ -44,14 +44,11 @@ if (favoriteMusicStyle !== null) {
     let allFMS = [jazzFMS, hiphopFMS, indieFMS, poprockFMS, electronicFMS, countryFMS, soulFMS]
 
 
-    // laden von eventuell bereits gesetzten elementen aus localstorage
+    // laden von eventuell bereits gesetzten elementen aus localstorage: muss als erstes gemacht werden
     getFMSSelection().forEach((e,i)=>{
-      allFMS[i].checked = e;
+      allFMS[i].checked = e;  // musikrichtung.html hat mehr Elemente als die anderen -> Fehler bei e
+
     });
-
-
-
-
 
     //zeigt nicht vorhandene mit null: console.log (allFMS) -> bei Eventlistener berücksichtigt
 
@@ -82,16 +79,16 @@ if (favoriteMusicStyle !== null) {
 
     function toggleSelection() {
         // HTML-String der ID:console.log(this)
-        //Ausgabe: true bzw. false console.log(this.checked)
+        //Ausgabe: true bzw. false console.log(this.toggleSelection)
 
-        //enthält alle inkl. checked: true or false allFMS
+        //enthält alle inkl. toggleSelection: true or false allFMS
 
         localstorageSetFMS(allFMS);
 
 
     }
 
-    function unchecked() {
+    function resetToggleSelection() {
         /*
         statt alle einzeln & Probleme auf Seiten ohne
         jazzFMS.checked = false etc. folgend ersetzt
@@ -132,7 +129,7 @@ if (favoriteMusicStyle !== null) {
     /*
     Eventlistener für zurücksetzen
      */
-    resetFMS.addEventListener('click', unchecked)
+    resetFMS.addEventListener('click', resetToggleSelection)
 
     /*
     Eventlistener für Zurück-Link in Nav
