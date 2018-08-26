@@ -79,8 +79,8 @@ class User {
              username, 
              id)   
           VALUES
-            (:password, 
-             :email,
+            (:email,
+             :password, 
              :username, 
              :id)'
         );
@@ -91,6 +91,8 @@ class User {
                 ':id'=> $this->getId()]
         );
     }
+
+    //hier zum Beispiel gemerkte Festivals holen
 }
 
 
