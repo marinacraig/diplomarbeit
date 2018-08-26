@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f96b143-ee16-43a3-95a2-b692ba973faf" name="Default" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/babel/counter.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/babel/counter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/main.css" afterDir="false" />
@@ -18,6 +19,13 @@
       <change beforePath="$PROJECT_DIR$/dist/php/kaufen_bestaetigung.php" beforeDir="false" afterPath="$PROJECT_DIR$/dist/php/kaufen_bestaetigung.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/php/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/dist/php/login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/php/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/dist/php/register.php" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/php/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/main.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/main.min.css" afterDir="false" />
+>>>>>>> html
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,6 +52,10 @@
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.closed" value="6" />
+<<<<<<< HEAD
+=======
+          <entry key="project.open.time.1" value="1" />
+>>>>>>> html
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.14" value="1" />
@@ -51,13 +63,21 @@
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.28" value="1" />
           <entry key="project.open.time.32" value="1" />
+<<<<<<< HEAD
           <entry key="project.opened" value="7" />
+=======
+          <entry key="project.opened" value="8" />
+>>>>>>> html
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="25" />
+<<<<<<< HEAD
           <entry key="gitignore" value="7" />
+=======
+          <entry key="gitignore" value="9" />
+>>>>>>> html
           <entry key="html" value="253" />
           <entry key="jpg" value="2" />
           <entry key="js" value="114" />
@@ -82,7 +102,11 @@
           <entry key="JavaScript" value="114" />
           <entry key="Markdown" value="59" />
           <entry key="PHP" value="45" />
+<<<<<<< HEAD
           <entry key="PLAIN_TEXT" value="22" />
+=======
+          <entry key="PLAIN_TEXT" value="24" />
+>>>>>>> html
           <entry key="SCSS" value="147" />
           <entry key="SVG" value="16" />
           <entry key="SourceMap" value="1" />
@@ -91,7 +115,11 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+<<<<<<< HEAD
           <entry key="gitignore" value="106" />
+=======
+          <entry key="gitignore" value="143" />
+>>>>>>> html
           <entry key="html" value="6506" />
           <entry key="js" value="23019" />
           <entry key="md" value="10124" />
@@ -107,7 +135,11 @@
           <entry key="JavaScript" value="23019" />
           <entry key="Markdown" value="10124" />
           <entry key="PHP" value="3248" />
+<<<<<<< HEAD
           <entry key="PLAIN_TEXT" value="164" />
+=======
+          <entry key="PLAIN_TEXT" value="201" />
+>>>>>>> html
           <entry key="SCSS" value="10116" />
           <entry key="SQL" value="6" />
           <entry key="SVG" value="23" />
@@ -119,12 +151,30 @@
     <favorites_list name="diplomarbeit" />
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
     <leaf>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/js/counter.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="351">
               <caret line="273" column="5" lean-forward="true" selection-start-line="273" selection-start-column="5" selection-end-line="273" selection-end-column="5" />
+=======
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/js/counter.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="199">
+              <caret line="280" column="70" lean-forward="true" selection-start-line="280" selection-start-column="70" selection-end-line="280" selection-end-column="70" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+>>>>>>> html
             </state>
           </provider>
         </entry>
@@ -220,7 +270,10 @@
         <option value="$PROJECT_DIR$/dist/php/login.php" />
         <option value="$PROJECT_DIR$/installcomposer.sh" />
         <option value="$PROJECT_DIR$/gulpfile.js" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/.gitignore" />
+=======
+>>>>>>> html
         <option value="$PROJECT_DIR$/app/php/register1.php" />
         <option value="$PROJECT_DIR$/app/php/.gitignore" />
         <option value="$PROJECT_DIR$/app/index.html" />
@@ -257,6 +310,10 @@
         <option value="$PROJECT_DIR$/dokumentation/drandenken.md" />
         <option value="$PROJECT_DIR$/install.sh" />
         <option value="$PROJECT_DIR$/app/js/counter.js" />
+<<<<<<< HEAD
+=======
+        <option value="$PROJECT_DIR$/.gitignore" />
+>>>>>>> html
       </list>
     </option>
   </component>
@@ -311,6 +368,7 @@
               <item name="diplomarbeit" type="b2602c69:ProjectViewProjectNode" />
               <item name="diplomarbeit" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="content" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -323,6 +381,9 @@
               <item name="diplomarbeit" type="b2602c69:ProjectViewProjectNode" />
               <item name="diplomarbeit" type="462c0819:PsiDirectoryNode" />
               <item name="dist" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="php" type="462c0819:PsiDirectoryNode" />
+>>>>>>> html
             </path>
           </expand>
           <select />
@@ -411,11 +472,19 @@
       <workItem from="1534763312998" duration="138195000" />
       <workItem from="1535179712319" duration="8243000" />
       <workItem from="1535208897297" duration="40158000" />
+<<<<<<< HEAD
+=======
+      <workItem from="1535304120916" duration="773000" />
+>>>>>>> html
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="973194000" />
+=======
+    <option name="totallyTimeSpent" value="973967000" />
+>>>>>>> html
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -430,7 +499,11 @@
     <frame x="4" y="36" width="1423" height="799" extended-state="0" />
     <editor active="true" />
     <layout>
+<<<<<<< HEAD
       <window_info content_ui="combo" id="Project" order="0" side_tool="true" visible="true" weight="0.14337437" />
+=======
+      <window_info active="true" content_ui="combo" id="Project" order="0" side_tool="true" visible="true" weight="0.1455467" />
+>>>>>>> html
       <window_info id="Structure" order="1" side_tool="true" weight="0.24926901" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.3298969" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -442,7 +515,11 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3281471" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+<<<<<<< HEAD
       <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49049708" visible="true" weight="0.22772278" />
+=======
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49049708" visible="true" weight="0.22772278" />
+>>>>>>> html
       <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49853802" weight="0.20509194" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50950295" side_tool="true" weight="0.22772278" />
       <window_info anchor="bottom" id="Messages" order="12" />
@@ -589,15 +666,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="246">
           <caret line="466" column="16" selection-start-line="466" selection-start-column="16" selection-end-line="467" selection-end-column="60" />
+<<<<<<< HEAD
           <folding>
             <element signature="n#nav#0;n#header#0;n#body#0;n#html#0;n#!!top" />
           </folding>
+=======
+>>>>>>> html
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package-lock.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/installcomposer.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -626,6 +707,10 @@
         </state>
       </provider>
     </entry>
+=======
+    <entry file="file://$PROJECT_DIR$/installcomposer.sh" />
+    <entry file="file://$PROJECT_DIR$/app/php/register1.php" />
+>>>>>>> html
     <entry file="file://$PROJECT_DIR$/app/content/festival_1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -646,6 +731,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/content/festivaluebersicht.html">
+<<<<<<< HEAD
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
@@ -684,11 +770,15 @@
           </folding>
         </state>
       </provider>
+=======
+      <provider selected="true" editor-type-id="text-editor" />
+>>>>>>> html
     </entry>
     <entry file="file://$PROJECT_DIR$/app/content/musikrichtung.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/content/kaufen_login.html">
+<<<<<<< HEAD
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
@@ -697,11 +787,15 @@
           </folding>
         </state>
       </provider>
+=======
+      <provider selected="true" editor-type-id="text-editor" />
+>>>>>>> html
     </entry>
     <entry file="file://$PROJECT_DIR$/app/content/kaufen_zahlen.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/content/register.html">
+<<<<<<< HEAD
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
@@ -944,6 +1038,12 @@
           </folding>
         </state>
       </provider>
+=======
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/content/ticketuebersicht.html">
+      <provider selected="true" editor-type-id="text-editor" />
+>>>>>>> html
     </entry>
     <entry file="file://$PROJECT_DIR$/app/content/festival_3.html">
       <provider selected="true" editor-type-id="text-editor" />
@@ -980,6 +1080,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/php/kaufen_bestaetigung.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -987,6 +1088,9 @@
         </state>
       </provider>
     </entry>
+=======
+    <entry file="file://$PROJECT_DIR$/app/php/kaufen_bestaetigung.php" />
+>>>>>>> html
     <entry file="file://$PROJECT_DIR$/app/php/bestellen.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -994,6 +1098,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/php/weiter.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -1036,6 +1141,14 @@
         </state>
       </provider>
     </entry>
+=======
+    <entry file="file://$PROJECT_DIR$/app/php/weiter.php" />
+    <entry file="file://$PROJECT_DIR$/app/php/variablen.php" />
+    <entry file="file://$PROJECT_DIR$/app/php/api.php" />
+    <entry file="file://$PROJECT_DIR$/app/php/DB.php" />
+    <entry file="file://$PROJECT_DIR$/app/php/extension.php" />
+    <entry file="file://$PROJECT_DIR$/app/php/login.php" />
+>>>>>>> html
     <entry file="file://$PROJECT_DIR$/app/php/register.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -1043,6 +1156,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/php/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
@@ -1074,6 +1188,12 @@
         </state>
       </provider>
     </entry>
+=======
+    <entry file="file://$PROJECT_DIR$/app/php/User.php" />
+    <entry file="file://$PROJECT_DIR$/app/php/festivals.php" />
+    <entry file="file://$PROJECT_DIR$/app/php/Festival.php" />
+    <entry file="file://$PROJECT_DIR$/dokumentation/php.md" />
+>>>>>>> html
     <entry file="file://$PROJECT_DIR$/dokumentation/diverses.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -1477,10 +1597,27 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/js/counter.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
           <caret line="273" column="5" lean-forward="true" selection-start-line="273" selection-start-column="5" selection-end-line="273" selection-end-column="5" />
+=======
+    <entry file="file://$PROJECT_DIR$/app/php/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/counter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="280" column="70" lean-forward="true" selection-start-line="280" selection-start-column="70" selection-end-line="280" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+>>>>>>> html
         </state>
       </provider>
     </entry>
