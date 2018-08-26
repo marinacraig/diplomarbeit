@@ -42,8 +42,8 @@ Identische paddings & margins: Diese sind leider etwas durcheinander geraten.
  **js / scripts für gulp build**  
  alle js-files in festival_1.html verlinkt  
  Einzelne js haben id-Abfrage  
- Vorsichtig sein mit neuen / Reihenfolge  
- ggf js anders via "modules" zusammenfügen (gilt auch für **CSS**)  
+ Vorsichtig sein mit Neuen / Reihenfolge  
+ ggf js anders (via "modules") zusammenfügen (gilt auch für **CSS**)  
 
 **Weiterentwicklung**  
 Ideen teilweise als Todo's oder Ideen für Weiterentwicklung im Code festgehalten
@@ -60,5 +60,7 @@ Wenn dann in php.md festgehalten
 
  
  
-[Style Abweichungen](style.md)  
+
  [zurück zum Inhaltsverzeichnis](../README.md)  
+ [Style Abweichungen](style.md)  
+ [Zusammenfassung & Fazit](dokumentation/zusammenfassung_fazit.md)

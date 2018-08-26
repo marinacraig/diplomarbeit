@@ -13,7 +13,6 @@ Bei klick auf plus: plus 1
 bei klick auf minus: minus 1
 -> Total dazwischen anzeigen
 Todo: Total sowie welche ausgewählt speichern bei klick auf Tickets Kaufen
-Todo: vorher herausfinden ob clickTotalTickets wirklich stimmt : Problem: wenn plus dann anderes plus zurück dann minus -> ignoriert
 
 später:
 überprüfe Festival
