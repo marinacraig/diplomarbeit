@@ -4,7 +4,7 @@ mysql: kenne nichts anderes, will einfach mal schauen wie weit ich komme
 DB: zeigt auf _localhost_, mir ist klar, dass login und pw mist sind
 DB-name: festival_lovers
 
-alle php-files in php Ordner
+alle php-files in php Ordner (via ..../dist/php)
 
 Grund: ausprobieren  
 
@@ -42,4 +42,12 @@ php Ordner löschen
 ## Export / Import  
 Keine Ahnung
 
+
+
+  
+
+
+ [zurück zum Inhaltsverzeichnis](../README.md)    
+ [Aufbau](aufbausite.md)  
+ [Zusammenfassung & Fazit](dokumentation/zusammenfassung_fazit.md)
 

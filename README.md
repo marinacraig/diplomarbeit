@@ -22,9 +22,7 @@ bzw. suche nach chmod.
 Alternative: alle npm Befehle händisch eingeben.
 3. gulp build  
 Erstellt dist-Ordner
-4. gulp inject  
-Korrekte js und css files im dist-Ordner
-5. gulp  
+4. gulp  
 für app / Entwicklung (ist ohne build und zeigt nicht auf dist, da sonst zu langsam während Entwicklung)
 
 - **URL der lauffähigen Version:**   
@@ -55,9 +53,7 @@ externem Code**
 - **Eidesstattliche Erklärung** 
 
 
+Diverse Erinnerungen:  
+[Notizen](dokumentation/drandenken.md)  
 
-Links zu diversen Erinnerungen:  
-Diplomarbeit Repo fehlt noch daher [Notizen](dokumentation/drandenken.md)  
-
-[php.md](dokumentation/php.md): verlinken!!!
 
