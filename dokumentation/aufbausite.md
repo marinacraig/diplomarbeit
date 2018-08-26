@@ -26,24 +26,38 @@ Identische paddings & margins: Diese sind leider etwas durcheinander geraten.
  
  Bugfixes: Entweder sofort gefixt oder in Feinkonzept eingefügt.
  
- JS: counter: Ich wollte noch ein js machen und habe mich für dieses
- Entschieden. Etwas unschön sind die diversen Wiederholungen. Momentan 
+ JS: counter, programm: Ich wollte noch ein js machen und habe mich für diese
+ entschieden. Etwas unschön sind die diversen Wiederholungen. Momentan 
  bin ich einfach zufrieden, dass ich es überhaupt hinbekommen habe.
  
+ PHP: Als Font-End soweit ok war, mehr JS nur mit Festival Class / DB sinnvoll wurde,
+ angefangen mit PHP zu experimentieren. [php.md](php.md)
+ 
  ##für später
- **svg direkt im HTML**:  
+ **svg direkt im HTML**  
  g mit fill: fill löschen, beispielsweise class="icon  icon__music icon__music--country"
  einfügen  
  id: wenn gleiches icon mehrmals auf gleicher Seite, dann löschen  
  
- **js für build**
- alle js in festival_1.html verlinkt
- Einzelne js haben id-Abfrage
- Vorsichtig sein mit neuen / Reihenfolge
- ggf js anders via gulp zusammenfügen (gilt auch für **css**)
+ **js / scripts für gulp build**  
+ alle js-files in festival_1.html verlinkt  
+ Einzelne js haben id-Abfrage  
+ Vorsichtig sein mit neuen / Reihenfolge  
+ ggf js anders via "modules" zusammenfügen (gilt auch für **CSS**)  
 
-**Weiterentwicklung**
-Ideen teilweise als Todo's oder Ideen für Weiterentwicklung festgehalten
+**Weiterentwicklung**  
+Ideen teilweise als Todo's oder Ideen für Weiterentwicklung im Code festgehalten
+
+**inject HMTL**  
+Nav und footer in seperaten files:
+Via gulp-inject ist dies möglich (sollte auch mit Unterordner
+ funktionieren), 
+ jedoch nicht umgesetzt, da ich mich nicht zu Beginn mit gulp 
+ auseinander setzen wollte.  
+ 
+**php**  
+Wenn dann in php.md festgehalten  
+
  
  
 [Style Abweichungen](style.md)  

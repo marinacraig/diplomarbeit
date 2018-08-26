@@ -16,32 +16,62 @@ if (ticketsBestellen !== null) {
         if (this == plusDay1) {
 
             clickDay1 += 1;
-            grammatikTicketsPlus();
+            clickTotalTicket += 1;
+            if (clickDay1 == 1) {
+                verkaufbar = ' Ticket';
+            } else {
+                verkaufbar = ' Tickets';
+            }
             totDay1.innerHTML = clickDay1 + verkaufbar;
         } else if (this == plusDay3) {
 
             clickDay3 += 1;
-            grammatikTicketsPlus();
+            clickTotalTicket += 1;
+            if (clickDay3 == 1) {
+                verkaufbar = ' Ticket';
+            } else {
+                verkaufbar = ' Tickets';
+            }
             totDay3.innerHTML = clickDay3 + verkaufbar;
         } else if (this == plusDay1vip) {
 
             clickDay1vip += 1;
-            grammatikTicketsPlus();
+            clickTotalTicket += 1;
+            if (clickDay1vip == 1) {
+                verkaufbar = ' Ticket';
+            } else {
+                verkaufbar = ' Tickets';
+            }
             totDay1vip.innerHTML = clickDay1vip + verkaufbar;
         } else if (this == plusDay3vip) {
 
             clickDay3vip += 1;
-            grammatikTicketsPlus();
+            clickTotalTicket += 1;
+            if (clickDay3vip == 1) {
+                verkaufbar = ' Ticket';
+            } else {
+                verkaufbar = ' Tickets';
+            }
             totDay3vip.innerHTML = clickDay3vip + verkaufbar;
         } else if (this == plusZelt) {
 
             clickZelt += 1;
-            grammatikTicketsPlus();
+            clickTotalTicket += 1;
+            if (clickZelt == 1) {
+                verkaufbar = ' Ticket';
+            } else {
+                verkaufbar = ' Tickets';
+            }
             totZelt.innerHTML = clickZelt + verkaufbar;
         } else if (this == plusZeltvip) {
 
             clickZeltvip += 1;
-            grammatikTicketsPlus();
+            clickTotalTicket += 1;
+            if (clickZeltvip == 1) {
+                verkaufbar = ' Ticket';
+            } else {
+                verkaufbar = ' Tickets';
+            }
             totZeltvip.innerHTML = clickZeltvip + verkaufbar;
         } else {
             console.log('hä? (hint: plus)');
@@ -64,7 +94,11 @@ if (ticketsBestellen !== null) {
                 clickTotalTicket -= 1;
                 totalTickets.innerHTML = clickTotalTicket;
             }
-            grammatikTicketsMinus();
+            if (clickDay1 == 1) {
+                verkaufbar = ' Ticket';
+            } else {
+                verkaufbar = ' Tickets';
+            }
             totDay1.innerHTML = clickDay1 + verkaufbar;
         } else if (this == minusDay3) {
 
@@ -75,7 +109,11 @@ if (ticketsBestellen !== null) {
                 clickTotalTicket -= 1;
                 totalTickets.innerHTML = clickTotalTicket;
             }
-            grammatikTicketsMinus();
+            if (clickDay3 == 1) {
+                verkaufbar = ' Ticket';
+            } else {
+                verkaufbar = ' Tickets';
+            }
             totDay3.innerHTML = clickDay3 + verkaufbar;
         } else if (this == minusDay1vip) {
 
@@ -86,7 +124,11 @@ if (ticketsBestellen !== null) {
                 clickTotalTicket -= 1;
                 totalTickets.innerHTML = clickTotalTicket;
             }
-            grammatikTicketsMinus();
+            if (clickDay1vip == 1) {
+                verkaufbar = ' Ticket';
+            } else {
+                verkaufbar = ' Tickets';
+            }
             totDay1vip.innerHTML = clickDay1vip + verkaufbar;
         } else if (this == minusDay3vip) {
 
@@ -97,7 +139,11 @@ if (ticketsBestellen !== null) {
                 clickTotalTicket -= 1;
                 totalTickets.innerHTML = clickTotalTicket;
             }
-            grammatikTicketsMinus();
+            if (clickDay3vip == 1) {
+                verkaufbar = ' Ticket';
+            } else {
+                verkaufbar = ' Tickets';
+            }
             totDay3vip.innerHTML = clickDay3vip + verkaufbar;
         } else if (this == minusZelt) {
 
@@ -108,7 +154,11 @@ if (ticketsBestellen !== null) {
                 clickTotalTicket -= 1;
                 totalTickets.innerHTML = clickTotalTicket;
             }
-            grammatikTicketsMinus();
+            if (clickZelt == 1) {
+                verkaufbar = ' Ticket';
+            } else {
+                verkaufbar = ' Tickets';
+            }
             totZelt.innerHTML = clickZelt + verkaufbar;
         } else if (this == minusZeltvip) {
 
@@ -119,33 +169,16 @@ if (ticketsBestellen !== null) {
                 clickTotalTicket -= 1;
                 totalTickets.innerHTML = clickTotalTicket;
             }
-            grammatikTicketsMinus();
+            if (clickZeltvip == 1) {
+                verkaufbar = ' Ticket';
+            } else {
+                verkaufbar = ' Tickets';
+            }
             totZeltvip.innerHTML = clickZeltvip + verkaufbar;
         } else {
             console.log('hä? (hint: minus)');
         }
         //   console.log(clickTotalTicket) -> ist im grammatikTicketMinus
-    };
-
-    //für weniger code: funktion hinzu ausgelagert
-
-    var grammatikTicketsPlus = function grammatikTicketsPlus() {
-        //damit im innerHTML die Grammatik stimmt
-        clickTotalTicket += 1;
-        if (clickDay1 != 1 || clickDay3 != 1 || clickDay1vip != 1 || clickDay3vip != 1 || clickZelt != 1 || clickDay1vip != 1) {
-            verkaufbar = ' Tickets';
-        } else {
-            verkaufbar = ' Ticket';
-        }
-    };
-
-    var grammatikTicketsMinus = function grammatikTicketsMinus() {
-        //damit im innerHTML die Grammatik stimmt
-        if (clickDay1 != 1 || clickDay3 != 1 || clickDay1vip != 1 || clickDay3vip != 1 || clickZelt != 1 || clickDay1vip != 1) {
-            verkaufbar = ' Tickets';
-        } else {
-            verkaufbar = ' Ticket';
-        }
     };
 
     //Eventlistener click plus

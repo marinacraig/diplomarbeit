@@ -45,19 +45,19 @@ Technologien, Begründung:**
 Die Technische Doku (insbesonders: gulp, sh, js) befindet sich in den Files. HTML und SCSS nebeneinander sollten 
 verständlich sein und sind daher minimal dokumentiert.  
 
-- **Zusammenfassung und Ausblick, persönliche Anmerkungen**
+- **Zusammenfassung und Ausblick, persönliche Anmerkungen**  
    [Style Abweichungen](dokumentation/style.md)  
-   [Zusammenfassung & Fazit](dokumentation/zusammenfassung_fazit.md)
+   [Zusammenfassung & Fazit](dokumentation/zusammenfassung_fazit.md)  
 
 - **[Literaturverzeichnis](dokumentation/literaturverzeichnis.md), Quellenangaben bei Nutzung von 
 externem Code** 
 
-- **Eidesstattliche Erklärung** _an Unterschrift / print / scan denken_  
+- **Eidesstattliche Erklärung** 
 
 
 
 Links zu diversen Erinnerungen:  
 Diplomarbeit Repo fehlt noch daher [Notizen](dokumentation/drandenken.md)  
 
-
+[php.md](dokumentation/php.md): verlinken!!!
 

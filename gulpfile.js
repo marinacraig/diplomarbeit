@@ -260,6 +260,7 @@ check ob es funktioniert hat:
 ls -l
 danach ./install.sh im Terminal damit es installiert wird (durch diesen Befehl wird speziell danach gesucht,
 wegen Sicherheit wird dies so gemacht
+
  */
 /*
 .gitignore:

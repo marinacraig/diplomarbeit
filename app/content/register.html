@@ -127,11 +127,12 @@
 
                             <li>
 
-                                <form>
-                                    <input type="email" placeholder="E-Mail Adresse"
+                               <form action="../php/login.php" method="post">
+                                    <input type="email" placeholder="E-Mail Adresse" name="email"
                                            autocomplete="section-blue shipping">
 
-                                    <input type="password" placeholder="Passwort" autocomplete="section-blue shipping">
+                                    <input type="password" placeholder="Passwort" name="password"
+                                           autocomplete="section-blue shipping">
 
                                     <button type="submit" class="button btnweiss">anmelden</button>
                                 </form>
@@ -191,13 +192,16 @@
             <form class="kaufen__maske" action="../php/register.php" method="post">
 
    <!--name und vorname würden dazu gehören-->
+                <label for="username">Dein User-Name:</label>
+                <input type="text" placeholder="User-Name" id="username" name="username" required
+                       autocomplete="section-blue shipping">
 
                 <label for="email">Deine E-Mail:</label>
-                <input type="email" placeholder="E-Mail Adresse" id="email" name="email"
+                <input type="email" placeholder="E-Mail Adresse" id="email" name="email" required
                        autocomplete="section-blue shipping">
 
                 <label for="password">Dein Passwort:</label>
-                <input type="password" placeholder="Passwort" id="password" name="password"
+                <input type="password" placeholder="Passwort" id="password" name="password" required
                        autocomplete="section-blue shipping">
 
                 <button type="submit" class="button btnschwarz">registrieren</button>

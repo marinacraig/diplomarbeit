@@ -18,5 +18,6 @@ $cvc = $_POST['cvc'];
 
 $cardholder = $_POST['cardholder'];
 */
-echo '../content/kaufen_bestaetigung.html';
+
+header('Location: kaufen_bestaetigung.php');
 

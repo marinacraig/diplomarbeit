@@ -29,6 +29,11 @@ mehr:
 via Filezilla, da so am wenigsten Zeitintensiv (leider unterschätzt).
 
 ##Eidesstattliche Erklärung
+[zum gescannten file](scan_eidesstattliche_erklaerung.pdf)
+
+##php:
+Inhalt Ordner PHP: alles für DB. Für Front-End nicht relevant (höchstens für "minimalnichtmalhalbvollstack").  
+[mehr zu php](php.md)
 
 #Fazit
 - Etwas Organisation hilft den Überblick zu bewahren
@@ -41,7 +46,8 @@ eindenken muss
 sehr Suchintensiv
 - Bugfixen macht Spass wenn man mit etwas anderem gerade nicht weiter kommt.
 - Idee via github bei master push auf Server deployen gefällt mir besser als filezilla 
-- statt externe links (jquery, normalize) via node_modules einbinden (mehr Kontrolle)
+- statt externe links (jquery, normalize) via node_modules einbinden (mehr Kontrolle, aber mehr 
+Vorsicht bei Ersetzen von Begriffen geboten)
 
 
  [zurück zum Inhaltsverzeichnis](../README.md)  
