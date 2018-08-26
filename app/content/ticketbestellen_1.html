@@ -1,4 +1,4 @@
-<?php session_start(); ?>  <!doctype html>
+<!doctype html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
@@ -124,10 +124,10 @@
                                 <li>
 
                                    <form action="../php/login.php" method="post">
-                                        <input type="email" placeholder="E-Mail Adresse"
+                                        <input type="email" placeholder="E-Mail Adresse" name="email"
                                                autocomplete="section-blue shipping">
 
-                                        <input type="password" placeholder="Passwort"
+                                        <input type="password" placeholder="Passwort" name="password"
                                                autocomplete="section-blue shipping">
 
                                         <button type="submit" class="button btnweiss">anmelden</button>
@@ -399,10 +399,11 @@
                             <li>
 
                                <form action="../php/login.php" method="post">
-                                    <input type="email" placeholder="E-Mail Adresse"
+                                    <input type="email" placeholder="E-Mail Adresse" name="email"
                                            autocomplete="section-blue shipping">
 
-                                    <input type="password" placeholder="Passwort" autocomplete="section-blue shipping">
+                                    <input type="password" placeholder="Passwort" name="password"
+                                           autocomplete="section-blue shipping">
 
                                     <button type="submit" class="button btnweiss">anmelden</button>
                                 </form>
