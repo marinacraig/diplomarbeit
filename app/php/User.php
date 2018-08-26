@@ -3,40 +3,45 @@
 //Kopie von Unterricht
 
 class User {
-    private $name;
+
     private $email;
-    private $passsword;
+    private $password;
+    private $username;
     private $id;
 
-    public function __construct($username = false)
+    public function __construct($email = false)
     {
-        if ($username) {
-            $statement = DB::get()->prepare('
-              SELECT
-                *
-              FROM
-                user
-              WHERE
-                username = :username');
 
-            $statement->execute([':username' => $username]);
-            $user = $statement->fetch();
 
-            $this->setName($user['username']);
-            $this->setEmail($user['email']);
-            $this->setPasssword($user['password']);
-            $this->setId($user['id']);
+         if ($email) {
+
+
+              $statement = DB::get()->prepare('
+                  SELECT
+                    *
+                  FROM
+                    user
+                  WHERE
+                    email = :email');
+
+                $statement->execute([':email' => $email]);
+                $user = $statement->fetch();
+
+                $this->setEmail($user['email']);
+                $this->setPassword($user['password']);
+                $this->setName($user['username']);
+                $this->setId($user['id']);
         }
     }
 
     public function getName()
     {
-        return $this->name;
+        return $this->username;
     }
 
-    public function setName($name)
+    public function setName($username)
     {
-        $this->name = $name;
+        $this->name = $username;
     }
 
     public function getEmail()
@@ -49,14 +54,14 @@ class User {
         $this->email = $email;
     }
 
-    public function getPasssword()
+    public function getPassword()
     {
-        return $this->passsword;
+        return $this->password;
     }
 
-    public function setPasssword($passsword)
+    public function setPassword($password)
     {
-        $this->passsword = $passsword;
+        $this->password = $password;
     }
 
     public function getId() {
@@ -69,20 +74,20 @@ class User {
     public function create() {
         $statement = DB::get()->prepare('
            INSERT INTO user 
-            (username, 
+            (email,
              password, 
-             email,
-             id) 
+             username, 
+             id)   
           VALUES
-            (:username, 
-             :password, 
+            (:password, 
              :email,
+             :username, 
              :id)'
         );
         $statement->execute([
-                ':username' => $this->getName(),
-                ':password' => $this->getPasssword(),
                 ':email' => $this->getEmail(),
+                ':password' => $this->getPassword(),
+                ':username' => $this->getName(),
                 ':id'=> $this->getId()]
         );
     }
