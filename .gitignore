@@ -1,0 +1,12 @@
+.idea
+.DS_Store
+Thumbs.db
+/node_modules
+/dist
+git
+
+/app/js/babel
+/app/css
+
+/app/php/vendor
+/app/php/composer.phar
