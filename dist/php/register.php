@@ -17,18 +17,24 @@ session_start();
  * da dies nicht vorhanden -> ticketuebersicht.html (kann dann "merken")
  */
 
+
 $error = false;
+
+if (isset($_SESSION['user'])) {
+    header('Location: weiter.php');
+    die();
+}
 
 if (isset($_POST['email']) && isset($_POST['password']) && isset($_POST['username']) ){
         $user = new User($_POST['email']);
 
-  if($email->getEmail()){
-        echo ('Benutzer existiert bereits');
+  if($user->getEmail()){
+      $error = 'Benutzer existiert bereits';
     }else{
 
-        $user->setName($_POST['username']);
-        $user->setPassword(password_hash($_POST['password'], PASSWORD_DEFAULT));
         $user->setEmail($_POST['email']);
+        $user->setPassword(password_hash($_POST['password'], PASSWORD_DEFAULT));
+        $user->setName($_POST['username']);
         $user->create();
 
 
@@ -37,9 +43,8 @@ if (isset($_POST['email']) && isset($_POST['password']) && isset($_POST['usernam
         die();
     }
 
-}else{
-    echo ('zurück via browser');
 }
+
 ?>
 
 <!doctype html>

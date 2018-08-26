@@ -4,6 +4,10 @@ require __DIR__ . '/vendor/autoload.php';
 
 session_start();
 
+if ($_POST['logout']) {
+    unset($_SESSION['user']);
+}
+
 if (isset($_SESSION['user'])) {
     header('Location: weiter.php');
     die();
@@ -14,9 +18,10 @@ $error = false;
 if (isset($_POST['email']) && isset($_POST['password'])) {
     $user = new User($_POST['email']);
 
-   if (password_verify($_POST['password'], $user->getPassword())) {
+
+    if (password_verify($_POST['password'], $user->getPassword())) {
         session_start();
-        $_SESSION['user'] =  $_POST['username'];// $user->getEmail();
+        $_SESSION['user'] = $user->getName();
         header('Location: weiter.php');
         die();
     } else {
@@ -213,17 +218,19 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
            autocomplete="section-blue shipping">
 
     <button type="submit" class="button btnweiss">anmelden</button>
-
+<br>
     <?php
     if ($error) {
         echo $error;
     }
     ?>
+    <br>
+    <input type="submit" name="logout" class="button btnschwarz">logout</input>
 </form>
     <br>
-    <a href="../content/register.html">registrieren</a>
+    <a href="register.php">registrieren</a>
     <br>
-    <a href="../index.html">Startseite</a>
+    <a href="login.php">login</a>
 
 </main>
 
