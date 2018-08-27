@@ -2,9 +2,11 @@
 /* Border Box Trick Start */
 @import url("https://fonts.googleapis.com/css?family=Bitter|Encode+Sans+Semi+Expanded|Niconne");
 html {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 *, *:before, *:after {
+  -webkit-box-sizing: inherit;
   box-sizing: inherit; }
 
 /* Border Box Trick Ende */
@@ -431,9 +433,16 @@ button {
 .button {
   height: 48px;
   max-width: 100%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -ms-flex-item-align: center;
   align-self: center;
   margin: 8px; }
   .button p {
@@ -448,10 +457,14 @@ button {
   color: #FFF;
   border-radius: 10px;
   margin: 18px 12px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex; }
   .btngrau .icon__music {
     fill: #FFF; }
   .btngrau span, .btngrau p {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin: auto;
     padding-right: 1em; }
@@ -486,6 +499,7 @@ button {
   width: 343px;
   margin: auto; }
   .btnschwarz p, .btnweiss p, .button .merken p {
+    -ms-flex-item-align: center;
     align-self: center;
     text-align: center; }
 
@@ -539,13 +553,21 @@ button {
   border: none;
   background-color: #FFF; }
   .btnmerken p {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center; }
   .btnmerken svg {
     margin: auto 6px auto auto;
+    -ms-flex-item-align: center;
     align-self: center; }
   .btnmerken span {
+    -ms-flex-item-align: center;
     align-self: center;
     margin: auto auto auto 6px; }
   .btnmerken:hover {
@@ -565,9 +587,11 @@ aside .button, .footer__musikrichtung .button {
   .btnschwarz, .btnweiss {
     margin: 8px; }
   .festivaluebersicht__filter .btnweiss {
+    -ms-flex-item-align: center;
     align-self: center; }
   .footer__musikrichtung .button {
     margin: 8px;
+    -ms-flex-item-align: center;
     align-self: center; } }
 
 .nav__dropdown {
@@ -664,6 +688,8 @@ nav {
   nav li {
     list-style-type: none;
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex; }
   nav .nav__login p, nav .nav__ticket p, nav .nav__menu p {
     margin: 0; }
@@ -713,6 +739,7 @@ nav {
     top: 0;
     background-color: rgba(0, 0, 0, 0.75);
     overflow-x: hidden;
+    -webkit-transition: 0.5s;
     transition: 0.5s; }
     nav .overlay .icon__nav, nav .overlay .icon__footer, nav .overlay .icon__nav--login, nav .overlay .icon__nav--ticket, nav .overlay .icon__nav--herz {
       fill: #FFF; }
@@ -740,6 +767,7 @@ nav {
       text-decoration: none;
       color: #FFF;
       display: block;
+      -webkit-transition: 0.3s;
       transition: 0.3s; }
       nav .overlay__content a:hover, nav .overlay__content a:focus {
         color: #000;
@@ -773,20 +801,35 @@ nav {
       top: 40%; } }
   @media screen and (min-width: 450px) {
     nav .overlay .item .nav__display--tablet.item__hidden {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex; } }
   @media screen and (min-width: 769px) {
     nav .overlay__content {
       font-size: 3.294117647rem; }
     nav .nav__bottom ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
       width: 60%;
       margin: auto; }
       nav .nav__bottom ul .nav__suche {
+        -webkit-box-ordinal-group: 11;
+        -ms-flex-order: 10;
         order: 10; } }
   nav .container, nav .overlay .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center; }
   nav .item .item__hidden {
     display: none; }
@@ -801,6 +844,8 @@ nav {
 
 @media screen and (min-width: 484px) {
   nav .item .nav__display--tablet.item__hidden {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex; } }
 
 @media screen and (min-width: 769px) {
@@ -811,6 +856,8 @@ nav {
   nav .nav__festivallovers--2 {
     margin-right: 20px; }
   nav .item .nav__display--desktop.item__hidden {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex; } }
 
 footer {
@@ -828,27 +875,48 @@ footer {
   footer .footer__menu > a, footer .footer__up {
     padding: 0 4px; }
   footer .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -ms-flex-line-pack: center;
     align-content: center; }
   footer .item .item__hidden {
     display: none; }
   footer .footer__socialmedia {
+    -webkit-box-ordinal-group: 6;
+    -ms-flex-order: 5;
     order: 5; }
   footer .footer__up {
+    -webkit-box-ordinal-group: 5;
+    -ms-flex-order: 4;
     order: 4; }
 
 @media screen and (min-width: 376px) {
   footer {
     padding: 0 24px; }
     footer .item .item__hidden {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex; }
     footer .footer__socialmedia {
+      -webkit-box-ordinal-group: 5;
+      -ms-flex-order: 4;
       order: 4; }
     footer .footer__up {
+      -webkit-box-ordinal-group: 6;
+      -ms-flex-order: 5;
       order: 5; } }
 
 @media screen and (min-width: 769px) {
@@ -865,26 +933,43 @@ footer {
   .breadcrumb .breadcrump {
     min-height: 14px;
     max-width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     list-style-type: none; }
     .breadcrumb .breadcrump .breadcrump, .breadcrumb .breadcrump .breadcrump > a {
       text-decoration: none;
       color: #C2C2C2;
       margin: 0 4px;
+      -ms-flex-item-align: center;
       align-self: center;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
+      -ms-flex-line-pack: center;
       align-content: center; }
       .breadcrumb .breadcrump .breadcrump:hover, .breadcrumb .breadcrump .breadcrump > a:hover {
         color: #000; }
     .breadcrumb .breadcrump .dropdown {
       position: relative;
       list-style-type: none;
+      -ms-flex-item-align: center;
       align-self: center;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
+      -ms-flex-line-pack: center;
       align-content: center;
       /*        span{
                 float: left;
@@ -897,13 +982,19 @@ footer {
         height: 48px;
         max-width: 343px;
         width: 100%;
+        -ms-flex-item-align: center;
         align-self: center; }
         .breadcrumb .breadcrump .dropdown li:first-child {
           padding-left: 8px;
           max-width: 100%; }
           .breadcrumb .breadcrump .dropdown li:first-child a, .breadcrumb .breadcrump .dropdown li:first-child p {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
             align-items: center;
+            -ms-flex-line-pack: center;
             align-content: center; }
             .breadcrumb .breadcrump .dropdown li:first-child a .circle, .breadcrumb .breadcrump .dropdown li:first-child p .circle {
               margin-right: 8px; }
@@ -914,6 +1005,7 @@ footer {
         .breadcrumb .breadcrump .dropdown:hover li:first-child {
           border: #C2C2C2 1px solid; }
         .breadcrumb .breadcrump .dropdown:hover .dropdown-up {
+          -webkit-transform: rotate(180deg);
           transform: rotate(180deg); }
     .breadcrumb .breadcrump .dropdown__content {
       display: none;
@@ -941,10 +1033,16 @@ footer {
     .breadcrumb__icon:hover {
       fill: #000; }
   .breadcrumb .rotate {
+    -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg); }
   .breadcrumb .circle {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -ms-flex-line-pack: center;
     align-content: center;
     margin-left: 12px;
     height: 20px;
@@ -954,6 +1052,7 @@ footer {
     .breadcrumb .circle svg {
       max-height: 17px;
       max-width: 17px;
+      -ms-flex-item-align: center;
       align-self: center;
       margin: 3px; }
 
@@ -973,6 +1072,7 @@ footer {
     height: 400px; }
 
 .slider-wrapper {
+  -ms-flex-item-align: center;
   align-self: center; }
 
 .slider--item {
@@ -1016,10 +1116,6 @@ footer {
       text-indent: -9999px;
       cursor: pointer;
       -webkit-transition: all, 0.2s, ease-in 1s ease-in-out;
-      -khtml-transition: all, 0.2s, ease-in 1s ease-in-out;
-      -moz-transition: all, 0.2s, ease-in 1s ease-in-out;
-      -ms-transition: all, 0.2s, ease-in 1s ease-in-out;
-      -o-transition: all, 0.2s, ease-in 1s ease-in-out;
       transition: all, 0.2s, ease-in 1s ease-in-out; }
       .slick-dots li button:hover {
         background-color: #000; }
@@ -1053,10 +1149,6 @@ footer {
     top: 50%;
     margin-top: -21px;
     -webkit-transition: all, 0.3s, cubic-bezier(0.55, 0, 0.1, 1) 1s ease-in-out;
-    -khtml-transition: all, 0.3s, cubic-bezier(0.55, 0, 0.1, 1) 1s ease-in-out;
-    -moz-transition: all, 0.3s, cubic-bezier(0.55, 0, 0.1, 1) 1s ease-in-out;
-    -ms-transition: all, 0.3s, cubic-bezier(0.55, 0, 0.1, 1) 1s ease-in-out;
-    -o-transition: all, 0.3s, cubic-bezier(0.55, 0, 0.1, 1) 1s ease-in-out;
     transition: all, 0.3s, cubic-bezier(0.55, 0, 0.1, 1) 1s ease-in-out; }
   .slick-arrow.slick-prev {
     left: 0; }
@@ -1094,22 +1186,30 @@ id's dürfen nur einmal vergeben werden, da mehrere Akkordions: hochzählen
 .accordeon__intro {
   margin: 32px 0 0 0;
   padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
   border-bottom: #000 4px solid; }
   .accordeon__intro h3 {
     margin: 0 auto 12px 0;
     max-width: 70%;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
     hyphens: auto;
     text-align: start;
+    -ms-flex-item-align: end;
     align-self: flex-end; }
   .accordeon__intro .show, .accordeon__intro .hide {
     margin-bottom: 12px;
     text-decoration: none;
     color: #000;
     max-width: 30%;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
     hyphens: auto;
     text-align: end;
+    -ms-flex-item-align: end;
     align-self: flex-end; }
 
 .magazin {
@@ -1135,6 +1235,7 @@ id's dürfen nur einmal vergeben werden, da mehrere Akkordions: hochzählen
     opacity: 0;
     max-height: 0;
     font-size: 0;
+    -webkit-transition: .25s ease;
     transition: .25s ease; }
   .magazin__content .magazin__content--mehr:checked ~ .magazin__content--inhalt .magazin__content--text {
     opacity: 1;
@@ -1148,13 +1249,21 @@ id's dürfen nur einmal vergeben werden, da mehrere Akkordions: hochzählen
 
 @media screen and (min-width: 376px) {
   .magazin__article {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
     margin: 0 24px; }
   .magazin__content {
     border-bottom: none;
+    -ms-flex-preferred-size: 43%;
     flex-basis: 43%; }
     .magazin__content .item__hidden {
       display: none; }
@@ -1169,6 +1278,7 @@ id's dürfen nur einmal vergeben werden, da mehrere Akkordions: hochzählen
   .magazin__article {
     margin: 0 120px; }
   .magazin__content {
+    -ms-flex-preferred-size: 30%;
     flex-basis: 30%; } }
 
 .news {
@@ -1195,6 +1305,8 @@ id's dürfen nur einmal vergeben werden, da mehrere Akkordions: hochzählen
     .news__content--content {
       padding: 16px; }
       .news__content--content .container {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex; }
         .news__content--content .container hr {
           color: #F0F0F0; }
@@ -1204,9 +1316,12 @@ id's dürfen nur einmal vergeben werden, da mehrere Akkordions: hochzählen
     padding-left: 24px;
     padding-right: 24px; }
     .news__article {
+      -webkit-column-count: 3;
       column-count: 3;
+      -webkit-column-gap: 0;
       column-gap: 0; }
       .news__article--content {
+        -webkit-column-break-inside: avoid;
         break-inside: avoid;
         padding: 5px; }
     .news__content {
@@ -1226,6 +1341,7 @@ id's dürfen nur einmal vergeben werden, da mehrere Akkordions: hochzählen
     padding-left: 120px;
     padding-right: 120px; }
     .news__article {
+      -webkit-column-count: 5;
       column-count: 5; } }
 
 .musikrichtung {
@@ -1241,20 +1357,31 @@ id's dürfen nur einmal vergeben werden, da mehrere Akkordions: hochzählen
   padding: 16px 8px;
   height: 160px;
   background-color: #FFF;
+  position: -webkit-sticky;
   position: sticky;
   bottom: 0; }
 
 @media screen and (min-width: 376px) {
   .musikrichtung {
     min-height: 70vh;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -ms-flex-line-pack: center;
     align-content: center; }
   .musikrichtung:not(.item__hidden--buttons) {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex; }
   .footer__musikrichtung {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center; } }
 
 .festivaluebersicht__filter {
@@ -1292,16 +1419,22 @@ id's dürfen nur einmal vergeben werden, da mehrere Akkordions: hochzählen
   .festivaluebersicht__filter .festival__list {
     width: 100%; }
     .festivaluebersicht__filter .festival__list ul {
+      -webkit-hyphens: auto;
+      -ms-hyphens: auto;
       hyphens: auto;
       display: grid;
       grid-template-columns: auto 50px;
       grid-template-rows: 48px auto auto auto;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center; }
     .festivaluebersicht__filter .festival__list li {
       width: 100%;
       height: 100%;
       list-style-type: none; }
       .festivaluebersicht__filter .festival__list li p, .festivaluebersicht__filter .festival__list li svg {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex; }
     .festivaluebersicht__filter .festival__list--item {
       background-color: #FFF;
@@ -1360,6 +1493,8 @@ id's dürfen nur einmal vergeben werden, da mehrere Akkordions: hochzählen
       max-width: 100%;
       grid-template-columns: 104px auto 25% 20%;
       grid-template-rows: 50% 50%;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center; }
     .festivaluebersicht__filter .festival__list--item {
       text-align: start; }
@@ -1368,18 +1503,25 @@ id's dürfen nur einmal vergeben werden, da mehrere Akkordions: hochzählen
         padding: 0;
         margin: 0;
         border-right: #F0F0F0 1px solid;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
+        -ms-flex-line-pack: center;
         align-content: center; }
         .festivaluebersicht__filter .festival__list--item .filter__music {
           height: 100%;
           grid-column: 1;
           grid-row-start: 1;
           grid-row-end: 3;
+          -ms-flex-item-align: center;
           align-self: center; }
           .festivaluebersicht__filter .festival__list--item .filter__music svg {
             height: 48px;
             width: auto;
+            -ms-flex-item-align: center;
             align-self: center;
             margin: auto; }
         .festivaluebersicht__filter .festival__list--item .filter__name {
@@ -1387,6 +1529,7 @@ id's dürfen nur einmal vergeben werden, da mehrere Akkordions: hochzählen
           grid-column: 2;
           grid-row-start: 1;
           grid-row-end: 3;
+          -ms-flex-item-align: center;
           align-self: center; }
         .festivaluebersicht__filter .festival__list--item .filter__detail {
           width: 100%; }
@@ -1395,23 +1538,28 @@ id's dürfen nur einmal vergeben werden, da mehrere Akkordions: hochzählen
             grid-column: 3;
             grid-row-start: 1;
             grid-row-end: 2;
+            -ms-flex-item-align: center;
             align-self: center; }
           .festivaluebersicht__filter .festival__list--item .filter__detail--datum {
             padding: 12px;
             grid-column: 3;
             grid-row-start: 2;
             grid-row-end: 3;
+            -ms-flex-item-align: center;
             align-self: center; }
         .festivaluebersicht__filter .festival__list--item .filter__merken, .festivaluebersicht__filter .festival__list--item .filter__gemerkt {
           grid-column: 4;
           grid-row-start: 1;
           grid-row-end: 3;
+          -ms-flex-item-align: center;
           align-self: center; }
           .festivaluebersicht__filter .festival__list--item .filter__merken p, .festivaluebersicht__filter .festival__list--item .filter__gemerkt p {
             display: inline-block;
+            -ms-flex-item-align: center;
             align-self: center;
             padding: 0 12px; }
             .festivaluebersicht__filter .festival__list--item .filter__merken p svg, .festivaluebersicht__filter .festival__list--item .filter__gemerkt p svg {
+              -ms-flex-item-align: center;
               align-self: center;
               max-height: 23px;
               width: auto; }
@@ -1428,6 +1576,8 @@ id's dürfen nur einmal vergeben werden, da mehrere Akkordions: hochzählen
       height: 104px;
       grid-template-columns: 15% 104px auto 15% 15% 19%;
       grid-template-rows: 52px 52px;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center; }
     .festivaluebersicht__filter .festival__list--item {
       text-align: start; }
@@ -1460,7 +1610,10 @@ id's dürfen nur einmal vergeben werden, da mehrere Akkordions: hochzählen
         grid-row-start: 1;
         grid-row-end: span 2; }
         .festivaluebersicht__filter .festival__list--item .filter__merken p, .festivaluebersicht__filter .festival__list--item .filter__gemerkt p {
+          display: -webkit-inline-box;
+          display: -ms-inline-flexbox;
           display: inline-flex;
+          -ms-flex-item-align: center;
           align-self: center;
           padding-left: 0; }
           .festivaluebersicht__filter .festival__list--item .filter__merken p svg, .festivaluebersicht__filter .festival__list--item .filter__gemerkt p svg {
@@ -1519,16 +1672,24 @@ id's dürfen nur einmal vergeben werden, da mehrere Akkordions: hochzählen
     margin: 0; }
     .abschluss .outro .background {
       text-align: center;
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
       display: inline-flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center; }
       .abschluss .outro .background svg {
+        -ms-flex-item-align: center;
         align-self: center;
         max-height: 80%;
         height: auto;
         width: 80%;
         z-index: 1; }
       .abschluss .outro .background .outro__festival {
+        -ms-flex-item-align: center;
         align-self: center;
         text-align: center;
         color: #FFF;
@@ -1561,19 +1722,32 @@ id's dürfen nur einmal vergeben werden, da mehrere Akkordions: hochzählen
       max-width: 100%;
       height: 128px; }
     .abschluss .more .more__back--content, .abschluss .more .more__next--content {
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
       display: inline-flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
       justify-content: space-between;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
+      -ms-flex-line-pack: center;
       align-content: center;
       width: 100%; }
       .abschluss .more .more__back--content p, .abschluss .more .more__back--content span, .abschluss .more .more__next--content p, .abschluss .more .more__next--content span {
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
         hyphens: auto;
+        -ms-flex-item-align: center;
         align-self: center; }
       .abschluss .more .more__back--content img, .abschluss .more .more__next--content img {
+        -ms-flex-item-align: center;
         align-self: center; }
     .abschluss .more .teaser__next {
+      -o-object-fit: cover;
       object-fit: cover; }
     .abschluss .more .rotate {
+      -webkit-transform: rotate(180deg);
       transform: rotate(180deg); }
     .abschluss .more .icon__music {
       fill: #FFF; }
@@ -1619,6 +1793,8 @@ id's dürfen nur einmal vergeben werden, da mehrere Akkordions: hochzählen
     color: #FFF;
     text-align: center;
     height: 128px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex; }
     .abschluss .more .more__back, .abschluss .more .more__next {
       width: 50%; } }
@@ -1659,6 +1835,7 @@ id's dürfen nur einmal vergeben werden, da mehrere Akkordions: hochzählen
     display: none; }
   .programm .btnschwarz svg {
     float: right;
+    -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
     margin: 8px 12px; }
   .programm .wochentag__auswahl:hover .btnweiss {
@@ -1687,6 +1864,8 @@ id's dürfen nur einmal vergeben werden, da mehrere Akkordions: hochzählen
       display: none; }
     .programm .wochentag__auswahl {
       width: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex; } }
 
 @media screen and (min-width: 769px) {
@@ -1722,6 +1901,8 @@ id's dürfen nur einmal vergeben werden, da mehrere Akkordions: hochzählen
 
 @media screen and (min-width: 376px) {
   .filter__detail {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
     float: left; }
   .tickets .btnschwarz, .tickets .btnweiss {
@@ -1751,6 +1932,8 @@ id's dürfen nur einmal vergeben werden, da mehrere Akkordions: hochzählen
     .tickets .btnschwarz, .tickets .btnweiss {
       margin: 8px auto; }
     .tickets .btnmerken {
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
       display: inline-flex; }
     .tickets .sponsoring {
       width: 200px; } }
@@ -1778,6 +1961,8 @@ link verschoben
     width: 100%;
     grid-template-columns: auto;
     grid-template-rows: 48px auto auto auto auto;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center; }
   .festival__tickets li {
     width: 100%;
@@ -1798,6 +1983,8 @@ link verschoben
       padding: 12px;
       grid-column: 1;
       grid-row: 2;
+      -webkit-hyphens: auto;
+      -ms-hyphens: auto;
       hyphens: auto; }
       .festival__tickets--item .filter__name h3 {
         margin: 0.5em 0; }
@@ -1820,6 +2007,8 @@ link verschoben
 
 .festival__tickets--item .filter__detail--tickets-verfuegbar, .bestellen__tickets .filter__detail--tickets-verfuegbar {
   padding: 4px 12px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   width: 100%; }
   .festival__tickets--item .filter__detail--tickets-verfuegbar p, .bestellen__tickets .filter__detail--tickets-verfuegbar p {
@@ -1833,6 +2022,8 @@ link verschoben
 .festival__tickets--item .filter__detail--ticket-grafik, .bestellen__tickets .filter__detail--ticket-grafik {
   padding: 4px 12px;
   width: 100%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex; }
   .festival__tickets--item .filter__detail--ticket-grafik .icon__ticket-grafik, .bestellen__tickets .filter__detail--ticket-grafik .icon__ticket-grafik {
     padding: 0;
@@ -1871,8 +2062,13 @@ link verschoben
       padding: 0;
       margin: 0;
       border-right: #F0F0F0 1px solid;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
+      -ms-flex-line-pack: center;
       align-content: center; }
       .festival__tickets--item .filter__music {
         height: 100%;
@@ -1943,9 +2139,15 @@ link verschoben
       background-color: #FFF; }
     .bestellen__tickets--variante {
       height: 88px;
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
       display: inline-flex;
       width: 100%;
+      -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
       justify-content: space-evenly;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
       margin-bottom: 16px; }
       .bestellen__tickets--variante .plus, .bestellen__tickets--variante .minus {
@@ -1971,6 +2173,8 @@ link verschoben
     width: 100%;
     border-top: #000 1px solid;
     display: inline-block;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center; }
     .bestellen .kaufen .kaufen__button {
       margin: 24px auto 32px auto; }
@@ -1985,6 +2189,8 @@ link verschoben
       display: inline-block;
       margin-left: 12px; }
     .bestellen__tickets .kaufen {
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
       display: inline-flex; }
       .bestellen__tickets .kaufen .kaufen__button {
         margin: 32px auto 40px auto; } }
@@ -2019,7 +2225,11 @@ link verschoben
       width: auto;
       padding: 12px; }
     .kaufen__maske--zahlen .creditcards {
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
       justify-content: space-between;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
       max-width: 100%; }
     .kaufen__maske--zahlen .creditcard {
