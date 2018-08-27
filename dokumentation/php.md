@@ -9,7 +9,7 @@ alle php-files in php Ordner (via ..../dist/php)
 Grund: ausprobieren  
 
 1. Testlogin / registrieren:  
-a. von DB: Test1 (=username), test@test1.com, test1 (=password) (-> kein hash)  
+a. von DB: Test1 (=username), test@test1.com, test1 (=password)
 b. falls registrieren funktioniert: Test2 (=username), test@test2.com, test2 (=password)
 
 2. Wo ist eigentlich der Logout? -> login.php
@@ -42,6 +42,10 @@ php Ordner löschen
 
 ## Export / Import  
 Keine Ahnung
+
+
+## Literatur  
+- login: https://www.php-einfach.de/experte/php-codebeispiele/loginscript/  
 
 
 

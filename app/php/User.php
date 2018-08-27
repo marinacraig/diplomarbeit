@@ -2,7 +2,8 @@
 
 //Kopie von Unterricht
 
-class User {
+
+/*class User {
 
     private $email;
     private $password;
@@ -13,10 +14,10 @@ class User {
     {
 
 
-         if ($email) {
+        if ($email) {
 
 
-              $statement = DB::get()->prepare('
+            $statement = DB::get()->prepare('
                   SELECT
                     *
                   FROM
@@ -24,13 +25,13 @@ class User {
                   WHERE
                     email = :email');
 
-                $statement->execute([':email' => $email]);
-                $user = $statement->fetch();
+            $statement->execute([':email' => $email]);
+            $user = $statement->fetch();
 
-                $this->setEmail($user['email']);
-                $this->setPassword($user['password']);
-                $this->setName($user['username']);
-                $this->setId($user['id']);
+            $this->setEmail($user['email']);
+            $this->setPassword($user['password']);
+            $this->setName($user['username']);
+            $this->setId($user['id']);
         }
     }
 
@@ -93,6 +94,6 @@ class User {
     }
 
     //hier zum Beispiel gemerkte Festivals holen
-}
+}*/
 
 

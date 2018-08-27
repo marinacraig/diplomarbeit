@@ -1,8 +1,8 @@
 <?php
 
-require __DIR__ . '/vendor/autoload.php';
-
 session_start();
+
+$pdo = new PDO('mysql:host=localhost;dbname=festival_lovers', 'root', 'root');
 
 /*
  * Idee: prüfen ob schon eingeloggt
@@ -16,34 +16,6 @@ session_start();
  * 2. geklappt: laut styleguide ins dashboard,
  * da dies nicht vorhanden -> ticketuebersicht.html (kann dann "merken")
  */
-
-
-$error = false;
-
-if (isset($_SESSION['user'])) {
-    header('Location: weiter.php');
-    die();
-}
-
-if (isset($_POST['email']) && isset($_POST['password']) && isset($_POST['username']) ){
-        $user = new User($_POST['email']);
-
-  if($user->getEmail()){
-      $error = 'Benutzer existiert bereits';
-    }else{
-
-        $user->setEmail($_POST['email']);
-        $user->setPassword(password_hash($_POST['password'], PASSWORD_DEFAULT));
-        $user->setName($_POST['username']);
-        $user->create();
-
-
-        $_SESSION['user'] = $user->getName();
-        header('Location: weiter.php');
-        die();
-    }
-
-}
 
 ?>
 
@@ -239,29 +211,79 @@ if (isset($_POST['email']) && isset($_POST['password']) && isset($_POST['usernam
     <!-- Login Maske - Dropdown -->
     <h1>Registrierung</h1>
 
-            <form class="kaufen__maske" method="post">
+
+    <?php
+    $showFormular = true; //Variable ob das Registrierungsformular anezeigt werden soll
+
+    if(isset($_GET['register'])) {
+        $error = false;
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+        $username = $_POST['username'];
+
+        if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            echo 'Bitte eine gültige E-Mail-Adresse eingeben<br>';
+            $error = true;
+        }
+        if(strlen($password) == 0) {
+            echo 'Bitte ein Passwort angeben<br>';
+            $error = true;
+        }
+
+
+        //Überprüfe, dass die E-Mail-Adresse noch nicht registriert wurde
+        if(!$error) {
+            $statement = $pdo->prepare("SELECT * FROM user WHERE email = :email");
+            $result = $statement->execute(array('email' => $email));
+            $user = $statement->fetch();
+
+            if($user !== false) {
+                echo 'Diese E-Mail-Adresse ist bereits vergeben<br>';
+                $error = true;
+            }
+        }
+
+        //Keine Fehler, wir können den Nutzer registrieren
+        if(!$error) {
+            $password_hash = password_hash($password, PASSWORD_DEFAULT);
+
+            $statement = $pdo->prepare("INSERT INTO user (email, password, username) VALUES (:email, :password, :username)");
+            $result = $statement->execute(array('email' => $email, 'password' => $password_hash, 'username' => $username));
+
+            if($result) {
+                echo 'Du wurdest erfolgreich registriert. <a href="login.php">Zum Login</a>';
+                $showFormular = false;
+            } else {
+                echo 'Beim Abspeichern ist leider ein Fehler aufgetreten<br>';
+            }
+        }
+    }
+
+    if($showFormular) {
+    ?>
+
+            <form class="kaufen__maske" method="post" action="?register=1">
 
    <!--name und vorname würden dazu gehören-->
                 <label for="username">Dein User-Name:</label>
-                <input type="text" placeholder="User-Name" id="username" name="username" required
+                <input type="text" placeholder="User-Name" id="username" name="username"
                        autocomplete="section-blue shipping">
 
                 <label for="email">Deine E-Mail:</label>
-                <input type="email" placeholder="E-Mail Adresse" id="email" name="email" required
+                <input type="email" placeholder="E-Mail Adresse" id="email" name="email"
                        autocomplete="section-blue shipping">
 
                 <label for="password">Dein Passwort:</label>
-                <input type="password" placeholder="Passwort" id="password" name="password" required
+                <input type="password" placeholder="Passwort" id="password" name="password"
                        autocomplete="section-blue shipping">
 
                 <button type="submit" class="button btnschwarz">registrieren</button>
             </form>
 
-    <?php
-    if ($error) {
-        echo $error;
-    }
+        <?php
+    } //Ende von if($showFormular)
     ?>
+
 </main>
 
 <!--footer-->

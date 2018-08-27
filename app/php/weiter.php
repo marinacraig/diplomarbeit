@@ -4,6 +4,12 @@ require __DIR__ . '/vendor/autoload.php';
 
 session_start();
 
+if ($_POST['logout']) {
+    unset($_SESSION['user']);
+    header('Location: login.php');
+    die();
+}
+
 ?>
 
 <!doctype html>
@@ -29,9 +35,18 @@ session_start();
 <h1>wäre vielleicht das Dashbord</h1>
 
 <!--Todo: aus Session username holen und hier anzeigen-->
+<?php
+echo ($_SESSION['username']);
+?>
 
 <p>du hast sich erfolgreich eingeloggt</p>
 <a href="../content/ticketuebersicht.html">Ticketübersicht</a>
+
+<br>
+
+<form method="post">
+    <button type="submit" name="logout" class="button btnschwarz" id="logout">logout</button>
+</form>
 
 </body>
 </html>

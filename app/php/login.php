@@ -6,6 +6,8 @@ session_start();
 
 if ($_POST['logout']) {
     unset($_SESSION['user']);
+    header('Location: login.php');
+    die();
 }
 
 if (isset($_SESSION['user'])) {
@@ -16,6 +18,12 @@ if (isset($_SESSION['user'])) {
 $error = false;
 
 if (isset($_POST['email']) && isset($_POST['password'])) {
+echo($_POST['email'] . $_POST['password']);
+
+    $error = 'Benutzer oder Passwort stimmt nicht…';
+}
+
+/*if (isset($_POST['email']) && isset($_POST['password'])) {
     $user = new User($_POST['email']);
 
 
@@ -27,7 +35,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
     } else {
       $error = 'Benutzer oder Passwort stimmt nicht…';
    }
-}
+}*/
 
 ?>
 
