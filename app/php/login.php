@@ -1,42 +1,32 @@
 <?php
 
-require __DIR__ . '/vendor/autoload.php';
-
 session_start();
 
-if ($_POST['logout']) {
-    unset($_SESSION['user']);
-    header('Location: login.php');
-    die();
-}
-
-if (isset($_SESSION['user'])) {
+if (isset($_SESSION)){
     header('Location: weiter.php');
     die();
 }
 
-$error = false;
+$pdo = new PDO('mysql:host=localhost;dbname=festival_lovers', 'root', 'root');
+if(isset($_GET['login']))
+    {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
 
-if (isset($_POST['email']) && isset($_POST['password'])) {
-echo($_POST['email'] . $_POST['password']);
+    $statement = $pdo->prepare("SELECT * FROM user WHERE email = :email");
+    $result = $statement->execute(array('email' => $email));
+    $user = $statement->fetch();
 
-    $error = 'Benutzer oder Passwort stimmt nicht…';
-}
-
-/*if (isset($_POST['email']) && isset($_POST['password'])) {
-    $user = new User($_POST['email']);
-
-
-    if (password_verify($_POST['password'], $user->getPassword())) {
-        session_start();
-        $_SESSION['user'] = $user->getName();
+    //Überprüfung des Passworts
+    if ($user !== false && password_verify($password, $user['password'])) {
+        $_SESSION['userid'] = $user['id'];
         header('Location: weiter.php');
         die();
     } else {
-      $error = 'Benutzer oder Passwort stimmt nicht…';
-   }
-}*/
+        $errorMessage = "E-Mail oder Passwort war ungültig<br>";
+    }
 
+}
 ?>
 
 <!doctype html>
@@ -219,7 +209,14 @@ echo($_POST['email'] . $_POST['password']);
     <p></p>
     <p></p>
     <h1>Login</h1>
-<form method="post">
+
+    <?php
+    if(isset($errorMessage)) {
+        echo $errorMessage;
+    }
+    ?>
+
+<form method="post" action="?login=1">
     <input type="email" placeholder="E-Mail Adresse" name="email"
            autocomplete="section-blue shipping">
 
@@ -236,9 +233,8 @@ echo($_POST['email'] . $_POST['password']);
     }
     ?>
     <br>
-    <!--Todo: logout funktion machen - in weiter integrieren macht wenig sinn, da dies eine Art Bestätigungsseite ist-->
-    <button type="submit" name="logout" class="button btnschwarz" id="logout">logout</button>
 </form>
+
     <br>
     <a href="register.php">registrieren</a>
     <br>

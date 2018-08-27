@@ -1,14 +1,7 @@
 <?php
 
-require __DIR__ . '/vendor/autoload.php';
-
 session_start();
 
-if ($_POST['logout']) {
-    unset($_SESSION['user']);
-    header('Location: login.php');
-    die();
-}
 
 ?>
 
@@ -44,7 +37,7 @@ echo ($_SESSION['username']);
 
 <br>
 
-<form method="post">
+<form method="post" action="logout.php">
     <button type="submit" name="logout" class="button btnschwarz" id="logout">logout</button>
 </form>
 

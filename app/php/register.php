@@ -251,7 +251,7 @@ $pdo = new PDO('mysql:host=localhost;dbname=festival_lovers', 'root', 'root');
             $result = $statement->execute(array('email' => $email, 'password' => $password_hash, 'username' => $username));
 
             if($result) {
-                echo 'Du wurdest erfolgreich registriert. <a href="login.php">Zum Login</a>';
+                echo 'Du wurdest erfolgreich registriert. <br><a href="login.php" class="button btnschwarz">Zum Login</a>';
                 $showFormular = false;
             } else {
                 echo 'Beim Abspeichern ist leider ein Fehler aufgetreten<br>';
