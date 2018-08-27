@@ -128,6 +128,7 @@ $zoom-slow: all, 2.4s, cubic-bezier(.55, 0, .1, 1);
     //nötig damit kein scollbalken  - dafür nun Bilder verschoben
     margin: 0 60px;
   }
+
   .slider--item {
 
   }
@@ -143,8 +144,8 @@ $zoom-slow: all, 2.4s, cubic-bezier(.55, 0, .1, 1);
   }
   //slick-arrow: bereits mobile wenn's stimmt
   .slick-arrow {
-    //wegen mozilla - jetzt nicht nur wenn man genau trifft
-    width: 100vw;
+    //wegen mozilla - jetzt nicht nur wenn man genau
+    //width: 100vw; -> dann scrollbalken...
 
     &:before {
       content: "";

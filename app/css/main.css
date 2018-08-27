@@ -1044,32 +1044,30 @@ footer {
     z-index: 1; }
     .slick-slide.slick-current {
       z-index: 2; }
-  .slick-arrow {
-    width: 100vw; }
-    .slick-arrow:before {
-      content: "";
-      position: absolute;
-      display: block;
-      width: 48px;
-      height: 48px;
-      top: 50%;
-      margin-top: -21px;
-      -webkit-transition: all, 0.3s, cubic-bezier(0.55, 0, 0.1, 1) 1s ease-in-out;
-      -khtml-transition: all, 0.3s, cubic-bezier(0.55, 0, 0.1, 1) 1s ease-in-out;
-      -moz-transition: all, 0.3s, cubic-bezier(0.55, 0, 0.1, 1) 1s ease-in-out;
-      -ms-transition: all, 0.3s, cubic-bezier(0.55, 0, 0.1, 1) 1s ease-in-out;
-      -o-transition: all, 0.3s, cubic-bezier(0.55, 0, 0.1, 1) 1s ease-in-out;
-      transition: all, 0.3s, cubic-bezier(0.55, 0, 0.1, 1) 1s ease-in-out; }
-    .slick-arrow.slick-prev {
-      left: 0; }
-      .slick-arrow.slick-prev:before {
-        border: #767676 1px solid;
-        left: -60px; }
-    .slick-arrow.slick-next {
-      right: 0; }
-      .slick-arrow.slick-next:before {
-        right: -60px;
-        border: #767676 1px solid; }
+  .slick-arrow:before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 48px;
+    height: 48px;
+    top: 50%;
+    margin-top: -21px;
+    -webkit-transition: all, 0.3s, cubic-bezier(0.55, 0, 0.1, 1) 1s ease-in-out;
+    -khtml-transition: all, 0.3s, cubic-bezier(0.55, 0, 0.1, 1) 1s ease-in-out;
+    -moz-transition: all, 0.3s, cubic-bezier(0.55, 0, 0.1, 1) 1s ease-in-out;
+    -ms-transition: all, 0.3s, cubic-bezier(0.55, 0, 0.1, 1) 1s ease-in-out;
+    -o-transition: all, 0.3s, cubic-bezier(0.55, 0, 0.1, 1) 1s ease-in-out;
+    transition: all, 0.3s, cubic-bezier(0.55, 0, 0.1, 1) 1s ease-in-out; }
+  .slick-arrow.slick-prev {
+    left: 0; }
+    .slick-arrow.slick-prev:before {
+      border: #767676 1px solid;
+      left: -60px; }
+  .slick-arrow.slick-next {
+    right: 0; }
+    .slick-arrow.slick-next:before {
+      right: -60px;
+      border: #767676 1px solid; }
   .gallery {
     padding: 32px 24px 100px 24px; } }
 
