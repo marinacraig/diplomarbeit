@@ -1,32 +1,33 @@
-#Styleanpassungen von Design Vorgaben von Stephanie Batliner bzw. Webprofessionals
+#  Styleanpassungen von Design Vorgaben von Stephanie Batliner bzw. Webprofessionals  
 ##Bilder
 Da unklar ist, ob die Bilder öffentlich verwendet werden dürfen, habe ich 
 welche zur freien Verfügung herunter geladen. Entgegen der Styleangaben sind es 
 Stockfotos.
 
-##Schriften 
+##Schriften  
 Adelle und Proxima Nova:  
 Diese Schriften können nicht via google fonts bzw. kostenlos 
 eingebunden werden.  
 **kostenlose Alternativen:**  
-Bitter statt Adelle
+Bitter statt Adelle  
 Sie kommt vor allem bei Überschriften, d.h. grösseren 
 Schrift- grössen zum Einsatz.  
-Encode Sans Semi Expanded statt Proxima Nova
+Encode Sans Semi Expanded statt Proxima Nova  
 Sie ist modern, klar und geometrisch. Die Schrift wird 
 hauptsächlich für Fliesstext, Labels, Buttons genutzt.  
 Zudem ist keine passende Schrift oder Logoteile für
  Festival Lovers in der Navigation vorhanden. Dort 
  wird eine weitere Google Font
 verwendet.  
-###Titel
+
+### Titel  
 Zwar sind h1-h3 im Styleguide definiert, aber sie werden nicht 
 webgerecht umgesetzt. 
 Irgendwie scheinen alle Titel h1 zu sein. 
 Nach dem vergeblichen Versuch mit "class xy" gibt es 
 nun Richtige h1, h2 und h3, da dies den Web-Vorgaben entspricht.
 
-##Header und Footer  
+## Header und Footer  
 Flexbox wurde im Header und
 Footer verwendet. Daher konnten nicht alle px-Abstände 
 zu 100 % eingehalten werden. Festival-Lovers liegt daher nicht exakt 
@@ -41,58 +42,58 @@ Laut Styleguide ist Header-Schrift bold (s. 6), bei Navigationsbeschreibung
  im Zusammenhang mit der Ticketbestellung. (Button Anmelden: ab Tablet kleiner 
  wurde nicht umgesetzt, dafür registrieren)
  
-##Buttons  
+## Buttons  
 Unterstrichener Button wechselt beim Hover die Farbe, 
 wirkt so einheitlicher.  
 Auf der Hauptseite bei Entdeckungen fehlt auf dem Mobile Bild 
 der Button für mehr Samples. Ich habe den Button dennoch eingebunden,
  da es auf mich sonst wie vergessen wirkt.   
 
-##Hauptseite  
-###news und magazin  
+## Hauptseite  
+### news und magazin  
 Laut Layout sollte beides mit Maisonry umgesetzt werden. Aus 
 Zeitgründen wurde jedoch nur der news-Teil entsprechend umgesetzt.  
  
-##Festivalübersicht  
+## Festivalübersicht  
 Die Texte sind vom padding / margin her anders als im Styleguide, diese sind 
-schlicht zu breit für die jeweiligen Breakpoints. 
+schlicht zu breit für die jeweiligen Breakpoints.  
 Damit es auf allen Viewports einigermassen anständig aussieht wurde am Ende 
 grid gewählt.  
 Zusatz: Switcher bei klick auf Kachel / Liste eingefügt (Farbwechsel fehlt)  
 
-##Festival
-###Sponsoring
+## Festival  
+### Sponsoring  
 Scheint laut Styleguide ein Div bestimmter Höhe und Breite 
 mit Text und Logo zu sein. Zudem ist das "merken" darüber links-bündig.
-Da mir dies nicht gefällt und ich von einem Versehen ausgehe ist es 
+Da mir dies nicht gefällt, und ich von einem Versehen ausgehe, ist es 
 eingemittet und eine Hintergrundfarbe gewählt.  
 Zudem scheint bei der Desktop Version dieser Teil dauernd mitzuscrollen. 
-Alternativ wäre ein anderer Einzug auf der Rechten Seite vorstellbar, was 
+Alternativ wäre ein anderer Einzug auf der rechten Seite vorstellbar, was 
 mir allerdings nicht gefällt. Da dies nicht ganz klar ist, und mich lieber 
-auf andere Task fokussieren möchte, lasse ich es so stehen. 
+auf andere Task fokussieren möchte, lasse ich es so stehen.  
 
-###maps
+### maps  
 Funktionierte bis vor dem 06.08.2018 noch mit einem Hack. Am 08.08.2018 
-habe ich festgestellt, dass Google diese Möglichkeit geschlossen hat. 
+habe ich festgestellt, dass Google diese Möglichkeit geschlossen hat.  
 Ab sofort ist eine entsprechende Umsetzung nur noch mit einer Kreditkarte, 
-welche keine Prepaid sein darf, möglich. 
-Mit Key von Rolf teilweise "nur für developing" sichtbar.
+welche keine Prepaid sein darf, möglich.  
+Mit Key von Rolf teilweise "nur für developing" sichtbar.  
 
-###weitere Festivalseiten  
+### weitere Festivalseiten   
 Weitere Einzelübersichten sind zwar zur Farbansicht vorhanden, jedoch evtl. nicht vollständig. 
 (entweder fehlen Elemente, Links oder Klassenanpassungen) 
  
-##Bestellvorgang
+## Bestellvorgang  
 Wie bereits beim Header erwähnt, hat jene Login-Entscheidung 
 Einfluss auf den Bestellvorgang. Da man auch als Gast bestellen 
 kann, gibt es eine weitere Möglichkeit.  
 Weiter ist im Zusammenhang 
 mit der Zahlung unlogisch, wieso dort 2 verschiedene Screens 
 (bezahlen und bezahlt ohne weiter) vorgegeben sind. Dies ergibt 
-so keinen Sinn.  
+so keinen Sinn. Daher habe ich eine Mischversion umgesetzt.  
 Die Kreditkartenbilder stammen von den offiziellen Seiten der Logoinhaber 
 und weichen daher von der Screen-Vorgabe ab.  
-Ebenfalls ist die Ticketbestellen Seite uneindeutig. Es ist auf dieser Seite 
+Ebenfalls ist die Ticketbestellen-Seite uneindeutig. Es ist auf dieser Seite 
 nicht klar ersichtlich für welches Festival Tickets gekauft werden können 
 (Breadcrump und Farbunterscheidung reicht meiner Meinung nach nicht, Festivalname, sowie 
 Gültigkeitsdatum für 1-Tagestickets, gehören hier dazu / UX).

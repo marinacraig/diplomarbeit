@@ -1,4 +1,4 @@
-#PHP-Teil
+# PHP-Teil  
 
 mysql: kenne nichts anderes, will einfach mal schauen wie weit ich komme    
 DB: zeigt auf _localhost_, mir ist klar, dass login und pw mist sind
@@ -24,7 +24,7 @@ Dementsprechend falsche links in ...kaufen_bestaetigung.php
 
 6. todo's: [https://docs.google.com/spreadsheets/d/1eV_7Tlo0QKG4BIn0B93sUNnICly4tzJ4m1kySTdQwCs/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1eV_7Tlo0QKG4BIn0B93sUNnICly4tzJ4m1kySTdQwCs/edit?usp=sharing)  
 
-## Installation:
+## Installation:  
 (https://getcomposer.org/download/)
 im app/php Ordner:
 
@@ -36,7 +36,7 @@ php -r "unlink('composer-setup.php');"
 composer require nesbot/carbon
 
 
-##zurücksetzen:  
+## zurücksetzen:  
 php Ordner löschen  
 
 ## Export / Import  
