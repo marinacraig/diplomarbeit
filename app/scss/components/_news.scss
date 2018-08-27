@@ -8,6 +8,9 @@
 
   &__article {
     text-align: left;
+    p.counter {
+      margin: auto 0;
+    }
   }
 
   &__content {

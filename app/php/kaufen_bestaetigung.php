@@ -462,7 +462,7 @@
 
 <main class="kaufen kaufen__indie" id="pagetop">
     <!-- Login Maske - Dropdown -->
-    <h1 class="">Juhui jetzt kann es los gehen!</h1>
+    <h1>Juhui jetzt kann es los gehen!</h1>
     <ul class="kaufen__maske kaufen__maske--bestaetigung">
 
         <li>

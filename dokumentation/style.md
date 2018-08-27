@@ -91,7 +91,11 @@ mit der Zahlung unlogisch, wieso dort 2 verschiedene Screens
 (bezahlen und bezahlt ohne weiter) vorgegeben sind. Dies ergibt 
 so keinen Sinn.  
 Die Kreditkartenbilder stammen von den offiziellen Seiten der Logoinhaber 
-und weichen daher von der Screen-Vorgabe ab.
+und weichen daher von der Screen-Vorgabe ab.  
+Ebenfalls ist die Ticketbestellen Seite uneindeutig. Es ist auf dieser Seite 
+nicht klar ersichtlich für welches Festival Tickets gekauft werden können 
+(Breadcrump und Farbunterscheidung reicht meiner Meinung nach nicht, Festivalname, sowie 
+Gültigkeitsdatum für 1-Tagestickets, gehören hier dazu / UX).
 
 
  [zurück zum Inhaltsverzeichnis](../README.md)  

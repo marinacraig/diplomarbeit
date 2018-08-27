@@ -19,66 +19,71 @@ if (ticketsBestellen !== null) {
             clickTotalTicket += 1;
             if (clickDay1 == 1) {
                 verkaufbar = ' Ticket';
+                totDay1.innerHTML = clickDay1 + verkaufbar;
             } else {
                 verkaufbar = ' Tickets';
+                totDay1.innerHTML = clickDay1 + verkaufbar;
             }
-            totDay1.innerHTML = clickDay1 + verkaufbar;
         } else if (this == plusDay3) {
 
             clickDay3 += 1;
             clickTotalTicket += 1;
             if (clickDay3 == 1) {
                 verkaufbar = ' Ticket';
+                totDay3.innerHTML = clickDay3 + verkaufbar;
             } else {
                 verkaufbar = ' Tickets';
+                totDay3.innerHTML = clickDay3 + verkaufbar;
             }
-            totDay3.innerHTML = clickDay3 + verkaufbar;
         } else if (this == plusDay1vip) {
 
             clickDay1vip += 1;
             clickTotalTicket += 1;
             if (clickDay1vip == 1) {
                 verkaufbar = ' Ticket';
+                totDay1vip.innerHTML = clickDay1vip + verkaufbar;
             } else {
                 verkaufbar = ' Tickets';
+                totDay1vip.innerHTML = clickDay1vip + verkaufbar;
             }
-            totDay1vip.innerHTML = clickDay1vip + verkaufbar;
         } else if (this == plusDay3vip) {
 
             clickDay3vip += 1;
             clickTotalTicket += 1;
             if (clickDay3vip == 1) {
                 verkaufbar = ' Ticket';
+                totDay3vip.innerHTML = clickDay3vip + verkaufbar;
             } else {
                 verkaufbar = ' Tickets';
+                totDay3vip.innerHTML = clickDay3vip + verkaufbar;
             }
-            totDay3vip.innerHTML = clickDay3vip + verkaufbar;
         } else if (this == plusZelt) {
 
             clickZelt += 1;
             clickTotalTicket += 1;
             if (clickZelt == 1) {
                 verkaufbar = ' Ticket';
+                totZelt.innerHTML = clickZelt + verkaufbar;
             } else {
                 verkaufbar = ' Tickets';
+                totZelt.innerHTML = clickZelt + verkaufbar;
             }
-            totZelt.innerHTML = clickZelt + verkaufbar;
         } else if (this == plusZeltvip) {
 
             clickZeltvip += 1;
             clickTotalTicket += 1;
             if (clickZeltvip == 1) {
                 verkaufbar = ' Ticket';
+                totZeltvip.innerHTML = clickZeltvip + verkaufbar;
             } else {
                 verkaufbar = ' Tickets';
+                totZeltvip.innerHTML = clickZeltvip + verkaufbar;
             }
-            totZeltvip.innerHTML = clickZeltvip + verkaufbar;
         } else {
             console.log('hä? (hint: plus)');
         }
 
         totalTickets.innerHTML = clickTotalTicket;
-        //   console.log(clickTotalTicket)
     };
 
     //Tickets runter zählen (kann nicht weniger als 0 sein)
@@ -96,10 +101,11 @@ if (ticketsBestellen !== null) {
             }
             if (clickDay1 == 1) {
                 verkaufbar = ' Ticket';
+                totDay1.innerHTML = clickDay1 + verkaufbar;
             } else {
                 verkaufbar = ' Tickets';
+                totDay1.innerHTML = clickDay1 + verkaufbar;
             }
-            totDay1.innerHTML = clickDay1 + verkaufbar;
         } else if (this == minusDay3) {
 
             if (clickDay3 < 1) {
@@ -111,10 +117,11 @@ if (ticketsBestellen !== null) {
             }
             if (clickDay3 == 1) {
                 verkaufbar = ' Ticket';
+                totDay3.innerHTML = clickDay3 + verkaufbar;
             } else {
                 verkaufbar = ' Tickets';
+                totDay3.innerHTML = clickDay3 + verkaufbar;
             }
-            totDay3.innerHTML = clickDay3 + verkaufbar;
         } else if (this == minusDay1vip) {
 
             if (clickDay1vip < 1) {
@@ -126,10 +133,11 @@ if (ticketsBestellen !== null) {
             }
             if (clickDay1vip == 1) {
                 verkaufbar = ' Ticket';
+                totDay1vip.innerHTML = clickDay1vip + verkaufbar;
             } else {
                 verkaufbar = ' Tickets';
+                totDay1vip.innerHTML = clickDay1vip + verkaufbar;
             }
-            totDay1vip.innerHTML = clickDay1vip + verkaufbar;
         } else if (this == minusDay3vip) {
 
             if (clickDay3vip < 1) {
@@ -141,10 +149,11 @@ if (ticketsBestellen !== null) {
             }
             if (clickDay3vip == 1) {
                 verkaufbar = ' Ticket';
+                totDay3vip.innerHTML = clickDay3vip + verkaufbar;
             } else {
                 verkaufbar = ' Tickets';
+                totDay3vip.innerHTML = clickDay3vip + verkaufbar;
             }
-            totDay3vip.innerHTML = clickDay3vip + verkaufbar;
         } else if (this == minusZelt) {
 
             if (clickZelt < 1) {
@@ -156,10 +165,11 @@ if (ticketsBestellen !== null) {
             }
             if (clickZelt == 1) {
                 verkaufbar = ' Ticket';
+                totZelt.innerHTML = clickZelt + verkaufbar;
             } else {
                 verkaufbar = ' Tickets';
+                totZelt.innerHTML = clickZelt + verkaufbar;
             }
-            totZelt.innerHTML = clickZelt + verkaufbar;
         } else if (this == minusZeltvip) {
 
             if (clickZeltvip < 1) {
@@ -171,10 +181,11 @@ if (ticketsBestellen !== null) {
             }
             if (clickZeltvip == 1) {
                 verkaufbar = ' Ticket';
+                totZeltvip.innerHTML = clickZeltvip + verkaufbar;
             } else {
                 verkaufbar = ' Tickets';
+                totZeltvip.innerHTML = clickZeltvip + verkaufbar;
             }
-            totZeltvip.innerHTML = clickZeltvip + verkaufbar;
         } else {
             console.log('hä? (hint: minus)');
         }
