@@ -94,7 +94,7 @@ $zoom-slow: all, 2.4s, cubic-bezier(.55, 0, .1, 1);
       display: block;
       width: 18px;
       height: 4px;
-      border: none;
+      //border: 1px solid $white-100;
       background-color: $grauC2_hex;
       text-indent: -9999px;
       //border-radius: 0;
@@ -143,8 +143,8 @@ $zoom-slow: all, 2.4s, cubic-bezier(.55, 0, .1, 1);
   }
   //slick-arrow: bereits mobile wenn's stimmt
   .slick-arrow {
-    //wegen mozilla - jetzt nicht nur wenn man genau trifft
-    width: 100vw;
+    //wegen mozilla - jetzt nicht nur wenn man genau
+    //width: 100vw; -> dann scrollbalken...
 
     &:before {
       content: "";
