@@ -217,6 +217,8 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
     <input type="password" placeholder="Passwort" name="password"
            autocomplete="section-blue shipping">
 
+    <br>
+
     <button type="submit" class="button btnweiss">anmelden</button>
 <br>
     <?php
@@ -225,7 +227,8 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
     }
     ?>
     <br>
-    <input type="submit" name="logout" class="button btnschwarz">logout</input>
+    <!--Todo: logout funktion machen - in weiter integrieren macht wenig sinn, da dies eine Art Bestätigungsseite ist-->
+    <button type="submit" name="logout" class="button btnschwarz" id="logout">logout</button>
 </form>
     <br>
     <a href="register.php">registrieren</a>

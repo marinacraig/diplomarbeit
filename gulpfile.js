@@ -136,6 +136,8 @@ gulp.task('userefjs', function(){
 Autoprefixer für ältere bzw. verschiedene Browserversionen
 idee: zuerst sass machen dann mit autoprefixer überschreiben
 (getestet mit alternativem Ordner)
+
+Todo: webkit Alternative für Mozilla?
  */
 
 gulp.task('autoprefixer', () =>

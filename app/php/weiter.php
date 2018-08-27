@@ -18,6 +18,8 @@ session_start();
 
 <h1>wäre vielleicht das Dashbord</h1>
 
+<!--Todo: aus Session username holen und hier anzeigen-->
+
 <p>du hast sich erfolgreich eingeloggt</p>
 <a href="../content/ticketuebersicht.html">Ticketübersicht</a>
 

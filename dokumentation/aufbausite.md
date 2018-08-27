@@ -38,6 +38,9 @@ Identische paddings & margins: Diese sind leider etwas durcheinander geraten.
  g mit fill: fill löschen, beispielsweise class="icon  icon__music icon__music--country"
  einfügen  
  id: wenn gleiches icon mehrmals auf gleicher Seite, dann löschen  
+ via suche / replace (ohne xy.svg) löschen: 
+ - id="Icons" 
+ - id="Shape"
  
  **js / scripts für gulp build**  
  alle js-files in festival_1.html verlinkt  
@@ -57,6 +60,13 @@ Via gulp-inject ist dies möglich (sollte auch mit Unterordner
  
 **php**  
 Wenn dann in php.md festgehalten  
+
+
+**css-check / html-check**  
+https://validator.w3.org/: keine Fehler angezeigt
+https://jigsaw.w3.org/css-validator/: CSS3 & SVG: Fehler nicht behoben,
+da es trotzdem funktioniert (sind in files entsprechend vermerkt), viele 
+unbekannte Erweiterungen sind für die verschiedenen Browser
 
  
  
