@@ -23,6 +23,7 @@ Seiten: siehe auf Server oder github
 Dementsprechend falsche links in ...kaufen_bestaetigung.php
 
 6. todo's: [https://docs.google.com/spreadsheets/d/1eV_7Tlo0QKG4BIn0B93sUNnICly4tzJ4m1kySTdQwCs/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1eV_7Tlo0QKG4BIn0B93sUNnICly4tzJ4m1kySTdQwCs/edit?usp=sharing)  
+(in Tabellenblatt php)
 
 ## Installation:  
 (https://getcomposer.org/download/)
