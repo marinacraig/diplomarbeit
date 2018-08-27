@@ -3,8 +3,8 @@ Da Codeschnipsel für slider auf der Festivalseite:
 check ob id xy vorhanden, falls ja dann ausführen
  */
 
-let map = document.getElementById('slider');
-if (map!==null) {
+let slider = document.getElementById('slider');
+if (slider!==null) {
 
 
     var $slider = $('.slider');
