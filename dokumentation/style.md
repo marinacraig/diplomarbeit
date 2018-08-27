@@ -1,10 +1,10 @@
 #  Styleanpassungen von Design Vorgaben von Stephanie Batliner bzw. Webprofessionals  
-##Bilder
+## Bilder
 Da unklar ist, ob die Bilder öffentlich verwendet werden dürfen, habe ich 
 welche zur freien Verfügung herunter geladen. Entgegen der Styleangaben sind es 
 Stockfotos.
 
-##Schriften  
+## Schriften  
 Adelle und Proxima Nova:  
 Diese Schriften können nicht via google fonts bzw. kostenlos 
 eingebunden werden.  
