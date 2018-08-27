@@ -65,7 +65,7 @@ if (isset($_POST['email']) && isset($_POST['password']) && isset($_POST['usernam
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
 
--->    <title>Musikrichtung</title>
+-->    <title>register</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
@@ -74,6 +74,7 @@ if (isset($_POST['email']) && isset($_POST['password']) && isset($_POST['usernam
 
     <!-- inject:css -->
     <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.min.css">
     <!-- endinject -->
 
 </head>

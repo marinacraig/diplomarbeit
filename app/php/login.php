@@ -46,6 +46,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
 
     <!-- inject:css -->
     <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.min.css">
     <!-- endinject -->
 
 </head>
