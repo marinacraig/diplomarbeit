@@ -53,28 +53,9 @@ if (festivaluebersicht !==null) {
     let alleKantone = [ktAG, ktAR, ktAI, ktBL, ktBS, ktBE, ktFR, ktGE, ktGL,ktGR, ktJU, ktLU, ktNE, ktNW, ktOW, ktSG, ktSH, ktSZ, ktSO, ktTG, ktTI, ktUR, ktVD, ktVS, ktZG, ktZH]
 
 
-    /*
-    Filterfunktionen
-     */
-    function sortDatum(){
-        /*
-        Idee: irgendwie an DB übergeben und nach Datum sortiertes holen
-         */
-        console.log('datum sortieren')
-    }
+    //AlleFestivals
 
-    function sortKantone(){
-        /*
-        Idee: irgendwie an DB übergeben und nach Kanton sortiertes holen
-        muss etwas mit this sein
-         */
 
-        localStorage.setItem('sortKanton', JSON.stringify(this.id));
-
-        //Todo: sobald die funktion in php vorhanden
-        //vielleicht sowas: JSON.parse(localStorage.getItem('sortedKanton'));
-
-    }
 
     /*
     Eventlistener für Filterfunktionen

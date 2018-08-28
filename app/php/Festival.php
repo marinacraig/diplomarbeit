@@ -18,8 +18,6 @@
  * Ticketpreise
  */
 
-
-
 //Kopie von Unterricht, angepasst
 
 class Festival {
