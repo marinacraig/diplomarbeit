@@ -78,3 +78,5 @@ switch($_SERVER['REQUEST_METHOD']){
 }
 */
 // dann hier den echo $antwort; statt echo json_encode ($ausgabe); in alleTasks.php bzw. tasklist.php wäre dann gut geschützt
+
+

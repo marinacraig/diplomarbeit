@@ -1,8 +1,5 @@
 <?php
 
-
-
-/*
 class DB
 {
     private static $PDO;  // wenn dies public wäre, könnte er den ganzen PDO lesen
@@ -23,4 +20,4 @@ class DB_optimized
     {
         return DB_optimized::$PDO ?: DB_optimized::$PDO = new PDO('mysql:host=localhost;dbname=festival_lovers;charset=utf8mb4', 'root', 'root');
     }
-}*/
+}

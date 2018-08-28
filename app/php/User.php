@@ -1,9 +1,9 @@
 <?php
 
-//Kopie von Unterricht
+//Kopie von Unterricht, leicht angepasst
 
 
-/*class User {
+class User {
 
     private $email;
     private $password;
@@ -94,6 +94,6 @@
     }
 
     //hier zum Beispiel gemerkte Festivals holen
-}*/
+}
 
 

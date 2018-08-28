@@ -1,5 +1,5 @@
 <?php
-
+/*
 require __DIR__ . '../../vendor/autoload.php';
 
 session_start();
@@ -11,4 +11,4 @@ if ($_POST['logout']) {
 }else{
     header('Location: weiter.php');
     die();
-}
+}*/
