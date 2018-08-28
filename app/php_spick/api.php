@@ -1,6 +1,4 @@
 <?php
-
-/*
 // dies ist die REST API
 $ausgabe = Array();
 foreach ($user->getFestivals() as $festival) {
@@ -15,4 +13,3 @@ foreach ($user->getFestivals() as $festival) {
 }
 header("Content-type:application/json");
 echo json_encode ($ausgabe);
-*/

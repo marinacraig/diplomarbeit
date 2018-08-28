@@ -27,7 +27,7 @@ Dementsprechend falsche links in ...kaufen_bestaetigung.php
 
 ## Installation:  
 (https://getcomposer.org/download/)
-im app/php Ordner:
+im Hauptordner Ordner:
 
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 php -r "if (hash_file('SHA384', 'composer-setup.php') === '544e09ee996cdf60ece3804abc52599c22b1f40f4323403c44d44fdfdd586475ca9813a858088ffbc1f233e9b180f061') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
@@ -36,7 +36,24 @@ php -r "unlink('composer-setup.php');"
 
 composer require nesbot/carbon
 
+## Vorgehen:
+Wegen Merge Problem / .gitignore: nochmals im Allgemeinen, in php gelöscht 
+und files (vendor) nach draussen verlinkt, Ordner composer.phar gelöscht.  
+Da Register und Login (Stand 27.08.2018) zwar funktionierte, jedoch 
+irgendwie die Session nicht gelöscht werden konnte, jedes DB Passwort 
+mitgesendet wird:  
+alle Dateien in Spick-Ordner, php wird alles neu gemacht  
 
+## Idee:
+- allgemeinen user-login  
+- wenn der funktioniert: if = admin@admin.com und pw = admin -> Seite
+festivals.php, dort Felder für Festival erfassen  
+- evtl. später die erfassten Festivals zum Check unten anzeigen, mit button 
+löschen bzw. bearbeiten  
+- via api festival-daten holen  
+- mittels js in html injecten  
+- filter festivals (datum, kanton) auf DB / in php diese dann via api an js  
+ 
 ## zurücksetzen:  
 php Ordner löschen  
 
@@ -47,6 +64,11 @@ Keine Ahnung
 ## Literatur  
 - login: https://www.php-einfach.de/experte/php-codebeispiele/loginscript/  
 
+## Anhang  
+User Tabelle: 
+![DB_user.png](DB_user.png)
+Neue Einträge 2-4 via app/php_spick/register.php entstanden, jedoch keine Garantie, dass dies noch geht:
+![erfasste_user_27082018.png](erfasste_user_27082018.png)
 
 
   

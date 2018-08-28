@@ -1,3 +1,6 @@
+<?php
+?>
+
 <!doctype html>
 <html lang="de">
 <head>
@@ -16,12 +19,15 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
 
-    <title>Login</title>
+
+    <title>Bestätigung</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
     <!-- inject:css -->
+    <!--Todo: css richtig verlinken-->
     <link rel="stylesheet" type="text/css" href="../css/main.css">
-    <!-- endinject -->
+    <link rel="stylesheet" type="text/css" href="../css/main.min.css">
+    <!-- endinject -->">
 </head>
 <body>
 <header>
@@ -56,7 +62,7 @@
                                    transform="translate(-12.000000, -12.000000)">
                                     <g transform="translate(12.000000, 12.000000)">
                                         <polygon
-                                                points="24 2.4 21.6 0 12 9.6 2.4 0 0 2.4 9.6 12 0 21.6 2.4 24 12 14.4 21.6 24 24 21.6 14.4 12"></polygon>
+                                            points="24 2.4 21.6 0 12 9.6 2.4 0 0 2.4 9.6 12 0 21.6 2.4 24 12 14.4 21.6 24 24 21.6 14.4 12"></polygon>
                                     </g>
                                 </g>
                             </g>
@@ -121,7 +127,7 @@
 
                                 <li>
 
-                                   <form action="../php/login.php" method="post">
+                                    <form action="../php/login.php" method="post">
                                         <input type="email" placeholder="E-Mail Adresse" name="email"
                                                autocomplete="section-blue shipping">
 
@@ -138,7 +144,7 @@
 
                                 <li>
                                     <p>Neu bei FestivalLovers?</p>
-                                    <p>Jetzt <a href="../php/register.php">registrieren.</a></p>
+                                    <p>Jetzt <a href="register.php">registrieren.</a></p>
 
 
                                 </li>
@@ -396,7 +402,7 @@
 
                             <li>
 
-                               <form action="../php/login.php" method="post">
+                                <form action="../php/login.php" method="post">
                                     <input type="email" placeholder="E-Mail Adresse" name="email"
                                            autocomplete="section-blue shipping">
 
@@ -413,7 +419,7 @@
 
                             <li>
                                 <p>Neu bei FestivalLovers?</p>
-                                <p>Jetzt <a href="../php/register.php">registrieren.</a></p>
+                                <p>Jetzt <a href="register.php">registrieren.</a></p>
 
 
                             </li>
@@ -456,32 +462,18 @@
 
 <main class="kaufen kaufen__indie" id="pagetop">
     <!-- Login Maske - Dropdown -->
-    <h1>Login</h1>
-    <ul class="kaufen__maske">
+    <h1>Juhui jetzt kann es los gehen!</h1>
+    <ul class="kaufen__maske kaufen__maske--bestaetigung">
 
         <li>
-
-           <form action="../php/login.php" method="post">
-                <input type="email" placeholder="E-Mail Adresse" name="email"
-                       autocomplete="section-blue shipping">
-
-                <input type="password" placeholder="Passwort" name="password"
-                       autocomplete="section-blue shipping">
-
-                <button type="submit" class="button btnschwarz">anmelden</button>
-            </form>
-
-            <p><a href="#">Passwort</a> vergessen?</p>
+            <p>Deine Tickets wurden an <span class="e-mail">tobias@gmail.com</span> gesendet
+                und sind in deinem Dashboard gespeichert. Mit unserer neuen App
+                bist du informiert und unabhängig. </p>
         </li>
 
-        <li class="horizontal-line"></li>
+        <li class="button btnweiss">zum Dashboard</li>
 
-        <li>
-            <p>Neu bei FestivalLovers?
-                Jetzt <a href="#">registrieren.</a></p>
-            <p>Als Gast <a href="kaufen_zahlen.html" >bestellen</a></p>
-
-        </li>
+        <li class="button btnweiss">APP downloaden</li>
 
     </ul>
 
@@ -499,7 +491,6 @@
             </g>
         </g>
     </svg>
-
 </main>
 
 <!--footer-->

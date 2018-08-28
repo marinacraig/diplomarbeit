@@ -1,36 +1,32 @@
 <?php
 
-require __DIR__ . '../../vendor/autoload.php';
-
 session_start();
 
-if ($_POST['logout']) {
-    unset($_SESSION['user']);
-}
-
-if (isset($_SESSION['user'])) {
+if (isset($_SESSION)){
     header('Location: weiter.php');
     die();
 }
 
-$error = false;
+$pdo = new PDO('mysql:host=localhost;dbname=festival_lovers', 'root', 'root');
+if(isset($_GET['login']))
+    {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
 
-if (isset($_POST['email']) && isset($_POST['password'])) {
-    $user = new User($_POST['email']);
+    $statement = $pdo->prepare("SELECT * FROM user WHERE email = :email");
+    $result = $statement->execute(array('email' => $email));
+    $user = $statement->fetch();
 
-
-    if (password_verify($_POST['password'], $user->getPassword())) {
-        session_start();
-        $_SESSION['user'] = $user->getName();
-
-        //todo: wenn user = admin dann weiter zu festivals.php sonst:
+    //Überprüfung des Passworts
+    if ($user !== false && password_verify($password, $user['password'])) {
+        $_SESSION['userid'] = $user['id'];
         header('Location: weiter.php');
         die();
     } else {
-      $error = 'Benutzer oder Passwort stimmt nicht…';
-   }
+        $errorMessage = "E-Mail oder Passwort war ungültig<br>";
     }
 
+}
 ?>
 
 <!doctype html>

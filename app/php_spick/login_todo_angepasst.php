@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__ . '../../vendor/autoload.php';
+require __DIR__ . '/vendor/autoload.php';
 
 session_start();
 
@@ -22,8 +22,6 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
     if (password_verify($_POST['password'], $user->getPassword())) {
         session_start();
         $_SESSION['user'] = $user->getName();
-
-        //todo: wenn user = admin dann weiter zu festivals.php sonst:
         header('Location: weiter.php');
         die();
     } else {

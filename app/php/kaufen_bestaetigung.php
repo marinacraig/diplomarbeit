@@ -1,4 +1,6 @@
 <?php
+require __DIR__ . '../../vendor/autoload.php';
+
 ?>
 
 <!doctype html>
@@ -144,7 +146,7 @@
 
                                 <li>
                                     <p>Neu bei FestivalLovers?</p>
-                                    <p>Jetzt <a href="register.html">registrieren.</a></p>
+                                    <p>Jetzt <a href="register.php">registrieren.</a></p>
 
 
                                 </li>
@@ -419,7 +421,7 @@
 
                             <li>
                                 <p>Neu bei FestivalLovers?</p>
-                                <p>Jetzt <a href="register.html">registrieren.</a></p>
+                                <p>Jetzt <a href="register.php">registrieren.</a></p>
 
 
                             </li>

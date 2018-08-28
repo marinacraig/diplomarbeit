@@ -1,3 +1,24 @@
+<?php
+
+session_start();
+
+$pdo = new PDO('mysql:host=localhost;dbname=festival_lovers', 'root', 'root');
+
+/*
+ * Idee: prüfen ob schon eingeloggt
+ * wenn nein
+ * prüfen ob login schon vorhanden
+ * -> falls ja: Fehlermeldung? oder zurück?
+ * -> unbedingt password hashen
+ * falls registrieren ok:
+ * 1. überprüfen ob im localStorage Daten von FMS (=Favorite Music Style) vorhanden
+ *      falls ja, ebenfalls speichern
+ * 2. geklappt: laut styleguide ins dashboard,
+ * da dies nicht vorhanden -> ticketuebersicht.html (kann dann "merken")
+ */
+
+?>
+
 <!doctype html>
 <html lang="de">
 <head>
@@ -7,7 +28,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!--favicon - for fun-->
-
+<!--
     <link rel="apple-touch-icon" sizes="180x180" href="../images/assets/favicon_package_v0.16/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../images/assets/favicon_package_v0.16/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../images/assets/favicon_package_v0.16/favicon-16x16.png">
@@ -16,7 +37,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
 
-    <title>Musikrichtung</title>
+-->    <title>register</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
@@ -25,6 +46,7 @@
 
     <!-- inject:css -->
     <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.min.css">
     <!-- endinject -->
 
 </head>
@@ -144,7 +166,7 @@
 
                             <li>
                                 <p>Neu bei FestivalLovers?</p>
-                                <p>Jetzt <a href="../php/register.php">registrieren.</a></p>
+                                <p>Jetzt <a href="register.html">registrieren.</a></p>
 
 
                             </li>
@@ -189,23 +211,78 @@
     <!-- Login Maske - Dropdown -->
     <h1>Registrierung</h1>
 
-            <form class="kaufen__maske" action="../php/register.php" method="post">
+
+    <?php
+    $showFormular = true; //Variable ob das Registrierungsformular anezeigt werden soll
+
+    if(isset($_GET['register'])) {
+        $error = false;
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+        $username = $_POST['username'];
+
+        if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            echo 'Bitte eine gültige E-Mail-Adresse eingeben<br>';
+            $error = true;
+        }
+        if(strlen($password) == 0) {
+            echo 'Bitte ein Passwort angeben<br>';
+            $error = true;
+        }
+
+
+        //Überprüfe, dass die E-Mail-Adresse noch nicht registriert wurde
+        if(!$error) {
+            $statement = $pdo->prepare("SELECT * FROM user WHERE email = :email");
+            $result = $statement->execute(array('email' => $email));
+            $user = $statement->fetch();
+
+            if($user !== false) {
+                echo 'Diese E-Mail-Adresse ist bereits vergeben<br>';
+                $error = true;
+            }
+        }
+
+        //Keine Fehler, wir können den Nutzer registrieren
+        if(!$error) {
+            $password_hash = password_hash($password, PASSWORD_DEFAULT);
+
+            $statement = $pdo->prepare("INSERT INTO user (email, password, username) VALUES (:email, :password, :username)");
+            $result = $statement->execute(array('email' => $email, 'password' => $password_hash, 'username' => $username));
+
+            if($result) {
+                echo 'Du wurdest erfolgreich registriert. <br><a href="login.php" class="button btnschwarz">Zum Login</a>';
+                $showFormular = false;
+            } else {
+                echo 'Beim Abspeichern ist leider ein Fehler aufgetreten<br>';
+            }
+        }
+    }
+
+    if($showFormular) {
+    ?>
+
+            <form class="kaufen__maske" method="post" action="?register=1">
 
    <!--name und vorname würden dazu gehören-->
                 <label for="username">Dein User-Name:</label>
-                <input type="text" placeholder="User-Name" id="username" name="username" required
+                <input type="text" placeholder="User-Name" id="username" name="username"
                        autocomplete="section-blue shipping">
 
                 <label for="email">Deine E-Mail:</label>
-                <input type="email" placeholder="E-Mail Adresse" id="email" name="email" required
+                <input type="email" placeholder="E-Mail Adresse" id="email" name="email"
                        autocomplete="section-blue shipping">
 
                 <label for="password">Dein Passwort:</label>
-                <input type="password" placeholder="Passwort" id="password" name="password" required
+                <input type="password" placeholder="Passwort" id="password" name="password"
                        autocomplete="section-blue shipping">
 
                 <button type="submit" class="button btnschwarz">registrieren</button>
             </form>
+
+        <?php
+    } //Ende von if($showFormular)
+    ?>
 
 </main>
 
