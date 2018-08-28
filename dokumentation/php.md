@@ -12,7 +12,7 @@ Grund: ausprobieren
 a. von DB: Test1 (=username), test@test1.com, test1 (=password)
 b. falls registrieren funktioniert: Test2 (=username), test@test2.com, test2 (=password)
 
-2. Wo ist eigentlich der Logout? -> login.php
+2. Wo ist eigentlich der Logout? -> weiter.php und festival.php
 
 3. php files: sind Kopien von den HTML-files  
 a. mache nichts kapputt  

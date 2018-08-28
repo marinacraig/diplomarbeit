@@ -1,5 +1,5 @@
 <?php
-
+/*
 require __DIR__ . '../../vendor/autoload.php';
 
 session_start();
@@ -29,7 +29,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
     } else {
       $error = 'Benutzer oder Passwort stimmt nicht…';
    }
-    }
+    }*/
 
 ?>
 
@@ -215,9 +215,9 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
     <h1>Login</h1>
 
     <?php
-    if(isset($errorMessage)) {
+/*    if(isset($errorMessage)) {
         echo $errorMessage;
-    }
+    }*/
     ?>
 
 <form method="post" action="?login=1">
@@ -232,9 +232,9 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
     <button type="submit" class="button btnweiss">anmelden</button>
 <br>
     <?php
-    if ($error) {
+/*    if ($error) {
         echo $error;
-    }
+    }*/
     ?>
     <br>
 </form>

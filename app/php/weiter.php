@@ -1,7 +1,7 @@
 <?php
-require __DIR__ . '../../vendor/autoload.php';
+//require __DIR__ . '../../vendor/autoload.php';
 
-session_start();
+//session_start();
 
 ?>
 
@@ -29,7 +29,7 @@ session_start();
 
 <!--Todo: aus Session username holen und hier anzeigen-->
 <?php
-echo ($_SESSION['username']);
+
 ?>
 
 <p>du hast sich erfolgreich eingeloggt</p>
@@ -37,7 +37,7 @@ echo ($_SESSION['username']);
 
 <br>
 
-<form method="post" action="?logout=1">
+<form method="post" action="logout.php">
     <button type="submit" name="logout" class="button btnschwarz" id="logout">logout</button>
 </form>
 
