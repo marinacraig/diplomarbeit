@@ -718,7 +718,7 @@ id pagetop: von unten nach oben hierhin-->
     </article>
 
 
-    <div class="festivaluebersicht__filter">
+    <div class="festivaluebersicht__filter" >
 
         <!--filter -->
 
@@ -743,8 +743,28 @@ id pagetop: von unten nach oben hierhin-->
                 </p>
             </li>
 
-            <li class="filter filter__kanton">
-                <p>Kanton<span class="item__hidden"> auswählen</span>
+            <li class="filter filter__kanton dropdown">
+               <!-- <p>Kanton<span class="item__hidden"> auswählen</span>
+                    <svg width="17px" height="10px" viewBox="0 0 17 10" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink">
+                         <title>steuerung_dropdown</title>
+                        <desc>Created with Sketch.</desc>
+                        <defs></defs>
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g class="icon__filter" transform="translate(-16.000000, -19.000000)">
+                                <g transform="translate(24.363636, 24.000000) rotate(-90.000000) translate(-24.363636, -24.000000) translate(20.000000, 16.000000)"
+                                >
+                                    <polygon
+                                            points="8.2329697 15.9516768 0.0206060606 7.97559596 8.2329697 0 8.65842424 0.437818182 0.89769697 7.97559596 8.65842424 15.5135354"></polygon>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </p>-->
+
+                <!--Todo: umbau css für selectliste filter-->
+                <ul class="dropdown">
+                    <li>Kanton<span class="item__hidden"> auswählen</span>
                     <svg width="17px" height="10px" viewBox="0 0 17 10" version="1.1" xmlns="http://www.w3.org/2000/svg"
                          xmlns:xlink="http://www.w3.org/1999/xlink">
                         <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
@@ -761,7 +781,39 @@ id pagetop: von unten nach oben hierhin-->
                             </g>
                         </g>
                     </svg>
-                </p>
+                    </li>
+                    <!--Reihenfolge dito in ../php/festivalerfassen.php-->
+                    <li class="dropdown__content">
+                        <p id="AG">AG</p>
+                        <p id="AR">AR</p>
+                        <p id="AI">AI</p>
+                        <p id="BL">BL</p>
+                        <p id="BS">BS</p>
+                        <p id="BE">BE</p>
+                        <p id="FR">FR</p>
+                        <p id="GE">GE</p>
+                        <p id="GL">GL</p>
+                        <p id="GR">GR</p>
+                        <p id="JU">JU</p>
+                        <p id="LU">LU</p>
+                        <p id="NE">NE</p>
+                        <p id="NW">NW</p>
+                        <p id="OW">OW</p>
+                        <p id="SG">SG</p>
+                        <p id="SH">SH</p>
+                        <p id="SZ">SZ</p>
+                        <p id="SO">SO</p>
+                        <p id="TG">TG</p>
+                        <p id="TI">TI</p>
+                        <p id="UR">UR</p>
+                        <p id="VD">VD</p>
+                        <p id="VS">VS</p>
+                        <p id="ZG">ZG</p>
+                        <p id="ZH">ZH</p>
+
+                    </li>
+                </ul>
+
             </li>
 
             <li class="filter filter__css">
@@ -1283,6 +1335,7 @@ id pagetop: von unten nach oben hierhin-->
 <script src="../babel/navigation.js"></script>
 <script src="../babel/localstorageFMS.js"></script>
 <script src="../babel/musikrichtung.js"></script>
+<script src="../babel/festivals_ui.js"></script>
 <script src="../babel/cssSwitcher.js"></script>
 
 <!-- endinject -->

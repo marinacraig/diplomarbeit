@@ -20,6 +20,8 @@
  *    echo $kanton."<br>";
  *    }
  *  }
+ *
+ * irgendwas mit echo ('xy erfolgreich erfasst');
  */
 
 ?>
@@ -217,7 +219,8 @@
         <input type="text" placeholder="PLZ und Ort" name="ort">
         <br>
         <!--Todo: Dropdown für Kanton-->
-        <label for="kanton">Kanton</label>
+        <p>Kanton</p>
+        <!--Reihenfolge dito in ../festivaluebersicht-->
         <select name="kanton" id="kanton">
             <option value="AG">AG</option>
             <option value="AR">AR</option>
@@ -225,9 +228,10 @@
             <option value="BL">BL</option>
             <option value="BS">BS</option>
             <option value="BE">BE</option>
-            <option value="GE">GE</option>
             <option value="FR">FR</option>
-            <option value="GL">GR</option>
+            <option value="GE">GE</option>
+            <option value="GL">GL</option>
+            <option value="GR">GR</option>
             <option value="JU">JU</option>
             <option value="LU">LU</option>
             <option value="NE">NE</option>

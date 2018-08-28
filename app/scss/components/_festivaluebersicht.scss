@@ -31,6 +31,28 @@
         grid-column: 2;
         //W3C - Check: gibt es nicht, aber ist trotzdem richtig positioniert:
         justify-self: center;
+
+
+        //Auswahlliste Kanton
+        .dropdown {
+         padding-top: 4px;
+          list-style-type: none;
+
+        }
+
+        .dropdown__content {
+          display: none;
+         // position: absolute;
+          z-index: 1;
+        }
+
+        .dropdown:hover .dropdown__content {
+          display: inline;
+          font-size: 13px;
+          p {
+            padding: 4px;
+          }
+        }
       }
 
       //für den css switch zur Kachelansicht, ggf nochmals umbauen
@@ -56,7 +78,9 @@
       &:active {
         color: $schwarz_hex;
       }
+
     }
+
   }
 
 

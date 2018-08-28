@@ -22,8 +22,8 @@ Da Codeschnipsel auf der Festivalseite:
 check ob id xy vorhanden, falls ja dann ausführen
  */
 
-let map = document.getElementById('remaining-time');
-if (map!==null) {
+let remaining_time = document.getElementById('remaining-time');
+if (remaining_time !==null) {
 
     function countdown(endDate) {
         let days, hours, minutes, seconds;

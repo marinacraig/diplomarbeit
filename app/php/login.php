@@ -23,7 +23,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
         session_start();
         $_SESSION['user'] = $user->getName();
 
-        //todo: wenn user = admin dann weiter zu festivals.php sonst:
+        //todo: wenn user = admin dann weiter zu festivalerfassen.php sonst:
         header('Location: weiter.php');
         die();
     } else {
