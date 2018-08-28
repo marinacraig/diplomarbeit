@@ -29,7 +29,9 @@ mehr:
 via Filezilla, da so am wenigsten Zeitintensiv (leider unterschätzt).
 
 ## Eidesstattliche Erklärung:  
-[zum gescannten file](scan_eidesstattliche_erklaerung.pdf)
+[weil gescanntes pdf](scan_eidesstattliche_erklaerung.pdf) gerne mal verschwindet:  
+![eidesstattliche_erklaerung.png](eidesstattliche_erklaerung.png)
+
 
 ## php:  
 Inhalt Ordner PHP: alles für DB. Für Front-End nicht relevant (höchstens für "minimalnichtmalhalbvollstack").  
