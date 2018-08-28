@@ -50,9 +50,10 @@ löschen bzw. bearbeiten
 Wegen Merge Problem / .gitignore: nochmals im Allgemeinen, in php gelöscht 
 und files (vendor) nach draussen verlinkt, Ordner composer.phar gelöscht.  
 Da Register und Login (Stand 27.08.2018) zwar funktionierte, jedoch 
-irgendwie die Session nicht gelöscht werden konnte, jedes DB Passwort 
-mitgesendet wird:  
-alle Dateien in Spick-Ordner, php wird alles neu gemacht  
+irgendwie die Session nicht gelöscht werden konnte, jedesmal DB Passwort 
+mitgesendet wurde -> 
+alle Dateien in Spick-Ordner, php wird alles neu gemacht.  
+   
 
 ## Export / Import  
 Keine Ahnung
