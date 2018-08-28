@@ -12,6 +12,16 @@
  * festival_id -> $id
  */
 
+/*
+ * würde php/tasklist.php von unterricht entsprechen
+ * Zum auslesen Fromular / dropdown
+ *  if (isset($_POST['kanton'])){
+ *  foreach ($_POST['kanton'] as $kanton) {
+ *    echo $kanton."<br>";
+ *    }
+ *  }
+ */
+
 ?>
 
 <!doctype html>
@@ -207,7 +217,37 @@
         <input type="text" placeholder="PLZ und Ort" name="ort">
         <br>
         <!--Todo: Dropdown für Kanton-->
-        <input type="text" placeholder="Kanton" name="kanton">
+        <label for="kanton">Kanton</label>
+        <select name="kanton" id="kanton">
+            <option value="AG">AG</option>
+            <option value="AR">AR</option>
+            <option value="AI">AI</option>
+            <option value="BL">BL</option>
+            <option value="BS">BS</option>
+            <option value="BE">BE</option>
+            <option value="GE">GE</option>
+            <option value="FR">FR</option>
+            <option value="GL">GR</option>
+            <option value="JU">JU</option>
+            <option value="LU">LU</option>
+            <option value="NE">NE</option>
+            <option value="NW">NW</option>
+            <option value="OW">OW</option>
+            <option value="SG">SG</option>
+            <option value="SH">SH</option>
+            <option value="SZ">SZ</option>
+            <option value="SO">SO</option>
+            <option value="TG">TG</option>
+            <option value="TI">TI</option>
+            <option value="UR">UR</option>
+            <option value="VD">VD</option>
+            <option value="VS">VS</option>
+            <option value="ZG">ZG</option>
+            <option value="ZH">ZH</option>
+
+
+
+        </select>
         <br>
         <!--Datum: exakte zeit angabe-->
         <input type="datetime-local" placeholder="Datum Beginn" name="beginn">

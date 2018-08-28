@@ -61,6 +61,8 @@ Keine Ahnung
 
 ## Literatur  
 - login: https://www.php-einfach.de/experte/php-codebeispiele/loginscript/  
+- dropdown auslesen: https://www.wirlernen.at/PHP5fuerEinsteiger/049.php  
+
 
 ## Anhang  
 User Tabelle:  
