@@ -154,7 +154,7 @@ class Festival {
         ]);
 
         $festival = new festival();
-        //$festival->setName('Mein neuer festival');
+        //$festival->setName('Mein neues festival');
         $festival->create();
     }
 }

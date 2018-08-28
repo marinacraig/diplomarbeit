@@ -9,4 +9,5 @@ git
 /app/babel
 /app/css
 
-/vendor
+app/php/vendor
+app/php/composer.phar
