@@ -36,14 +36,6 @@ php -r "unlink('composer-setup.php');"
 
 composer require nesbot/carbon
 
-## Vorgehen:
-Wegen Merge Problem / .gitignore: nochmals im Allgemeinen, in php gelöscht 
-und files (vendor) nach draussen verlinkt, Ordner composer.phar gelöscht.  
-Da Register und Login (Stand 27.08.2018) zwar funktionierte, jedoch 
-irgendwie die Session nicht gelöscht werden konnte, jedes DB Passwort 
-mitgesendet wird:  
-alle Dateien in Spick-Ordner, php wird alles neu gemacht  
-
 ## Idee:
 - allgemeinen user-login  
 - wenn der funktioniert: if = admin@admin.com und pw = admin -> Seite
@@ -54,8 +46,13 @@ löschen bzw. bearbeiten
 - mittels js in html injecten  
 - filter festivals (datum, kanton) auf DB / in php diese dann via api an js  
  
-## zurücksetzen:  
-php Ordner löschen  
+## Vorgehen:
+Wegen Merge Problem / .gitignore: nochmals im Allgemeinen, in php gelöscht 
+und files (vendor) nach draussen verlinkt, Ordner composer.phar gelöscht.  
+Da Register und Login (Stand 27.08.2018) zwar funktionierte, jedoch 
+irgendwie die Session nicht gelöscht werden konnte, jedes DB Passwort 
+mitgesendet wird:  
+alle Dateien in Spick-Ordner, php wird alles neu gemacht  
 
 ## Export / Import  
 Keine Ahnung
