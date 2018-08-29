@@ -32,6 +32,7 @@ class Festival {
     private $ende;
     private $musikrichtung;
     private $id;
+    private $gemerkt;
 
     //festival erstellen
     public function __construct($id = false) // dann beginnt er gar nicht erst auf der DB zu suchen
@@ -58,6 +59,7 @@ class Festival {
         $this->set_ende(\Carbon\Carbon::parse($festival['ende']));
         $this->set_musikrichtung($festival['musikrichtung']);
         $this->set_id($festival['id']);
+        $this->set_gemerkt($festival['gemerkt']);
     }
 
     //Elemente: getters und setters
@@ -117,7 +119,12 @@ class Festival {
     public function set_id($id) {
         $this->id = $id;
     }
-
+    public function get_gemerkt() {
+        return $this->gemerkt;
+    }
+    public function set_gemerkt($gemerkt) {
+        $this->gemerkt = $gemerkt;
+    }
 
 
     /*
@@ -134,7 +141,8 @@ class Festival {
                 kanton,
                 beginn,
                 ende,
-                musikrichtung)
+                musikrichtung,
+                gemerkt)
               VALUES 
                 (:user_id,
                 :name,
@@ -142,7 +150,8 @@ class Festival {
                 :kanton,
                 :beginn,
                 :ende,
-                :musikrichtung) 
+                :musikrichtung,
+                :gemerkt)
                 ');
 
         $statement->execute([
@@ -153,6 +162,7 @@ class Festival {
             ':beginn' => $this->get_beginn(),
             ':ende' => $this->get_ende(),
             ':musikrichtung' => $this->get_musikrichtung(),
+            ':gemerkt' => $this->get_gemerkt(),
         ]);
 
         $festival = new festival();
@@ -162,4 +172,3 @@ class Festival {
 
 }
 
-echo(Festival::create());

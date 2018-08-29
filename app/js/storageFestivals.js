@@ -13,6 +13,17 @@ if (festivaluebersicht !== null) {
     //hier sollen alle Festivals rein (unsortiert und sortiert
     let alleFestivals = []
 
+    //Für Test: // todo: gemerkt
+    alleFestivals = [
+        {name:'jsFestival1', ort: '4000 Solothurn', kanton:'SO',
+            beginn: '13. Okt', ende: '14. Okt 2018',
+            musikrichtung: 'indie', id: '1', gemerkt: true},
+        {name:'jsFestival2', ort: '3000 Bern', kanton:'BE',
+            beginn: '02. Okt', ende: '05. Okt 2018',
+            musikrichtung: 'poprock', id: '3', gemerkt: false}
+    ]
+
+
     //Für Filter Datum
     let datumFilter = 0;
 
