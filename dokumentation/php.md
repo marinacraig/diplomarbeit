@@ -55,14 +55,10 @@ mitgesendet wurde ->
 alle Dateien in Spick-Ordner, php wird alles neu gemacht.  
    
 
-## Fragen / Unklarheiten  
-- kann es sein, dass ich - wenn ich in php filtere - im HTML 
-Session machen muss? (DB muss ja wissen in welchen Browser das soll ) Wie
- umsetzen?  
- 
-
 ## Export / Import  
-Keine Ahnung
+Database in PhpStorm anzeigen (geht)  
+Keine Ahnung wie sauber exportieren bzw. auf Server importieren  
+
 
 
 ## Literatur  
