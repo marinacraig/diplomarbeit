@@ -26,7 +26,7 @@ mehr:
 - hashtags auf github stören mich, sind jedoch nicht relevant
 
 ## Deployment:  
-via Filezilla, da so am wenigsten Zeitintensiv (leider unterschätzt).
+Zuerst via Filezilla, dann PhpStorm (wenn upload nicht möglich -> browse remote host)
 
 ## Eidesstattliche Erklärung:  
 [weil gescanntes pdf](scan_eidesstattliche_erklaerung.pdf) gerne mal verschwindet:  
