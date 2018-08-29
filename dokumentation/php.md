@@ -58,7 +58,8 @@ alle Dateien in Spick-Ordner, php wird alles neu gemacht.
 ## Export / Import  
 Database in PhpStorm anzeigen (geht)  
 Keine Ahnung wie sauber exportieren bzw. auf Server importieren  
-
+Am Ende über SQL Generator sql generiert und Gesamt-Export in Mamp gemacht 
+und Inhalt ersetzt.
 
 
 ## Literatur  
