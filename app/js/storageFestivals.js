@@ -7,12 +7,26 @@ let festivaluebersicht = document.getElementById('festivaluebersicht');
 if (festivaluebersicht !== null) {
     //hier alles zum in JSON umwandeln bzw. übergeben HTML <-> DB
 
+    //da html-page und nicht php für Sesssion -> Cookie
+    let mySession = 'etwas';
+
     //hier sollen alle Festivals rein (unsortiert und sortiert
     let alleFestivals = []
 
     //Für Filter Datum
     let datumFilter = 0;
 
+
+
+    /*
+    für irgendwie dem Server die Session übergeben -
+    der muss wissen wer ich bin
+    (Soll mit schliessen des Browsers gelöscht werden ->
+    ein Cookie genererieren)
+     */
+
+    sessionStorage['mySession'] = JSON.stringify(mySession);
+    mySession = JSON.parse(sessionStorage['mySession']);
 
     /*
  Filterfunktionen
@@ -45,6 +59,7 @@ if (festivaluebersicht !== null) {
 
         //Todo: sobald die funktion in php vorhanden
         // alleFestivals = JSON.parse(localStorage.getItem('sortKanton'));
+
 
 
     }

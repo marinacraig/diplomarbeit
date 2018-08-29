@@ -1,4 +1,6 @@
 <?php
+ini_set("display_errors",true); // für Fehlerausgabe
+
 
 /*
  * Festival Class -> evtl. nur getter keine setter (Erfassen nur auf DB möglich) -> nein, dafür kein delete und updated (Zeit)
@@ -157,4 +159,7 @@ class Festival {
         //$festival->setName('Mein neues festival');
         $festival->create();
     }
+
 }
+
+echo(Festival::create());
