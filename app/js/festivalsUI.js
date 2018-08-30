@@ -75,42 +75,42 @@ if (festivaluebersicht !== null) {
     alleFestivals.forEach (function (Festival) {
 
 
-            let liMusicStyle = Festival.musikrichtung
+        let liMusicStyle = Festival.musikrichtung
 
-            //Todo: statt id den "name" nehmen für die verlinkung
-            let detailSeite = zurDetailseite(Festival.id)
+        //Todo: statt id den "name" nehmen für die verlinkung
+        let detailSeite = zurDetailseite(Festival.id)
 
-            //Todo: verschiedene Festivalbilder
+        //Todo: verschiedene Festivalbilder
 
-            //Musikfilter: class & svg
-            let liFilterMusik = musikIcon(Festival.musikrichtung)
+        //Musikfilter: class & svg
+        let liFilterMusik = musikIcon(Festival.musikrichtung)
 
-            //Name
-            let liName = festivalName(Festival.name)
+        //Name
+        let liName = festivalName(Festival.name)
 
-            //Ort
-            let liOrt = festivalLocation(Festival.ort, Festival.kanton)
+        //Ort
+        let liOrt = festivalLocation(Festival.ort, Festival.kanton)
 
-            //Datumsausgabe soll sowas sein: 20. Jul - 23. Jul 2018
-            let liDatum = festivalDatum(Festival.beginn, Festival.ende)
+        //Datumsausgabe soll sowas sein: 20. Jul - 23. Jul 2018
+        let liDatum = festivalDatum(Festival.beginn, Festival.ende)
 
-            //merken (ist das ganze listenelement
-            let merken = festivalMerken(Festival.gemerkt)
+        //merken (ist das ganze listenelement
+        let merken = festivalMerken(Festival.gemerkt)
 
-            //Todo: fixen, nur das letzte wird angezeigt
-            let ul = document.querySelector('#css_uebersicht')
+        //Todo: fixen, nur das letzte wird angezeigt
+        let ul = document.querySelector('#css_uebersicht')
 
-            let li = document.createElement('li')
-            li.classList = '"festival__list--item festival__list--' + liMusicStyle + '"';
+        let li = document.createElement('li')
+        li.classList = 'festival__list--item festival__list--' + liMusicStyle;
 
-            let kurzBeschreibung = li.innerHTML = (detailSeite + liFilterMusik + liName + liOrt + liDatum + merken);
-            console.log(li)
-
-            li.appendChild(document.createTextNode(kurzBeschreibung));
-            ul.appendChild(li);
+        li.innerHTML = (detailSeite + liFilterMusik + liName + liOrt + liDatum + merken);
+        console.log(li)
 
 
-            console.log(ul)
+        ul.appendChild(li);
+
+
+        console.log(ul)
 
     });
 
@@ -146,9 +146,7 @@ function musikIcon(musicStyle) {
         return ('' +
             '<li class="filter filter__music filter__music--indie">' +
             '<svg width="20px" height="15px" viewBox="0 0 20 15" version="1.1"\n' +
-            '                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">\n' +
-            '                                <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->\n' +
-            '                                <title>music_indie</title>\n' +
+            '                                 xmlns="http://www.w3.org/2000/svg"  <title>music_indie</title>\n' +
             '                                <desc>Created with Sketch.</desc>\n' +
             '                                <defs></defs>\n' +
             '                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">\n' +
@@ -164,9 +162,7 @@ function musikIcon(musicStyle) {
     } else if (musicStyle === 'jazz') {
         return (' <li class="filter filter__music filter__music--jazz">' +
             '<svg width="20px" height="18px" viewBox="0 0 20 18" version="1.1"\n' +
-            '                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">\n' +
-            '                                <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->\n' +
-            '                                <title>music_jazz</title>\n' +
+            '                                 xmlns="http://www.w3.org/2000/svg"  <title>music_jazz</title>\n' +
             '                                <desc>Created with Sketch.</desc>\n' +
             '                                <defs></defs>\n' +
             '                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">\n' +
@@ -184,9 +180,7 @@ function musikIcon(musicStyle) {
     } else if (musicStyle === 'electronic') {
         return ('<li class="filter filter__music filter__music--electronic">\n' +
             '                        <svg width="20px" height="16px" viewBox="0 0 20 16" version="1.1"\n' +
-            '                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">\n' +
-            '                            <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->\n' +
-            '                            <title>music_electronic</title>\n' +
+            '                             xmlns="http://www.w3.org/2000/svg" <title>music_electronic</title>\n' +
             '                            <desc>Created with Sketch.</desc>\n' +
             '                            <defs></defs>\n' +
             '                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">\n' +
@@ -203,9 +197,7 @@ function musikIcon(musicStyle) {
     } else if (musicStyle === 'hiphop') {
         return (' <li class="filter filter__music filter__music--hiphop">\n' +
             '<svg width="20px" height="23px" viewBox="0 0 20 23" version="1.1"\n' +
-            '                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">\n' +
-            '                                <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->\n' +
-            '                                <title>music_hiphop</title>\n' +
+            '                                 xmlns="http://www.w3.org/2000/svg" <title>music_hiphop</title>\n' +
             '                                <desc>Created with Sketch.</desc>\n' +
             '                                <defs></defs>\n' +
             '                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">\n' +
@@ -222,9 +214,7 @@ function musikIcon(musicStyle) {
 
     } else if (musicStyle === 'poprock') {
         return ('  <li class="filter filter__music filter__music--poprock">   <svg width="24px" height="19px" viewBox="0 0 24 19" version="1.1"\n' +
-            '                             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">\n' +
-            '                            <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->\n' +
-            '                            <title>music_poprock</title>\n' +
+            '                             xmlns="http://www.w3.org/2000/svg" <title>music_poprock</title>\n' +
             '                            <desc>Created with Sketch.</desc>\n' +
             '                            <defs></defs>\n' +
             '                            <g class="icon icon__music icon__music--poprock" stroke="none" stroke-width="1" fill="none"\n' +
