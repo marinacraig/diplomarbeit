@@ -53,10 +53,11 @@ if (festivaluebersicht !== null) {
     let alleKantone = [ktAG, ktAR, ktAI, ktBL, ktBS, ktBE, ktFR, ktGE, ktGL, ktGR, ktJU, ktLU, ktNE, ktNW, ktOW, ktSG, ktSH, ktSZ, ktSO, ktTG, ktTI, ktUR, ktVD, ktVS, ktZG, ktZH]
 
 
+
     //AlleFestivals
 
-
     //Class Festival - wird diese überhaupt benötigt? Wie?
+/*
     class Festival {
         constructor(name, ort, kanton, beginn, ende, musikrichtung, id, gemerkt) {
             this.name = name;
@@ -70,6 +71,7 @@ if (festivaluebersicht !== null) {
         }
     }
 
+*/
 
     //Festivals in HTML einfügen
     alleFestivals.forEach (function (Festival) {
@@ -77,7 +79,7 @@ if (festivaluebersicht !== null) {
 
         let liMusicStyle = Festival.musikrichtung
 
-        //Todo: statt id den "name" nehmen für die verlinkung
+        //Verlinkung zur Detailseite
         let detailSeite = zurDetailseite(Festival.id)
 
         //Todo: verschiedene Festivalbilder
@@ -104,13 +106,8 @@ if (festivaluebersicht !== null) {
         li.classList = 'festival__list--item festival__list--' + liMusicStyle;
 
         li.innerHTML = (detailSeite + liFilterMusik + liName + liOrt + liDatum + merken);
-        console.log(li)
-
 
         ul.appendChild(li);
-
-
-        console.log(ul)
 
     });
 
@@ -140,7 +137,6 @@ function zurDetailseite(id) {
 
 //Function Musicicon für richtiges svg
 function musikIcon(musicStyle) {
-    console.log(musicStyle)
 
     if (musicStyle === 'indie') {
         return ('' +

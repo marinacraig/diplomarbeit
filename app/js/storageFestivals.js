@@ -13,17 +13,26 @@ if (festivaluebersicht !== null) {
     //hier sollen alle Festivals rein (unsortiert und sortiert
     let alleFestivals = []
 
-    //Für Test: // todo: gemerkt
+    //Für Test dh.solle eigentlich von DB kommen:
     alleFestivals = [
-        {name:'jsFestival1', ort: '4000 Solothurn', kanton:'SO',
-            beginn: '13. Okt', ende: '14. Okt 2018',
+        {name:'jsFestival1', ort: 'Eggersriet', kanton:'SG',
+            beginn: '30. Sep', ende: '1. Okt 2018',
             musikrichtung: 'indie', id: '1', gemerkt: true},
-        {name:'jsFestival2', ort: '1000 Lausanne', kanton:'VD',
+        {name:'jsFestival2', ort: 'Lausanne', kanton:'VD',
             beginn: '13. Nov', ende: '14. Nov 2018',
             musikrichtung: 'jazz', id: '2', gemerkt: true},
-        {name:'jsFestival3', ort: '3000 Bern', kanton:'BE',
+        {name:'jsFestival3', ort: 'Bern', kanton:'BE',
             beginn: '02. Okt', ende: '05. Okt 2018',
-            musikrichtung: 'hiphop', id: '3', gemerkt: false}
+            musikrichtung: 'hiphop', id: '3', gemerkt: false},
+        {name:'jsFestival4', ort: 'Solothurn', kanton:'SO',
+            beginn: '13. Okt', ende: '14. Okt 2018',
+            musikrichtung: 'poprock', id: '4', gemerkt: true},
+        {name:'jsFestival5', ort: 'St. Gallen', kanton:'SG',
+            beginn: '13. Nov', ende: '14. Nov 2018',
+            musikrichtung: 'electronic', id: '5', gemerkt: true},
+        {name:'jsFestival6', ort: 'Arbon', kanton:'TG',
+            beginn: '02. Okt', ende: '05. Okt 2018',
+            musikrichtung: 'indie', id: '6', gemerkt: false}
     ]
 
 

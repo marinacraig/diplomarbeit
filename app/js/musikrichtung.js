@@ -160,10 +160,6 @@ if (favoriteMusicStyle !== null) {
 
 /*
 Anpassungen HTML:
-div mit form ersetzen -> glaubs unnötig bzw. wieder gelöscht
 bei input name="musikrichtung" (nicht nötig)
 label mit for und input mit id id="resetFMS"
-ergebnis anzeigen id="filterFMS"
-Filter zurücksetzen:
-Todo's im HTML bezüglich weiteren Seiten  bzw. zurücksetzen löschen
  */
