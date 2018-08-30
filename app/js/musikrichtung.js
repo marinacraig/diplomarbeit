@@ -44,9 +44,13 @@ if (favoriteMusicStyle !== null) {
     let allFMS = [jazzFMS, hiphopFMS, indieFMS, poprockFMS, electronicFMS, countryFMS, soulFMS]
 
 
-    // laden von eventuell bereits gesetzten elementen aus localstorage: muss als erstes gemacht werden
+    /*
+    laden von eventuell bereits gesetzten elementen aus localstorage: muss als erstes gemacht werden
+    auch für Filter in festivalsUI.js (keine gute idee - reload nötig)
+     */
+
     getFMSSelection().forEach((e,i)=>{
-      allFMS[i].checked = e;  // musikrichtung.html hat mehr Elemente als die anderen -> Fehler bei e
+      allFMS[i].checked = e;  // musikrichtung.html hat mehr Elemente als die anderen
 
     });
 
@@ -69,7 +73,6 @@ if (favoriteMusicStyle !== null) {
     let indexHTML = document.querySelector('.indexHTML')
     let festUebHTML = document.querySelector('.festivaluebersichtHTML')
 
-
     let zurueckFMS = document.querySelector('#zurueckFMS')
 
     let i = 0;
@@ -84,8 +87,6 @@ if (favoriteMusicStyle !== null) {
         //enthält alle inkl. toggleSelection: true or false allFMS
 
         localstorageSetFMS(allFMS);
-
-
     }
 
     function resetToggleSelection() {
@@ -102,9 +103,6 @@ if (favoriteMusicStyle !== null) {
             }
         }
         localstorageSetFMS(allFMS);
-
-        //todo: idee: this.checked bwz. true false in localstorage, dann dort holen und injecten
-
     }
 
     function backFMS() {

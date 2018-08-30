@@ -52,8 +52,6 @@ if (festivaluebersicht !== null) {
 
     let alleKantone = [ktAG, ktAR, ktAI, ktBL, ktBS, ktBE, ktFR, ktGE, ktGL, ktGR, ktJU, ktLU, ktNE, ktNW, ktOW, ktSG, ktSH, ktSZ, ktSO, ktTG, ktTI, ktUR, ktVD, ktVS, ktZG, ktZH]
 
-
-
     //AlleFestivals
 
     //Class Festival - wird diese überhaupt benötigt? Wie?
@@ -76,7 +74,6 @@ if (festivaluebersicht !== null) {
     //Festivals in HTML einfügen
     alleFestivals.forEach (function (Festival) {
 
-
         let liMusicStyle = Festival.musikrichtung
 
         //Verlinkung zur Detailseite
@@ -98,6 +95,11 @@ if (festivaluebersicht !== null) {
 
         //merken (ist das ganze listenelement
         let merken = festivalMerken(Festival.gemerkt)
+
+
+
+        //schauen ob anzeigen
+        showFMS(Festival.musikrichtung, allFMS)
 
         //Todo: fixen, nur das letzte wird angezeigt
         let ul = document.querySelector('#css_uebersicht')
@@ -172,7 +174,6 @@ function musikIcon(musicStyle) {
             '                            </svg>' +
             '</li>\n' +
             '                       ')
-
     } else if (musicStyle === 'electronic') {
         return ('<li class="filter filter__music filter__music--electronic">\n' +
             '                        <svg width="20px" height="16px" viewBox="0 0 20 16" version="1.1"\n' +
@@ -301,5 +302,32 @@ function festivalMerken(festivalMerken) {
 
 }
 
+//Filter für FMS: Idee vgl allFMS mit alleFestivals wenn dann nicht zeigen
+function showFMS(festivalStyle, allFMS){
+    /*
+    nehme Festival.musikrichtung, wenn das identisch ist mit Musikrichtung.checked = false nicht anzeigen
+    sowas wie style.display none
+    */
+    getFMSSelection(allFMS)
+
+    console.log(indieFMS.checked)
+    let indie = document.querySelector('.festival__list--indie')
+    console.log(indie)
+
+    if(festivalStyle === 'indie' && indieFMS.checked !== true){
+
+       //return (indie.style.display='none')
+
+      } else if(festivalStyle === 'indie' && indieFMS.checked === true){
+
+        //return (indie.style.display='block')
+    }
+
+
+
+
+
+
+}
 
 
