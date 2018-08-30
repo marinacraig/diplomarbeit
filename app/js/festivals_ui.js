@@ -75,34 +75,43 @@ if (festivaluebersicht !== null) {
     alleFestivals.forEach (function (Festival) {
 
 
-        let liFestival = festivalHauptlistenElement(Festival.musikrichtung)
+            let liMusicStyle = Festival.musikrichtung
 
-        //Todo: statt id den "name" nehmen für die verlinkung
-        let detailSeite = zurDetailseite(Festival.id)
+            //Todo: statt id den "name" nehmen für die verlinkung
+            let detailSeite = zurDetailseite(Festival.id)
 
-        //Todo: verschiedene Festivalbilder
+            //Todo: verschiedene Festivalbilder
 
-        //Musikfilter: class & svg
-        let liFilterMusik = musikIcon(Festival.musikrichtung)
+            //Musikfilter: class & svg
+            let liFilterMusik = musikIcon(Festival.musikrichtung)
 
-        //Name
-        let liName = festivalName(Festival.name)
+            //Name
+            let liName = festivalName(Festival.name)
 
-        //Ort
-        let liOrt = festivalLocation(Festival.ort, Festival.kanton)
+            //Ort
+            let liOrt = festivalLocation(Festival.ort, Festival.kanton)
 
-        //Datumsausgabe soll sowas sein: 20. Jul - 23. Jul 2018
-        let liDatum = festivalDatum(Festival.beginn, Festival.ende)
+            //Datumsausgabe soll sowas sein: 20. Jul - 23. Jul 2018
+            let liDatum = festivalDatum(Festival.beginn, Festival.ende)
 
-        //merken (ist das ganze listenelement
-        let merken = festivalMerken(Festival.gemerkt)
+            //merken (ist das ganze listenelement
+            let merken = festivalMerken(Festival.gemerkt)
+
+            //Todo: fixen, nur das letzte wird angezeigt
+            let ul = document.querySelector('#css_uebersicht')
+
+            let li = document.createElement('li')
+            li.classList = '"festival__list--item festival__list--' + liMusicStyle + '"';
+
+            let kurzBeschreibung = li.innerHTML = (detailSeite + liFilterMusik + liName + liOrt + liDatum + merken);
+            console.log(li)
+
+            li.appendChild(document.createTextNode(kurzBeschreibung));
+            ul.appendChild(li);
 
 
-    //Todo: fixen, nur das letzte wird angezeigt
-        let ul = document.querySelector('#css_uebersicht')
+            console.log(ul)
 
-        ul.innerHTML = (liFestival + detailSeite + liFilterMusik + liName + liOrt + liDatum + merken);
-        console.log(Festival)
     });
 
 
@@ -117,10 +126,6 @@ if (festivaluebersicht !== null) {
         }
     }
 
-}
-
-function festivalHauptlistenElement(musicStyle) {
-    return (' <li class="festival__list--item festival__list--' + musicStyle + '">')
 }
 
 //da einheitliches Festivalbild hier inkl.
@@ -280,7 +285,7 @@ function festivalMerken(festivalMerken) {
             '                    </li>               ' +
             '                    </ul>\n' +
             '                </a>\n' +
-            '            </li>')
+            '            ')
     } else {
         return ('                        <li class="filter filter__merken">\n' +
             '                            <p>\n' +
@@ -305,7 +310,7 @@ function festivalMerken(festivalMerken) {
             '                        </li>            ' +
             '                   </ul>\n' +
             '                </a>\n' +
-            '            </li>')
+            '            ')
     }
 
 }

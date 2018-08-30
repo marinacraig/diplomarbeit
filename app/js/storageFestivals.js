@@ -18,9 +18,12 @@ if (festivaluebersicht !== null) {
         {name:'jsFestival1', ort: '4000 Solothurn', kanton:'SO',
             beginn: '13. Okt', ende: '14. Okt 2018',
             musikrichtung: 'indie', id: '1', gemerkt: true},
-        {name:'jsFestival2', ort: '3000 Bern', kanton:'BE',
+        {name:'jsFestival2', ort: '1000 Lausanne', kanton:'VD',
+            beginn: '13. Nov', ende: '14. Nov 2018',
+            musikrichtung: 'jazz', id: '2', gemerkt: true},
+        {name:'jsFestival3', ort: '3000 Bern', kanton:'BE',
             beginn: '02. Okt', ende: '05. Okt 2018',
-            musikrichtung: 'poprock', id: '3', gemerkt: false}
+            musikrichtung: 'hiphop', id: '3', gemerkt: false}
     ]
 
 
