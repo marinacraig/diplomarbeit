@@ -68,7 +68,7 @@ und Inhalt ersetzt.
 
 
 ## Anhang  
-User Tabelle:  
+User Tabelle (bereits veraltet):  
 ![DB_user.png](DB_user.png)  
 Neue Einträge 2-4 via app/php_spick/register.php entstanden, jedoch keine Garantie, dass dies noch geht:  
 ![erfasste_user_27082018.png](erfasste_user_27082018.png)  

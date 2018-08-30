@@ -102,6 +102,7 @@ if (favoriteMusicStyle !== null) {
                 //Antwort alle ohne true: console.log (allFMS[i])
             }
         }
+        let showFMS
         localstorageSetFMS(allFMS);
     }
 
@@ -153,6 +154,8 @@ if (favoriteMusicStyle !== null) {
             })
         }*/
 
+
+    //Todo Filter anzeigen auf festivaluebersicht
 
 }
 
