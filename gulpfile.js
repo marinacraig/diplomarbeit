@@ -13,7 +13,7 @@ app:
 - content
 - css (zum verlinken und via gulp verkleinern)
 - images (auch icons etc.)
-- js (mit Unterordner Babel welcher durch gulp build entsteht, files vom Unterordner im HTML verlinken bzw. via gulp verkleinern)
+- js (seperaten babel-Ordner welcher durch gulp build entsteht, files vom babel im HTML verlinken bzw. via gulp verkleinern)
 - scss
 - index.html
 (dist)
@@ -48,7 +48,7 @@ const browserSync = require('browser-sync').create(); // Aktualisierung im Brows
 const useref = require('gulp-useref'); // für min js
 const uglify = require('gulp-uglify'); // damit js wirklich verkleinert wird
 const gulpIf = require('gulp-if'); // damit nur js verkleinert wird
-const cssnano = require('gulp-cssnano'); // css verkleinern
+const cssnano = require('gulp-cssnano'); //css verkleinern - Alternative: clean-css
 
 const autoprefixer = require('gulp-autoprefixer'); // css für ältere browser
 const inject = require('gulp-inject'); //damit minifizierte js und css eingefügt werden können - Achtung im HTML steht zwingend inject:css -> alle css files werden eingefügt
@@ -117,20 +117,8 @@ im HTML:
 <!-- build:<type> <path> -->
 ...css oder ...js
 <!-- endbuild -->
+*/
 
-zuerst js dann css mit autoprefixer
- */
-
-
-gulp.task('userefjs', function(){
-    return gulp.src('app/**/*.html')
-        .pipe(useref())
-        // Minifies only if it's a JavaScript file
-        .pipe(gulpIf('*.js', uglify()))
-        // Minifies only if it's a CSS file
-        //.pipe(gulpIf('*.css', cssnano()))
-        .pipe(gulp.dest('dist'))
-});
 
 /*
 Autoprefixer für ältere bzw. verschiedene Browserversionen
@@ -148,21 +136,20 @@ gulp.task('autoprefixer', () =>
 );
 
 /*
-für die  css minified version, entsteht aus build im html
+für die js und css minified version, entsteht aus build im html
  */
 
-gulp.task('userefcss', function(){
+gulp.task('useref', function(){
     return gulp.src('app/**/*.html')
         .pipe(sourcemaps.init())
         .pipe(useref())
         // Minifies only if it's a JavaScript file
-        //.pipe(gulpIf('*.js', uglify())) // -> funktioniert nicht
+        .pipe(gulpIf('*.js', uglify()))
         // Minifies only if it's a CSS file
         .pipe(gulpIf('*.css', cssnano()))
         .pipe(sourcemaps.write('sourcemaps'))
         .pipe(gulp.dest('dist'))
 });
-
 
 /*
 Bilder optimieren - braucht Zeit, daher auch cachen
@@ -234,7 +221,7 @@ gulp.task('cache:clear', (callback) => {
 damit build ausgeführt wird, aufpassen mit Reihenfolge, alles in [] wird gleichzeitig gemacht - Terminal: gulp build
  */
 gulp.task('build', (callback) => {
-    runSequence('clean:dist', 'cache:clear', ['babel','sass'], 'autoprefixer', ['userefcss', 'userefjs', 'images', 'content', 'copy-php'], 'inject', callback);
+    runSequence('clean:dist', 'cache:clear', ['babel','sass'], 'autoprefixer', ['useref','images', 'content', 'copy-php'], 'inject', callback);
 });
 
 
