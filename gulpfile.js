@@ -45,10 +45,10 @@ const babel = require('gulp-babel'); // ES6
 
 const sass = require('gulp-sass'); // scss in css
 const browserSync = require('browser-sync').create(); // Aktualisierung im Browser
-const useref = require('gulp-useref'); // für min js
+const useref = require('gulp-useref'); // für min js / css
 const uglify = require('gulp-uglify'); // damit js wirklich verkleinert wird
-const gulpIf = require('gulp-if'); // damit nur js verkleinert wird
-const cssnano = require('gulp-cssnano'); //css verkleinern - Alternative: clean-css
+const gulpIf = require('gulp-if'); // damit js bzw. css verkleinert wird
+const cssnano = require('gulp-cssnano'); //css wirklich verkleinern - Alternative: clean-css
 
 const autoprefixer = require('gulp-autoprefixer'); // css für ältere browser
 const inject = require('gulp-inject'); //damit minifizierte js und css eingefügt werden können - Achtung im HTML steht zwingend inject:css -> alle css files werden eingefügt
@@ -57,7 +57,6 @@ const imagemin = require('gulp-imagemin'); // Bilder optimieren
 const cache = require('gulp-cache'); // Bilder optimieren dauert, damit nicht unnötig oft -> cachen
 const del = require('del'); // löscht gelöschte files, nötig, da diese automatisch generiert
 const runSequence = require('gulp-run-sequence');  //damit nicht alles was gemacht wurde, gleich wieder gelöscht wird, Reihenfolge
-
 
 
 /*
