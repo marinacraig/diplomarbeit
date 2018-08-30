@@ -72,11 +72,10 @@ if (festivaluebersicht !== null) {
 
 
     //Festivals in HTML einfügen
-
     alleFestivals.forEach (function (Festival) {
 
 
-        let liFestival = festivalHauptlistenElement(Festival.musikrichtung)
+            let liMusicStyle = Festival.musikrichtung
 
             //Todo: statt id den "name" nehmen für die verlinkung
             let detailSeite = zurDetailseite(Festival.id)
@@ -101,8 +100,18 @@ if (festivaluebersicht !== null) {
             //Todo: fixen, nur das letzte wird angezeigt
             let ul = document.querySelector('#css_uebersicht')
 
-        ul.innerHTML = (liFestival + detailSeite + liFilterMusik + liName + liOrt + liDatum + merken);
-        console.log(Festival)
+            let li = document.createElement('li')
+            li.classList = '"festival__list--item festival__list--' + liMusicStyle + '"';
+
+            let kurzBeschreibung = li.innerHTML = (detailSeite + liFilterMusik + liName + liOrt + liDatum + merken);
+            console.log(li)
+
+            li.appendChild(document.createTextNode(kurzBeschreibung));
+            ul.appendChild(li);
+
+
+            console.log(ul)
+
     });
 
 
@@ -117,10 +126,6 @@ if (festivaluebersicht !== null) {
         }
     }
 
-}
-
-function festivalHauptlistenElement(musicStyle) {
-    return (' <li class="festival__list--item festival__list--' + musicStyle + '">')
 }
 
 //da einheitliches Festivalbild hier inkl.
@@ -280,7 +285,7 @@ function festivalMerken(festivalMerken) {
             '                    </li>               ' +
             '                    </ul>\n' +
             '                </a>\n' +
-            '            </li>')
+            '            ')
     } else {
         return ('                        <li class="filter filter__merken">\n' +
             '                            <p>\n' +
@@ -305,7 +310,7 @@ function festivalMerken(festivalMerken) {
             '                        </li>            ' +
             '                   </ul>\n' +
             '                </a>\n' +
-            '            </li>')
+            '            ')
     }
 
 }
