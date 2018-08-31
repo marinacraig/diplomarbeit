@@ -19,7 +19,7 @@ foreach ($festival->get_festival() as $festival) {
     $festivalitem['kanton'] = $festival->get_kanton();
     $festivalitem['beginn'] = $festival->get_beginn();
     $festivalitem['ende'] = $festival->get_ende();
-    $festivalitem['musikrichtung'] = $festival->musikrichtung();
+    $festivalitem['musikrichtung'] = $festival->get_musikrichtung();
     $festivalitem['id'] = $festival->get_id();
     $festivalitem['gemerkt'] = $festival->get_gemerkt();
 
@@ -36,3 +36,6 @@ echo json_encode ($alleFestivals);
 //für nach kanton sortiert: $alleFestivalsKanton (soll nur via user ausgeführt werden)
 
 
+print "<pre>";
+print_r($alleFestivals);
+print "</pre>";

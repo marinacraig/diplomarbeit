@@ -49,8 +49,6 @@ function datum_aufsteigend($a, $b)
     return $t1 - $t2;
 }
 
-//usort($festivals, 'datum_aufsteigend');
-
 function datum_absteigend($a, $b)
 {
     $t1 = strtotime($a['beginn']);
@@ -58,10 +56,12 @@ function datum_absteigend($a, $b)
     return $t2 - $t1;
 }
 
-//usort($festivals, 'datum_absteigend');
-
-
 $alleFestivals = $festivals;
+
+
+print "<pre>";
+print_r($alleFestivals);
+print "</pre>";
 
 
 //Filter nach Kanton -> json schickt sortKanton mit Kantonskürzel
