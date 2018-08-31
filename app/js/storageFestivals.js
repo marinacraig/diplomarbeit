@@ -11,15 +11,16 @@ if (festivaluebersicht !== null) {
     let mySession = 'etwas';
     let datumFilter = 0;
 
+
     sessionStorage['mySession'] = JSON.stringify(mySession);
     mySession = JSON.parse(sessionStorage['mySession']);
 
 
     //hier sollen alle Festivals rein (unsortiert und sortiert
-    let alleFestivals = []
+    // let alleFestivals = []
 
     //Für Test dh.solle eigentlich von DB kommen:
-    alleFestivals = [
+    let alleFestivals = [
         {
             name: 'jsFestival1', ort: 'Eggersriet', kanton: 'SG',
             beginn: '2018-09-30 09:56:07', ende: '2018-10-01 09:56:07',
@@ -72,7 +73,29 @@ if (festivaluebersicht !== null) {
 
 
         //Todo: alle ungeraden aufsteigend ; alle geraden absteigend - oder umgekehrt
-        //alleFestivals =   JSON.parse(sessionStorage.getItem('sortDate'));
+       // alleFestivals = JSON.parse(sessionStorage.getItem('sortDate'));
+
+        if(datumFilter === 0){
+            //aktuellstes zuerst
+            alleFestivals.sort(function (a, b) {
+                a = new Date(a.beginn);
+                b = new Date(b.beginn);
+                return a < b ? -1 : a > b ? 1 : 0;
+            });
+
+        }else{
+            //aktuellstes zuletzt:
+            alleFestivals.sort(function (a, b) {
+                a = new Date(a.beginn);
+                b = new Date(b.beginn);
+                return a > b ? -1 : a < b ? 1 : 0;
+
+            });
+        }
+       //Todo: irgendwie alleFestivals.forEach(function (Festival) aufrufen
+       console.log(alleFestivals)
+
+
 
     }
 

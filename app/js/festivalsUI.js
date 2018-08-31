@@ -35,9 +35,10 @@ if (festivaluebersicht !== null) {
     */
 
     //Festivals in HTML einfügen
-    alleFestivals.forEach(function (Festival) {
 
-        //Datumsausgabe soll sowas sein: 20. Jul - 23. Jul 2018
+      alleFestivals.forEach(function (Festival) {
+
+        //Datumsausgabe soll so was sein: 20. Jul - 23. Jul 2018
         let beginn = datumFormatierenBeginn(Festival.beginn)
         let ende = datumFormatierenEnde(Festival.ende)
 

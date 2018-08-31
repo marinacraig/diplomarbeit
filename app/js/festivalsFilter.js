@@ -46,15 +46,7 @@ if (festivaluebersicht !== null) {
 
 
     //Sortieren nach Datum: soll eigentlich über DB laufen, daher hier nicht relevant
-    //Todo: mit click verbinden (sortDatum bzw datumFilter)
-
-        //aktuellstes zuletzt:
-        alleFestivals.sort(function (a, b) {
-            a = new Date(a.beginn);
-            b = new Date(b.beginn);
-            return a > b ? -1 : a < b ? 1 : 0;
-
-        });
+    //Todo: wenn von DB läuft, löschen
 
         //aktuellstes zuerst
         alleFestivals.sort(function (a, b) {
