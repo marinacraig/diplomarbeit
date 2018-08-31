@@ -67,6 +67,6 @@ weltweite Produktkommunikation und Übersetzungsorganisation,
 sowie die Verwendung von Jira und Confluence, CMS, Google 
 Analytics und Adwords dazu.  
  
-![Marina](marina.jpg)     
+![Marina](assets/marina.jpg)     
 
 [zurück zum Inhaltsverzeichnis](../README.md)  

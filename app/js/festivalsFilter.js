@@ -56,7 +56,7 @@ if (festivaluebersicht !== null) {
 
         });
 
-        //neustes zuerst
+        //aktuellstes zuerst
         alleFestivals.sort(function (a, b) {
             a = new Date(a.beginn);
             b = new Date(b.beginn);
@@ -86,6 +86,7 @@ if (festivaluebersicht !== null) {
     }
 
 
+    //Datumsformatierung für die UI
     function datumFormatierenBeginn(datum) {
 
         let date = new Date(datum);

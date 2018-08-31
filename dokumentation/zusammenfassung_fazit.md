@@ -5,8 +5,9 @@
 - Google docs bzw. spreadsheet: sehr praktisch und einfacher als github issues
 - typisch ich, Gedanken irgendwo festhalten, dann ordnen
 - Zeitplan: erstellt, korrigiert und - da Einzelprojekt - nicht mehr gross beachtet
-- gulp: Wollte zu Beginn nicht laufen und dann alles noch schlimmer gemacht. Gelernt alles
- Schritt für Schritt zu prüfen und erst dann weiter zu machen (@Alex Karbstein: Danke :-))
+- gulp: Wollte zu Beginn nicht laufen und habe dann alles noch schlimmer gemacht. Gelernt alles
+ Schritt für Schritt zu prüfen und erst dann weiter zu machen (@Alex Karbstein: Danke für 
+ die Unterstützung (gulp-task für sass und install.sh) :-))
 - package.json: war verwirrend, Grund: githubrepo fehlte noch
 - Auf privatem github funktioniert http://htmlpreview.github.io/? nicht (="liveanzeige html"). 
 Dadurch lange einfach in Entwicklungsumgebung geprüft.
@@ -17,7 +18,7 @@ Versionen erstellt. Veiths Empfehlung 2 verschiedene Versionen zu machen habe ic
 verworfen, da ich zum einen bereits begonnen hatte, zum anderen ein fluides Design 
 wollte (Dickschädel).  
 mehr:  
-[Aufbau](aufbausite.md) (etwas detailierter wann was gemacht)   
+[Aufbau](aufbausite.md) (etwas detailierter wann was wie gemacht)   
 [Style Abweichungen](style.md)  
 
 
@@ -26,11 +27,11 @@ mehr:
 - hashtags auf github stören mich, sind jedoch nicht relevant
 
 ## Deployment:  
-Zuerst via Filezilla, dann PhpStorm (wenn upload nicht möglich -> browse remote host)
+Via Filezilla
 
 ## Eidesstattliche Erklärung:  
-[weil gescanntes pdf](scan_eidesstattliche_erklaerung.pdf) gerne mal verschwindet:  
-![eidesstattliche_erklaerung.png](eidesstattliche_erklaerung.png)
+[weil gescanntes pdf](assets/scan_eidesstattliche_erklaerung.pdf) gerne mal verschwindet:  
+![eidesstattliche_erklaerung.png](assets/eidesstattliche_erklaerung.png)
 
 
 ## php:  
@@ -45,7 +46,7 @@ eindenken muss
 - nicht immer einfach den Fokus beizubehalten, wenn man etwas nicht sofort lösen kann
 - Literaturverzeichnis: besser laufend erstellen, als im Nachgang zusammensuchen
 - Einheitliche paddings & margins von anfang an in einem seperaten scss machen - jetzt 
-sehr Suchintensiv
+sehr suchintensiv
 - Bugfixen macht Spass wenn man mit etwas anderem gerade nicht weiter kommt.
 - Idee via github bei master push auf Server deployen gefällt mir besser als filezilla 
 - statt externe links (jquery, normalize) via node_modules einbinden (mehr Kontrolle, aber mehr 

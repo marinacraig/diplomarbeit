@@ -25,7 +25,7 @@ Dementsprechend falsche links in ...kaufen_bestaetigung.php
 6. todo's: [https://docs.google.com/spreadsheets/d/1eV_7Tlo0QKG4BIn0B93sUNnICly4tzJ4m1kySTdQwCs/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1eV_7Tlo0QKG4BIn0B93sUNnICly4tzJ4m1kySTdQwCs/edit?usp=sharing)  
 (in Tabellenblatt php)
 
-## Installation:  
+## Installation  
 (https://getcomposer.org/download/)
 im app/php Ordner:
 
@@ -39,7 +39,7 @@ composer require nesbot/carbon
 In script.sql sind alle DB-Daten. Diese in lokalen Server importieren 
 (läuft nicht via http://marina.techfabrik.com/dist bzw. /app)
 
-## Idee:
+## Idee
 - allgemeinen user-login  
 - wenn der funktioniert: if = admin@admin.com und pw = admin -> Seite
 festivals.php, dort Felder für Festival erfassen  
@@ -49,7 +49,7 @@ löschen bzw. bearbeiten
 - mittels js in html injecten  
 - filter festivals (datum, kanton) auf DB / in php diese dann via api an js  
  
-## Vorgehen:
+## Vorgehen
 Wegen Merge Problem / .gitignore: nochmals im Allgemeinen, in php gelöscht 
 und files (vendor) nach draussen verlinkt, Ordner composer.phar gelöscht.  
 Da Register und Login (Stand 27.08.2018) zwar funktionierte, jedoch 
@@ -60,23 +60,33 @@ alle Dateien in Spick-Ordner, php wird alles neu gemacht.
 
 ## Export / Import  
 Database in PhpStorm anzeigen (geht)  
-Keine Ahnung wie sauber exportieren bzw. auf Server importieren  
-Am Ende über SQL Generator sql generiert und Gesamt-Export in Mamp gemacht 
-und Inhalt ersetzt. Daher via Import script.sql hochladen.  
+Über SQL Generator sql generiert und Gesamt-Export in Mamp gemacht, 
+und Inhalt ersetzt. U.a. wegen mangelhaften Passwort: nicht richtig auf Server.  
 
+
+## Herausforderungen
+- Verbindung zur DB bzw. class DB (daher u.a. registrieren und login verworfen)
+- Festivals von DB auslesen und dann sortieren
+- API  
+- Vermutungen: 
+    - Infos aus sessionStorage für API holen  
+    - sortierte Festivals zurücksenden und richtig verarbeiten 
+    - im js nochmals Anpassungen nötig (z.B. weil array anders aussieht a
+    als erwartet)
 
 ## Literatur  
 - login: https://www.php-einfach.de/experte/php-codebeispiele/loginscript/  
-- dropdown auslesen: https://www.wirlernen.at/PHP5fuerEinsteiger/049.php  
+- dropdown auslesen: https://www.wirlernen.at/PHP5fuerEinsteiger/049.php 
+- diverse weitere 
 
 
 ## Anhang  
-User Tabelle (bereits veraltet):  
-![DB_user.png](DB_user.png)  
+User Tabelle (veraltet):  
+![DB_user.png](assets/DB_user.png)  
 Neue Einträge 2-4 via app/php_spick/register.php entstanden, jedoch keine Garantie, dass dies noch geht:  
-![erfasste_user_27082018.png](erfasste_user_27082018.png)  
+![erfasste_user_27082018.png](assets/erfasste_user_27082018.png)  
 User Tabelle:  
-![DB_festival.png](DB_festival.png)  
+![DB_festival.png](assets/DB_festival.png)  
 
   
 

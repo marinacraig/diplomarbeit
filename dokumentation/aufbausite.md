@@ -29,6 +29,10 @@ Identische paddings & margins: Diese sind leider etwas durcheinander geraten.
  JS: counter, programm: Ich wollte noch ein js machen und habe mich für diese
  entschieden. Etwas unschön sind die diversen Wiederholungen. Momentan 
  bin ich einfach zufrieden, dass ich es überhaupt hinbekommen habe.  
+ Des weiteren werden auf festivaluebersicht.html die Festivals via js 
+ (Datum ist formatiert, Festivals sortiert) eingefügt.  
+ Für die Verbindung zur DB gibt es via sessionStorage die Identifier sortDate und
+ sortKanton. (Festivalsortierung soll in php geschehen)  
  
  PHP: Als Font-End soweit ok war, mehr JS nur mit Festival Class / DB sinnvoll wurde,
  angefangen mit PHP zu experimentieren. [php.md](php.md)  
