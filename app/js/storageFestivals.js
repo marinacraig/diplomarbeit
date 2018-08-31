@@ -9,7 +9,7 @@ if (festivaluebersicht !== null) {
 
     //da html-page und nicht php für Sesssion -> Cookie
     let mySession = 'etwas';
-
+    let datumFilter = 0;
 
     sessionStorage['mySession'] = JSON.stringify(mySession);
     mySession = JSON.parse(sessionStorage['mySession']);
@@ -21,28 +21,48 @@ if (festivaluebersicht !== null) {
     let alleFestivals = []
 
     //Für Test dh.solle eigentlich von DB kommen:
-    alleFestivals = [
-        {name:'jsFestival1', ort: 'Eggersriet', kanton:'SG',
-            beginn: '30. Sep', ende: '1. Okt 2018',
-            musikrichtung: 'indie', id: '1', gemerkt: true},
-        {name:'jsFestival2', ort: 'Lausanne', kanton:'VD',
-            beginn: '13. Nov', ende: '14. Nov 2018',
-            musikrichtung: 'jazz', id: '2', gemerkt: true},
-        {name:'jsFestival3', ort: 'Bern', kanton:'BE',
-            beginn: '02. Okt', ende: '05. Okt 2018',
-            musikrichtung: 'hiphop', id: '3', gemerkt: false},
-        {name:'jsFestival4', ort: 'Solothurn', kanton:'SO',
-            beginn: '13. Okt', ende: '14. Okt 2018',
-            musikrichtung: 'poprock', id: '4', gemerkt: true},
-        {name:'jsFestival5', ort: 'St. Gallen', kanton:'SG',
-            beginn: '13. Nov', ende: '14. Nov 2018',
-            musikrichtung: 'electronic', id: '5', gemerkt: true},
-        {name:'jsFestival6', ort: 'Arbon', kanton:'TG',
-            beginn: '02. Okt', ende: '05. Okt 2018',
-            musikrichtung: 'indie', id: '6', gemerkt: false}
-    ]
-
-
+    /*    alleFestivals = [
+          {name:'jsFestival1', ort: 'Eggersriet', kanton:'SG',
+              beginn: '30. Sep', ende: '1. Okt 2018',
+              musikrichtung: 'indie', id: '1', gemerkt: true},
+          {name:'jsFestival2', ort: 'Lausanne', kanton:'VD',
+              beginn: '13. Nov', ende: '14. Nov 2018',
+              musikrichtung: 'jazz', id: '2', gemerkt: true},
+          {name:'jsFestival3', ort: 'Bern', kanton:'BE',
+              beginn: '02. Okt', ende: '05. Okt 2018',
+              musikrichtung: 'hiphop', id: '3', gemerkt: false},
+          {name:'jsFestival4', ort: 'Solothurn', kanton:'SO',
+              beginn: '13. Okt', ende: '14. Okt 2018',
+              musikrichtung: 'poprock', id: '4', gemerkt: true},
+          {name:'jsFestival5', ort: 'St. Gallen', kanton:'SG',
+              beginn: '13. Nov', ende: '14. Nov 2018',
+              musikrichtung: 'electronic', id: '5', gemerkt: true},
+          {name:'jsFestival6', ort: 'Arbon', kanton:'TG',
+              beginn: '02. Okt', ende: '05. Okt 2018',
+              musikrichtung: 'indie', id: '6', gemerkt: false}
+      ] */
+   let    testDatumformat = [
+            {name:'jsFestival1', ort: 'Eggersriet', kanton:'SG',
+                beginn: '2018-09-30 09:56:07', ende: '2018-10-01 09:56:07',
+                musikrichtung: 'indie', id: '1', gemerkt: true},
+            {name:'jsFestival2', ort: 'Lausanne', kanton:'VD',
+                beginn: '2018-11-13 09:56:07', ende: '2018-11-14 09:56:07',
+                musikrichtung: 'jazz', id: '2', gemerkt: true},
+            {name:'jsFestival3', ort: 'Bern', kanton:'BE',
+                beginn: '2018-10-12 09:56:07', ende: '2018-10-13 09:56:07',
+                musikrichtung: 'hiphop', id: '3', gemerkt: false},
+            {name:'jsFestival4', ort: 'Solothurn', kanton:'SO',
+                beginn: '2018-10-03 09:56:07', ende: '2018-10-04 09:56:07',
+                musikrichtung: 'poprock', id: '4', gemerkt: true},
+            {name:'jsFestival5', ort: 'St. Gallen', kanton:'SG',
+                beginn: '2018-11-29 09:56:07', ende: '2018-11-30 09:56:07',
+                musikrichtung: 'electronic', id: '5', gemerkt: true},
+            {name:'jsFestival6', ort: 'Arbon', kanton:'TG',
+                beginn: '2018-11-13 10:56:08', ende: '2018-11-14 09:56:07',
+                musikrichtung: 'indie', id: '6', gemerkt: false}
+        ]
+    //Datumsformat für UI
+    alleFestivals = testDatumformat;
 
     /*
  Filterfunktionen
@@ -58,7 +78,9 @@ if (festivaluebersicht !== null) {
         datumFilter = (datumFilter % 2)
         console.log(datumFilter) //Ausgaben: 1 und 0
 
-        Storage.setItem('sortDate', JSON.stringify(datumFilter));
+
+        sessionStorage.setItem('sortDate', JSON.stringify(datumFilter));
+
 
         //Todo: alle ungeraden aufsteigend ; alle geraden absteigend - oder umgekehrt
         //alleFestivals =   JSON.parse(sessionStorage.getItem('sortDate'));

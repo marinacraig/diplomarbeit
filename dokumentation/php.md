@@ -37,7 +37,7 @@ php -r "unlink('composer-setup.php');"
 composer require nesbot/carbon  
 
 In script.sql sind alle DB-Daten. Diese in lokalen Server importieren 
-(läuft nicht via http://marina.techfabrik.com/dist bzw. /app )
+(läuft nicht via http://marina.techfabrik.com/dist bzw. /app)
 
 ## Idee:
 - allgemeinen user-login  

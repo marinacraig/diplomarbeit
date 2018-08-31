@@ -37,6 +37,9 @@ if (festivaluebersicht !== null) {
     //Festivals in HTML einfügen
     alleFestivals.forEach(function (Festival) {
 
+       // let beginn = datumFormatierenBeginn(Festival.beginn)
+       // let ende = datumFormatierenEnde(Festival.ende)
+
         let liMusicStyle = Festival.musikrichtung
 
         //Verlinkung zur Detailseite
@@ -55,11 +58,14 @@ if (festivaluebersicht !== null) {
 
         //Datumsausgabe soll sowas sein: 20. Jul - 23. Jul 2018
         let liDatum = festivalDatum(Festival.beginn, Festival.ende)
+        //let liDatum = festivalDatum(beginn, ende)
 
         //merken (ist das ganze listenelement
         let merken = festivalMerken(Festival.gemerkt)
 
-        //Todo: fixen, nur das letzte wird angezeigt
+
+
+
         let ul = document.querySelector('#css_uebersicht')
 
         let li = document.createElement('li')
@@ -247,4 +253,15 @@ if (festivaluebersicht !== null) {
 
     }
 
+    function datumFormatierenBeginn(sekundenDatum){
+        console.log(sekundenDatum)
+
+    }
+
+    function datumFormatierenEnde(sekundenDatum){
+        console.log(sekundenDatum)
+
+    }
+
 }
+

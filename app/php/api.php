@@ -10,7 +10,7 @@ require __DIR__ . '/vendor/autoload.php';
 
 // dies ist die REST API
 $alleFestivals = Array();
-foreach ($festival->get_festival() as $festival) {
+foreach ($PDO->get_festival() as $festival) {
     echo $festival->get_name();
 
     $festivalitem = Array();

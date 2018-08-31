@@ -42,12 +42,25 @@ if (festivaluebersicht !== null) {
 
     let alleKantone = [ktAG, ktAR, ktAI, ktBL, ktBS, ktBE, ktFR, ktGE, ktGL, ktGR, ktJU, ktLU, ktNE, ktNW, ktOW, ktSG, ktSH, ktSZ, ktSO, ktTG, ktTI, ktUR, ktVD, ktVS, ktZG, ktZH]
 
+
     //Sortieren nach Datum: soll eigentlich über DB laufen, daher hier nicht relevant
-    alleFestivals.sort(function (a, b) {
-        a = new Date(a.beginn);
-        b = new Date(b.beginn);
-        return a > b ? -1 : a < b ? 1 : 0;
-    });
+    //Todo: mit click verbinden (sortDatum bzw datumFilter)
+
+        //aktuellstes zuletzt:
+        alleFestivals.sort(function (a, b) {
+            a = new Date(a.beginn);
+            b = new Date(b.beginn);
+            return a > b ? -1 : a < b ? 1 : 0;
+
+        });
+
+        //neustes zuerst
+        alleFestivals.sort(function (a, b) {
+            a = new Date(a.beginn);
+            b = new Date(b.beginn);
+            return a < b ? -1 : a > b ? 1 : 0;
+        });
+
 
 
     alleFestivals.filter(kanton => {
@@ -60,7 +73,7 @@ if (festivaluebersicht !== null) {
      })*/
 
     /*
-    Eventlistener für Filterfunktionen via DB (fkt in storageFestivals:
+    Eventlistener für Filterfunktionen via DB (fkt in storageFestivasl:
      */
     filterDatum.addEventListener('click', sortDatum)
 
