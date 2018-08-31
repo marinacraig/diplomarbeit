@@ -1,7 +1,7 @@
 <?php
 ini_set("display_errors",true); // für Fehlerausgabe
 
-
+require __DIR__ . '/vendor/autoload.php';
 /*
  * Festival Class -> evtl. nur getter keine setter (Erfassen nur auf DB möglich) -> nein, dafür kein delete und updated (Zeit)
  *

@@ -36,6 +36,9 @@ php -r "unlink('composer-setup.php');"
 
 composer require nesbot/carbon  
 
+In script.sql sind alle DB-Daten. Diese in lokalen Server importieren 
+(läuft nicht via http://marina.techfabrik.com/dist bzw. /app )
+
 ## Idee:
 - allgemeinen user-login  
 - wenn der funktioniert: if = admin@admin.com und pw = admin -> Seite
@@ -59,7 +62,7 @@ alle Dateien in Spick-Ordner, php wird alles neu gemacht.
 Database in PhpStorm anzeigen (geht)  
 Keine Ahnung wie sauber exportieren bzw. auf Server importieren  
 Am Ende über SQL Generator sql generiert und Gesamt-Export in Mamp gemacht 
-und Inhalt ersetzt.  
+und Inhalt ersetzt. Daher via Import script.sql hochladen.  
 
 
 ## Literatur  

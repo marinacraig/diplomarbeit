@@ -3,6 +3,7 @@ ini_set("display_errors", true); // für Fehlerausgabe
 
 require __DIR__ . '/vendor/autoload.php';
 
+include('DB.php');
 
 /*
  * hier alles was mit dem auflisten der Festivals zu tun hat
@@ -13,7 +14,7 @@ require __DIR__ . '/vendor/autoload.php';
 
 
 //alle Festivals aus DB holen (hier via export)
-$festivals = array(
+/*$festivals = array(
     array('user_id' => NULL, 'name' => 'DB festival1', 'ort' => 'Eggersriet', 'kanton' => 'SG', 'beginn' => '2018-09-30 14:59:43', 'ende' => '2018-10-01 14:59:43', 'musikrichtung' => 'indie', 'id' => '1', 'gemerkt' => '0'),
     array('user_id' => NULL, 'name' => 'DB Festival2', 'ort' => 'Bern', 'kanton' => 'BE', 'beginn' => '2018-10-12 00:00:00', 'ende' => '2018-10-14 00:00:00', 'musikrichtung' => 'jazz', 'id' => '2', 'gemerkt' => '1'),
     array('user_id' => NULL, 'name' => 'DB festival3', 'ort' => 'Oerlikon', 'kanton' => 'ZH', 'beginn' => '2018-10-04 14:59:43', 'ende' => '2018-10-06 14:59:43', 'musikrichtung' => 'hiphop', 'id' => '3', 'gemerkt' => '0'),
@@ -22,7 +23,21 @@ $festivals = array(
     array('user_id' => NULL, 'name' => 'DB Festival6', 'ort' => 'Bern', 'kanton' => 'BE', 'beginn' => '2018-10-12 00:00:00', 'ende' => '2018-10-14 00:00:00', 'musikrichtung' => 'jazz', 'id' => '6', 'gemerkt' => '1'),
     array('user_id' => NULL, 'name' => 'DB Festival7', 'ort' => 'Bern', 'kanton' => 'BE', 'beginn' => '2018-10-12 00:00:00', 'ende' => '2018-10-14 00:00:00', 'musikrichtung' => 'jazz', 'id' => '7', 'gemerkt' => '1'),
     array('user_id' => NULL, 'name' => 'DB festival8', 'ort' => 'Eggersriet', 'kanton' => 'SG', 'beginn' => '2018-09-30 14:59:43', 'ende' => '2018-10-01 14:59:43', 'musikrichtung' => 'indie', 'id' => '8', 'gemerkt' => '0')
-);
+);*/
+
+
+//Alle Kundendaten selektieren
+//Todo: 1. wie hole ich die connection aus DB.php - wird nicht gefunden, vendor allerdings verlinkt...
+$statement = PDO::fetch()->prepare('
+              SELECT
+                *
+              FROM
+                festival
+              ');
+
+print "<pre>";
+print_r($statement);
+print "</pre>";
 
 
 //todo: $datum - via API - anpassen, Werte: 1 & 0
@@ -72,7 +87,6 @@ $kanton = 'TG';
 $alleFestivalsKanton = array_filter($festivals, function ($item) use ($kanton) {
     return ($item['kanton'] == $kanton);
 });
-
 
 
 /*
