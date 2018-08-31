@@ -7,7 +7,7 @@ require __DIR__ . '/vendor/autoload.php';
  * unklar: getFestivals()
  */
 
-
+/*
 // dies ist die REST API
 $alleFestivals = Array();
 foreach ($PDO->get_festival() as $festival) {
@@ -39,3 +39,5 @@ echo json_encode ($alleFestivals);
 print "<pre>";
 print_r($alleFestivals);
 print "</pre>";
+
+*/

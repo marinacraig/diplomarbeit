@@ -1,7 +1,7 @@
 <?php
 ini_set("display_errors",true); // für Fehlerausgabe
 
-require __DIR__ . '../../vendor/autoload.php';
+require __DIR__ . '/vendor/autoload.php';
 
 session_start();
 
