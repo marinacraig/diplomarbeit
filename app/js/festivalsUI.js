@@ -15,7 +15,7 @@ check ob id xy vorhanden, falls ja dann ausführen
 let festivaluebersicht = document.getElementById('festivaluebersicht');
 if (festivaluebersicht !== null) {
 
- //AlleFestivals
+    //AlleFestivals
 
     //Class Festival - wird diese überhaupt benötigt? Wie?
     /*
@@ -37,6 +37,7 @@ if (festivaluebersicht !== null) {
     //Festivals in HTML einfügen
     alleFestivals.forEach(function (Festival) {
 
+        //Datumsausgabe soll sowas sein: 20. Jul - 23. Jul 2018
         let beginn = datumFormatierenBeginn(Festival.beginn)
         let ende = datumFormatierenEnde(Festival.ende)
 
@@ -50,20 +51,14 @@ if (festivaluebersicht !== null) {
         //Musikfilter: class & svg
         let liFilterMusik = musikIcon(Festival.musikrichtung)
 
-        //Name
         let liName = festivalName(Festival.name)
 
-        //Ort
         let liOrt = festivalLocation(Festival.ort, Festival.kanton)
 
-        //Datumsausgabe soll sowas sein: 20. Jul - 23. Jul 2018
-        //let liDatum = festivalDatum(Festival.beginn, Festival.ende)
         let liDatum = festivalDatum(beginn, ende)
 
-        //merken (ist das ganze listenelement
+        //merken (ist das ganze listenelement)
         let merken = festivalMerken(Festival.gemerkt)
-
-
 
 
         let ul = document.querySelector('#css_uebersicht')
@@ -253,50 +248,6 @@ if (festivaluebersicht !== null) {
 
     }
 
-    function datumFormatierenBeginn(datum){
-
-        let date = new Date(datum);
-
-        let day = date.getDate()
-        let month = date.getMonth() +1
-
-
-        let year = date.getFullYear()
-
-        return (day +'. '+ month)
-
-    }
-
-    function datumFormatierenEnde(datum){
-        let date = new Date(datum);
-
-        let day = date.getDate()
-        let month = date.getMonth() +1
-
-
-        let year = date.getFullYear()
-
-        return (day +'. '+ month +'. '+ year)
-    }
-
-
-    let datum = '2018-11-13 10:56:08'
-    function datumFormatierung (){
-        //datum.toString('dddd, MMM ,yyyy')
-        //millisec = Date.parse(datum);
-
-        let date = new Date(datum);
-
-        let day = date.getDate()
-        let month = date.getMonth()+1
-
-
-        let year = date.getFullYear()
-
-        retun (day +' '+ month +' '+ year)
-
-    }
-    datumFormatierung ()
 
 
 }

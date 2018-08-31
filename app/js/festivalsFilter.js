@@ -7,7 +7,8 @@ let festivaluebersicht = document.getElementById('festivaluebersicht');
 if (festivaluebersicht !== null) {
 
     /*
-    Für die Filterfunktionen
+    1. Filterfunktionen / Kanton und Datum
+    2. Datumsformatierung (wird auch für ticketübersicht benötigt)
      */
     let filterDatum = document.querySelector('.filter__datum')
 
@@ -41,8 +42,6 @@ if (festivaluebersicht !== null) {
 
 
     let alleKantone = [ktAG, ktAR, ktAI, ktBL, ktBS, ktBE, ktFR, ktGE, ktGL, ktGR, ktJU, ktLU, ktNE, ktNW, ktOW, ktSG, ktSH, ktSZ, ktSO, ktTG, ktTI, ktUR, ktVD, ktVS, ktZG, ktZH]
-
-
 
 
 
@@ -84,6 +83,62 @@ if (festivaluebersicht !== null) {
         if (alleKantone[i] != null) {
             alleKantone[i].addEventListener('click', sortKantone)
         }
+    }
+
+
+    function datumFormatierenBeginn(datum) {
+
+        let date = new Date(datum);
+
+        let day = date.getDate()
+        let month = date.getMonth() + 1
+        month = monatskuerzel(month)
+
+        return (day + '. ' + month)
+    }
+
+    function datumFormatierenEnde(datum) {
+        let date = new Date(datum);
+
+        let day = date.getDate()
+        let month = date.getMonth() + 1
+        month = monatskuerzel(month)
+
+        let year = date.getFullYear()
+
+        return (day + '. ' + month + ' ' + year)
+    }
+
+    function monatskuerzel(month) {
+
+        if (month == 1){
+            month = 'Jan';
+        }else if(month == 2){
+            month = 'Feb';
+        }else if(month == 3){
+            month = 'Mar';
+        }else if(month == 4){
+            month = 'Apr';
+        }else if(month == 5){
+            month = 'Mai';
+        }else if(month == 6){
+            month = 'Jun';
+        }else if(month == 7){
+            month = 'Jul';
+        }else if(month == 8){
+            month = 'Aug';
+        }else if(month == 9){
+            month = 'Sep';
+        }else if(month == 10){
+            month = 'Okt';
+        }else if(month == 11){
+            month = 'Nov';
+        }else if(month == 12){
+            month = 'Dez';
+        }else {
+            console.log('hi')
+        }
+        return(month)
     }
 
 }
