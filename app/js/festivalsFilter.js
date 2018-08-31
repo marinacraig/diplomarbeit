@@ -43,6 +43,9 @@ if (festivaluebersicht !== null) {
     let alleKantone = [ktAG, ktAR, ktAI, ktBL, ktBS, ktBE, ktFR, ktGE, ktGL, ktGR, ktJU, ktLU, ktNE, ktNW, ktOW, ktSG, ktSH, ktSZ, ktSO, ktTG, ktTI, ktUR, ktVD, ktVS, ktZG, ktZH]
 
 
+
+
+
     //Sortieren nach Datum: soll eigentlich über DB laufen, daher hier nicht relevant
     //Todo: mit click verbinden (sortDatum bzw datumFilter)
 

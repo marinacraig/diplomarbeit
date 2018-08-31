@@ -37,8 +37,8 @@ if (festivaluebersicht !== null) {
     //Festivals in HTML einfügen
     alleFestivals.forEach(function (Festival) {
 
-       // let beginn = datumFormatierenBeginn(Festival.beginn)
-       // let ende = datumFormatierenEnde(Festival.ende)
+        let beginn = datumFormatierenBeginn(Festival.beginn)
+        let ende = datumFormatierenEnde(Festival.ende)
 
         let liMusicStyle = Festival.musikrichtung
 
@@ -57,8 +57,8 @@ if (festivaluebersicht !== null) {
         let liOrt = festivalLocation(Festival.ort, Festival.kanton)
 
         //Datumsausgabe soll sowas sein: 20. Jul - 23. Jul 2018
-        let liDatum = festivalDatum(Festival.beginn, Festival.ende)
-        //let liDatum = festivalDatum(beginn, ende)
+        //let liDatum = festivalDatum(Festival.beginn, Festival.ende)
+        let liDatum = festivalDatum(beginn, ende)
 
         //merken (ist das ganze listenelement
         let merken = festivalMerken(Festival.gemerkt)
@@ -253,15 +253,51 @@ if (festivaluebersicht !== null) {
 
     }
 
-    function datumFormatierenBeginn(sekundenDatum){
-        console.log(sekundenDatum)
+    function datumFormatierenBeginn(datum){
+
+        let date = new Date(datum);
+
+        let day = date.getDate()
+        let month = date.getMonth() +1
+
+
+        let year = date.getFullYear()
+
+        return (day +'. '+ month)
 
     }
 
-    function datumFormatierenEnde(sekundenDatum){
-        console.log(sekundenDatum)
+    function datumFormatierenEnde(datum){
+        let date = new Date(datum);
+
+        let day = date.getDate()
+        let month = date.getMonth() +1
+
+
+        let year = date.getFullYear()
+
+        return (day +'. '+ month +'. '+ year)
+    }
+
+
+    let datum = '2018-11-13 10:56:08'
+    function datumFormatierung (){
+        //datum.toString('dddd, MMM ,yyyy')
+        //millisec = Date.parse(datum);
+
+        let date = new Date(datum);
+
+        let day = date.getDate()
+        let month = date.getMonth()+1
+
+
+        let year = date.getFullYear()
+
+        retun (day +' '+ month +' '+ year)
 
     }
+    datumFormatierung ()
+
 
 }
 
