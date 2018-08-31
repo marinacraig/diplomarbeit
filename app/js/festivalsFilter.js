@@ -42,13 +42,13 @@ if (festivaluebersicht !== null) {
 
     let alleKantone = [ktAG, ktAR, ktAI, ktBL, ktBS, ktBE, ktFR, ktGE, ktGL, ktGR, ktJU, ktLU, ktNE, ktNW, ktOW, ktSG, ktSH, ktSZ, ktSO, ktTG, ktTI, ktUR, ktVD, ktVS, ktZG, ktZH]
 
-
-//Sortieren nach Datum: Achtung: sortiert zahl inkl. Buchstaben
+    //Sortieren nach Datum: soll eigentlich über DB laufen, daher hier nicht relevant
     alleFestivals.sort(function (a, b) {
         a = new Date(a.beginn);
         b = new Date(b.beginn);
         return a > b ? -1 : a < b ? 1 : 0;
     });
+
 
     alleFestivals.filter(kanton => {
         return kanton.kanton
@@ -60,13 +60,13 @@ if (festivaluebersicht !== null) {
      })*/
 
     /*
-    Eventlistener für Filterfunktionen
+    Eventlistener für Filterfunktionen via DB (fkt in storageFestivals:
      */
-    filterDatum.addEventListener('click', alleFestivals.sort)
+    filterDatum.addEventListener('click', sortDatum)
 
     for (let i = 0; i < alleKantone.length; ++i) {
         if (alleKantone[i] != null) {
-            alleKantone[i].addEventListener('click', alleFestivals.filter)
+            alleKantone[i].addEventListener('click', sortKantone)
         }
     }
 

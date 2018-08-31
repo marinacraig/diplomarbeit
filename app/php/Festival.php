@@ -108,7 +108,7 @@ class Festival {
         $this->ende = $ende;
     }
     public function get_musikrichtung() {
-        return $this->kanton;
+        return $this->musikrichtung;
     }
     public function set_musikrichtung($musikrichtung) {
         $this->musikrichtung = $musikrichtung;
@@ -165,9 +165,9 @@ class Festival {
             ':gemerkt' => $this->get_gemerkt(),
         ]);
 
-        $festival = new festival();
+        //$festival = new festival();
         //$festival->setName('Mein neues festival');
-        $festival->create();
+        //$festival->create();
     }
 
 }

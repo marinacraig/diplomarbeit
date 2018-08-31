@@ -10,6 +10,13 @@ if (festivaluebersicht !== null) {
     //da html-page und nicht php für Sesssion -> Cookie
     let mySession = 'etwas';
 
+
+    sessionStorage['mySession'] = JSON.stringify(mySession);
+    mySession = JSON.parse(sessionStorage['mySession']);
+
+
+
+
     //hier sollen alle Festivals rein (unsortiert und sortiert
     let alleFestivals = []
 
@@ -36,20 +43,6 @@ if (festivaluebersicht !== null) {
     ]
 
 
-    //Für Filter Datum
-    let datumFilter = 0;
-
-
-
-    /*
-    für irgendwie dem Server die Session übergeben -
-    der muss wissen wer ich bin
-    (Soll mit schliessen des Browsers gelöscht werden ->
-    ein Cookie genererieren)
-     */
-
-    sessionStorage['mySession'] = JSON.stringify(mySession);
-    mySession = JSON.parse(sessionStorage['mySession']);
 
     /*
  Filterfunktionen
@@ -65,10 +58,11 @@ if (festivaluebersicht !== null) {
         datumFilter = (datumFilter % 2)
         console.log(datumFilter) //Ausgaben: 1 und 0
 
-        localStorage.setItem('sortDate', JSON.stringify(datumFilter));
+        Storage.setItem('sortDate', JSON.stringify(datumFilter));
 
         //Todo: alle ungeraden aufsteigend ; alle geraden absteigend - oder umgekehrt
-        //alleFestivals =   JSON.parse(localStorage.getItem('sortDate'));
+        //alleFestivals =   JSON.parse(sessionStorage.getItem('sortDate'));
+
     }
 
 
@@ -78,10 +72,10 @@ if (festivaluebersicht !== null) {
         muss etwas mit this sein
          */
 
-        localStorage.setItem('sortKanton', JSON.stringify(this.id));
+        sessionStorage.setItem('sortKanton', JSON.stringify(this.id));
 
         //Todo: sobald die funktion in php vorhanden
-        // alleFestivals = JSON.parse(localStorage.getItem('sortKanton'));
+        // alleFestivals = JSON.parse(sessionStorage.getItem('sortKanton'));
 
 
 

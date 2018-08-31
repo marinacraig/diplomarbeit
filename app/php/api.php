@@ -1,18 +1,38 @@
 <?php
+ini_set("display_errors",true); // für Fehlerausgabe
+
+require __DIR__ . '/vendor/autoload.php';
 
 /*
+ * unklar: getFestivals()
+ */
+
+
 // dies ist die REST API
-$ausgabe = Array();
-foreach ($user->getFestivals() as $festival) {
+$alleFestivals = Array();
+foreach ($festival->get_festival() as $festival) {
     echo $festival->get_name();
+
     $festivalitem = Array();
     $festivalitem['name'] = $festival->get_name();
-    array_push($ausgabe, $festivalitem);
+    $festivalitem['ort'] = $festival->get_ort();
+    $festivalitem['kanton'] = $festival->get_kanton();
+    $festivalitem['beginn'] = $festival->get_beginn();
+    $festivalitem['ende'] = $festival->get_ende();
+    $festivalitem['musikrichtung'] = $festival->musikrichtung();
+    $festivalitem['id'] = $festival->get_id();
+    $festivalitem['gemerkt'] = $festival->get_gemerkt();
 
-    // besser direkt toJSON in Festival.php entsprechend ergänzen bzw. im USER wo alle Tasks geholt werden
-    //array_push($ausgabe, $Festival->toArray());
+    array_push($alleFestivals, $festivalitem->toArray());
 
 }
 header("Content-type:application/json");
-echo json_encode ($ausgabe);
-*/
+echo json_encode ($alleFestivals);
+
+
+//Todo: erhalten und alle zurück senden via: $kanton und $datum (1 & 0) -> via allefestivals.php verknüpfen
+
+//für nach datum sortiert: $allefestivals
+//für nach kanton sortiert: $alleFestivalsKanton (soll nur via user ausgeführt werden)
+
+

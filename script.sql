@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Erstellungszeit: 29. Aug 2018 um 13:06
+-- Erstellungszeit: 30. Aug 2018 um 20:36
 -- Server-Version: 5.7.21
 -- PHP-Version: 7.2.7
 
@@ -21,23 +21,30 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `festival` (
-  `user_id` int(11) NOT NULL,
+  `user_id` int(11) DEFAULT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `ort` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `kanton` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `beginn` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `ende` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `musikrichtung` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `id` int(11) NOT NULL
+  `id` int(11) NOT NULL,
+  `gemerkt` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Daten für Tabelle `festival`
 --
 
-INSERT INTO `festival` (`user_id`, `name`, `ort`, `kanton`, `beginn`, `ende`, `musikrichtung`, `id`) VALUES
-(9, 'eingabe in DB festival1', '8050 Oerlikon', 'ZH', '2018-10-04 14:59:43', '2018-10-06 14:59:43', 'poprock', 1),
-(9, 'eingabe in DB festival2', '1000 Lausanne', 'VD', '2018-10-07 14:59:43', '2018-10-08 14:59:43', 'electronic', 2);
+INSERT INTO `festival` (`user_id`, `name`, `ort`, `kanton`, `beginn`, `ende`, `musikrichtung`, `id`, `gemerkt`) VALUES
+(NULL, 'DB festival1', 'Eggersriet', 'SG', '2018-09-30 14:59:43', '2018-10-01 14:59:43', 'indie', 1, 0),
+(NULL, 'DB Festival2', 'Bern', 'BE', '2018-10-12 00:00:00', '2018-10-14 00:00:00', 'jazz', 2, 1),
+(NULL, 'DB festival3', 'Oerlikon', 'ZH', '2018-10-04 14:59:43', '2018-10-06 14:59:43', 'hiphop', 3, 0),
+(NULL, 'DB Festival4', 'Arbon', 'TG', '2018-09-26 00:00:00', '2018-09-27 00:00:00', 'electronic', 4, 1),
+(NULL, 'DB Festival5', 'Romanshorn', 'TG', '2018-11-20 00:00:00', '2018-11-22 00:00:00', 'poprock', 5, 1),
+(NULL, 'DB Festival6', 'Bern', 'BE', '2018-10-12 00:00:00', '2018-10-14 00:00:00', 'jazz', 6, 1),
+(NULL, 'DB Festival7', 'Bern', 'BE', '2018-10-12 00:00:00', '2018-10-14 00:00:00', 'jazz', 7, 1),
+(NULL, 'DB festival8', 'Eggersriet', 'SG', '2018-09-30 14:59:43', '2018-10-01 14:59:43', 'indie', 8, 0);
 
 -- --------------------------------------------------------
 
@@ -90,7 +97,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT für Tabelle `festival`
 --
 ALTER TABLE `festival`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT für Tabelle `user`
