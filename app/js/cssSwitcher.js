@@ -1,4 +1,4 @@
-
+//Idee: Switch Listen-Layout / Kachel-Layout
 /*
 Da Codeschnipsel auf der Festivalseite:
 check ob id festivaluebersicht vorhanden, falls ja dann ausführen

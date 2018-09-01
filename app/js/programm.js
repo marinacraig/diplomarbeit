@@ -17,25 +17,25 @@ if (tagesprogramm!==null) {
     let show_sonntag = document.querySelector('#show_sonntag')
 
 
-    /*
-    zu Beginn nur Inhalt von Freitag anzeigen: _programm.scss
-     */
+
+    //zu Beginn nur Inhalt von Freitag anzeigen: _programm.scss
+
 
     function programm() {
         // zeigt button vom Tag: console.log(this)
         //ist der passende Tag : console.log(this.id)
 
-        if (this.id == 'freitag') {
+        if (this.id === 'freitag') {
 
             /*
             damit klar ist welcher Tag aktiv: class btn... berücksichtigen
              */
-            //button  class btnweiss entfernen
+            //button  class btnweiss / bzw. btnschwarz entfernen
             freitag.classList.remove('btnweiss')
             samstag.classList.remove('btnschwarz')
             sonntag.classList.remove('btnschwarz')
 
-            //button mit class btnschwarz setzten
+            //button mit class setzten
             freitag.classList.add('btnschwarz')
             samstag.classList.add('btnweiss')
             sonntag.classList.add('btnweiss')
@@ -52,17 +52,17 @@ if (tagesprogramm!==null) {
             show_freitag.style.display = 'block';
 
 
-        } else if (this.id == 'samstag') {
+        } else if (this.id === 'samstag') {
 
             /*
             damit klar ist welcher Tag aktiv: class btn... berücksichtigen
              */
-            //button  class btnweiss entfernen
+            //button  class entfernen
             freitag.classList.remove('btnschwarz')
             samstag.classList.remove('btnweiss')
             sonntag.classList.remove('btnschwarz')
 
-            //button mit class btnschwarz setzten
+            //button mit class setzten
             freitag.classList.add('btnweiss')
             samstag.classList.add('btnschwarz')
             sonntag.classList.add('btnweiss')
@@ -70,14 +70,14 @@ if (tagesprogramm!==null) {
             /*
             passendes div mit Progamm anzeigen:
             falsche display none
-            richtiges display block oder inline...
+            richtiges display block oder inline
              */
             show_freitag.style.display = 'none';
             show_sonntag.style.display = 'none';
 
             show_samstag.style.display = 'block';
 
-        } else if (this.id == 'sonntag') {
+        } else if (this.id === 'sonntag') {
 
             /*
             damit klar ist welcher Tag aktiv: class btn... berücksichtigen

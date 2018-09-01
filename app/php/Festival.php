@@ -170,5 +170,30 @@ class Festival {
         //$festival->create();
     }
 
+
+
+
+/*
+
+    public function getTasks()
+    {
+        $statement = DB::get()->prepare('
+              SELECT
+                id
+              FROM
+                task
+              WHERE
+                user_id = :id');
+
+        $statement->execute([':id' => $this->getId()]);
+
+        $tasks = [];
+
+        foreach($statement->fetchAll() as $task){
+            $tasks[] = new Task($task['id']);
+        }
+
+        return $tasks;
+    }*/
 }
 

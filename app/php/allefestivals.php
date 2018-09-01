@@ -28,12 +28,7 @@ include('DB.php');
 
 //Alle Kundendaten selektieren
 //Todo: 1. wie hole ich die connection aus DB.php - wird nicht gefunden, vendor allerdings verlinkt...
-$statement = PDO::fetch()->prepare('
-              SELECT
-                *
-              FROM
-                festival
-              ');
+
 
 print "<pre>";
 print_r($statement);

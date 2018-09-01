@@ -5,15 +5,11 @@ check ob id xy vorhanden, falls ja dann ausführen
 
 let festivaluebersicht = document.getElementById('festivaluebersicht');
 if (festivaluebersicht !== null) {
-    //hier alles zum in JSON umwandeln bzw. übergeben HTML <-> DB
+    //hier alles zum in JSON umwandeln bzw. übergeben HTML <-> DB (Schnittstelle)
 
     //da html-page und nicht php für Sesssion -> Cookie
-    let mySession = 'etwas';
+
     let datumFilter = 0;
-
-
-    sessionStorage['mySession'] = JSON.stringify(mySession);
-    mySession = JSON.parse(sessionStorage['mySession']);
 
 
     //hier sollen alle Festivals rein (unsortiert und sortiert
@@ -53,11 +49,7 @@ if (festivaluebersicht !== null) {
         }
     ]
 
-
-    /*
- Filterfunktionen
-  */
-
+    //Filterfunktionen - sollte eigentlich via php gemacht und geliefert werden, da Verbindung fehlt, hier
 
     function sortDatum() {
 
@@ -96,22 +88,26 @@ if (festivaluebersicht !== null) {
 
     }
 
-
     function sortKantone() {
         /*
         Idee: irgendwie an DB übergeben und nach Kanton sortiertes holen
         muss etwas mit this sein
          */
 
-        sessionStorage.setItem('sortKanton', JSON.stringify(this.id));
+        let gewaelterKanton = this.id;
 
+        sessionStorage.setItem('sortKanton', JSON.stringify(gewaelterKanton));
 
-        alleFestivals.filter(kanton => {
-            return kanton.kanton
-        })
+        // gibt nur die Kantone der jeweiligen Festivals aus
+        /* alleFestivals.filter((Festival) => {
+            console.log(Festival.kanton)
+
+        })*/
+
         //Todo: sobald die funktion in php vorhanden
         // alleFestivals = JSON.parse(sessionStorage.getItem('sortKanton'));
 
 
     }
+
 }

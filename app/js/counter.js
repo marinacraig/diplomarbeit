@@ -9,10 +9,10 @@ if (ticketsBestellen!==null) {
 /*
 Idee:
 Einzelne Ticket-Variante
-Bei klick auf plus: plus 1
-bei klick auf minus: minus 1
--> Total dazwischen anzeigen
-Todo: Total sowie welche ausgewählt speichern bei klick auf Tickets Kaufen
+Bei klick auf plus: plus 1 (=umgesetzt)
+bei klick auf minus: minus 1 (=umgesetzt)
+-> Total dazwischen und in Gesamttotal anzeigen (=umgesetzt)
+
 
 später:
 überprüfe Festival
@@ -20,7 +20,7 @@ später:
 - falls ja, welche? -> Zahlen entsprechend einfügen
 - falls nein, welche? -> Text grau einfügen
 - auf icon__ticket-grafik--1 bis icon__ticket-grafik--10 zugreifen, Farben abfüllen
-
+- Total Tickets sowie welche ausgewählt "speichern" bei klick auf Tickets Kaufen
  */
 
 //alle ticketvarianten aus html holen - vorbereitet für später
@@ -287,7 +287,6 @@ später:
         }else{
             console.log('hä? (hint: minus)')
         }
-        //   console.log(clickTotalTicket) -> ist im grammatikTicketMinus
     }
 
     //Eventlistener click plus

@@ -104,7 +104,7 @@ if (sliderNeu !==null) {
     });
 
 
-//Der Teil von Veith - geht der überhaupt hier? oder seperat?
+//Der Teil von Veith
     /*
 
     fullscreen = (elem)=>{if (elem.requestFullscreen) {

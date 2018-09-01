@@ -2,8 +2,7 @@
 * Idee:
 * suche das passende Element und füge alle Festivals hinzu
 *
-* Todo: zum laufen bringen
-* Todo: später gemerkte festivals in ticketbestellen - entweder hier oder seperat (fix out of scope)
+* Todo: später gemerkte festivals in ticketbestellen - entweder hier oder seperat
 * */
 
 
@@ -17,7 +16,7 @@ let festivaluebersicht = document.getElementById('festivaluebersicht');
 if (festivaluebersicht !== null) {
 
 /*
-Kanton: bei click -> storage -> aus DB holen, abfüllen
+Kanton (=kt): bei click -> storage -> aus DB holen, abfüllen
  */
 //für die Filterfunktion nach Kanton
     let ktAG = document.querySelector('#AG')
@@ -52,8 +51,9 @@ Kanton: bei click -> storage -> aus DB holen, abfüllen
 
 
     /*
-    Eventlistener für Filterfunktionen via DB (fkt in storageFestivals:
+    Eventlistener für Filterfunktionen via DB (fkt in storageFestivals):
      */
+    //Todo: Umbau wenn array wirklich von DB kommt
 
     for (let i = 0; i < alleKantone.length; ++i) {
         if (alleKantone[i] != null) {
@@ -89,10 +89,9 @@ Kanton: bei click -> storage -> aus DB holen, abfüllen
 
 
 
-//alleFestials -> extract -> method -> funktion abfüllen, diese für gefiltertes wieder abfüllen
+//Festivals in HTML einfügen (-> extract -> method -> funktion abfüllen), diese für gefiltertes wieder abfüllen
 
     function abfuellen() {
-//Festivals in HTML einfügen
 
         alleFestivals.forEach(function (Festival) {
 
@@ -367,22 +366,5 @@ Kanton: bei click -> storage -> aus DB holen, abfüllen
 // initiales abfuellen
     abfuellen();
 
-
-    //Class Festival - wird diese überhaupt benötigt? Wie?
-    /*
-        class Festival {
-            constructor(name, ort, kanton, beginn, ende, musikrichtung, id, gemerkt) {
-                this.name = name;
-                this.ort = ort;
-                this.kanton = kanton;
-                this.beginn = beginn;
-                this.ende = ende;
-                this.musikrichtung = musikrichtung;
-                this.id = id;
-                this.gemerkt = gemerkt;
-            }
-        }
-
-    */
 }
 
