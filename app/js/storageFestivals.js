@@ -60,6 +60,7 @@ if (festivaluebersicht !== null) {
 
 
     function sortDatum() {
+
         /*
         Idee: irgendwie an DB übergeben und nach Datum sortiertes holen
          */
@@ -92,10 +93,6 @@ if (festivaluebersicht !== null) {
 
             });
         }
-       //Todo: irgendwie alleFestivals.forEach(function (Festival) aufrufen
-       console.log(alleFestivals)
-
-
 
     }
 
@@ -108,6 +105,10 @@ if (festivaluebersicht !== null) {
 
         sessionStorage.setItem('sortKanton', JSON.stringify(this.id));
 
+
+        alleFestivals.filter(kanton => {
+            return kanton.kanton
+        })
         //Todo: sobald die funktion in php vorhanden
         // alleFestivals = JSON.parse(sessionStorage.getItem('sortKanton'));
 

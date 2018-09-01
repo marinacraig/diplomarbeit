@@ -13,66 +13,181 @@ check ob id xy vorhanden, falls ja dann ausführen
  */
 
 let festivaluebersicht = document.getElementById('festivaluebersicht');
+
 if (festivaluebersicht !== null) {
 
-    //AlleFestivals
+/*
+Kanton: bei click -> storage -> aus DB holen, abfüllen
+ */
+//für die Filterfunktion nach Kanton
+    let ktAG = document.querySelector('#AG')
+    let ktAR = document.querySelector('#AR')
+    let ktAI = document.querySelector('#AI')
+    let ktBL = document.querySelector('#BL')
+    let ktBS = document.querySelector('#BS')
+    let ktBE = document.querySelector('#BE')
+    let ktFR = document.querySelector('#FR')
+    let ktGE = document.querySelector('#GE')
+    let ktGL = document.querySelector('#GL')
+    let ktGR = document.querySelector('#GR')
+    let ktJU = document.querySelector('#JU')
+    let ktLU = document.querySelector('#LU')
+    let ktNE = document.querySelector('#NE')
+    let ktNW = document.querySelector('#NW')
+    let ktOW = document.querySelector('#OW')
+    let ktSG = document.querySelector('#SG')
+    let ktSH = document.querySelector('#SH')
+    let ktSZ = document.querySelector('#SZ')
+    let ktSO = document.querySelector('#SO')
+    let ktTG = document.querySelector('#TG')
+    let ktTI = document.querySelector('#TI')
+    let ktUR = document.querySelector('#UR')
+    let ktVD = document.querySelector('#VD')
+    let ktVS = document.querySelector('#VS')
+    let ktZG = document.querySelector('#ZG')
+    let ktZH = document.querySelector('#ZH')
 
-    //Class Festival - wird diese überhaupt benötigt? Wie?
+
+    let alleKantone = [ktAG, ktAR, ktAI, ktBL, ktBS, ktBE, ktFR, ktGE, ktGL, ktGR, ktJU, ktLU, ktNE, ktNW, ktOW, ktSG, ktSH, ktSZ, ktSO, ktTG, ktTI, ktUR, ktVD, ktVS, ktZG, ktZH]
+
+
     /*
-        class Festival {
-            constructor(name, ort, kanton, beginn, ende, musikrichtung, id, gemerkt) {
-                this.name = name;
-                this.ort = ort;
-                this.kanton = kanton;
-                this.beginn = beginn;
-                this.ende = ende;
-                this.musikrichtung = musikrichtung;
-                this.id = id;
-                this.gemerkt = gemerkt;
-            }
+    Eventlistener für Filterfunktionen via DB (fkt in storageFestivals:
+     */
+
+    for (let i = 0; i < alleKantone.length; ++i) {
+        if (alleKantone[i] != null) {
+            alleKantone[i].addEventListener('click', sortKantone)
         }
-
-    */
-
-    //Festivals in HTML einfügen
-
-      alleFestivals.forEach(function (Festival) {
-
-        //Datumsausgabe soll so was sein: 20. Jul - 23. Jul 2018
-        let beginn = datumFormatierenBeginn(Festival.beginn)
-        let ende = datumFormatierenEnde(Festival.ende)
-
-        let liMusicStyle = Festival.musikrichtung
-
-        //Verlinkung zur Detailseite
-        let detailSeite = zurDetailseite(Festival.id)
-
-        //Todo: verschiedene Festivalbilder
-
-        //Musikfilter: class & svg
-        let liFilterMusik = musikIcon(Festival.musikrichtung)
-
-        let liName = festivalName(Festival.name)
-
-        let liOrt = festivalLocation(Festival.ort, Festival.kanton)
-
-        let liDatum = festivalDatum(beginn, ende)
-
-        //merken (ist das ganze listenelement)
-        let merken = festivalMerken(Festival.gemerkt)
+    }
 
 
-        let ul = document.querySelector('#css_uebersicht')
 
-        let li = document.createElement('li')
-        li.classList = 'festival__list--item festival__list--' + liMusicStyle;
-
-        li.innerHTML = (detailSeite + liFilterMusik + liName + liOrt + liDatum + merken);
-
-        ul.appendChild(li);
-
+    /*
+    Datum: bei click an storage für Sortierung, dann Inhalt ul löschen,
+    dann abfüllen (soll über DB laufen
+     */
+    let filterDatum = document.querySelector('.filter__datum')
+    filterDatum.addEventListener('click', () => {
+        sortDatum();
+        document.querySelector('#css_uebersicht').innerHTML = '';
+        abfuellen();
     });
 
+
+    //Todo sowas für filter Musikrichung, style anhand allFMS
+
+
+    //Todo: wenn von DB läuft, löschen
+    //aktuellstes zuerst bei initial Abfüllung
+    alleFestivals.sort(function (a, b) {
+        a = new Date(a.beginn);
+        b = new Date(b.beginn);
+        return a < b ? -1 : a > b ? 1 : 0;
+    });
+
+
+
+
+//alleFestials -> extract -> method -> funktion abfüllen, diese für gefiltertes wieder abfüllen
+
+    function abfuellen() {
+//Festivals in HTML einfügen
+
+        alleFestivals.forEach(function (Festival) {
+
+            //Datumsausgabe soll so was sein: 20. Jul - 23. Jul 2018
+            let beginn = datumFormatierenBeginn(Festival.beginn)
+            let ende = datumFormatierenEnde(Festival.ende)
+
+            let liMusicStyle = Festival.musikrichtung
+
+            //Verlinkung zur Detailseite
+            let detailSeite = zurDetailseite(Festival.id)
+
+            //Todo: verschiedene Festivalbilder
+
+            //Musikfilter: class & svg
+            let liFilterMusik = musikIcon(Festival.musikrichtung)
+
+            let liName = festivalName(Festival.name)
+
+            let liOrt = festivalLocation(Festival.ort, Festival.kanton)
+
+            let liDatum = festivalDatum(beginn, ende)
+
+            //merken (ist das ganze listenelement)
+            let merken = festivalMerken(Festival.gemerkt)
+
+
+            let ul = document.querySelector('#css_uebersicht')
+
+            let li = document.createElement('li')
+            li.classList = 'festival__list--item festival__list--' + liMusicStyle;
+
+            li.innerHTML = (detailSeite + liFilterMusik + liName + liOrt + liDatum + merken);
+
+            ul.appendChild(li);
+
+        });
+    }
+
+
+    //Datumsformatierung für die UI
+    function datumFormatierenBeginn(datum) {
+
+        let date = new Date(datum);
+
+        let day = date.getDate()
+        let month = date.getMonth() + 1
+        month = monatskuerzel(month)
+
+        return (day + '. ' + month)
+    }
+
+    function datumFormatierenEnde(datum) {
+        let date = new Date(datum);
+
+        let day = date.getDate()
+        let month = date.getMonth() + 1
+        month = monatskuerzel(month)
+
+        let year = date.getFullYear()
+
+        return (day + '. ' + month + ' ' + year)
+    }
+
+    function monatskuerzel(month) {
+
+        if (month == 1){
+            month = 'Jan';
+        }else if(month == 2){
+            month = 'Feb';
+        }else if(month == 3){
+            month = 'Mar';
+        }else if(month == 4){
+            month = 'Apr';
+        }else if(month == 5){
+            month = 'Mai';
+        }else if(month == 6){
+            month = 'Jun';
+        }else if(month == 7){
+            month = 'Jul';
+        }else if(month == 8){
+            month = 'Aug';
+        }else if(month == 9){
+            month = 'Sep';
+        }else if(month == 10){
+            month = 'Okt';
+        }else if(month == 11){
+            month = 'Nov';
+        }else if(month == 12){
+            month = 'Dez';
+        }else {
+            console.log('hi')
+        }
+        return(month)
+    }
 
     //da einheitliches Festivalbild hier inkl.
     function zurDetailseite(id) {
@@ -249,7 +364,25 @@ if (festivaluebersicht !== null) {
 
     }
 
+// initiales abfuellen
+    abfuellen();
 
 
+    //Class Festival - wird diese überhaupt benötigt? Wie?
+    /*
+        class Festival {
+            constructor(name, ort, kanton, beginn, ende, musikrichtung, id, gemerkt) {
+                this.name = name;
+                this.ort = ort;
+                this.kanton = kanton;
+                this.beginn = beginn;
+                this.ende = ende;
+                this.musikrichtung = musikrichtung;
+                this.id = id;
+                this.gemerkt = gemerkt;
+            }
+        }
+
+    */
 }
 
