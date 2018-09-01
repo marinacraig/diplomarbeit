@@ -68,9 +68,9 @@ Falls vorhanden, dann in php.md festgehalten
 
 **css-check / html-check**  
 https://validator.w3.org/: keine Fehler angezeigt  
-https://jigsaw.w3.org/css-validator/: CSS3 & SVG: Fehler nicht behoben,
-da es trotzdem funktioniert (sind in files entsprechend vermerkt), viele 
-unbekannte Erweiterungen sind für die verschiedenen Browser  
+https://jigsaw.w3.org/css-validator/: CSS3: Fehler sind alles unbekannte 
+Browswererweiterungen und 2x :not - da es trotzdem 
+funktioniert (sind in files entsprechend vermerkt), nicht behoben
 Mozilla - Styles: slider, breadcrump, maisonry  
 
  
