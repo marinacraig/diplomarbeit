@@ -15,17 +15,15 @@
 - **Setup Guide**  
 Bitte folgendes im Terminal nach fork oder clone von github eingeben:  
 1. npm init  
-Bedingung: npm vorhanden, sonst zuerst npm installieren  
-2. ./install.sh  
-Befehl damit alle node module installiert werden. Falls dies nicht geht, siehe Lösung ganz unten gulpfile.js 
-bzw. suche nach chmod.  
-Alternative: alle npm Befehle händisch eingeben.  
+Bedingung: npm vorhanden, sonst zuerst npm install 
+2. gulp babel
+Punkt 3 läuft sonst nicht sauber durch 
 3. gulp build  
 Erstellt dist-Ordner  
 4. gulp  
 für app / Entwicklung (ist ohne build und zeigt nicht auf dist, da sonst zu langsam während Entwicklung)  
 
-- **URL der lauffähigen Version:**   
+- **URL der lauffähigen Version (bis 20.09.2018):**   
 [http://marina.techfabrik.com/dist/](http://marina.techfabrik.com/dist/)  
 Anmerkung: Lektion Deployment: alles soll auf Server, daher ist alles hochgeladen (gültig bis 20.09.2018, 
 Zugangsdaten von Rolf erhalten, falls diese benötigt werden, bitte ihn fragen, ich möchte sie nicht veröffentlichen)  
@@ -46,6 +44,7 @@ verständlich sein und sind daher minimal dokumentiert.
 - **Zusammenfassung und Ausblick, persönliche Anmerkungen**  
    [Style Abweichungen](dokumentation/style.md)  
    [Zusammenfassung & Fazit](dokumentation/zusammenfassung_fazit.md)  
+   Hinweis: Frontend mit allen geforderten Teilen umgesetzt
 
 - **[Literaturverzeichnis](dokumentation/literaturverzeichnis.md), Quellenangaben bei Nutzung von 
 externem Code**  
