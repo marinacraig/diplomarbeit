@@ -30,8 +30,7 @@ mehr:
 Via Filezilla
 
 ## Eidesstattliche Erklärung:  
-[weil gescanntes pdf](assets/scan_eidesstattliche_erklaerung.pdf) gerne mal verschwindet:  
-![eidesstattliche_erklaerung.png](assets/eidesstattliche_erklaerung.png)
+![eidesstattliche_erklaerung.jpg](assets/eidesstattliche_erklaerung.jpg)
 
 
 ## php:  

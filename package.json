@@ -35,5 +35,10 @@
   "bugs": {
     "url": "https://github.com/WebProfessionals/dipl1718_marina/issues"
   },
-  "homepage": "https://github.com/WebProfessionals/dipl1718_marina#readme"
+  "homepage": "https://github.com/WebProfessionals/dipl1718_marina#readme",
+  "keywords": [
+    "diplomarbeit",
+    "september",
+    "2018"
+  ]
 }

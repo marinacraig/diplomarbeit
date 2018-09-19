@@ -4,7 +4,7 @@
 - für den slider: [https://codepen.io/norman_pixelkings/pen/qNGBAB](https://codepen.io/norman_pixelkings/pen/qNGBAB)  
 - für countdown: [https://codeburst.io/a-countdown-timer-in-pure-javascript-f3cdaae1a1a3](https://codeburst.io/a-countdown-timer-in-pure-javascript-f3cdaae1a1a3)  
 - für maps (wegen Kreditkartenproblem nur dieser möglich): [https://developers.google.com/maps/documentation/javascript/examples/icon-simple?hl=de](https://developers.google.com/maps/documentation/javascript/examples/icon-simple?hl=de)  
-- für Hauptseite, Bereich news: [https://medium.com/@andybarefoot/a-masonry-style-layout-using-css-grid-8c663d355ebb](https://medium.com/@andybarefoot/a-masonry-style-layout-using-css-grid-8c663d355ebb)  
+- maisonry / news: [https://codeburst.io/how-to-pure-css-masonry-layouts-a8ede07ba31a](https://codeburst.io/how-to-pure-css-masonry-layouts-a8ede07ba31a)  
 - gulp: [https://www.npmjs.com](https://www.npmjs.com)  
 - HTML-Check: [https://validator.w3.org/#validate_by_upload](https://validator.w3.org/#validate_by_upload)  
 - CSS-Check: [https://jigsaw.w3.org/css-validator/#validate_by_upload](https://jigsaw.w3.org/css-validator/#validate_by_upload)  

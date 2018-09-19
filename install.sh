@@ -1,4 +1,4 @@
-#!/bin/bash
+n#!/bin/bash
 npm install gulp-cli
 npm install gulp
 npm install gulp-babel babel-core babel-preset-env
