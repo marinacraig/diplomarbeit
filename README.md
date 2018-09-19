@@ -16,7 +16,7 @@
 Bitte folgendes im Terminal nach fork oder clone von github eingeben:  
 1. npm init  
 Bedingung: npm vorhanden, sonst zuerst npm install 
-2. gulp babel
+2. gulp babel  
 Punkt 3 läuft sonst nicht sauber durch 
 3. gulp build  
 Erstellt dist-Ordner  
