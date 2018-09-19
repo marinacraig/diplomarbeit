@@ -16,10 +16,8 @@
 Bitte folgendes im Terminal nach fork oder clone von github eingeben:  
 1. npm init  
 Bedingung: npm vorhanden, sonst zuerst npm install 
-2. ./install.sh  
-Befehl damit alle node module installiert werden. Falls dies nicht geht, siehe Lösung ganz unten gulpfile.js 
-bzw. suche nach chmod.  
-Alternative: alle npm Befehle händisch eingeben.  
+2. gulp babel
+Punkt 3 läuft sonst nicht sauber durch 
 3. gulp build  
 Erstellt dist-Ordner  
 4. gulp  
