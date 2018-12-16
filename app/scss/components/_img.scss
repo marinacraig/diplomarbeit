@@ -176,7 +176,11 @@ img {
 
 //TV
 @media screen and (min-width: 1441px) {
-  img {
+    img .image__big, .teaser__big, .banner__desktop, .festivalbild, .outro .background{
+      width: 100%;
+    }
+
+/*  img {
     .image__big {
       max-width: 1600px;
       height: 450px;
@@ -189,6 +193,6 @@ img {
     height: 1289px;
     width: 1440px;
 
-  }
+  }*/
 
 }

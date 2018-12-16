@@ -261,7 +261,14 @@ article, .programm, .festivaluebersicht__filter {
     background-image: url("../images/rsz_sponsoring.jpg");
   }
 }
+//TV
+@media screen and (min-width : 1441px) {
 
+  main, .schriftfestival, .bestellen, .kaufen {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+}
 
 /*
 
